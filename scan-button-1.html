@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão animado</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            width: 100vw;
+            height: 100vh;
+            background: rgb(0, 0, 0);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        /* botão com cor de fundo snow, imagem de fundo de captura com tamanho inicial 0 e borrão de 2px*/
+        button{
+            border-radius: 10px;
+            outline: none;
+            border: none;
+            width: 150px;
+            height: 50px;
+            background-color: snow;
+            background-image: url("capture.svg");
+            background-size: 0;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            font-family: monospace;
+            filter: blur(2px);
+        }
+        /* barra de scan dentro do botão com animação scan e invisivel por enquanto*/
+        button:hover div{
+            content: "";
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            visibility: hidden;
+            top: 0;
+            z-index: 1;
+            left: 0;
+            background-color: rgb(0, 0, 0);
+            animation: scan 2s linear infinite;
+            animation-delay: 1s;
+        }
+        /* animação do botão para capturar */
+        button:hover{
+            animation: focus 1s linear forwards;
+
+        }
+        /* efeito de piscar para ficar igual captura e tirar o borrão no final */
+        @keyframes focus{
+            0%{
+              background-size: 140px 40px;
+            }
+            20%{
+                background-size: 0;
+            }
+            24%{
+                background-size: 140px 40px;
+            }
+            30%{
+                background-size: 0;
+            }
+
+            100%{
+                background-size: 140px 40px;
+                filter: blur(0);
+            }
+        }
+        /* efeito simples de scan, e deixando a barra visivel*/
+        @keyframes scan{
+            0%{
+                visibility: visible;
+
+            
+            }
+            50%{
+                transform: translateY(50px);
+            }
+    
+        }
+    </style>
+</head>
+<body>
+    <!-- HTML-->
+    <button>
+    <div></div>
+    SCAN BUTTON 1
+    </button>
+    
+</body>
+</html>
