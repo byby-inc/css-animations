@@ -19,6 +19,7 @@
             width: 100vw;
             background: #000000; 
         }
+        /* botão com uma imagem no fundo e  com o overflow hidden (para esconder o ::before)*/
         .glowing-btn-1 {
             cursor: pointer;
             font-family: monospace;
@@ -34,6 +35,7 @@
             position: relative;
             overflow: hidden;
         }
+          /* no ::before um conteudo vazio com posição inicial -100% do botão e 50% da largura do botão, com um fundo gradiente para parecer um brilho*/
         .glowing-btn-1::before {
             content: '';
             position: absolute;
@@ -48,24 +50,27 @@
                 transparent
             ); 
         }
+        /* animação para mover suavemente o ::before da esquerda para direita e voltar ao inicio*/
         @keyframes reflect {
             0% {
-                transform: translateX(-300%);
-            }
-            45% {
                 transform: translateX(0);
             }
+            45% {
+                transform: translateX(500%);
+            }
             100% {
-                transform: translateX(-300%);
+                transform: translateX(0);
             }
         }
+        
+        /* ao passar o mouse por cima do botão, ativar a animação reflect*/
         .glowing-btn-1:hover::before {
-            left: 100%; 
-            animation: reflect 1.4s ease;
+            animation: reflect 2 ease;
         }
     </style>
 </head>
 <body>
+    <!--Estrutura HTML-->
     <button class="glowing-btn-1">
         GLOWING BTN 1
     </button>
