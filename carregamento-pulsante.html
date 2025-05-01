@@ -1,3 +1,4 @@
+LINK: https://www.instagram.com/p/DJHTH7JROaj/
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -5,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carregamento pulsante</title>
     <style>
+
+        /* fundo preto, tudo alinhado no centro, 100vh e 100vw*/
         body {
             display: flex;
             justify-content: center;
@@ -17,7 +20,7 @@
             padding: 0;
         }
 
-
+        /* anel que ficará em volta do circulo com animacao para pulsar */
         .carregamento-pulsante {
             width: 150px;
             height: 150px;
@@ -29,7 +32,7 @@
             position: relative;
             animation: animacaoPulsante 0.6s ease-in-out infinite;
         }
-        
+        /* usando o after para colocar o circulo dentro, com 50% left e 50% top*/
         .carregamento-pulsante::after {
             content: '';
             position: absolute;
@@ -42,7 +45,7 @@
             transform: translate(-50%, -50%);
             box-shadow: 0 0 8px #3498db;
         }
-
+        /* animacao para pulsar*/
         @keyframes animacaoPulsante {
             0% {
                 transform: scale(0);
@@ -55,7 +58,10 @@
         }
     </style>
 </head>
+
+
 <body onmousemove="document.querySelector('.unload').classList.toggle('carregamento-pulsante')">
+     <!-- ESTRUTURA HTML-->
     <div class="unload"></div>
 
 
