@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desbloquear cadeado</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #1a1a1a;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+        }
+        /* base para o cadeado */
+        .desbloquear-cadeado{
+            background: linear-gradient(145deg, #e6e6e6, #ffffff);
+            width: 120px;
+            height: 120px;
+            border-top-right-radius: 30px;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 3px;
+            border-bottom-right-radius: 3px;
+            box-shadow: 
+                5px 5px 10px rgba(0, 0, 0, 0.3),
+                -2px -2px 8px rgba(255, 255, 255, 0.1),
+                inset 3px 3px 5px rgba(0, 0, 0, 0.1),
+                inset -3px -3px 5px rgba(255, 255, 255, 0.2);
+            position: relative;
+        }
+        /* detalhe de aparencia*/
+        .desbloquear-cadeado::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border-radius: 15px;
+            background: linear-gradient(145deg, #d1d1d1, #f0f0f0);
+            z-index: 1;
+        }
+        /* detalhe do lado direito do cadeado para mostrar apenas o esquerdo na hora de levantar o ferro*/
+        .desbloquear-cadeado-detail{
+            width:14px;
+            height: 20px;
+            background: transparent;
+            background: linear-gradient(135deg, #e6e6e6, #8a8a8a);
+            clip-path: polygon(
+                0% 100%,
+                0% 0%,
+                100% 0%,
+                100% 100%
+            );
+            z-index: 19;
+            bottom: 57%;
+            left: 51.8%;
+            border-radius: 30%;
+            scale: 0.7;
+            position: absolute;
+            transition: all 0.3s ease;
+            transform-origin: right center;
+            box-shadow: 
+                5px 5px 15px rgba(0, 0, 0, 0.4),
+                -2px -2px 8px rgba(255, 255, 255, 0.1);
+        }
+        /* o ferro que irá girar na animação, clip-path para cortar metade do quadrado com bordas arredondadas */
+        .desbloquear-cadeado-locker{
+            width: 120px;
+            height: 150px;
+            background: transparent;
+            box-sizing: border-box;
+            border: solid #d1d1d1 15px;
+            border-top-color: #f5f5f5;
+            border-left-color: #e0e0e0;
+            border-right-color: #b0b0b0;
+            border-bottom-color: #8a8a8a;
+            clip-path: polygon(
+                0% 70%,    
+                0% 0%,    
+                100% 0%,   
+                100% 70%   
+            );
+            z-index: 20;
+            bottom: 50%;
+            left: 44.9%;
+            border-radius: 30%;
+            scale: 0.7;
+            position: absolute;
+            transition: all 0.3s ease;
+            transform-origin: right center; 
+            box-shadow: 
+                5px 5px 15px rgba(0, 0, 0, 0.4),
+                -2px -2px 8px rgba(255, 255, 255, 0.1);
+        }
+        /* buraco para inserir a chave*/
+        .desbloquear-cadeado-hole {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            background: #333;
+            width: 1px;
+            height: 1px;
+            z-index: 20;
+            scale: 20;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        }
+        /* animação ao passar o mouse sobre o buraco acionar o ferro */
+        .desbloquear-cadeado-hole:hover ~ .desbloquear-cadeado-locker {
+            animation: desbloquear 3s ease forwards;
+        }
+        /* detalhe para ir em paralelo com o ferro */
+        .desbloquear-cadeado-hole:hover ~ .desbloquear-cadeado-detail{
+            animation: desbloquear-detail 3s ease forwards;
+        }
+        /* animação do detalhe, não vai para cima eixo  Y */
+        @keyframes desbloquear-detail{
+            0%{
+                transform: translateY(0) translateX(0) rotateY(0deg);
+            }
+            30%{
+                transform: translateY(0) translateX(0) rotateY(0);
+            }
+
+            100%{
+                transform: translateY(0) translateX(0) rotateY(-180deg);
+            }
+        }
+        /* animacao para o ferro para rotacionar e ir para cima para mostrar a parte cortada */
+        @keyframes desbloquear{
+            0%{
+                transform: translateY(-15px) translateX(0) rotateY(0deg);
+            }
+            30%{
+                transform: translateY(-15px) translateX(0) rotateY(0);
+            }
+    
+            100%{
+                transform: translateY(-15px) translateX(0) rotateY(-180deg);
+            }
+        }
+        /* animcacao do buraco */
+        .desbloquear-cadeado-hole:hover{
+            scale: 30;
+            background: #555;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <!--Estrutura HTML-->
+    <div class="desbloquear-cadeado-hole"></div>
+    <div class="desbloquear-cadeado-locker"></div>
+    <div class="desbloquear-cadeado-detail"></div>
+    <div class="desbloquear-cadeado"></div>
+</body>
+</html>
