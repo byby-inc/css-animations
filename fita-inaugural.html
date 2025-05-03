@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fita inaugural</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Arial', sans-serif;
+        overflow: hidden;
+    }
+    /* container do confetti */
+    .ribbon-container {
+        position: relative;
+        width: 20%;
+        height: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 2;
+    }
+    /* aparencia da fita*/
+    .ribbon {
+        position: absolute;
+        width: 100%;
+        height: 60px;
+        background: linear-gradient(145deg, #ff4d4d, #c62828);
+        box-shadow: 0 5px 20px rgba(198, 40, 40, 0.4), 
+                    inset 0 2px 5px rgba(255,255,255,0.2);
+        transition: all 0.5s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 24px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        border-radius: 2px;
+    }
+    /* detalhes antes e depois da fita*/
+    .ribbon::before, .ribbon::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 60px;
+        background: linear-gradient(145deg, #b71c1c, #8e0000);
+        box-shadow: inset 2px 0 5px rgba(0,0,0,0.3);
+    }
+    .ribbon::before {
+        left: -20px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    
+    .ribbon::after {
+        right: -20px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    /* usando o cubic-bezier para animar as duas fitas*/
+    .ribbon-left, .ribbon-right {
+        position: absolute;
+        width: 50%;
+        height: 60px;
+        background: linear-gradient(145deg, #ff4d4d, #c62828);
+        top: 0;
+        transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        opacity: 0;
+        transform-origin: center bottom;
+        box-shadow: 0 5px 15px rgba(198, 40, 40, 0.3),
+                    inset 0 2px 5px rgba(255,255,255,0.2);
+    }
+    /* diferenciando o ribbon left do ribbon right (fita)*/
+    .ribbon-left {
+        left: 0;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    
+    .ribbon-right {
+        right: 0;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    /*mudando os angulos ao passar o mouse sobre a fita */
+    .ribbon-container:hover .ribbon {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+    
+    .ribbon-container:hover .ribbon-left {
+        opacity: 1;
+        transform: rotate(-15deg) translateY(-20px);
+    }
+    
+    .ribbon-container:hover .ribbon-right {
+        opacity: 1;
+        transform: rotate(15deg) translateY(-20px);
+    }
+    
+ 
+    /* acionando o confetti quando passar o hover pela fita */
+    .ribbon-container:hover ~ img {
+        animation: confetti 3s linear forwards;
+    }
+    /* imagem do confetti com propriedade z acima das outras*/
+    img {
+        position: absolute;
+        top: 15%;
+        width: 500px;
+        height: 400px;
+        z-index: 10;
+        clip-path: circle(50% at 50% 50%);
+        opacity: 0;
+        z-index: 0;
+        filter: drop-shadow(0 0 15px rgba(255,255,255,0.3));
+    }
+    /*animacao da imagem do confetti para mudar a opacidade e o z-index */
+    @keyframes confetti {
+        0%{
+            z-index: 0;
+            opacity: 0;
+        }
+        30%{
+            opacity: 0;
+            z-index: 10;
+        }
+        90%{
+            opacity: 1;
+            z-index: 10;
+        }
+        100%{
+            opacity: 0;
+            z-index: 0;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- Estrutura HTML-->
+    <div class="ribbon-container">
+        <div class="ribbon">fita inaugural</div>
+        <div class="ribbon-left"></div>
+        <div class="ribbon-right"></div>
+    </div>
+    <img src="confetti.gif" alt="confetti">
+
+</body>
+</html>
