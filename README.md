@@ -5,7 +5,7 @@ Este repositório foi desenvolvido para a ByBy, uma empresa inovadora no setor e
 **O que você encontrará aqui**
 
 Aqui estão disponíveis todas as animações CSS compartilhadas no Instagram da ByBy: instagram.com/byby.inc.
-Todas as animações são open-source, permitindo que qualquer pessoa as visualize, utilize ou modifique, desde que o código permaneça aberto e acessível à comunidade.
+Todas as animações são open-source, permitindo que qualquer pessoa as visualize, utilize ou modifique.
 
 **Contribuições e Sugestões**
 
@@ -20,7 +20,7 @@ This repository was created for ByBy, an innovative company in the educational s
 **What You’ll Find Here**
 
 You’ll find all the CSS animations posted on ByBy’s Instagram: instagram.com/byby.inc.
-These animations are open-source, meaning anyone can view, use, or modify them, as long as the code remains open and accessible to the community.
+These animations are open-source, meaning anyone can view, use, or modify them.
 
 **Contributions and Suggestions**
 
