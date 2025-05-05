@@ -1,3 +1,4 @@
+LINK: https://www.instagram.com/reel/DJRnqlDRU1J/
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -21,6 +22,7 @@
             height: 100vh;
             overflow: hidden;
         }
+        /* circulos com rotateX para ver de outro angulo */
         .circle {
         width: 120px;
         height: 120px;
@@ -34,7 +36,7 @@
         transform: perspective(600px) rotateX(60deg); 
         position: absolute;
     }
-
+        /* delay de animações para cada circulo (mesma animação) */
         .circle:nth-child(1) { animation-delay: -0.55s; }
         .circle:nth-child(2) { animation-delay: -0.50s; }
         .circle:nth-child(3) { animation-delay: -0.45s; }
@@ -44,10 +46,13 @@
         .circle:nth-child(7) { animation-delay: -0.25s; }
         .circle:nth-child(8) { animation-delay: -0.20s; }
         .circle:nth-child(9) { animation-delay: -0.1s; }
+
+        /* adicionando animação a classe .circle e transform-origin para ele girar no centro dos dois circulos*/
         .circle{
             animation: circleAnimation 1.2s linear alternate-reverse infinite;
             transform-origin: 180px;
         }
+        /* animação do circulo com translateX(1px) pois ja tem o transform-origin */
         @keyframes circleAnimation{
             0%{
                 transform: rotateX(60deg) rotateY(0) translateX(0);  
@@ -65,6 +70,7 @@
     </style>
 </head>
 <body>
+    <!--Estrutura HTML-->
     <div class="circle"></div>
     <div class="circle"></div>
     <div class="circle"></div>
