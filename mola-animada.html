@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mola animada</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: black;
+            font: monospace;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-border;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .circle {
+        width: 120px;
+        height: 120px;
+        border: 2px solid #fff; 
+        border-radius: 50%;
+        background: transparent; 
+        box-shadow: 
+            0 0 15px 3px rgba(255, 255, 255, 1), 
+            0 6px 2px rgba(0, 0, 0, 0.4), 
+            inset 0 0 1px rgba(255, 255, 255, 0.7);
+        transform: perspective(600px) rotateX(60deg); 
+        position: absolute;
+    }
+
+        .circle:nth-child(1) { animation-delay: -0.55s; }
+        .circle:nth-child(2) { animation-delay: -0.50s; }
+        .circle:nth-child(3) { animation-delay: -0.45s; }
+        .circle:nth-child(4) { animation-delay: -0.40s; }
+        .circle:nth-child(5) { animation-delay: -0.35s; }
+        .circle:nth-child(6) { animation-delay: -0.30s; }
+        .circle:nth-child(7) { animation-delay: -0.25s; }
+        .circle:nth-child(8) { animation-delay: -0.20s; }
+        .circle:nth-child(9) { animation-delay: -0.1s; }
+        .circle{
+            animation: circleAnimation 1.2s linear alternate-reverse infinite;
+            transform-origin: 180px;
+        }
+        @keyframes circleAnimation{
+            0%{
+                transform: rotateX(60deg) rotateY(0) translateX(0);  
+            }
+            5%{
+                transform: rotateX(60deg) rotateY(0) translateX(0);  
+            }
+            895%{
+                transform: rotateX(60deg) rotateY(180deg) translateX(1px);  
+            }
+            100%{
+                transform: rotateX(60deg) rotateY(180deg) translateX(1px);  
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+</body>
+</html>
