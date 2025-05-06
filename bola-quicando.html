@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>          
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bola quicando</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            font-family: monospace;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        .bola-quicando {
+            position: absolute;
+            z-index: 1;
+            box-sizing: border-box;
+            -webkit-box-reflect: below;
+            margin-top: 10px;
+            background: radial-gradient(circle, #ffffff 50%, #e0e0e0 100%);
+            box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.7), 
+                        inset 0 0 10px 2px rgba(255, 255, 255, 0.9),
+                        0 0 30px 10px rgba(255, 255, 255, 0.5);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bola-quicando::before {
+            content: 'hover';
+            font-size: 12px;
+            color: #333;
+            opacity: 0.7;
+        }
+
+        .bola-superior {
+            position: absolute;
+            z-index: 5; 
+            box-sizing: border-box;
+            margin-top: 10px;
+            background: radial-gradient(circle, #ffffff 60%, #f0f0f0 100%);
+            box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.7), 
+                        inset 0 0 10px 2px rgba(255, 255, 255, 0.9),
+                        0 0 30px 10px rgba(255, 255, 255, 0.5);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .bola-superior::before {
+            content: 'hover';
+            font-size: 12px;
+            color: #333;
+            opacity: 0.7;
+        }
+
+        .chao {
+            z-index: 3;
+            height: 10vh;
+            background: transparent; 
+            position: absolute;
+            width: 100vw;
+            bottom: 0;
+            left: 0;
+            box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5); 
+        }
+
+        .bola-animada{
+            animation: bounce 12s ease-in-out; 
+        }
+        
+        .bola-quicando.bola-animada::before,
+        .bola-superior.bola-animada::before {
+            content: ''; 
+        }
+        
+        .parede{
+            border: none;
+            outline: none;
+            position: absolute;
+            height: 1000px;
+            background: black;
+            width: 600px;
+            z-index: 4; 
+            bottom: 10.4vh;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            11.17% {
+                transform: translateY(80vh);
+            }
+            20.08% {
+                transform: translateY(28.8vh);
+            }
+            29.00% {
+                transform: translateY(80vh);
+            }
+            36.17% {
+                transform: translateY(47.232vh); 
+            }
+            43.33% {
+                transform: translateY(80vh);
+            }
+            49.08% {
+                transform: translateY(60.606vh); 
+            }
+            54.00% {
+                transform: translateY(80vh);
+            }
+            58.22% {
+                transform: translateY(70.254vh); 
+            }
+            62.00% {
+                transform: translateY(80vh);
+            }
+            65.36% {
+                transform: translateY(76.162vh); 
+            }
+            68.36% {
+                transform: translateY(80vh);
+            }
+            70.99% {
+                transform: translateY(79.099vh); 
+            }
+            73.33% {
+                transform: translateY(80vh);
+            }
+            75.47% {
+                transform: translateY(79.839vh); 
+            }
+            77.39% {
+                transform: translateY(80vh);
+            }
+            79.13% {
+                transform: translateY(79.975vh); 
+            }
+            80.73% {
+                transform: translateY(80vh);
+            }
+            82.21% {
+                transform: translateY(79.996vh);
+            }
+            83.60% {
+                transform: translateY(80vh);
+            }
+            84.91% {
+                transform: translateY(79.999vh); 
+            }
+            86.16% {
+                transform: translateY(80vh);
+            }
+            87.35% {
+                transform: translateY(80vh); 
+            }
+            88.50% {
+                transform: translateY(80vh);
+            }
+            99.83% {
+                transform: translateY(80vh); 
+            }
+            100% {
+                transform: translateY(80vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="parede"></div>
+    <div class="bola-quicando" id="bola1"></div>
+    <div class="bola-superior" id="bola2"></div>
+    <div class="chao"></div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const bola1 = document.getElementById('bola1');
+            const bola2 = document.getElementById('bola2');
+            
+
+            function animarBolas() {
+                bola1.classList.add('bola-animada');
+                bola2.classList.add('bola-animada');
+            }
+            
+
+            function pararAnimacao() {
+                setTimeout(function() {
+                    bola1.classList.remove('bola-animada');
+                    bola2.classList.remove('bola-animada');
+                }, 12000); 
+            }
+            
+
+            bola1.addEventListener('mouseenter', function() {
+                animarBolas();
+                pararAnimacao();
+            });
+            
+            bola2.addEventListener('mouseenter', function() {
+                animarBolas();
+                pararAnimacao();
+            });
+        });
+    </script>
+</body>
+</html>
