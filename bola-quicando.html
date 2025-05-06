@@ -1,3 +1,4 @@
+LINK: https://www.instagram.com/reel/DJUNrbSR6qn/
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>          
@@ -20,6 +21,8 @@
             overflow: hidden;
             box-sizing: border-box;
         }
+
+        /* primeira bola (fica atras da outra identica, mas essa possui box-reflect para refletir)*/
         .bola-quicando {
             position: absolute;
             z-index: 1;
@@ -38,14 +41,14 @@
             justify-content: center;
             align-items: center;
         }
-
+         /* texto dentro da bola hover*/
         .bola-quicando::before {
             content: 'hover';
             font-size: 12px;
             color: #333;
             opacity: 0.7;
         }
-
+         /* bola superior essa fica na frente mas nao possui reflexo*/
         .bola-superior {
             position: absolute;
             z-index: 5; 
@@ -63,14 +66,14 @@
             justify-content: center;
             align-items: center;
         }
-        
+        /*texto tambem*/
         .bola-superior::before {
             content: 'hover';
             font-size: 12px;
             color: #333;
             opacity: 0.7;
         }
-
+         /*chao 100% transparente para poder ver o reflexo*/
         .chao {
             z-index: 3;
             height: 10vh;
@@ -81,16 +84,18 @@
             left: 0;
             box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5); 
         }
-
+         /* classe da bola animada para ativar ao passar o mouse*/
         .bola-animada{
             animation: bounce 12s ease-in-out; 
         }
-        
+        /* remover o hover texto*/
         .bola-quicando.bola-animada::before,
         .bola-superior.bola-animada::before {
             content: ''; 
         }
-        
+        /* uma parede invisivel e toda preta, que fica acima do piso (essa parede serve como um intermediario entre a bola com reflexo e a sem reflexo, 
+        desta forma a parte com reflexo sera escondida atras dela e a identica sem reflexo aparecerá na frente, e como ela está acima do chão ela vai 
+        continuar mostrando o reflexo*/
         .parede{
             border: none;
             outline: none;
@@ -101,7 +106,7 @@
             z-index: 4; 
             bottom: 10.4vh;
         }
-
+        /* animacao que a IA fez para mim baseada na fisica real para bola quicar*/
         @keyframes bounce {
             0% {
                 transform: translateY(0);
@@ -185,11 +190,13 @@
     </style>
 </head>
 <body>
+    <!-- Estrutura HTML -->
     <div class="parede"></div>
     <div class="bola-quicando" id="bola1"></div>
     <div class="bola-superior" id="bola2"></div>
     <div class="chao"></div>
-    
+
+    <!-- SCRIPT basico (opcional)-->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const bola1 = document.getElementById('bola1');
