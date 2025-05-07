@@ -1,0 +1,121 @@
+LINK: https://www.instagram.com/reel/DJWyLx7xamy/
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disco girando</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        body{
+            font-family: monospace;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+        }
+        .disco-girando{
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            background: rgb(255, 255, 255);
+            background-attachment: fixed;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: solid 3px gray;
+
+        }
+        /* quando passar o mouse gire o cd e mostre o gradiente */
+        .disco-girando:hover{
+            transform: rotateY(180deg);
+            transition: all 0.5s ease-in-out;
+            animation: girarGradiente 5s linear infinite;
+            animation-delay: 0.25s;
+        }
+        /* esconda o texto */
+        .disco-girando:hover::before{
+            animation: hideContent 0.5s linear forwards;
+
+        }
+        /* escondendo usando o content do before */
+        @keyframes hideContent{
+            0%{content: 'PLAY ▶️';}
+            100%{content: '';}
+        }
+        /* conic gradiente tirado de https://stackoverflow.com/questions/65363546/ */
+        @keyframes girarGradiente{
+            0%{
+            background: conic-gradient(white, white, white, grey, grey, violet, deepskyblue, aqua, palegreen, yellow, orange, red, grey, grey, white, white, white, white, grey, grey, violet, deepskyblue, aqua, palegreen, yellow, orange, red, grey, grey, white);
+            transform: rotateZ(0);
+            }
+            100%{
+                background: conic-gradient(white, white, white, grey, grey, violet, deepskyblue, aqua, palegreen, yellow, orange, red, grey, grey, white, white, white, white, grey, grey, violet, deepskyblue, aqua, palegreen, yellow, orange, red, grey, grey, white);
+                transform: rotateZ(360deg);
+            }
+        }
+        /* centro do cd */
+        .disco-girando::after{
+            content: '';
+            width: 25%;
+            height: 25%;
+            border-radius: 50%;
+            position: relative;
+            background: black;
+            border: solid 3px gray;
+            box-shadow: 0 0 5px grey;
+            box-sizing: border-box;
+        }
+        /* texto do cd que gira, ja que o background do cd é uma cor solida, podemos girar apenas o textp
+        e criar uma ilusão */
+        .disco-girando::before{
+            color: black;
+            font-family: monospace;
+            content: 'PLAY ▶️';
+            text-align: center;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            text-overflow:clip;
+            animation: girarDisco 5s linear infinite;
+            transform-origin: center;
+            line-height: 20px;
+            scale: 0.7;
+
+        }
+        /*girar o texto em volta do centro */
+        @keyframes girarDisco{
+            0%{
+                transform: rotateZ(0);
+            }
+            100%{
+                transform: rotateZ(360deg);
+            }
+        }
+     
+
+        
+    </style>
+</head>
+<body>
+    <!--Estrutura HTML-->
+
+    <div class="disco-girando">
+
+    </div>
+    
+</body>
+</html>
