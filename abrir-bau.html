@@ -1,0 +1,160 @@
+LINK: https://instagram.com/reel/DJZWYHiRb5V/
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baú abrindo</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+        }
+        /* base lateral usando o clip path para dar efeito de 3d*/
+        .base-lateral{
+            background: #5C4033; 
+            position: absolute;
+            left: 46%;
+            top: 40%;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+            width: 50px;
+            height: 100px;
+            z-index: 1;
+        }
+        /* base frontal usando o clip path para dar efeito de 3d*/
+        .base-frontal{
+            z-index: 1;
+            background: #5C4033; 
+            position: absolute;
+            left: 49.25%;
+            top: 40%;
+            width: 100px;
+            height: 100px;
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        }
+         /* tampa frontal usando o clip path para dar efeito de 3d*/
+        .tampa-frontal{
+            z-index: 1;
+            background: #4A3728; 
+            position: absolute;
+            clip-path: circle(50% at 50% 100%);
+            transform: rotateZ(80%);
+            left: 46%;
+            top: calc(40% - 55px);
+            width: 50px;
+            height: 50px;
+        }
+        /* tampa lateral usando o clip path para dar efeito de 3d*/
+        .tampa-lateral{
+            background: #4A3728; 
+            position: absolute;
+            left:  calc(49.25% - 30px);
+            top: calc(40% - 30px);
+            z-index: -1;
+            border-top-right-radius: 50%;
+            width: 130px;
+            height: 25px;
+        }
+        /* retangulo interno maior que o baú para mostrar ao clicar*/
+        .internal{
+            background: #2E1E1A; 
+            position: absolute;
+            visibility: hidden;
+            z-index: -2;
+            transform: rotateZ(90deg);
+            left:  42%;
+            top: 24%;
+            width: 170px;
+            height: 170px;
+        }
+        /* retangulo muito grande e fora do baú para cobrir  o interno e da mesma cor do body para parecer
+        transparente*/
+        .external{
+            background: rgb(0, 0, 0);
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 33%;
+            top: 22%;
+            z-index: -1;
+        }
+        /* retangulo muito grande e fora do baú para cobrir  o interno e da mesma cor do body para parecer
+        transparente*/
+        .external2{
+            content: '';
+            background: rgb(0, 0, 0);
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 43%;
+            top:9.8%;
+            z-index: -1;
+            transform: rotateZ(-10deg);
+        }
+         /* animacao para abrir a tampa parte redonda*/
+        @keyframes abrirBau {
+            0%{
+                transform: rotateZ(0) translate(0,0);
+            }
+            100%{
+                transform: rotateZ(-8deg) translate(-4px,1px);
+            }
+        }
+        /* animacao para abrir a tampa parte quadrada*/
+        @keyframes abrirLateral{
+            0%{
+                transform: rotateZ(0) translate(0,0);
+            }
+            100%{
+                transform: rotateZ(-8deg) translate(-1.5px,-6.7px);
+            }
+        }
+        /* animacao para mostrar o interno*/
+        @keyframes abrirInterno{
+            0%{
+                transform: rotateZ(90deg);
+            }
+            10%{
+                visibility: visible;
+            }
+            100%{
+                visibility: visible;
+                transform: rotateZ(130deg);
+            }
+        }
+    </style>
+</head>
+<body>  
+    <!--Estrutura HTML-->
+    <div class="external"></div>
+    <div class="external2"></div>
+    <div class="internal"></div>
+    <div class="tampa-frontal"></div>
+    <div class="tampa-lateral"></div>
+    <div class="base-frontal"></div>
+    <div class="base-lateral"></div>
+
+
+    <script>
+        /*script basico para controle*/
+        document.body.addEventListener("click",()=>{
+            var animarInternal = document.querySelector(".internal")
+            var animarTampaFrontal = document.querySelector(".tampa-frontal")
+            var animarTampaLateral = document.querySelector(".tampa-lateral")
+            animarInternal.style.animation = "abrirInterno 3s linear forwards"
+            animarTampaFrontal.style.animation = "abrirBau 3s linear forwards"
+            animarTampaLateral.style.animation = "abrirLateral 3s linear forwards"
+        })
+    </script>
+</body>
+</html>
