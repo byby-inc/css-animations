@@ -71,11 +71,11 @@ LINK: https://instagram.com/reel/DJZWYHiRb5V/
             position: absolute;
             visibility: hidden;
             z-index: -2;
-            transform: rotateZ(90deg);
             left:  42%;
-            top: 24%;
-            width: 170px;
-            height: 170px;
+            top: 27%;
+            transform: rotateZ(130deg);
+            width: 160px;
+            height: 150px;
         }
         /* retangulo muito grande e fora do baú para cobrir  o interno e da mesma cor do body para parecer
         transparente*/
@@ -85,7 +85,7 @@ LINK: https://instagram.com/reel/DJZWYHiRb5V/
             height: 200px;
             position: absolute;
             left: 33%;
-            top: 22%;
+            top: 27%;
             z-index: -1;
         }
         /* retangulo muito grande e fora do baú para cobrir  o interno e da mesma cor do body para parecer
@@ -93,11 +93,11 @@ LINK: https://instagram.com/reel/DJZWYHiRb5V/
         .external2{
             content: '';
             background: rgb(0, 0, 0);
-            width: 200px;
-            height: 200px;
+            width: 230px;
+            height: 210px;
             position: absolute;
-            left: 43%;
-            top:9.8%;
+            left: 41%;
+            top:9%;
             z-index: -1;
             transform: rotateZ(-10deg);
         }
@@ -122,14 +122,15 @@ LINK: https://instagram.com/reel/DJZWYHiRb5V/
         /* animacao para mostrar o interno*/
         @keyframes abrirInterno{
             0%{
-                transform: rotateZ(90deg);
+                transform: rotateZ(130deg);
             }
             10%{
+               transform: rotateZ(130deg);
                 visibility: visible;
             }
             100%{
-                visibility: visible;
                 transform: rotateZ(130deg);
+                visibility: visible;
             }
         }
     </style>
