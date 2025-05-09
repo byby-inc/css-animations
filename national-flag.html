@@ -1,0 +1,80 @@
+LINK: 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandeira do Brasil Animada</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: black;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        /*mastro*/
+        .mastro {
+            width: 4px;
+            height: 600px;
+            background: white;
+            border-radius: 6px;
+            position: relative;
+        }
+        /*container */
+        .container-bandeira {
+            display: flex;
+            position: relative;
+            perspective: 800px;
+            margin-left: 12px;
+            scale: 0.4;
+        }
+        /*bandeira do brasil ou branca se não carregar a imagem */
+        .national-flag {
+            width: 300px;
+            height: 210px;
+            background-color: white; 
+            background-image: url('brazil.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            transform-origin: left center;
+            animation: tremular 3s ease-in-out infinite;;
+        }
+
+
+        /* animacao rotateY + perspective */
+        @keyframes tremular {
+            0% {
+                transform: rotateY(0deg);
+            }
+            25% {
+                transform: rotateY(10deg);
+            }
+            50% {
+                transform: rotateY(0deg);
+            }
+            75% {
+                transform: rotateY(10deg);
+            }
+            100% {
+                transform: rotateY(0deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!--Estrutura HTML-->
+    <div class="container-bandeira">
+        <div class="mastro"></div>
+        <div class="national-flag"></div>
+    </div>
+</body>
+</html>
