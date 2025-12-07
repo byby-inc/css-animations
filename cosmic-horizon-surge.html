@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Cosmic Horizon Surge</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+            /* Code snippet container */
+            .codigo {
+            position: absolute;
+            top: 15%;
+            left: 40%;
+            scale: 1.5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background:url("/gold_snippet") no-repeat center center;
+            color: white;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 45px;
+            font-weight: bold;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+            text-align: center;
+            border-radius: 12px;
+            line-height: 1.6;
+            max-height: 25%;
+            max-width: 75%;
+            width: 75%;
+            height: 25%;
+            overflow-y: hidden;
+            border: 6px solid;
+            border-image: linear-gradient(
+                135deg,
+                #D4AF37 0%,
+                #F9E79F 15%,
+                #B8860B 30%,
+                #CFB53B 45%,
+                #E6C35C 60%,
+                #B8860B 75%,
+                #D4AF37 90%,
+                #C9A961 100%
+            ) 1;
+            box-shadow: 
+                inset 0 2px 4px rgba(212, 175, 55, 0.3),
+                inset 0 -2px 4px rgba(139, 101, 8, 0.4),
+                0 4px 12px rgba(184, 134, 11, 0.5),
+                0 8px 25px rgba(0, 0, 0, 0.6);
+            }
+
+            /* Animation container */
+            .animation-container {
+           position: absolute;
+            top: 90%;
+            left: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            scale:2;
+            }
+
+            @keyframes spiral-birth {
+    from { stroke-dashoffset: 1000; }
+    to { stroke-dashoffset: 0; }
+  }
+  @keyframes vortex-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(720deg); }
+  }
+  @keyframes particle-dance {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(10px, 10px); }
+    100% { transform: translate(0, 0); }
+  }
+  @keyframes energy-stream {
+    from { stroke-dashoffset: 1000; opacity: 0; }
+    to { stroke-dashoffset: 0; opacity: 1; }
+  }
+  @keyframes core-pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.2); }
+  }
+  @keyframes neural-flicker {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+  }
+  .vortex-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+  .particle {
+    position: absolute;
+    background: linear-gradient(45deg, #6A11CB, #EA580C);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    animation: particle-dance 2s infinite;
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(45deg, #1E40AF, #3B82F6);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    animation: core-pulse 1s infinite;
+  }
+        </style>
+        </head>
+        <body>
+        <div class="codigo">
+            <div>.vortex-container { background: linear-gradient(45deg, #6A11CB, #8B5CF6); }</div>
+        </div>
+        <div class="animation-container">
+            <svg width="0" height="0" style="position: absolute; z-index: -1;">
+    <defs>
+      <linearGradient id="gradients-1" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#6A11CB" />
+        <stop offset="100%" stop-color="#EA580C" />
+      </linearGradient>
+      <linearGradient id="gradients-2" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#1E40AF" />
+        <stop offset="100%" stop-color="#3B82F6" />
+      </linearGradient>
+      <linearGradient id="gradients-3" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#8B5CF6" />
+        <stop offset="100%" stop-color="#1E40AF" />
+      </linearGradient>
+    </defs>
+  </svg>
+  <div class="vortex-container">
+    <svg width="100%" height="100%" viewBox="0 0 100 100">
+      <path d="M50,0 L75,25 L100,50 L75,75 L50,100 L25,75 L0,50 L25,25 Z" stroke="#EA580C" stroke-width="2" fill="none" stroke-dasharray="1000" stroke-dashoffset="1000" animation="spiral-birth 2s infinite" />
+      <path d="M50,0 L25,25 L0,50 L25,75 L50,100 L75,75 L100,50 L75,25 Z" stroke="#6A11CB" stroke-width="2" fill="none" stroke-dasharray="1000" stroke-dashoffset="1000" animation="vortex-spin 4s infinite" />
+    </svg>
+    <div class="particle" style="top: 20px; left: 20px;"></div>
+    <div class="particle" style="top: 40px; left: 60px;"></div>
+    <div class="particle" style="top: 60px; left: 40px;"></div>
+    <div class="particle" style="top: 80px; left: 20px;"></div>
+    <div class="particle" style="top: 20px; left: 80px;"></div>
+    <div class="particle" style="top: 40px; left: 20px;"></div>
+    <div class="particle" style="top: 60px; left: 60px;"></div>
+    <div class="particle" style="top: 80px; left: 80px;"></div>
+    <div class="core"></div>
+    <svg class="neural-web" width="100%" height="100%" viewBox="0 0 100 100">
+      <path d="M50,0 L25,25 L0,50 L25,75 L50,100 L75,75 L100,50 L75,25 Z" stroke="#1E40AF" stroke-width="1" fill="none" stroke-dasharray="1000" stroke-dashoffset="1000" animation="neural-flicker 2s infinite" />
+    </svg>
+  </div>
+        </div>
+        </body>
+        </html>

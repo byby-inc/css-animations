@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Cosmic Radiance Bloom</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+            /* Code snippet container */
+            .codigo {
+            position: absolute;
+            top: 15%;
+            left: 40%;
+            scale: 1.5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background:url("/gold_snippet") no-repeat center center;
+            color: white;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 45px;
+            font-weight: bold;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+            text-align: center;
+            border-radius: 12px;
+            line-height: 1.6;
+            max-height: 25%;
+            max-width: 75%;
+            width: 75%;
+            height: 25%;
+            overflow-y: hidden;
+            border: 6px solid;
+            border-image: linear-gradient(
+                135deg,
+                #D4AF37 0%,
+                #F9E79F 15%,
+                #B8860B 30%,
+                #CFB53B 45%,
+                #E6C35C 60%,
+                #B8860B 75%,
+                #D4AF37 90%,
+                #C9A961 100%
+            ) 1;
+            box-shadow: 
+                inset 0 2px 4px rgba(212, 175, 55, 0.3),
+                inset 0 -2px 4px rgba(139, 101, 8, 0.4),
+                0 4px 12px rgba(184, 134, 11, 0.5),
+                0 8px 25px rgba(0, 0, 0, 0.6);
+            }
+
+            /* Animation container */
+            .animation-container {
+           position: absolute;
+            top: 90%;
+            left: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            scale:3;
+            }
+
+            @keyframes spiral-birth {
+    0% {
+      opacity: 0;
+      transform: scale(0.1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes vortex-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(720deg);
+    }
+  }
+
+  @keyframes particle-dance {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(20px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes energy-stream {
+    0% {
+      stroke-dashoffset: 1000;
+      opacity: 0.5;
+    }
+    100% {
+      stroke-dashoffset: 0;
+      opacity: 1;
+    }
+  }
+
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes neural-flicker {
+    0% {
+      opacity: 0.8;
+    }
+    50% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 0.8;
+    }
+  }
+
+  .vortex-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+
+  .particle {
+    position: absolute;
+    background: linear-gradient(to bottom, #EA580C, #6A11CB);
+    border-radius: 50%;
+    animation: particle-dance 2s infinite;
+  }
+
+  .core {
+    position: absolute;
+    background: linear-gradient(to bottom, #1E40AF, #3B82F6);
+    border-radius: 50%;
+    animation: core-pulse 1s infinite;
+  }
+        </style>
+        </head>
+        <body>
+        <div class="codigo">
+            <div>.vortex-container { position: absolute; }</div>
+        </div>
+        <div class="animation-container">
+            <svg width="0" height="0" style="position: absolute; z-index: -1;">
+    <defs>
+      <linearGradient id="gradients-1" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#6A11CB" />
+        <stop offset="100%" stop-color="#EA580C" />
+      </linearGradient>
+      <linearGradient id="gradients-2" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#1E40AF" />
+        <stop offset="100%" stop-color="#3B82F6" />
+      </linearGradient>
+      <linearGradient id="gradients-3" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#8B5CF6" />
+        <stop offset="100%" stop-color="#1E40AF" />
+      </linearGradient>
+    </defs>
+  </svg>
+  <div class="vortex-container">
+    <svg width="100%" height="100%">
+      <path d="M 50 50 L 100 50 L 75 100 Z" stroke="url(#gradients-1)" stroke-width="5" fill="none" animation="energy-stream 2s infinite" />
+      <path d="M 50 50 L 0 100 L 25 50 Z" stroke="url(#gradients-2)" stroke-width="5" fill="none" animation="energy-stream 2s 0.5s infinite" />
+    </svg>
+    <div class="particle" style="top: 20px; left: 20px; width: 10px; height: 10px; animation-delay: 0.2s;"></div>
+    <div class="particle" style="top: 50px; left: 50px; width: 15px; height: 15px; animation-delay: 0.5s;"></div>
+    <div class="particle" style="top: 80px; left: 30px; width: 12px; height: 12px; animation-delay: 0.8s;"></div>
+    <div class="core" style="top: 50%; left: 50%; transform: translate(-50%, -50%); width: 20px; height: 20px;"></div>
+    <svg class="neural-web" width="100%" height="100%">
+      <path d="M 50 50 L 100 50 L 75 100 Z" stroke="url(#gradients-3)" stroke-width="2" fill="none" animation="neural-flicker 1s infinite" />
+    </svg>
+  </div>
+        </div>
+        </body>
+        </html>
