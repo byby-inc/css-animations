@@ -613,3 +613,4 @@ animation: Shattering the Facade</a> <br/><br/>
 <a href="./cosmic-horizon-symmetry.html">Cosmic Horizon Symmetry</a> <br/><br/>
 <a href="./celestial-harmony-pulse.html">Celestial Harmony Pulse</a> <br/><br/>
 <a href="./stellar-prism-wave.html">Stellar Prism Wave</a> <br/><br/>
+<a href="./aurora-cosmic-bloom.html">Aurora Cosmic Bloom</a> <br/><br/>
