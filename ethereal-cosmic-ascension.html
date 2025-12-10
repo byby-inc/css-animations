@@ -1,7 +1,7 @@
 <!DOCTYPE html>
         <html lang="pt-BR">
         <head>
-        <title>Cosmic Aurora Genesis</title>
+        <title>Ethereal Cosmic Ascension</title>
         <style>
             * {
             margin: 0;
@@ -85,13 +85,13 @@
 
             @keyframes particle-dance {
     0% {
-      transform: rotate(0deg) translateX(0);
+      transform: translate(0, 0) rotate(0deg);
     }
     50% {
-      transform: rotate(360deg) translateX(20px);
+      transform: translate(10px, 10px) rotate(180deg);
     }
     100% {
-      transform: rotate(720deg) translateX(0);
+      transform: translate(0, 0) rotate(360deg);
     }
   }
 
@@ -115,7 +115,7 @@
       transform: scale(1.1) rotate(10deg);
     }
     100% {
-      transform: scale(1) rotate(0deg);
+      transform: scale(1) rotate(20deg);
     }
   }
 
@@ -140,7 +140,7 @@
     border-radius: 50%;
     background: linear-gradient(45deg, #1E40AF, #3B82F6);
     box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 60px #fff;
-    animation: core-pulse 5s infinite;
+    animation: core-pulse 2s infinite;
   }
 
   .particle {
@@ -156,7 +156,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    animation: neural-flicker 7s infinite;
+    animation: neural-flicker 4s infinite;
   }
 
   .neural-web path {
@@ -171,23 +171,18 @@
         </div>
         <div class="animation-container">
             <div class="vortex-container">
-  <div class="core"></div>
-  <svg class="neural-web">
-    <path d="M100,200 C200,300 300,200 400,300" />
-    <path d="M400,100 C300,200 200,100 100,200" />
-    <path d="M200,400 C300,300 400,400 300,200" />
-  </svg>
-  <div class="particle" style="width: 20px; height: 20px; top: 10%; left: 10%;"></div>
-  <div class="particle" style="width: 30px; height: 30px; top: 20%; left: 30%;"></div>
-  <div class="particle" style="width: 40px; height: 40px; top: 30%; left: 50%;"></div>
-  <div class="particle" style="width: 50px; height: 50px; top: 40%; left: 20%;"></div>
-  <div class="particle" style="width: 10px; height: 10px; top: 50%; left: 40%;"></div>
-  <div class="particle" style="width: 60px; height: 60px; top: 60%; left: 60%;"></div>
-  <div class="particle" style="width: 70px; height: 70px; top: 70%; left: 10%;"></div>
-  <div class="particle" style="width: 80px; height: 80px; top: 80%; left: 80%;"></div>
-  <div class="particle" style="width: 90px; height: 90px; top: 90%; left: 30%;"></div>
-  <div class="particle" style="width: 25px; height: 25px; top: 25%; left: 75%;"></div>
-</div>
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 100 100 L 200 200" />
+      <path d="M 200 100 L 300 200" />
+      <path d="M 300 100 L 400 200" />
+    </svg>
+    <div class="particle" style="width: 20px; height: 20px; top: 10%; left: 10%;"></div>
+    <div class="particle" style="width: 30px; height: 30px; top: 20%; left: 20%;"></div>
+    <div class="particle" style="width: 40px; height: 40px; top: 30%; left: 30%;"></div>
+    <div class="particle" style="width: 50px; height: 50px; top: 40%; left: 40%;"></div>
+    <div class="particle" style="width: 60px; height: 60px; top: 50%; left: 50%;"></div>
+  </div>
         </div>
         </body>
         </html>
