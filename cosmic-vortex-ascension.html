@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Cosmic Vortex Ascension</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+            /* Code snippet container */
+            .codigo {
+            position: absolute;
+            top:15%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background:url("/gold_snippet") no-repeat center center;
+            color: white;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 45px;
+            font-weight: bold;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+            text-align: center;
+            border-radius: 12px;
+            line-height: 1.6;
+            max-height: 25%;
+            max-width: 75%;
+            width: 75%;
+            height: 25%;
+            overflow-y: hidden;
+            border: 6px solid;
+            border-image: linear-gradient(
+                135deg,
+                #D4AF37 0%,
+                #F9E79F 15%,
+                #B8860B 30%,
+                #CFB53B 45%,
+                #E6C35C 60%,
+                #B8860B 75%,
+                #D4AF37 90%,
+                #C9A961 100%
+            ) 1;
+            box-shadow: 
+                inset 0 2px 4px rgba(212, 175, 55, 0.3),
+                inset 0 -2px 4px rgba(139, 101, 8, 0.4),
+                0 4px 12px rgba(184, 134, 11, 0.5),
+                0 8px 25px rgba(0, 0, 0, 0.6);
+            }
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:70%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% {
+      transform: rotate(0deg) translate(0, 0);
+    }
+    50% {
+      transform: rotate(180deg) translate(10px, 10px);
+    }
+    100% {
+      transform: rotate(360deg) translate(0, 0);
+    }
+  }
+
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes neural-flicker {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+      transform: translate(5px, 5px) rotate(90deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+  }
+
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: linear-gradient(to bottom right, #3a86ff, #ff006e);
+  }
+
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, #ffffff, #ff69b4);
+    box-shadow: 0 0 10px #ffffff, 0 0 20px #ff69b4, 0 0 30px #ffe6f2, 0 0 40px #ffd2c9, 0 0 50px #ffb6c1, 0 0 60px #ff99cc;
+    animation: core-pulse 5s infinite;
+  }
+
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, #ffe6f2, #ffb6c1);
+    animation: particle-dance 10s infinite;
+  }
+
+  .particle:nth-child(1) {
+    top: 10%;
+    left: 10%;
+    width: 20px;
+    height: 20px;
+  }
+
+  .particle:nth-child(2) {
+    top: 20%;
+    left: 30%;
+    width: 30px;
+    height: 30px;
+  }
+
+  .particle:nth-child(3) {
+    top: 30%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+  }
+
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #fff;
+    animation: neural-flicker 7s infinite;
+  }
+
+  .neural-web path {
+    stroke-width: 2;
+  }
+        </style>
+        </head>
+        <body>
+        <div class="codigo">
+            <div>.vortex-container { position: absolute; }</div>
+        </div>
+        <div class="animation-container">
+            <div class="vortex-container">
+  <div class="core"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <svg class="neural-web" viewBox="0 0 100 100">
+    <path d="M10,10 L90,90" />
+    <path d="M90,10 L10,90" />
+    <path d="M50,10 L50,90" />
+  </svg>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+</div>
+        </div>
+        </body>
+        </html>

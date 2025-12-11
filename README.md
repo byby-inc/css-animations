@@ -42,7 +42,7 @@ be suject to copyright policies.
 
 Send me an e-mail if interested.
 
-610/1000
+630/1000
 
 
 <a href="./reflections-of-self-a-cracked-mirror-of-digital-identity.html">Reflections of Self: A Cracked Mirror of Digital Identity</a> <br/><br/>
@@ -661,4 +661,23 @@ animation: Shattering the Facade</a> <br/><br/>
 <a href="./nebula-genesis-pulse.html">Nebula Genesis Pulse</a> <br/><br/>
 <a href="./nebula-infinity-cascade.html">Nebula Infinity Cascade</a> <br/><br/>
 <a href="./nebula-quantum-ascension.html">Nebula Quantum Ascension</a> <br/><br/>
-<a href="./nebula-quantum-genesis.html">Nebula Quantum Genesis</a> <br/><br/>
+<a href="./nebula-quantum-genesis.html">Nebula Quantum Genesis</a> <br/><br/><a href="./cosmic-horizon-vortex-genesis.html">Cosmic Horizon Vortex Genesis</a> <br/><br/>
+<a href="./cosmic-luminous-drift.html">Cosmic Luminous Drift</a> <br/><br/>
+<a href="./stellar-vortex-harmonics.html">Stellar Vortex Harmonics</a> <br/><br/>
+<a href="./aurora-cosmic-pulse.html">Aurora Cosmic Pulse</a> <br/><br/>
+<a href="./cosmic-auroral-rift.html">Cosmic Auroral Rift</a> <br/><br/>
+<a href="./cosmic-prism-horizon.html">Cosmic Prism Horizon</a> <br/><br/>
+<a href="./cosmic-quantum-propulsion-wave.html">Cosmic Quantum Propulsion Wave</a> <br/><br/>
+<a href="./cosmic-horizon-pulse-genesis.html">Cosmic Horizon Pulse Genesis</a> <br/><br/>
+<a href="./aurora-abyssal-pulse.html">Aurora Abyssal Pulse</a> <br/><br/>
+<a href="./aurora-vortex-pulse.html">Aurora Vortex Pulse</a> <br/><br/>
+<a href="./cosmic-luminous-avalanche.html">Cosmic Luminous Avalanche</a> <br/><br/>
+<a href="./stellar-abyssal-rift.html">Stellar Abyssal Rift</a> <br/><br/>
+<a href="./cosmic-infinity-wave.html">Cosmic Infinity Wave</a> <br/><br/>
+<a href="./luminous-cosmic-rift.html">Luminous Cosmic Rift</a> <br/><br/>
+<a href="./cosmic-vortex-ascension.html">Cosmic Vortex Ascension</a> <br/><br/>
+<a href="./cosmic-harmony-genesis.html">Cosmic Harmony Genesis</a> <br/><br/>
+<a href="./stellar-quantum-vortex.html">Stellar Quantum Vortex</a> <br/><br/>
+<a href="./aurora-spectral-collapse.html">Aurora Spectral Collapse</a> <br/><br/>
+<a href="./nebula-quantum-surge.html">Nebula Quantum Surge</a> <br/><br/>
+<a href="./cosmic-quantum-pulse-ascension.html">Cosmic Quantum Pulse Ascension</a> <br/><br/>
