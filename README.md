@@ -42,7 +42,7 @@ be suject to copyright policies.
 
 Send me an e-mail if interested.
 
-652/1000
+678/1000
 
 
 <a href="./reflections-of-self-a-cracked-mirror-of-digital-identity.html">Reflections of Self: A Cracked Mirror of Digital Identity</a> <br/><br/>
@@ -703,3 +703,29 @@ animation: Shattering the Facade</a> <br/><br/>
 <a href="./celestial-nexus-pulse.html">Celestial Nexus Pulse</a> <br/><br/>
 <a href="./cosmic-prism-ignition.html">Cosmic Prism Ignition</a> <br/><br/>
 <a href="./stellar-vortex-odyssey.html">Stellar Vortex Odyssey</a> <br/><br/>
+<a href="./celestial-aurora-wave-genesis.html">Celestial Aurora Wave Genesis</a> <br/><br/>
+<a href="./cosmic-aurora-pulsewave.html">Cosmic Aurora Pulsewave</a> <br/><br/>
+<a href="./cosmic-aurora-vortex-pulse.html">Cosmic Aurora Vortex Pulse</a> <br/><br/>
+<a href="./cosmic-luminous-abyss.html">Cosmic Luminous Abyss</a> <br/><br/>
+<a href="./cosmic-quantum-rift.html">Cosmic Quantum Rift</a> <br/><br/>
+<a href="./cosmic-aurora-pulse-wave.html">Cosmic Aurora Pulse Wave</a> <br/><br/>
+<a href="./astral-quantum-harmonics.html">Astral Quantum Harmonics</a> <br/><br/>
+<a href="./cosmic-aurora-spiral.html">Cosmic Aurora Spiral</a> <br/><br/>
+<a href="./cosmic-horizon-lumina.html">Cosmic Horizon Lumina</a> <br/><br/>
+<a href="./cosmic-pulse-aurora-bloom.html">Cosmic Pulse Aurora Bloom</a> <br/><br/>
+<a href="./aurora-infinity-horizon.html">Aurora Infinity Horizon</a> <br/><br/>
+<a href="./cosmic-horizon-ignition-pulse.html">Cosmic Horizon Ignition Pulse</a> <br/><br/>
+<a href="./aurora-quantum-rift.html">Aurora Quantum Rift</a> <br/><br/>
+<a href="./aurora-spacetime-odyssey.html">Aurora Spacetime Odyssey</a> <br/><br/>
+<a href="./cosmic-quantum-nexus.html">Cosmic Quantum Nexus</a> <br/><br/>
+<a href="./stellar-nexus-evolution.html">Stellar Nexus Evolution</a> <br/><br/>
+<a href="./cosmic-vortex-singularity.html">Cosmic Vortex Singularity</a> <br/><br/>
+<a href="./stellar-nexus-odyssey.html">Stellar Nexus Odyssey</a> <br/><br/>
+<a href="./stellar-evolution-odyssey.html">Stellar Evolution Odyssey</a> <br/><br/>
+<a href="./stellar-vortex-cascade.html">Stellar Vortex Cascade</a> <br/><br/>
+<a href="./stellar-luminous-vortex-pulse.html">Stellar Luminous Vortex Pulse</a> <br/><br/>
+<a href="./aurora-pulse-infinity.html">Aurora Pulse Infinity</a> <br/><br/>
+<a href="./cosmic-quantum-surge.html">Cosmic Quantum Surge</a> <br/><br/>
+<a href="./cosmic-quantum-rift-genesis.html">Cosmic Quantum Rift Genesis</a> <br/><br/>
+<a href="./cosmic-horizon-genesis-pulse.html">Cosmic Horizon Genesis Pulse</a> <br/><br/>
+<a href="./celestial-quantum-drift-genesis.html">Celestial Quantum Drift Genesis</a> <br/><br/>

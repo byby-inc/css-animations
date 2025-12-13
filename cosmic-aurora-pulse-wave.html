@@ -1,7 +1,7 @@
 <!DOCTYPE html>
         <html lang="pt-BR">
         <head>
-        <title>Cosmic Aurora Pulse</title>
+        <title>Cosmic Aurora Pulse Wave</title>
         <style>
             * {
             margin: 0;
@@ -84,41 +84,20 @@
             }
 
             @keyframes particle-dance {
-    0% {
-      transform: translate(0, 0) rotate(0deg);
-    }
-    50% {
-      transform: translate(20px, 20px) rotate(180deg);
-    }
-    100% {
-      transform: translate(0, 0) rotate(360deg);
-    }
+    0% { transform: rotate(0deg) translateX(0); }
+    50% { transform: rotate(180deg) translateX(20px); }
+    100% { transform: rotate(360deg) translateX(0); }
   }
-
   @keyframes core-pulse {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.2);
-    }
-    100% {
-      transform: scale(1);
-    }
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
   }
-
   @keyframes neural-flicker {
-    0% {
-      transform: rotate(0deg);
-    }
-    50% {
-      transform: rotate(10deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
+    0% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+    100% { transform: translateY(0); }
   }
-
   .vortex-container {
     position: absolute;
     top: 0;
@@ -126,10 +105,9 @@
     width: 100%;
     height: 100%;
     z-index: -1;
-    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
-    background: linear-gradient(to bottom, #03055B, #5B2BE5);
+    clip-path: circle(50% at 50% 50%);
+    background: linear-gradient(to bottom, #2f4f7f, #0652ff);
   }
-
   .core {
     position: absolute;
     top: 50%;
@@ -138,46 +116,47 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background: linear-gradient(to bottom, #FFFFFF, #C7D2FE);
-    box-shadow: 0 0 10px #FFFFFF, 0 0 20px #FFFFFF, 0 0 30px #FFFFFF, 0 0 40px #FFFFFF, 0 0 50px #FFFFFF, 0 0 60px #FFFFFF;
+    background: linear-gradient(to bottom, #fff, #ff99cc);
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff99cc, 0 0 40px #ff99cc, 0 0 50px #fff, 0 0 60px #fff;
     animation: core-pulse 5s infinite;
   }
-
   .particle {
     position: absolute;
-    width: 10px;
-    height: 10px;
     border-radius: 50%;
-    background: linear-gradient(to bottom, #FFFFFF, #C7D2FE);
-    animation: particle-dance 3s infinite;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(to bottom, #fff, #ff99cc);
+    animation: particle-dance 10s infinite;
   }
-
   .neural-web {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    animation: neural-flicker 10s infinite;
-  }
-
-  .neural-web path {
+    fill: none;
     stroke: #fff;
     stroke-width: 2;
+    animation: neural-flicker 7s infinite;
+  }
+  .neural-web path {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 0;
+    animation: neural-flicker 7s infinite;
   }
         </style>
         </head>
         <body>
         <div class="codigo">
-            <div>.core { transform: scale(1); }</div>
+            <div>.vortex-container { background: linear-gradient(to bottom, #2f4f7f, #0652ff); }</div>
         </div>
         <div class="animation-container">
             <div class="vortex-container">
     <div class="core"></div>
     <svg class="neural-web">
-      <path d="M0,0 L100,100" />
-      <path d="M100,0 L0,100" />
-      <path d="M50,0 L50,100" />
+      <path d="M 0 0 L 100 100" />
+      <path d="M 100 0 L 0 100" />
+      <path d="M 50 0 L 50 100" />
     </svg>
     <div class="particle" style="top: 10%; left: 10%;"></div>
     <div class="particle" style="top: 20%; left: 20%;"></div>

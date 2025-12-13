@@ -1,7 +1,7 @@
 <!DOCTYPE html>
         <html lang="pt-BR">
         <head>
-        <title>Cosmic Aurora Pulse</title>
+        <title>Celestial Aurora Wave Genesis</title>
         <style>
             * {
             margin: 0;
@@ -88,7 +88,7 @@
       transform: translate(0, 0) rotate(0deg);
     }
     50% {
-      transform: translate(20px, 20px) rotate(180deg);
+      transform: translate(100px, 100px) rotate(180deg);
     }
     100% {
       transform: translate(0, 0) rotate(360deg);
@@ -109,13 +109,13 @@
 
   @keyframes neural-flicker {
     0% {
-      transform: rotate(0deg);
+      transform: rotate(0deg) translateX(0);
     }
     50% {
-      transform: rotate(10deg);
+      transform: rotate(45deg) translateX(50px);
     }
     100% {
-      transform: rotate(0deg);
+      transform: rotate(90deg) translateX(0);
     }
   }
 
@@ -127,7 +127,7 @@
     height: 100%;
     z-index: -1;
     clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
-    background: linear-gradient(to bottom, #03055B, #5B2BE5);
+    background: linear-gradient(to bottom, #4400ff, #ff0000);
   }
 
   .core {
@@ -138,18 +138,18 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background: linear-gradient(to bottom, #FFFFFF, #C7D2FE);
-    box-shadow: 0 0 10px #FFFFFF, 0 0 20px #FFFFFF, 0 0 30px #FFFFFF, 0 0 40px #FFFFFF, 0 0 50px #FFFFFF, 0 0 60px #FFFFFF;
+    background: linear-gradient(to bottom, #ffffff, #0000ff);
+    box-shadow: 0 0 10px #ffffff, 0 0 20px #0000ff, 0 0 30px #ff0000, 0 0 40px #00ff00, 0 0 50px #0000ff, 0 0 60px #ffffff;
     animation: core-pulse 5s infinite;
   }
 
   .particle {
     position: absolute;
-    width: 10px;
-    height: 10px;
     border-radius: 50%;
-    background: linear-gradient(to bottom, #FFFFFF, #C7D2FE);
-    animation: particle-dance 3s infinite;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(to bottom, #ffffff, #0000ff);
+    animation: particle-dance 10s infinite;
   }
 
   .neural-web {
@@ -158,37 +158,36 @@
     left: 0;
     width: 100%;
     height: 100%;
-    animation: neural-flicker 10s infinite;
-  }
-
-  .neural-web path {
+    fill: none;
     stroke: #fff;
-    stroke-width: 2;
+    animation: neural-flicker 7s infinite;
   }
         </style>
         </head>
         <body>
         <div class="codigo">
-            <div>.core { transform: scale(1); }</div>
+            <div>.vortex-container { clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%); }</div>
         </div>
         <div class="animation-container">
             <div class="vortex-container">
-    <div class="core"></div>
-    <svg class="neural-web">
-      <path d="M0,0 L100,100" />
-      <path d="M100,0 L0,100" />
-      <path d="M50,0 L50,100" />
-    </svg>
-    <div class="particle" style="top: 10%; left: 10%;"></div>
-    <div class="particle" style="top: 20%; left: 20%;"></div>
-    <div class="particle" style="top: 30%; left: 30%;"></div>
-    <div class="particle" style="top: 40%; left: 40%;"></div>
-    <div class="particle" style="top: 50%; left: 50%;"></div>
-    <div class="particle" style="top: 60%; left: 60%;"></div>
-    <div class="particle" style="top: 70%; left: 70%;"></div>
-    <div class="particle" style="top: 80%; left: 80%;"></div>
-    <div class="particle" style="top: 90%; left: 90%;"></div>
-  </div>
+  <div class="core"></div>
+  <svg class="neural-web" viewBox="0 0 100 100">
+    <path d="M10,10 L90,90" stroke-width="2" />
+    <path d="M10,90 L90,10" stroke-width="2" />
+    <path d="M50,10 L50,90" stroke-width="2" />
+    <path d="M10,50 L90,50" stroke-width="2" />
+    <path d="M20,20 L80,80" stroke-width="2" />
+  </svg>
+  <div class="particle" style="top: 10%; left: 10%"></div>
+  <div class="particle" style="top: 20%; left: 30%"></div>
+  <div class="particle" style="top: 30%; left: 50%"></div>
+  <div class="particle" style="top: 40%; left: 20%"></div>
+  <div class="particle" style="top: 50%; left: 40%"></div>
+  <div class="particle" style="top: 60%; left: 10%"></div>
+  <div class="particle" style="top: 70%; left: 30%"></div>
+  <div class="particle" style="top: 80%; left: 50%"></div>
+  <div class="particle" style="top: 90%; left: 20%"></div>
+</div>
         </div>
         </body>
         </html>
