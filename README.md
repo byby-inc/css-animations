@@ -42,7 +42,7 @@ be suject to copyright policies.
 
 Send me an e-mail if interested.
 
-699/1000
+700/1000
 
 
 <a href="./reflections-of-self-a-cracked-mirror-of-digital-identity.html">Reflections of Self: A Cracked Mirror of Digital Identity</a> <br/><br/>
@@ -750,3 +750,4 @@ animation: Shattering the Facade</a> <br/><br/>
 <a href="./aurora-cosmic-genesis.html">Aurora Cosmic Genesis</a> <br/><br/>
 <a href="./cosmic-aurora-rift.html">Cosmic Aurora Rift</a> <br/><br/>
 <a href="./cosmic-horizon-drift-evolution.html">Cosmic Horizon Drift Evolution</a> <br/><br/>
+<a href="./luminous-cosmic-horizon-bloom.html">Luminous Cosmic Horizon Bloom</a> <br/><br/>
