@@ -1,7 +1,7 @@
 <!DOCTYPE html>
         <html lang="pt-BR">
         <head>
-        <title>Cosmic Horizon Surge</title>
+        <title>Cosmic Horizon Drift Pulse</title>
         <style>
             * {
             margin: 0;
@@ -83,84 +83,84 @@
             background: transparent;
             }
 
-            @keyframes particle-dance {
-    0% {
-      transform: rotate(0deg) translate(0, 0);
-    }
-    100% {
-      transform: rotate(360deg) translate(100px, 100px);
-    }
+            .vortex-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+}
+
+.core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #ff69b4, #ffe6f2);
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffe6f2, 0 0 40px #ffe6f2, 0 0 50px #ff69b4, 0 0 60px #ff69b4;
+  animation: core-pulse infinite 5s;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(to bottom, #ffe6f2, #ff69b4);
+  animation: particle-dance infinite 3s;
+}
+
+.neural-web {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #fff;
+  animation: neural-flicker infinite 7s;
+}
+
+@keyframes particle-dance {
+  0% {
+    transform: rotate(0deg) translate(0px, 0px);
   }
-  @keyframes core-pulse {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.2);
-    }
-    100% {
-      transform: scale(1);
-    }
+  50% {
+    transform: rotate(180deg) translate(100px, 100px);
   }
-  @keyframes neural-flicker {
-    0% {
-      transform: translate(0, 0) rotate(0deg);
-    }
-    50% {
-      transform: translate(50px, 50px) rotate(180deg);
-    }
-    100% {
-      transform: translate(0, 0) rotate(0deg);
-    }
+  100% {
+    transform: rotate(360deg) translate(0px, 0px);
   }
-  .vortex-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
-    background: linear-gradient(45deg, #ff69b4, #33cc33);
+}
+
+@keyframes core-pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
   }
-  .core {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: linear-gradient(45deg, #6666ff, #ccffcc);
-    box-shadow: 
-      0 0 10px #fff,
-      0 0 20px #fff,
-      0 0 30px #fff,
-      0 0 40px #fff,
-      0 0 50px #fff,
-      0 0 60px #fff;
-    animation: core-pulse 2s infinite;
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
   }
-  .particle {
-    position: absolute;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    background: linear-gradient(45deg, #ff99cc, #66ffff);
-    animation: particle-dance 3s infinite;
+  100% {
+    transform: translate(-50%, -50%) scale(1);
   }
-  .neural-web {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    animation: neural-flicker 4s infinite;
+}
+
+@keyframes neural-flicker {
+  0% {
+    transform: scale(1) rotate(0deg);
   }
-  .neural-web path {
-    stroke: #fff;
-    stroke-width: 2;
+  50% {
+    transform: scale(1.1) rotate(180deg);
   }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
         </style>
         </head>
         <body>
@@ -169,22 +169,22 @@
         </div>
         <div class="animation-container">
             <div class="vortex-container">
-    <div class="core"></div>
-    <svg class="neural-web">
-      <path d="M0 0L100 100" />
-      <path d="M100 0L0 100" />
-      <path d="M50 0L50 100" />
-    </svg>
-    <div class="particle" style="top: 10%; left: 10%;"></div>
-    <div class="particle" style="top: 20%; left: 20%;"></div>
-    <div class="particle" style="top: 30%; left: 30%;"></div>
-    <div class="particle" style="top: 40%; left: 40%;"></div>
-    <div class="particle" style="top: 50%; left: 50%;"></div>
-    <div class="particle" style="top: 60%; left: 60%;"></div>
-    <div class="particle" style="top: 70%; left: 70%;"></div>
-    <div class="particle" style="top: 80%; left: 80%;"></div>
-    <div class="particle" style="top: 90%; left: 90%;"></div>
-  </div>
+  <div class="core"></div>
+  <svg class="neural-web" viewBox="0 0 100 100">
+    <path d="M10,10 C20,20 40,20 50,10" stroke-width="2" />
+    <path d="M50,10 C60,20 70,20 60,40" stroke-width="2" />
+    <path d="M60,40 C70,60 80,60 70,80" stroke-width="2" />
+  </svg>
+  <div class="particle" style="top: 10%; left: 10%;"></div>
+  <div class="particle" style="top: 20%; left: 20%;"></div>
+  <div class="particle" style="top: 30%; left: 30%;"></div>
+  <div class="particle" style="top: 40%; left: 40%;"></div>
+  <div class="particle" style="top: 50%; left: 50%;"></div>
+  <div class="particle" style="top: 60%; left: 60%;"></div>
+  <div class="particle" style="top: 70%; left: 70%;"></div>
+  <div class="particle" style="top: 80%; left: 80%;"></div>
+  <div class="particle" style="top: 90%; left: 90%;"></div>
+</div>
         </div>
         </body>
         </html>

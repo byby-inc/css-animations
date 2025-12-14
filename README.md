@@ -42,7 +42,7 @@ be suject to copyright policies.
 
 Send me an e-mail if interested.
 
-678/1000
+699/1000
 
 
 <a href="./reflections-of-self-a-cracked-mirror-of-digital-identity.html">Reflections of Self: A Cracked Mirror of Digital Identity</a> <br/><br/>
@@ -729,3 +729,24 @@ animation: Shattering the Facade</a> <br/><br/>
 <a href="./cosmic-quantum-rift-genesis.html">Cosmic Quantum Rift Genesis</a> <br/><br/>
 <a href="./cosmic-horizon-genesis-pulse.html">Cosmic Horizon Genesis Pulse</a> <br/><br/>
 <a href="./celestial-quantum-drift-genesis.html">Celestial Quantum Drift Genesis</a> <br/><br/>
+<a href="./cosmic-lumina-drift.html">Cosmic Lumina Drift</a> <br/><br/>
+<a href="./cosmic-harmony-nexus.html">Cosmic Harmony Nexus</a> <br/><br/>
+<a href="./cosmic-horizon-genesis-wave.html">Cosmic Horizon Genesis Wave</a> <br/><br/>
+<a href="./stellar-aurora-pulse.html">Stellar Aurora Pulse</a> <br/><br/>
+<a href="./ethereal-quantum-ascension.html">Ethereal Quantum Ascension</a> <br/><br/>
+<a href="./cosmic-luminous-drift-pulse.html">Cosmic Luminous Drift Pulse</a> <br/><br/>
+<a href="./cosmic-horizon-drift-pulse.html">Cosmic Horizon Drift Pulse</a> <br/><br/>
+<a href="./harmonic-cosmos-expansion.html">Harmonic Cosmos Expansion</a> <br/><br/>
+<a href="./cosmic-rift-infinity.html">Cosmic Rift Infinity</a> <br/><br/>
+<a href="./nebula-quantum-symphony.html">Nebula Quantum Symphony</a> <br/><br/>
+<a href="./stellar-aurora-waveform.html">Stellar Aurora Waveform</a> <br/><br/>
+<a href="./aurora-abyssal-fusion.html">Aurora Abyssal Fusion</a> <br/><br/>
+<a href="./cosmic-horizon-pulse-wave.html">Cosmic Horizon Pulse Wave</a> <br/><br/>
+<a href="./cosmic-pulse-infinity.html">Cosmic Pulse Infinity</a> <br/><br/>
+<a href="./cosmic-quantum-pulse.html">Cosmic Quantum Pulse</a> <br/><br/>
+<a href="./stellar-vortex-nexus.html">Stellar Vortex Nexus</a> <br/><br/>
+<a href="./celestial-nexus-ascension.html">Celestial Nexus Ascension</a> <br/><br/>
+<a href="./astral-quantum-fusion.html">Astral Quantum Fusion</a> <br/><br/>
+<a href="./aurora-cosmic-genesis.html">Aurora Cosmic Genesis</a> <br/><br/>
+<a href="./cosmic-aurora-rift.html">Cosmic Aurora Rift</a> <br/><br/>
+<a href="./cosmic-horizon-drift-evolution.html">Cosmic Horizon Drift Evolution</a> <br/><br/>
