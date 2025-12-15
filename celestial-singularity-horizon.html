@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Celestial Singularity Horizon</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% {
+      transform: rotate(0deg) translate(0px, 0px);
+    }
+    50% {
+      transform: rotate(180deg) translate(100px, 100px);
+    }
+    100% {
+      transform: rotate(360deg) translate(0px, 0px);
+    }
+  }
+
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes neural-flicker {
+    0% {
+      transform: scale(1) rotate(0deg);
+    }
+    50% {
+      transform: scale(1.2) rotate(180deg);
+    }
+    100% {
+      transform: scale(1) rotate(360deg);
+    }
+  }
+
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: linear-gradient(to bottom right, #ff69b4, #ffe6f2);
+  }
+
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, #ffe6f2, #ff69b4);
+    box-shadow: 0 0 10px #fff, 0 0 20px #ffe6f2, 0 0 30px #ff69b4, 0 0 40px #ffe6f2, 0 0 50px #ff69b4, 0 0 60px #ffe6f2;
+    animation: core-pulse 5s infinite;
+  }
+
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(to bottom right, #ffe6f2, #ff69b4);
+    animation: particle-dance 3s infinite;
+  }
+
+  .particle:nth-child(1) {
+    top: 10%;
+    left: 10%;
+  }
+
+  .particle:nth-child(2) {
+    top: 20%;
+    left: 20%;
+  }
+
+  .particle:nth-child(3) {
+    top: 30%;
+    left: 30%;
+  }
+
+  .particle:nth-child(4) {
+    top: 40%;
+    left: 40%;
+  }
+
+  .particle:nth-child(5) {
+    top: 50%;
+    left: 50%;
+  }
+
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+    animation: neural-flicker 7s infinite;
+  }
+
+  .neural-web path:nth-child(1) {
+    d: path("M 0 0 L 100 100");
+    stroke-width: 2;
+  }
+
+  .neural-web path:nth-child(2) {
+    d: path("M 100 0 L 0 100");
+    stroke-width: 2;
+  }
+
+  .neural-web path:nth-child(3) {
+    d: path("M 50 0 L 50 100");
+    stroke-width: 2;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 0 0 L 100 100"></path>
+      <path d="M 100 0 L 0 100"></path>
+      <path d="M 50 0 L 50 100"></path>
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>
