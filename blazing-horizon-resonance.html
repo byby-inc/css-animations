@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Horizon Resonance</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            /* Main container */
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(50% at 50% 50%);
+    z-index: -1;
+    background: linear-gradient(to bottom, #ff9900, #ffff00);
+  }
+
+  /* Core */
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to bottom, #00ff00, #ff00ff);
+    box-shadow:
+      0 0 20px #000,
+      0 0 30px #000,
+      0 0 40px #000,
+      0 0 50px #000,
+      0 0 60px #000,
+      0 0 70px #000;
+    animation: core-pulse infinite 5s;
+  }
+
+  /* Particles */
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(to bottom, #ff0000, #ffff00);
+    animation: particle-dance infinite 2s;
+  }
+
+  /* Neural Web */
+  .neural-web {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+  }
+
+  /* Keyframes */
+  @keyframes particle-dance {
+    0% { transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+    25% { transform: translate(-50%, -50%) scale(1) rotate(360deg); }
+    50% { transform: translate(-50%, -50%) scale(0.5) rotate(360deg); }
+    75% { transform: translate(-50%, -50%) scale(1) rotate(360deg); }
+    100% { transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+  }
+
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+
+  @keyframes neural-flicker {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    50% { transform: scale(0.9); }
+    75% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+
+  /* Particles Animation */
+  @-webkit-keyframes particle-animation-1 {
+    0% { top: 10px; left: 10px; }
+    25% { top: 20px; left: 20px; }
+    50% { top: 30px; left: 30px; }
+    75% { top: 20px; left: 20px; }
+    100% { top: 10px; left: 10px; }
+  }
+
+  @-webkit-keyframes particle-animation-2 {
+    0% { top: 20px; left: 40px; }
+    25% { top: 30px; left: 50px; }
+    50% { top: 20px; left: 60px; }
+    75% { top: 30px; left: 50px; }
+    100% { top: 20px; left: 40px; }
+  }
+
+  .neural-web path:nth-child(1) {
+    animation: neural-flicker infinite 3s;
+  }
+
+  .neural-web path:nth-child(2) {
+    animation: neural-flicker infinite 4s;
+  }
+
+  .neural-web path:nth-child(3) {
+    animation: neural-flicker infinite 2s;
+  }
+
+  /* Particles */
+  .particle:nth-child(1) {
+    top: 0px;
+    left: 0px;
+    animation: particle-animation-1 infinite 10s;
+  }
+
+  .particle:nth-child(2) {
+    top: 10px;
+    left: 10px;
+    animation: particle-animation-2 infinite 12s;
+  }
+
+  .particle:nth-child(3) {
+    top: 20px;
+    left: 20px;
+    animation: particle-animation-2 infinite 13s;
+  }
+
+  .particle:nth-child(4) {
+    top: 30px;
+    left: 30px;
+    animation: particle-animation-2 infinite 14s;
+  }
+
+  .particle:nth-child(5) {
+    top: 40px;
+    left: 40px;
+    animation: particle-animation-1 infinite 11s;
+  }
+
+  .particle:nth-child(6) {
+    top: 50px;
+    left: 50px;
+    animation: particle-animation-2 infinite 15s;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+
+    <div class="core"></div>
+
+    <svg class="neural-web">
+      <path d="M 50 50 l 30 20 q 30 20 30 20" />
+      <path d="M 50 50 l 20 60 q 40 20 90 50" />
+      <path d="M 50 50 l 20 70 q 30 20 60 30" />
+    </svg>
+
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+
+  </div>
+        </div>
+        </body>
+        </html>

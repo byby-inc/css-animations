@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Timeless Vortex Bloom</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: linear-gradient(90deg, #ff9900, #ff00ff);
+  }
+
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background: linear-gradient(180deg, #cc00ff, #ff00ff);
+    animation: core-pulse infinite 0.5s;
+  }
+
+  .core::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background: linear-gradient(180deg, #cc00ff, #ff00ff);
+    box-shadow: 0 0 10px #ff99cc, 0 0 10px #ff0099, 0 0 10px #cc00ff, 0 0 10px #ff00ff, 0 0 10px #ff3300, 0 0 10px #ff00cc;
+  }
+
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(180deg, #cc00ff, #ff00ff);
+    animation: particle-dance infinite 0.2s;
+  }
+
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+
+  .neural-web path {
+    stroke-dasharray: 100, 150;
+    animation: neural-flicker infinite 0.1s;
+  }
+
+  @keyframes particle-dance {
+    0% {
+      transform: translate(100px, 100px) rotate(0deg);
+    }
+    50% {
+      transform: translate(-100px, -100px) rotate(360deg);
+    }
+    100% {
+      transform: translate(100px, 100px) rotate(720deg);
+    }
+  }
+
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes neural-flicker {
+    0% {
+      stroke-dashoffset: 100;
+    }
+    50% {
+      stroke-dashoffset: -50;
+    }
+    100% {
+      stroke-dashoffset: 100;
+    }
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 0 0 L 200 0 L 200 200 L 0 200 Z" />
+      <path d="M 100 0 L 300 0 L 300 300 L 100 300 Z" />
+      <path d="M 0 100 L 200 100 L 200 300 L 0 300 Z" />
+    </svg>
+    <div class="particle" style="top: 10px; left: 10px;"></div>
+    <div class="particle" style="top: 20px; left: 20px;"></div>
+    <div class="particle" style="top: 30px; left: 30px;"></div>
+    <div class="particle" style="top: 40px; left: 40px;"></div>
+    <div class="particle" style="top: 50px; left: 50px;"></div>
+  </div>
+        </div>
+        </body>
+        </html>

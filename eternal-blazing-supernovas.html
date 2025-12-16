@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>ETERNAL BLAZING SUPERNOVAS</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0%   { transform: translate(-50%, 0) rotate(0deg); }
+    50%  { transform: translate(-50%, 50px) rotate(10deg); }
+    100% { transform: translate(-50%, 0) rotate(0deg); }
+  }
+  
+  @keyframes core-pulse {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes neural-flicker {
+    0%   { transform: translateY(5px); }
+    50%  { transform: translateY(0); }
+    100% { transform: translateY(5px); }
+  }
+  
+  body * {
+    box-sizing: border-box;
+  }
+  
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(ellipse at 50% 0%, #FF6600, #FF0000);
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    z-index: -1;
+  }
+  
+  .core {
+    position: absolute;
+    top: 40vh;
+    left: 40vw;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: linear-gradient(315deg, #FF6600, #FF0000);
+    animation: core-pulse infinite 3s;
+  }
+  .core::before, .core::after, .core::before::before, .core::after::before, .core::before::after, .core::after::after {
+    content: '';
+    position: absolute;
+    border-radius: 100%;
+    box-shadow: 0 0 10px #F7F7F7, 0 0 5px #F7F7F7;
+    width: 15%;
+    height: 15%;
+    animation: shimmer 2s infinite alternate;
+  }
+  .core::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .core::after {
+    bottom: -20px;
+    left: 50%;
+    transform: translate(-50%, 0) rotate(90deg);
+  }
+  .core::before::before {
+    bottom: -20px;
+    left: 50%;
+    transform: translate(-50%, 0) rotate(90deg);
+  }
+  .core::after::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .core::before::after, .core::after::after {
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 0) rotate(45deg);
+  }
+  @keyframes shimmer {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.2);
+    }
+  }
+  
+  .particle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: linear-gradient(315deg, #FF6600, #FF0000);
+    animation: particle-dance infinite 5s;
+  }
+  
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 5%;
+  }
+  .neural-web path {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .neural-web path:first-child {
+    transform: translateY(-5px);
+  }
+  .neural-web path:nth-child(2) {
+    transform: translateY(10px);
+  }
+  .neural-web path:last-child {
+    transform: translateY(20px);
+  }
+  @keyframes neural-flicker {
+    0%   { transform: translateY(5px); }
+    50%  { transform: translateY(0); }
+    100% { transform: translateY(5px); }
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <div class="particle" style="top: 30vh; left: 10vw;"></div>
+    <div class="particle" style="top: 10vh; left: 40vw;"></div>
+    <div class="particle" style="top: 50vh; left: 70vw;"></div>
+    <div class="particle" style="top: 70vh; left: 20vw;"></div>
+    <div class="particle" style="top: 80vh; left: 60vw;"></div>
+    <div class="particle" style="top: 20vh; left: 30vw;"></div>
+    <div class="neural-web">
+      <svg viewBox="0 0 100 100">
+        <path d="M 5 5 L 50 5 L 55 10 L 55 55 L 5 55 Z" />
+        <path d="M 5 30 L 70 30 L 75 35 L 75 90 L 5 90 Z" />
+        <path d="M 5 70 L 90 70 L 95 75 L 95 45 L 5 45 Z" />
+        <path d="M 10 10 L 90 10 L 95 15 L 95 40 L 10 40 Z" />
+        <path d="M 20 20 L 80 20 L 85 25 L 85 30 L 20 30 Z" />
+        <path d="M 30 50 L 80 50 L 85 60 L 85 90 L 30 90 Z" />
+      </svg>
+    </div>
+  </div>
+        </div>
+        </body>
+        </html>

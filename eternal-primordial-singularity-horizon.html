@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Eternal Primordial Singularity Horizon</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(10px, -10px) rotate(30deg); }
+  100% { transform: translate(-10px, 10px) rotate(0deg); }
+}
+
+@keyframes core-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes neural-flicker {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.vortex-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+  background: radial-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.7));
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(to bottom, #fff, #ff8c00);
+}
+
+.core {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to bottom, #fff, #ff8c00);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
+              0 0 10px rgba(255, 255, 255, 0.5), 
+              0 0 10px rgba(255, 255, 255, 0.5), 
+              0 0 10px rgba(255, 255, 255, 0.5), 
+              0 0 10px rgba(255, 255, 255, 0.5), 
+              0 0 10px rgba(255, 255, 255, 0.5);
+  animation: core-pulse infinite 2s;
+}
+
+.neural-web {
+  position: absolute;
+  fill: #fff;
+}
+
+.neural-web path {
+  stroke-width: 5;
+  stroke: #fff;
+}
+
+#neural-waves-1 {
+  animation: neural-flicker infinite 5s;
+}
+
+#neural-waves-2 {
+  animation: neural-flicker infinite 3s;
+}
+
+#neural-waves-3 {
+  animation: neural-flicker infinite 4s;
+}
+
+.vortex-container, .particle, .core, .neural-web {
+  transform-origin: 50% 50%;
+}
+
+.core, .neural-web, .particle {
+  animation-fill-mode: both;
+}
+
+.particle {
+  animation: particle-dance infinite 1s;
+}
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <svg class="neural-web">
+      <g id="neural-waves-1"><path d="M 100 100 S 200 50 300 100 M 300 100 S 200 150 300 200"/></g>
+      <g id="neural-waves-2"><path d="M 100 100 S 250 50 400 100 M 400 100 S 250 150 400 200"/></g>
+      <g id="neural-waves-3"><path d="M 100 100 S 350 50 600 100 M 600 100 S 350 150 600 200"/></g>
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

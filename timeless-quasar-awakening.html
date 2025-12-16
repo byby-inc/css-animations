@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Timeless Quasar Awakening</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(-50px, 100px) rotate(30deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+  }
+  
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes neural-flicker {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(-5deg); }
+    30% { transform: rotate(5deg); }
+    40% { transform: rotate(-5deg); }
+    50% { transform: rotate(0deg); }
+  }
+  
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+  }
+  
+  .core {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(to bottom, #fff, #333);
+    box-shadow: 0 0 10px #333;
+    box-shadow: 0 0 20px #333;
+    box-shadow: 0 0 30px #333;
+    box-shadow: 0 0 40px #333;
+    box-shadow: 0 0 50px #333;
+    box-shadow: 0 0 60px #333;
+    animation: core-pulse infinite 1.5s;
+  }
+  
+  .particle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, #fff, #333);
+  }
+  
+  .neural-web {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: none;
+    stroke: #fff;
+    stroke-width: 5px;
+  }
+  
+  .neural-web path {
+    stroke-dasharray: 100, 100;
+    animation: neural-flicker infinite 0.8s;
+  }
+  
+  @keyframes particle-dance {
+    0% { animation-timing-function: ease-in; }
+    50% { animation-timing-function: ease-out; }
+  }
+  
+  .particle {
+    animation: particle-dance infinite 1.2s;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 100 100 L 200 200 L 300 100 Z" />
+      <path d="M 300 100 L 400 200 L 500 100 Z" />
+      <path d="M 500 100 L 600 200 L 700 100 Z" />
+    </svg>
+    <div class="particle" style="top: 50px; left: 50px;"></div>
+    <div class="particle" style="top: 150px; left: 150px;"></div>
+    <div class="particle" style="top: 250px; left: 250px;"></div>
+    <div class="particle" style="top: 350px; left: 350px;"></div>
+    <div class="particle" style="top: 450px; left: 450px;"></div>
+    <div class="particle" style="top: 550px; left: 550px;"></div>
+    <div class="particle" style="top: 650px; left: 650px;"></div>
+  </div>
+        </div>
+        </body>
+        </html>

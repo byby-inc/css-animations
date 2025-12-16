@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Supernova Fusion</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: linear-gradient(90deg, #333, #444);
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 100px #fff, 0 0 0 120px #fff, 0 0 0 140px #fff, 0 0 0 160px #fff, 0 0 0 180px #fff, 0 0 0 200px #fff;
+    background: linear-gradient(90deg, #fff, #ccc);
+  }
+  @keyframes core-pulse {
+    100% {
+      transform: scale(1.1);
+    }
+  }
+  .core {
+    animation: core-pulse 2s infinite;
+  }
+  .particle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #fff, #ccc);
+    animation: particle-dance 8s infinite;
+  }
+  @keyframes particle-dance {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, 50%) rotate(360deg);
+    }
+  }
+  .particle:nth-child(1) {
+    top: 20px;
+    left: 40px;
+  }
+  .particle:nth-child(2) {
+    top: 40px;
+    left: 80px;
+  }
+  .particle:nth-child(3) {
+    top: 60px;
+    left: 120px;
+  }
+  .particle:nth-child(4) {
+    top: 20px;
+    left: 60px;
+  }
+  .particle:nth-child(5) {
+    top: 40px;
+    left: 20px;
+  }
+  .particle:nth-child(6) {
+    top: 60px;
+    left: 80px;
+  }
+  .particle:nth-child(7) {
+    top: 80px;
+    left: 120px;
+  }
+  .particle:nth-child(8) {
+    top: 20px;
+    left: 100px;
+  }
+  .particle:nth-child(9) {
+    top: 40px;
+    left: 40px;
+  }
+  .particle:nth-child(10) {
+    top: 60px;
+    left: 60px;
+  }
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: #fff;
+  }
+  .neural-web path {
+    stroke: #fff;
+  }
+  @keyframes neural-flicker {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+  .neural-web path {
+    animation: neural-flicker 1.5s infinite;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 20 20 L 40 40 M 60 60 C 80 80 100 100 120 120 Z" />
+      <path d="M 140 140 L 160 160 M 180 180 C 200 200 220 220 240 240 Z" />
+      <path d="M 260 260 L 280 280 M 300 300 C 320 320 340 340 360 360 Z" />
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

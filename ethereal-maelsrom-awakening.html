@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Ethereal Maelstrom Awakening</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 100px;
+  }
+
+  .core {
+    position: absolute;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to bottom right, #33ccff, #aa66cc);
+    animation: core-pulse infinite 1s;
+    transform: translate(-50%, -50%);
+    box-shadow: 
+      0 0 20px #33ccff,
+      0 0 20px #aa66cc,
+      5px 5px 10px #33ccff,
+      -5px -5px 10px #aa66cc,
+      10px 10px 15px #33ccff,
+      -10px -10px 15px #aa66cc;
+  }
+
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(to bottom right, #99ff00, #cc66ff);
+    animation: particle-dance infinite 2s;
+    transform-origin: center;
+  }
+
+  .neural-web {
+    position: absolute;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 3;
+  }
+
+  @keyframes particle-dance {
+    from {
+      transform: translate(-100px, -100px);
+      opacity: 0;
+    }
+    to {
+      transform: translate(100px, 100px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes neural-flicker {
+    from {
+      transform: rotate(0) scale(1);
+    }
+    to {
+      transform: rotate(360deg) scale(1.2);
+    }
+  }
+
+  .particle:nth-child(1) {
+    top: -200px;
+    left: 50%;
+    transform: translate(0, 50px) rotate(90deg);
+  }
+  .particle:nth-child(2) {
+    top: 50%;
+    left: -200px;
+    transform: translate(50px, 0) rotate(180deg);
+  }
+  .particle:nth-child(3) {
+    top: 200px;
+    left: 50%;
+    transform: translate(0, -50px) rotate(270deg);
+  }
+  .particle:nth-child(4) {
+    top: 50%;
+    left: 200px;
+    transform: translate(-50px, 0) rotate(0deg);
+  }
+  .particle:nth-child(5) {
+    top: -100px;
+    left: 50%;
+    transform: translate(0, 50px);
+  }
+  .particle:nth-child(6) {
+    top: 100px;
+    left: 50%;
+    transform: translate(0, -50px);
+  }
+  .particle:nth-child(7) {
+    top: 50%;
+    left: -150px;
+    transform: translate(50px, 0) rotate(90deg);
+  }
+  .particle:nth-child(8) {
+    top: -150px;
+    left: 50%;
+    transform: translate(0, 50px) rotate(180deg);
+  }
+  .particle:nth-child(9) {
+    top: 150px;
+    left: 50%;
+    transform: translate(0, -50px) rotate(270deg);
+  }
+  .particle:nth-child(10) {
+    top: 50%;
+    left: 150px;
+    transform: translate(-50px, 0) rotate(0deg);
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web" width="100%" height="100%">
+      <path d="M 0 0 L 50 100 L 100 0 Z" />
+      <path d="M 50 200 L 0 100 L 100 200 Z" />
+      <path d="M 0 400 L 50 300 L 100 400 Z" />
+    </svg>
+    <div class="particle" style="top: -100px; left: 50%; transform: translate(0, 50px);"></div>
+    <div class="particle" style="top: -200px; left: 50%; transform: translate(0, 50px) rotate(90deg);"></div>
+    <div class="particle" style="top: -300px; left: 50%; transform: translate(0, 50px) rotate(180deg);"></div>
+    <div class="particle" style="top: -400px; left: 50%; transform: translate(0, 50px) rotate(270deg);"></div>
+    <div class="particle" style="top: -500px; left: 50%; transform: translate(0, 50px);"></div>
+    <div class="particle" style="top: -600px; left: 50%; transform: translate(0, 50px);"></div>
+    <div class="particle" style="top: 100px; left: 50%; transform: translate(0, -50px);"></div>
+    <div class="particle" style="top: 200px; left: 50%; transform: translate(0, -50px);"></div>
+    <div class="particle" style="top: 300px; left: 50%; transform: translate(0, -50px);"></div>
+    <div class="particle" style="top: 400px; left: 50%; transform: translate(0, -50px);"></div>
+  </div>
+        </div>
+        </body>
+        </html>
