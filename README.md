@@ -96,7 +96,8 @@ Send me an e-mail if interested.
 <a href="./shapeshifter-showdown.html">Shapeshifter showdown (Instagram)</a> <br/><br/>
 <a href="./interactive-shape-dance.html">Interactive shape dance (Instagram)</a> <br/><br/>
 <a href="./3d-glitch-city.html">3d glitch city (Instagram)</a> <br/><br/>
-<a href="./the-syntax-symphony.html">The syntax symphony (Instagram)</a><br/><br/><a href="./hover-memory.html">Hover memory (Instagram)</a> <br/><br/>
+<a href="./the-syntax-symphony.html">The syntax symphony (Instagram)</a><br/><br/>
+<a href="./hover-memory.html">Hover memory (Instagram)</a> <br/><br/>
 <a href="./glitch-cube.html">Glitch cube (Instagram)</a> <br/><br/>
 <a href="./flow-stat.html">Flow stat (Instagram)</a> <br/><br/>
 <a href="./floating-interfac.html">Floating interfac (Instagram)</a> <br/><br/>
