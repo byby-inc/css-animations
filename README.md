@@ -44,7 +44,7 @@ Send me an e-mail if interested.
 
 894/1000
 
--------------------------------OLD ANIMATIONS--------------------------------
+<br/><br/>-------------------------------OLD ANIMATIONS--------------------------------<br/><br/>
 <a href="./abrir-bau.html">Magic Chest (Instagram)</a> <br/><br/>
 <a href="./abrir-envelope.html">Animated Envelope (Instagram)</a> <br/><br/>
 <a href="./bola-quicando.html">Bouncing Ball (Instagram)</a> <br/><br/>
@@ -183,7 +183,7 @@ Send me an e-mail if interested.
 <a href="./dev-memes.html">Dev memes </a> <br/><br/>
 <a href="./emotions.html">emotions</a> <br/><br/>
 
--------------------------------NEW ANIMATIONS--------------------------------
+<br/><br/>-------------------------------NEW ANIMATIONS--------------------------------<br/><br/>
 <a href="./reflections-of-self-a-cracked-mirror-of-digital-identity.html">Reflections of Self: A Cracked Mirror of Digital Identity</a> <br/><br/>
 <a href="./sundayblues-mazedigger-devlife-codestruggles-cssanimation.html">Sundayblues mazedigger devlife codestruggles cssanimation</a> <br/><br/>
 <a href="./sunday-mirror-self.html">Sunday mirror self</a> <br/><br/>
