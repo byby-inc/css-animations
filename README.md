@@ -197,7 +197,7 @@ Send me an e-mail if interested.
 <a href="./ephemeral-fractures-in-harmony.html">Ephemeral Fractures in Harmony</a> <br/><br/>
 <a href="./whispers-in-shattered-harmony.html">Whispers in Shattered Harmony</a> <br/><br/>
 <a href="./fractured-harmony-odyssey.html">Fractured Harmony Odyssey</a> <br/><br/>
-<a href="./-fractured-self.html">** Fractured Self**</a> <br/><br/>
+<a href="./-fractured-self.html">- Fractured Self</a> <br/><br/>
 <a href="./dancing-fracture-silhouettes.html">Dancing Fracture Silhouettes</a> <br/><br/>
 <a href="./shattered-harmonies-realign.html">Shattered Harmonies Realign</a> <br/><br/>
 <a href="./refractions-in-ephemeral-identity.html">Refractions in Ephemeral Identity</a> <br/><br/>
