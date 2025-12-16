@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Cosmic Vortex Awakening</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% { transform: translate(0, 0) rotate(0); }
+    10% { transform: translate(5%, 5%) rotate(10deg); }
+    20% { transform: translate(-5%, -5%) rotate(-20deg); }
+    30% { transform: translate(10%, -10%) rotate(30deg); }
+    40% { transform: translate(-10%, 10%) rotate(-40deg); }
+    50% { transform: translate(0, 0) rotate(0); }
+  }
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    10% { transform: scale(1.1); }
+    20% { transform: scale(0.9); }
+    30% { transform: scale(1.2); }
+    40% { transform: scale(0.8); }
+    50% { transform: scale(1); }
+  }
+  @keyframes neural-flicker {
+    0% { transform: translateY(0); }
+    10% { transform: translateY(-5%); }
+    20% { transform: translateY(0); }
+    30% { transform: translateY(5%); }
+    40% { transform: translateY(0); }
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: circle(50% at 50% 50%);
+  }
+  
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(
+      180deg,
+      #ffeecc,
+      #ffffcc,
+      #ccffcc,
+      #88ffff,
+      #44ccff,
+      #0033cc
+    );
+    background-size: 400% 400%;
+    animation: core-pulse 2s infinite;
+    box-shadow: 0 0 0 1px #ff9999, 0 0 0 2px #ff9999, 0 0 0 3px #ff9999, 0 0 0 4px #ff9999, 0 0 0 5px #ff9999, 0 0 0 6px #ff9999;
+  }
+  
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-image: linear-gradient(
+      to bottom,
+      #33ccff,
+      #88ffcc
+    );
+    background-size: 200% 200%;
+    animation: particle-dance 0.5s infinite;
+  }
+  .particle:nth-child(1) {
+    top: 10%;
+    left: 10%;
+    transform: translate(0, 0) rotate(0);
+  }
+  .particle:nth-child(2) {
+    top: 20%;
+    left: 30%;
+    transform: translate(5%, -5%) rotate(10deg);
+  }
+  .particle:nth-child(3) {
+    top: 40%;
+    left: 20%;
+    transform: translate(-5%, 5%) rotate(-20deg);
+  }
+  .particle:nth-child(4) {
+    top: 60%;
+    left: 10%;
+    transform: translate(10%, -10%) rotate(30deg);
+  }
+  .particle:nth-child(5) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-10%, 10%) rotate(-40deg);
+  }
+  .particle:nth-child(6) {
+    top: 30%;
+    left: 70%;
+    transform: translate(0, 0) rotate(0);
+  }
+  .particle:nth-child(7) {
+    top: 70%;
+    left: 60%;
+    transform: translate(5%, -5%) rotate(10deg);
+  }
+  
+  .neural-web {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    width: 80%;
+    height: 200px;
+    stroke: #fff;
+  }
+  .neural-web path {
+    stroke-width: 1px;
+    fill: none;
+  }
+  .neural-web path:nth-child(1) {
+    d: M0,100 A100,100 0 1,1 100,0 A100,100 0 1,1 0,100;
+    animation: neural-flicker 1s infinite;
+  }
+  .neural-web path:nth-child(2) {
+    d: M50,100 A100,100 0 1,1 150,0 A100,100 0 1,1 50,100;
+    animation: neural-flicker 1.2s infinite;
+  }
+  .neural-web path:nth-child(3) {
+    d: M100,50 A100,100 0 1,1 150,150 A100,100 0 1,1 100,50;
+    animation: neural-flicker 1s infinite;
+  }
+  @keyframes neural-flicker {
+    0% { transform: translateY(0); }
+    10% { transform: translateY(-5%); }
+    20% { transform: translateY(0); }
+    30% { transform: translateY(5%); }
+    40% { transform: translateY(0); }
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container" style="clip-path: polygon(25% 0%,75% 0%,100% 25%,50% 100%,0% 25%);">
+    <div class="core">
+      <!-- <svg></svg> -->
+    </div>
+    <svg class="neural-web">
+      <path d="M0,100 A100,100 0 1,1 100,0 A100,100 0 1,1 0,100"/>
+      <path d="M50,100 A100,100 0 1,1 150,0 A100,100 0 1,1 50,100"/>
+      <path d="M100,50 A100,100 0 1,1 150,150 A100,100 0 1,1 100,50"/>
+      <div class="particle" style="top:10%;left:10%;transform:translate(0,0) rotate(0)">
+      </div>
+      <div class="particle" style="top:20%;left:30%;transform:translate(5%,-5%) rotate(10deg)">
+      </div>
+      <div class="particle" style="top:40%;left:20%;transform:translate(-5%,5%) rotate(-20deg)">
+      </div>
+      <div class="particle" style="top:60%;left:10%;transform:translate(10%,-10%) rotate(30deg)">
+      </div>
+      <div class="particle" style="top:50%;left:50%;transform:translate(-10%,10%) rotate(-40deg)">
+      </div>
+    </svg>
+    <div class="particle" style="top:30%;left:70%;transform:translate(0,0) rotate(0)">
+    </div>
+    <div class="particle" style="top:70%;left:60%;transform:translate(5%,-5%) rotate(10deg)">
+    </div>
+  </div>
+        </div>
+        </body>
+        </html>

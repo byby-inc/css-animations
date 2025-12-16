@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Ephemeral Vortex Ascension</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% { transform: rotate(0deg) translate(0px, 0px); }
+    50% { transform: rotate(360deg) translate(100px, -50px); }
+    100% { transform: rotate(720deg) translate(0px, 0px); }
+  }
+
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+
+  @keyframes neural-flicker {
+    0% { transform: translate(0px, 0px); }
+    50% { transform: translate(50px, 20px); }
+    100% { transform: translate(0px, 0px); }
+  }
+
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    z-index: -1;
+    background: radial-gradient(rgba(128, 128, 128, 0.5), rgba(128, 128, 128, 0));
+  }
+
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(to bottom right, rgb(128, 128, 128), rgb(220, 220, 220), rgb(60, 60, 60));
+    box-shadow: 0 0 50px rgb(80, 80, 80), 0 0 25px rgb(100, 100, 100), 0 0 15px rgb(120, 120, 120), 0 0 10px rgb(140, 140, 140), 0 0 5px rgb(160, 160, 160), 0 0 2px rgb(180, 180, 180);
+  }
+
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(to bottom right, rgb(240, 240, 240), rgb(220, 220, 220), rgb(200, 200, 200));
+    animation: particle-dance infinite 6s forwards;
+  }
+  @keyframes particle-dance {
+    0% { transform: rotate(0deg) translate(0px, 0px); }
+    50% { transform: rotate(360deg) translate(100px, -50px); }
+    100% { transform: rotate(720deg) translate(0px, 0px); }
+  }
+
+  .neural-web {
+    position: absolute;
+    fill: #fff;
+    stroke-width: 1;
+  }
+
+  .neural-web path {
+    stroke: #fff;
+  }
+
+  .neural-web rect {
+    fill: #fff;
+  }
+
+  .neural-web circle {
+    stroke-width: 1;
+    stroke: #fff;
+  }
+
+  @-webkit-keyframes neural-flicker {
+    0% { transform: translate(0px, 0px); }
+    50% { transform: translate(50px, 20px); }
+    100% { transform: translate(0px, 0px); }
+  }
+
+  @keyframes neural-flicker {
+    0% { transform: translate(0px, 0px); }
+    50% { transform: translate(50px, 20px); }
+    100% { transform: translate(0px, 0px); }
+  }
+
+  .neural-web path:nth-child(1) {
+    animation: neural-flicker infinite forwards 0.5s;
+  }
+  .neural-web path:nth-child(2) {
+    animation: neural-flicker infinite forwards 0.7s;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+
+    <svg class="neural-web">
+      <path d="M 50 20 L 100 80 L 150 20 C 100 20 20 20 10 100" />
+      <path d="M 100 50 L 10 10 L 150 150 L 50 100" />
+      <path d="M 100 50 L 150 10 L 50 50 L 100 150" />
+      <rect x="50" y="50" width="100" height="100" rx="20" />
+      <circle cx="100" cy="100" r="20" />
+    </svg>
+
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+
+    <!-- Add some extra particles here -->
+  </div>
+        </div>
+        </body>
+        </html>

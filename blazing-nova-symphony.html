@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Nova Symphony</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% {
+      transform: rotate(0deg) translate(50%, 50%);
+    }
+    50% {
+      transform: rotate(120deg) translate(50%, 50%);
+    }
+    100% {
+      transform: rotate(240deg) translate(50%, 50%);
+    }
+  }
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    20% {
+      transform: scale(1.2);
+    }
+    30% {
+      transform: scale(1);
+    }
+    40% {
+      transform: scale(1.2);
+    }
+    60% {
+      transform: scale(1.4);
+    }
+    80% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes neural-flicker {
+    0% {
+      transform: scale(1) rotate(0deg);
+    }
+    10% {
+      transform: scale(1.1) rotate(5deg);
+    }
+    20% {
+      transform: scale(1) rotate(0deg);
+    }
+    30% {
+      transform: scale(1.1) rotate(-5deg);
+    }
+    40% {
+      transform: scale(1) rotate(0deg);
+    }
+    50% {
+      transform: scale(1.1) rotate(5deg);
+    }
+    60% {
+      transform: scale(1) rotate(0deg);
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+    }
+  }
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background-image: radial-gradient(circle at 50% 50%, #3b3b3b, #2f2f2f);
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-image: linear-gradient(to bottom, #ffffff, #f4f4f4, #ffffff);
+    box-shadow: 0 0 10px #ffffff, 0 0 20px #f4f4f4, 0 0 30px #ffffff, 0 0 40px #f4f4f4, 0 0 50px #ffffff, 0 0 60px #f4f4f4;
+  }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-image: linear-gradient(to bottom, #3b3b3b, #2f2f2f);
+  }
+  .neural-web {
+    position: absolute;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+  @-webkit-keyframes particle-dance {
+    0% {
+      -webkit-transform: rotate(0deg) translate(50%, 50%);
+    }
+    50% {
+      -webkit-transform: rotate(120deg) translate(50%, 50%);
+    }
+    100% {
+      -webkit-transform: rotate(240deg) translate(50%, 50%);
+    }
+  }
+  @-webkit-keyframes core-pulse {
+    0% {
+      -webkit-transform: scale(1);
+    }
+    20% {
+      -webkit-transform: scale(1.2);
+    }
+    30% {
+      -webkit-transform: scale(1);
+    }
+    40% {
+      -webkit-transform: scale(1.2);
+    }
+    60% {
+      -webkit-transform: scale(1.4);
+    }
+    80% {
+      -webkit-transform: scale(1.2);
+    }
+    100% {
+      -webkit-transform: scale(1);
+    }
+  }
+  @-webkit-keyframes neural-flicker {
+    0% {
+      -webkit-transform: scale(1) rotate(0deg);
+    }
+    10% {
+      -webkit-transform: scale(1.1) rotate(5deg);
+    }
+    20% {
+      -webkit-transform: scale(1) rotate(0deg);
+    }
+    30% {
+      -webkit-transform: scale(1.1) rotate(-5deg);
+    }
+    40% {
+      -webkit-transform: scale(1) rotate(0deg);
+    }
+    50% {
+      -webkit-transform: scale(1.1) rotate(5deg);
+    }
+    60% {
+      -webkit-transform: scale(1) rotate(0deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotate(0deg);
+    }
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 500 400 Q 300,800 500,100"/>
+      <path d="M 300,400 Q 500,500 600,400"/>
+      <path d="M 500,300 Q 300,100 500,400"/>
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

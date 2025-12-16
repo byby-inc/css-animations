@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Eternal Vortex Bloom</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    100% {
+      transform: translate(25px, -25px) rotate(360deg);
+    }
+  }
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+      animation-timing-function: ease;
+    }
+    50% {
+      transform: scale(1.2);
+      animation-timing-function: ease-out;
+    }
+    100% {
+      transform: scale(1);
+      animation-timing-function: ease;
+    }
+  }
+  @keyframes neural-flicker {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: linear-gradient(135deg, #FF69B4, #33CCFF);
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #FF9900, #0099FF);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) 10px 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) -10px 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) 10px -10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) -10px -10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) -10px 10px;
+    animation: core-pulse 3s infinite;
+  }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(180deg, #FF9900, #0099FF);
+    animation: particle-dance 2s infinite;
+  }
+  .neural-web {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+  }
+  .neural-web path {
+    stroke: #fff;
+    stroke-width: 10px;
+  }
+  @keyframes particle-dance {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    100% {
+      transform: translate(25px, -25px) rotate(360deg);
+    }
+  }
+  @keyframes neural-flicker {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid meet">
+      <path d="M 100,300 L 300,200 L 50,500" />
+      <path d="M 300,200 L 50,500 L 300,300" />
+      <path d="M 400,400 L 150,500 L 250,300" />
+    </svg>
+    <div class="particle" style="top: 30%; left: 50%; transform: translate(-50%, -50%);"></div>
+    <div class="particle" style="top: 40%; left: 20%; transform: translate(-50%, -50%) rotate(45deg);"></div>
+    <div class="particle" style="top: 40%; left: 80%; transform: translate(-50%, -50%) rotate(135deg);"></div>
+    <div class="particle" style="top: 10%; left: 70%; transform: translate(-50%, -50%) rotate(225deg);"></div>
+    <div class="particle" style="top: 80%; left: 30%; transform: translate(-50%, -50%) rotate(315deg);"></div>
+  </div>
+        </div>
+        </body>
+        </html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Cosmic Vortex Awakening</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            /* Define keyframes */
+  @keyframes particle-dance {
+    0% {
+      transform: translate(-100%, -100%) rotate(0deg);
+    }
+    100% {
+      transform: translate(100%, 100%) rotate(360deg);
+    }
+  }
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(2);
+    }
+  }
+  @keyframes neural-flicker {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Style the container */
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    z-index: -1;
+    background: linear-gradient(to bottom, #000, #777);
+  }
+
+  /* Style the core */
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to top, #fff, #333);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 70px rgba(0, 0, 0, 0.5);
+    animation: core-pulse infinite 2s;
+  }
+
+  /* Style the particle */
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(to bottom, #fff, #333);
+    animation: particle-dance infinite 1s;
+  }
+
+  /* Style the neural-web */
+  .neural-web {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    fill: #fff;
+    stroke: #fff;
+    stroke-width: 2;
+    animation: neural-flicker infinite 3s;
+  }
+
+  /* Define the paths for the neural-web */
+  .neural-web path {
+    stroke-dasharray: 100, 200;
+    animation: dash infinite 2s;
+  }
+
+  @keyframes dash {
+    0% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dashoffset: -100;
+    }
+  }
+
+  /* Add multiple particles */
+  .particle1 {
+    top: 20%;
+    left: 20%;
+  }
+  .particle2 {
+    top: 40%;
+    left: 80%;
+  }
+  .particle3 {
+    top: 60%;
+    left: 20%;
+  }
+  .particle4 {
+    top: 20%;
+    left: 80%;
+  }
+  .particle5 {
+    top: 60%;
+    left: 60%;
+  }
+  .particle6 {
+    top: 20%;
+    left: 40%;
+  }
+  .particle7 {
+    top: 40%;
+    left: 40%;
+  }
+  .particle8 {
+    top: 80%;
+    left: 20%;
+  }
+
+  /* Add the SVG paths */
+  .neural-web path:nth-child(1) {
+    d: M 30 20 L 70 50 L 30 80;
+  }
+  .neural-web path:nth-child(2) {
+    d: M 80 40 L 50 70 L 20 40;
+  }
+  .neural-web path:nth-child(3) {
+    d: M 40 20 L 60 40 L 80 20;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <div class="particle particle1"></div>
+    <div class="particle particle2"></div>
+    <div class="particle particle3"></div>
+    <div class="particle particle4"></div>
+    <div class="particle particle5"></div>
+    <div class="particle particle6"></div>
+    <div class="particle particle7"></div>
+    <div class="particle particle8"></div>
+    <svg class="neural-web">
+      <path d="M 30 20 L 70 50 L 30 80"></path>
+      <path d="M 80 40 L 50 70 L 20 40"></path>
+      <path d="M 40 20 L 60 40 L 80 20"></path>
+    </svg>
+  </div>
+        </div>
+        </body>
+        </html>

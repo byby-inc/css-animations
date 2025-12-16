@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Transcendent Cosmic Maelstrom</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% {
+      transform: translate(0, 0) rotate(0);
+    }
+    50% {
+      transform: translate(-20px, -20px) rotate(30deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0);
+    }
+  }
+
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes neural-flicker {
+    0% {
+      transform: skewX(0deg) translate(0, 0);
+    }
+    50% {
+      transform: skewX(10deg) translate(5px, 5px);
+    }
+    100% {
+      transform: skewX(0deg) translate(0, 0);
+    }
+  }
+
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: radial-gradient(circle at 50% 50%, #171717, #000);
+  }
+
+  .core {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(45deg, #ff99ff, #ffff99);
+    box-shadow: 0 0 10px #ff99ff, 0 0 10px #ffff99, 0 0 10px #ff99ff, 0 0 10px #ffff99, 0 0 10px #ff99ff, 0 0 10px #ffff99;
+    animation: core-pulse 2s infinite;
+  }
+
+  .particle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #666, #333);
+    animation: particle-dance 3s infinite;
+  }
+
+  .neural-web {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  .neural-web path {
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+
+  .neural-web path:nth-child(1) {
+    stroke-dasharray: 100, 100;
+    animation: neural-flicker 5s infinite;
+  }
+
+  .neural-web path:nth-child(2) {
+    stroke-dasharray: 150, 150;
+    animation: neural-flicker 3s infinite;
+    animation-delay: 1s;
+  }
+
+  .neural-web path:nth-child(3) {
+    stroke-dasharray: 200, 200;
+    animation: neural-flicker 4s infinite;
+    animation-delay: 2s;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+  <div class="core"></div>
+  <svg class="neural-web">
+    <path d="M 50 0 L 100 100 L 0 100 Z" />
+    <path d="M 50 0 L 150 100 L 50 100 Z" />
+    <path d="M 50 0 L 250 100 L 50 100 Z" />
+  </svg>
+  <div class="particle" style="top: 20vh; left: 20vw;"></div>
+  <div class="particle" style="top: 40vh; left: 40vw;"></div>
+  <div class="particle" style="top: 60vh; left: 60vw;"></div>
+  <div class="particle" style="top: 80vh; left: 80vw;"></div>
+  <div class="particle" style="top: 10vh; left: 10vw;"></div>
+  <div class="particle" style="top: 30vh; left: 30vw;"></div>
+</div>
+        </div>
+        </body>
+        </html>

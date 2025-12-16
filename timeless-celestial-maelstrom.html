@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Timeless Celestial Maelstrom</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% { transform: scale(1) translate(-50%, -50%);
+          opacity: 0; }
+    10% { transform: scale(1.2) translate(-40%, -40%);
+          opacity: 0.8; }
+    20% { transform: scale(0.8) translate(-55%, -55%);
+          opacity: 1; }
+    40% { transform: scale(1.1) translate(-45%, -45%);
+          opacity: 0.9; }
+    50% { transform: scale(1) translate(-50%, -50%);
+          opacity: 1; }
+    70% { transform: scale(0.9) translate(-55%, -55%);
+          opacity: 0.8; }
+    90% { transform: scale(1) translate(-50%, -50%);
+          opacity: 1; }
+    100% { transform: scale(1) translate(-50%, -50%);
+            opacity: 1; }
+  }
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    10% { transform: scale(1.2); }
+    20% { transform: scale(0.8); }
+    30% { transform: scale(1); }
+    40% { transform: scale(1.1); }
+    50% { transform: scale(1); }
+    60% { transform: scale(0.9); }
+    70% { transform: scale(1); }
+    80% { transform: scale(1); }
+    100% { transform: scale(1); }
+  }
+  @keyframes neural-flicker {
+    0% { transform: scale(1) rotate(0deg); }
+    10% { transform: scale(1.2) rotate(5deg); }
+    20% { transform: scale(0.8) rotate(0deg); }
+    30% { transform: scale(1.1) rotate(10deg); }
+    40% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1) rotate(-5deg); }
+    60% { transform: scale(0.9) rotate(0deg); }
+    70% { transform: scale(1) rotate(3deg); }
+    80% { transform: scale(1) rotate(0deg); }
+    100% { transform: scale(1) rotate(0deg); }
+  }
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%,75% 0%,100% 25%,50% 100%,0% 25%);
+    background: url('https://picsum.photos/1920/1080'), linear-gradient(to bottom, #fff, #000);
+    background-size: cover, 100% 100%;
+    background-repeat: no-repeat, repeat;
+    animation: core-pulse 7s infinite;
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow:
+    -3px 3px 20px #fff,
+    3px 3px 20px #000,
+    -2px -2px 15px #fff,
+    2px -2px 15px #000,
+    -1px 1px 10px #fff,
+    1px 1px 10px #000;
+    background: radial-gradient(to top, #fff 0%, #000 0%, #000 100%);
+  }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    animation: particle-dance 5s infinite;
+  }
+  .neural-web {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 200 200 Q 0 200, 200 400" stroke="#fff" />
+      <path d="M 200 200 Q 300 100, 0 200" stroke="#fff" />
+      <path d="M 200 200 Q 100 200, 0 100" stroke="#fff" />
+      <path d="M 200 200 Q 200 0, 300 100" stroke="#fff" />
+    </svg>
+    <div class="particle" style="top: 10px; left: 10px; background: radial-gradient(to top, #000 0%, #fff 0%, #fff 100%);"></div>
+    <div class="particle" style="top: 20px; left: 20px; background: linear-gradient(to bottom, #fff 0%, #000 100%);"></div>
+    <div class="particle" style="top: 5px; left: 35px; background: radial-gradient(to top, #fff 0%, #000 100%);"></div>
+    <div class="particle" style="top: 30px; left: 10px; background: linear-gradient(to bottom, #fff 0%, #000 100%);"></div>
+    <div class="particle" style="top: 45px; left: 20px; background: radial-gradient(to top, #000 0%, #fff 100%);"></div>
+    <div class="particle" style="top: 50px; left: 35px; background: linear-gradient(to bottom, #000 0%, #fff 100%);"></div>
+  </div>
+        </div>
+        </body>
+        </html>

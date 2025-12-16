@@ -42,7 +42,7 @@ be suject to copyright policies.
 
 Send me an e-mail if interested.
 
-722/1000
+741/1000
 
 
 <a href="./reflections-of-self-a-cracked-mirror-of-digital-identity.html">Reflections of Self: A Cracked Mirror of Digital Identity</a> <br/><br/>
@@ -773,3 +773,22 @@ animation: Shattering the Facade</a> <br/><br/>
 <a href="./eternal-cosmic-bloom.html">Eternal Cosmic Bloom</a> <br/><br/>
 <a href="./ethereal-cosmic-bloom.html">Ethereal Cosmic Bloom</a> <br/><br/>
 <a href="./eternal-cosmic-ignition.html">Eternal Cosmic Ignition</a> <br/><br/>
+<a href="./ephemeral-celestial-maelstrom.html">Ephemeral Celestial Maelstrom</a> <br/><br/>
+<a href="./eternal-vortex-bloom.html">Eternal Vortex Bloom</a> <br/><br/>
+<a href="./celestial-aurora-genesis.html">Celestial Aurora Genesis</a> <br/><br/>
+<a href="./blazing-cosmic-vortex-awakening.html">Blazing Cosmic Vortex Awakening</a> <br/><br/>
+<a href="./blazing-galactic-singularity.html">Blazing Galactic Singularity</a> <br/><br/>
+<a href="./transcendent-cosmic-maelstrom.html">Transcendent Cosmic Maelstrom</a> <br/><br/>
+<a href="./blazing-horizon-singularity.html">Blazing Horizon Singularity</a> <br/><br/>
+<a href="./timeless-celestial-maelstrom.html">Timeless Celestial Maelstrom</a> <br/><br/>
+<a href="./eternally-blazing-supernova-dawn.html">Eternally Blazing Supernova Dawn</a> <br/><br/>
+<a href="./blazing-nova-symphony.html">Blazing Nova Symphony</a> <br/><br/>
+<a href="./cosmic-vortex-awakening.html">Cosmic Vortex Awakening</a> <br/><br/>
+<a href="./ephemeral-vortex-singularity.html">Ephemeral Vortex Singularity</a> <br/><br/>
+<a href="./celestial-aurora-convergence.html">Celestial Aurora Convergence</a> <br/><br/>
+<a href="./ancient-cosmic-maelstrom.html">Ancient Cosmic Maelstrom</a> <br/><br/>
+<a href="./ancient-vortex-inferno.html">Ancient Vortex Inferno</a> <br/><br/>
+<a href="./boundless-eruptive-genesis.html">Boundless Eruptive Genesis</a> <br/><br/>
+<a href="./blazing-primordial-vortex.html">Blazing Primordial Vortex</a> <br/><br/>
+<a href="./ephemeral-plasma-bloom.html">Ephemeral Plasma Bloom</a> <br/><br/>
+<a href="./ephemeral-vortex-ascension.html">Ephemeral Vortex Ascension</a> <br/><br/>
