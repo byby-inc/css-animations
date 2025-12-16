@@ -42,7 +42,7 @@ be suject to copyright policies.
 
 Send me an e-mail if interested.
 
-741/1000
+754/1000
 
 
 <a href="./reflections-of-self-a-cracked-mirror-of-digital-identity.html">Reflections of Self: A Cracked Mirror of Digital Identity</a> <br/><br/>
@@ -798,3 +798,4 @@ Send me an e-mail if interested.
 <a href="./blazing-primordial-vortex.html">Blazing Primordial Vortex</a> <br/><br/>
 <a href="./ephemeral-plasma-bloom.html">Ephemeral Plasma Bloom</a> <br/><br/>
 <a href="./ephemeral-vortex-ascension.html">Ephemeral Vortex Ascension</a> <br/><br/>
+<a href="./eternal-vortex-resonance.html">Eternal Vortex Resonance</a> <br/><br/>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Eternal Vortex Resonance</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% { transform: translate(-50%, 0) rotate(0deg); }
+    100% { transform: translate(-50%, 100px) rotate(-360deg); }
+  }
+
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+
+  @keyframes neural-flicker {
+    0% { transform: rotate(0deg) translate(0, 0); }
+    50% { transform: rotate(10deg) translate(0, -10px); }
+    100% { transform: rotate(0deg) translate(0, 0); }
+  }
+
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background-image: linear-gradient(to bottom, #03055B, #1A1D23);
+  }
+
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-image: linear-gradient(to right, #FF69B4, #FFC080);
+    box-shadow: 0 0 10px #FF69B4, 0 0 10px #FFC080, 0 0 10px #FF69B4, 0 0 10px #FFC080, 0 0 10px #FF69B4, 0 0 10px #FFC080;
+    animation: core-pulse 1s infinite;
+  }
+
+  .particle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-image: linear-gradient(to right, #00FFFF, #808080);
+    animation: particle-dance 2s infinite;
+  }
+
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .neural-web path {
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-linecap: round;
+  }
+
+  @keyframes particle-dance {
+    0% { transform: translate(-50%, 0) rotate(0deg); }
+    100% { transform: translate(-50%, 100px) rotate(-360deg); }
+  }
+
+  .neural-web path:nth-child(1) {
+    transform: rotate(0deg) translate(0, 0);
+    animation: neural-flicker 2s infinite;
+  }
+
+  .neural-web path:nth-child(2) {
+    transform: rotate(5deg) translate(0, -5px);
+    animation: neural-flicker 2s infinite;
+  }
+
+  .neural-web path:nth-child(3) {
+    transform: rotate(10deg) translate(0, -10px);
+    animation: neural-flicker 2s infinite;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 100 100 C 120 150, 150 120, 200 100" />
+      <path d="M 100 100 C 150 120, 120 150, 200 100" />
+      <path d="M 100 100 C 200 120, 120 150, 50 100" />
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>
