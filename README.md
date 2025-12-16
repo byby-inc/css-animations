@@ -788,7 +788,7 @@ Send me an e-mail if interested.
 <a href="./ephemeral-plasma-bloom.html">Ephemeral Plasma Bloom</a> <br/><br/>
 <a href="./ephemeral-vortex-ascension.html">Ephemeral Vortex Ascension</a> <br/><br/>
 <a href="./eternal-vortex-resonance.html">Eternal Vortex Resonance</a> <br/><br/>
-<a href="./ethereal-maelstrom-awakening.html"></a>Ethereal Maelstrom Awakening <br/><br/>
+<a href="./ethereal-maelstrom-awakening.html">Ethereal Maelstrom Awakening ></a> <br/><br/>
 <a href="./timeless-vortex-bloom.html">Timeless Vortex Bloom</a> <br/><br/>
 <a href="./blazing-supernova-fusion.html">Blazing Supernova Fusion</a> <br/><br/>
 <a href="./celestial-eruption-symphony.html">Celestial Eruption Symphony</a> <br/><br/>
