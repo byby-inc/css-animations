@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Celestial Vortex Bloom</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            /* Main container */
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    z-index: -1;
+    background:
+      linear-gradient(150deg, #2F2F7F 0%, #5E5E5E 50%, #5E5E5E 51%, #000000 100%),
+      radial-gradient(#444, #333);
+  }
+
+  /* Core animation */
+  @keyframes core-pulse {
+    0% {
+      transform: scale(0.5);
+    }
+    25% {
+      transform: scale(1.2);
+    }
+    50% {
+      transform: scale(0.8);
+    }
+    100% {
+      transform: scale(0.5);
+    }
+  }
+
+  /* Core element */
+  .core {
+    position: relative;
+    margin: 0 auto;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background:
+      radial-gradient(#FFA07A 0%, #FFD700 50%, #FFA07A 51%, #FFC107 100%),
+      conic-gradient(from 0deg, #F7F7F7 at 0deg 0deg, #F7F7F7 at 180deg 180deg, #F7F7F7 at 180deg 180deg, #F7F7F7 at 360deg 360deg),
+      radial-gradient(#333, #444);
+    box-shadow:
+      0 0 10px #666,
+      0 0 20px #666,
+      0 0 30px #666,
+      0 0 30px #666,
+      0 0 30px #666,
+      0 0 30px #666;
+    animation: core-pulse infinite 6s linear;
+  }
+
+  /* Particle animation */
+  @keyframes particle-dance {
+    0% {
+      transform: translate(-10px, -10px) rotate(0deg);
+    }
+    50% {
+      transform: translate(10px, 10px) rotate(360deg);
+    }
+    100% {
+      transform: translate(-10px, -10px) rotate(0deg);
+    }
+  }
+
+  /* Particle element */
+  .particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background:
+      linear-gradient(120deg, #9F4D4D 0%, #FF7C4D 100%);
+    border-radius: 50%;
+    animation: particle-dance infinite 4s ease-in-out;
+  }
+
+  /* Neural-web animation */
+  @keyframes neural-flicker {
+    0% {
+      transform: scale(0.5) rotate(0deg);
+    }
+    50% {
+      transform: scale(1.2) rotate(360deg);
+    }
+    100% {
+      transform: scale(0.5) rotate(0deg);
+    }
+  }
+
+  /* Neural-web element */
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 10;
+    stroke-linecap: round;
+  }
+
+  /* Paths for neural-web */
+  .neural-web path {
+    fill: none;
+    transform: rotate(45deg) translate(0, -20px);
+  }
+
+  .neural-web path:nth-child(1) {
+    stroke: #4C5155;
+    transform: rotate(45deg) translate(0, -10px);
+  }
+
+  .neural-web path:nth-child(2) {
+    stroke: #F7F7F7;
+    transform: rotate(90deg) translate(0, -20px);
+  }
+
+  .neural-web path:nth-child(3) {
+    stroke: #8B8B83;
+    transform: rotate(135deg) translate(0, -10px);
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 0 0 L 50 0 L 50 50 L 0 50 Z" style="transform: rotate(90deg) translate(0, -10px);" />
+      <path d="M 0 0 L 50 0 L 50 50 L 0 50 Z" style="transform: rotate(45deg) translate(0, -20px);" />
+      <path d="M 0 0 L 50 0 L 50 50 L 0 50 Z" style="transform: rotate(135deg) translate(0, -10px);" />
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

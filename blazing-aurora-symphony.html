@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Aurora Symphony</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% { transform: translateY(-100px); }
+    30% { transform: translateX(50px); }
+    50% { transform: scale(1.2); }
+    70% { transform: translateY(50px); }
+    100% { transform: translateX(-50px) scale(1); }
+  }
+  @keyframes core-pulse {
+    0% { transform: scale(0.8); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(0.8); }
+  }
+  @keyframes neural-flicker {
+    0% { transform: stroke-dasharray(10px); }
+    50% { transform: stroke-dasharray(5px); }
+    100% { transform: stroke-dasharray(10px); }
+  }
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(25% 0%,75% 0%,100% 25%,50% 100%,0% 25%);
+    background: linear-gradient(90deg, #45A0E6 0%, #C6F5D6 100%);
+    animation: core-pulse infinite 2s;
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: linear-gradient(90deg, #F2C464 0%, #87CEEB 100%);
+    width: 20px;
+    height: 20px;
+    box-shadow:
+      0 0 10px #F2C464,
+      0 0 20px #F2C464,
+      0 0 30px #F2C464,
+      0 0 40px #F2C464,
+      0 0 50px #F2C464,
+      0 0 60px #F2C464;
+    animation: core-pulse infinite 3s;
+  }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #C6F5D6 0%, #45A0E6 100%);
+    width: 10px;
+    height: 10px;
+    animation: particle-dance infinite 5s;
+  }
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2px;
+    stroke-dasharray: 10px;
+    animation: neural-flicker infinite 1s;
+  }
+  .neural-web path:nth-child(1) {
+    stroke-dashoffset: 100px;
+    animation: neural-flicker 2s infinite forwards;
+  }
+  .neural-web path:nth-child(2) {
+    stroke-dashoffset: 200px;
+    animation: neural-flicker 4s infinite forwards;
+  }
+  .neural-web path:nth-child(3) {
+    stroke-dashoffset: 300px;
+    animation: neural-flicker 6s infinite forwards;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 0, 0 H 100 V 100 H 0 Z" />
+      <path d="M 0, 0 H 150 V 150 H 0 Z" />
+      <path d="M 0, 0 H 200 V 200 H 0 Z" />
+    </svg>
+    <div class="particle" style="top: 10px; left: 10px;"></div>
+    <div class="particle" style="top: 20px; left: 20px;"></div>
+    <div class="particle" style="top: 30px; left: 30px;"></div>
+    <div class="particle" style="top: 40px; left: 40px;"></div>
+    <div class="particle" style="top: 50px; left: 50px;"></div>
+  </div>
+        </div>
+        </body>
+        </html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Ancient Plasma Ascension</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance { 0% { transform: rotate(0deg) translate(0px, 0px) scale(1); } 100% { transform: rotate(360deg) translate(500px, -500px) scale(1.5); } }
+  @keyframes core-pulse { 0% { transform: scale(1); } 100% { transform: scale(1.5); } }
+  @keyframes neural-flicker { 0% { transform: rotate(0deg); } 100% { transform: rotate(1deg); } }
+  
+  .vortex-container { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%); 
+  }
+  
+  .core {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to bottom, #fff2e6, #fecf66);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow:
+      0 0 0 10px #fff2e6,
+      0 0 0 15px #fecf66,
+      0 0 0 20px #f2c464,
+      0 0 0 25px #f7dc6f,
+      0 0 0 30px #fee08b,
+      0 0 0 35px #ffd700;
+  }
+  
+  .core::before { 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    content: ""; 
+    transform: translate(-50%, -50%); 
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%; 
+    background: linear-gradient(to bottom, #fff2e6, #fecf66);
+    animation: core-pulse infinite 3s;
+  }
+  
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #f2c464, #fecf66);
+    animation: particle-dance infinite 5s;
+  }
+  .particle:nth-child(1) { top: 10%; left: 20%; transform: rotate(0deg); }
+  .particle:nth-child(2) { top: 50%; left: 70%; transform: rotate(90deg) translate(100px, -100px); }
+  .particle:nth-child(3) { top: 80%; left: 10%; transform: rotate(45deg) translate(-100px, 100px); }
+  .particle:nth-child(4) { top: 30%; left: 40%; transform: rotate(135deg) translate(0px, 0px); }
+  .particle:nth-child(5) { top: 90%; left: 80%; transform: rotate(225deg) translate(150px, -150px); }
+  .particle:nth-child(6) { top: 20%; left: 60%; transform: rotate(315deg) translate(50px, -50px); }
+  .particle:nth-child(7) { top: 70%; left: 30%; transform: rotate(90deg); }
+  .particle:nth-child(8) { top: 40%; left: 90%; transform: rotate(45deg) translate(10px, 30px); }
+  .particle:nth-child(9) { top: 10%; left: 40%; transform: rotate(270deg) translate(-20px, -40px); }
+  
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: #fff;
+  }
+  
+  .neural-web path {
+    stroke: #fff;
+    stroke-width: 2;
+  }
+  
+  .neural-web path:nth-child(1) { d: M 25 25 H 75 V 75 H 25 Z; animation: neural-flicker infinite 2s; }
+  .neural-web path:nth-child(2) { d: M 25 75 L 75 25 Z; animation: neural-flicker infinite 2s; }
+  .neural-web path:nth-child(3) { d: M 75 25 L 25 75 Z; animation: neural-flicker infinite 2s; }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 25 25 H 75 V 75 H 25 Z" />
+      <path d="M 25 75 L 75 25 Z" />
+      <path d="M 75 25 L 25 75 Z" />
+    </svg>
+    <div class="particle" style="top: 10%; left: 20%; transform: rotate(0deg);"></div>
+    <div class="particle" style="top: 50%; left: 70%; transform: rotate(90deg) translate(100px, -100px);"></div>
+    <div class="particle" style="top: 80%; left: 10%; transform: rotate(45deg) translate(-100px, 100px);"></div>
+    <div class="particle" style="top: 30%; left: 40%; transform: rotate(135deg) translate(0px, 0px);"></div>
+    <div class="particle" style="top: 90%; left: 80%; transform: rotate(225deg) translate(150px, -150px);"></div>
+    <div class="particle" style="top: 20%; left: 60%; transform: rotate(315deg) translate(50px, -50px);"></div>
+    <div class="particle" style="top: 70%; left: 30%; transform: rotate(90deg);"></div>
+    <div class="particle" style="top: 40%; left: 90%; transform: rotate(45deg) translate(10px, 30px);"></div>
+    <div class="particle" style="top: 10%; left: 40%; transform: rotate(270deg) translate(-20px, -40px);"></div>
+  </div>
+        </div>
+        </body>
+        </html>

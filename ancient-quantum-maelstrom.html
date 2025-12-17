@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Ancient Quantum Maelstrom</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% {
+      transform: rotate(0deg) translate(0, 50px);
+    }
+    50% {
+      transform: rotate(30deg) translate(-30px, -30px);
+    }
+    100% {
+      transform: rotate(0deg) translate(0, 50px);
+    }
+  }
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    5% {
+      transform: scale(1.1);
+    }
+    10% {
+      transform: scale(0.9);
+    }
+    15% {
+      transform: scale(1.05);
+    }
+    20% {
+      transform: scale(0.95);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes neural-flicker {
+    0% {
+      transform: rotate(0deg);
+    }
+    20% {
+      transform: rotate(5deg);
+    }
+    40% {
+      transform: rotate(-5deg);
+    }
+    60% {
+      transform: rotate(5deg);
+    }
+    80% {
+      transform: rotate(-5deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #ff33cc, #33cccc, #ff9933);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 
+                0 0 5px rgba(255, 255, 255, 0.5), 
+                0 0 10px rgba(0, 0, 0, 0.5), 
+                0 0 5px rgba(255, 255, 255, 0.5), 
+                0 0 10px rgba(0, 0, 0, 0.5), 
+                0 0 5px rgba(255, 255, 255, 0.5);
+  }
+  .core::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #ffff00, #33cccc, #ff9933);
+  }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(90deg, #ff66cc, #33cccc, #ff9966);
+  }
+  .neural-web {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: none;
+  }
+  .neural-web path {
+    stroke: #fff;
+    stroke-width: 1;
+  }
+  .neural-web path:nth-child(1) {
+    d: M 50, 50 L 25, 75 L 75, 75;
+  }
+  .neural-web path:nth-child(2) {
+    d: M 50, 50 L 25, 25 L 75, 25;
+  }
+  .neural-web path:nth-child(3) {
+    d: M 50, 50 L 25, 75 L 75, 75;
+  }
+  @-webkit-keyframes particle-dance {
+    0% {
+      transform: rotate(0deg) translate(0, 50px);
+    }
+    50% {
+      transform: rotate(30deg) translate(-30px, -30px);
+    }
+    100% {
+      transform: rotate(0deg) translate(0, 50px);
+    }
+  }
+  @-moz-keyframes particle-dance {
+    0% {
+      transform: rotate(0deg) translate(0, 50px);
+    }
+    50% {
+      transform: rotate(30deg) translate(-30px, -30px);
+    }
+    100% {
+      transform: rotate(0deg) translate(0, 50px);
+    }
+  }
+  @-o-keyframes particle-dance {
+    0% {
+      transform: rotate(0deg) translate(0, 50px);
+    }
+    50% {
+      transform: rotate(30deg) translate(-30px, -30px);
+    }
+    100% {
+      transform: rotate(0deg) translate(0, 50px);
+    }
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 50, 50 L 25, 75 L 75, 75"/>
+      <path d="M 50, 50 L 25, 25 L 75, 25"/>
+      <path d="M 50, 50 L 25, 75 L 75, 75"/>
+    </svg>
+    <div class="particle" style="left: 100px; top: 80px;"></div>
+    <div class="particle" style="left: 150px; top: 100px;"></div>
+    <div class="particle" style="left: 220px; top: 120px;"></div>
+    <div class="particle" style="left: 280px; top: 140px;"></div>
+    <div class="particle" style="left: 340px; top: 160px;"></div>
+    <div class="particle" style="left: 400px; top: 180px;"></div>
+  </div>
+        </div>
+        </body>
+        </html>

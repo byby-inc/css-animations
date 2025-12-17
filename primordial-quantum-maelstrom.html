@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Primordial Quantum Maelstrom</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            /* Keyframes */
+  @keyframes particle-dance {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    20% {
+      transform: translate(-20px, -20px) rotate(10deg);
+    }
+    40% {
+      transform: translate(20px, 20px) rotate(20deg);
+    }
+    60% {
+      transform: translate(-40px, -40px) rotate(30deg);
+    }
+    80% {
+      transform: translate(40px, 40px) rotate(40deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+  }
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    20% {
+      transform: scale(1.1);
+    }
+    40% {
+      transform: scale(1);
+    }
+    60% {
+      transform: scale(1.2);
+    }
+    80% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes neural-flicker {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    20% {
+      transform: translate(10px, 10px) rotate(5deg);
+    }
+    40% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    60% {
+      transform: translate(-20px, -20px) rotate(10deg);
+    }
+    80% {
+      transform: translate(20px, 20px) rotate(15deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+  }
+
+  /* Styles */
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: linear-gradient(to top, #141414, #333);
+  }
+  .core {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right, #ff99cc, #ff0000);
+    animation: core-pulse infinite 1s;
+  }
+  .core-box-shadow {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  }
+  .core-box-shadows {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to right, #66CCCC, #6666CC);
+    animation: particle-dance infinite 2s;
+  }
+  .neural-web {
+    position: absolute;
+    fill: #fff;
+    stroke: #fff;
+  }
+  .neural-web path {
+    stroke-width: 2;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core">
+      <div class="core-box-shadows"></div>
+      <div class="core_box_shadow_1"></div>
+      <div class="core_box_shadow_2"></div>
+      <div class="core_box_shadow_3"></div>
+      <div class="core_box_shadow_4"></div>
+      <div class="core_box_shadow_5"></div>
+      <div class="core_box_shadow_6"></div>
+    </div>
+    <svg class="neural-web">
+      <path d="M50 0 L75 75 L0 75 Z" />
+      <path d="M150 0 L75 75 L100 75 Z" />
+      <path d="M200 0 L125 75 L250 75 Z" />
+    </svg>
+    <div class="particle" style="top: 200px; left: 200px;"></div>
+    <div class="particle" style="top: 300px; left: 300px;"></div>
+    <div class="particle" style="top: 100px; left: 100px;"></div>
+    <div class="particle" style="top: 400px; left: 400px;"></div>
+    <div class="particle" style="top: 50px; left: 50px;"></div>
+  </div>
+        </div>
+        </body>
+        </html>

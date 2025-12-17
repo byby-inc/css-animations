@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Vortex Ascension</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: linear-gradient(180deg, #ff9900, #ff3300);
+  }
+  
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #ffff00, #ff0000);
+    box-shadow: 0 0 10px #ffffff, 0 0 15px #ffff00, 0 0 20px #ff9900, 0 0 25px #ff3300, 0 0 30px #ff0000, 0 0 35px #ffff00;
+  }
+  
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(90deg, #ffff00, #ff0000);
+  }
+  
+  .neural-web {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  @keyframes particle-dance {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    100% {
+      transform: translate(-20px, -20px) rotate(360deg);
+    }
+  }
+  
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.5);
+    }
+  }
+  
+  @keyframes neural-flicker {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    100% {
+      transform: rotate(180deg) scale(0.95);
+    }
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core" class="animate-pulse"></div>
+    <svg class="neural-web">
+      <path stroke="#ffffff" d="M 0 0 V 50 H 100 Z"></path>
+      <path stroke="#ffffff" d="M 0 0 V 75 H 150 Z"></path>
+      <path stroke="#ffffff" d="M 0 0 V 100 H 200 Z"></path>
+    </svg>
+    <div class="particle animate-dance" style="top: 20%; left: 20%;"></div>
+    <div class="particle animate-dance" style="top: 30%; left: 30%;"></div>
+    <div class="particle animate-dance" style="top: 40%; left: 40%;"></div>
+    <div class="particle animate-dance" style="top: 50%; left: 50%;"></div>
+    <div class="particle animate-dance" style="top: 60%; left: 60%;"></div>
+    <div class="particle animate-dance" style="top: 70%; left: 70%;"></div>
+    <div class="particle animate-dance" style="top: 80%; left: 80%;"></div>
+    <div class="particle animate-dance" style="top: 90%; left: 90%;"></div>
+    <div class="particle animate-dance" style="top: 95%; left: 95%;"></div>
+    <div class="particle animate-dance" style="top: 99%; left: 99%;"></div>
+  </div>
+        </div>
+        </body>
+        </html>
