@@ -42,7 +42,7 @@ be suject to copyright policies.
 
 Send me an e-mail if interested.
 
-817/1000
+823/1000
 
 
 
@@ -863,3 +863,6 @@ Send me an e-mail if interested.
 <a href="./blazing-vortex-maelstrom.html">Blazing Vortex Maelstrom</a> <br/><br/>
 <a href="./ancient-primordial-singularity-dawn.html">Ancient Primordial Singularity Dawn</a> <br/><br/>
 <a href="./blazing-horizon-convergence.html">Blazing Horizon Convergence</a> <br/><br/>
+<a href="./ethereal-cascade-horizon.html">Ethereal Cascade Horizon</a> <br/><br/>
+<a href="./primordial-vortex-inferno.html">Primordial Vortex Inferno</a> <br/><br/>
+<a href="./blazing-horizon-vortex.html">Blazing Horizon Vortex</a> <br/><br/>
