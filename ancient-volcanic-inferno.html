@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Ancient Volcanic Inferno</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% {
+      transform: translate(0px, 0px) rotate(0deg);
+    }
+    50% {
+      transform: translate(20px, 10px) rotate(180deg);
+    }
+    100% {
+      transform: translate(0px, 0px) rotate(0deg);
+    }
+  }
+  
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes neural-flicker {
+    0% {
+      transform: translate(0px, 0px) rotate(0deg);
+      stroke-dashoffset: 0;
+    }
+    50% {
+      transform: translate(-20px, 10px) rotate(180deg);
+      stroke-dashoffset: -40;
+    }
+    100% {
+      transform: translate(0px, 0px) rotate(0deg);
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0, 75% 0, 100% 25%, 50% 100%, 0 25%);
+    background: linear-gradient(to bottom, #ff6b6b, #ff9d8f, #ff6b6b);
+  }
+  
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to right, #ff9900, #ff6600);
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ff9900, 0 0 10px #ff9900, 0 0 10px #ff9900, 0 0 10px #ff9900, 0 0 10px #ff9900;
+  }
+  
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to right, #ff9900, #ff6600);
+  }
+  
+  .neural-web {
+    position: absolute;
+    fill: #ff6b6b;
+  }
+  
+  .particle1 {
+    top: 30px;
+    left: 40px;
+  }
+  
+  .particle2 {
+    top: 60px;
+    left: 10px;
+  }
+  
+  .particle3 {
+    top: 20px;
+    left: 70px;
+  }
+  
+  .particle4 {
+    top: 80px;
+    left: 30px;
+  }
+  
+  .particle5 {
+    top: 100px;
+    left: 50px;
+  }
+  
+  .particle6 {
+    top: 40px;
+    left: 20px;
+  }
+  
+  .particle7 {
+    top: 90px;
+    left: 60px;
+  }
+  
+  .particle8 {
+    top: 110px;
+    left: 80px;
+  }
+  
+  .particle9 {
+    top: 120px;
+    left: 10px;
+  }
+  
+  .particle10 {
+    top: 130px;
+    left: 90px;
+  }
+  
+  .neural-web path {
+    stroke: #fff;
+    stroke-dasharray: 100, 100;
+    animation: neural-flicker 2s infinite;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web" width="100%" height="100%">
+      <path d="M 50 50 L 70 50 90 30 50 10 10 30 70 90 50 50" />
+      <path d="M 20 70 L 80 50 90 30 20 10 70 60 90 80 50 70" />
+      <path d="M 40 20 L 100 70 80 90 60 30 90 10 70 60 60 40" />
+    </svg>
+    <div class="particle particle1"></div>
+    <div class="particle particle2"></div>
+    <div class="particle particle3"></div>
+    <div class="particle particle4"></div>
+    <div class="particle particle5"></div>
+    <div class="particle particle6"></div>
+    <div class="particle particle7"></div>
+    <div class="particle particle8"></div>
+    <div class="particle particle9"></div>
+    <div class="particle particle10"></div>
+  </div>
+        </div>
+        </body>
+        </html>

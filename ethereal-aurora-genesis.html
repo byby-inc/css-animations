@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Ethereal Aurora Genesis</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            /* Position the container */
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: linear-gradient(-45deg, #03a9f4, #03a9f4 25%, #ff99cc 25%, #ff99cc 50%, #33cc33 50%, #33cc33 75%, #9900ff 75%, #9900ff);
+  }
+  
+  /* Style the .core */
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border: 5px solid #fff;
+    background: linear-gradient(-45deg, #cc99ff, #cc99ff 25%, #33cc33 25%, #33cc33 50%, #ff99cc 50%, #ff99cc 75%, #cc99ff 75%, #cc99ff);
+    box-shadow: 0 0 10px #fff, 5px 5px 15px #fff, 10px 10px 25px #fff, 15px 15px 35px #fff, 20px 20px 45px #fff, 25px 25px 55px #fff;
+  }
+  .core:hover {
+    animation: core-pulse 2s infinite;
+  }
+  
+  /* Style the particles */
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, #ff99cc, #ff99cc 25%, #33cc33 25%, #33cc33 50%, #cc99ff 50%, #cc99ff 75%, #33cc33 75%, #33cc33);
+  }
+  .particle:hover {
+    animation: particle-dance 1.5s infinite;
+    transform: translateX(10px);
+  }
+  
+  /* Style the .neural-web */
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: #fff;
+  }
+  .neural-web path {
+    stroke: #fff;
+  }
+  
+  /* Animations */
+  @keyframes particle-dance {
+    0% {
+      transform: rotate(0deg) translate(0px, 0px);
+    }
+    100% {
+      transform: rotate(360deg) translate(20px, 20px);
+    }
+  }
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1.0);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1.0);
+    }
+  }
+  @keyframes neural-flicker {
+    0% {
+      transform: rotate(0deg) skewX(0deg);
+    }
+    50% {
+      transform: rotate(15deg) skewX(5deg);
+    }
+    100% {
+      transform: rotate(0deg) skewX(0deg);
+    }
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 10 10 L 10 20 L 20 10 z" />
+      <path d="M 10 10 L 10 20 L 30 10 z" />
+      <path d="M 10 10 L 10 20 L 20 10 L 30 20 z" />
+    </svg>
+    <div class="particle" style="top: 30px; left: 30px;"></div>
+    <div class="particle" style="top: 30px; left: 40px;"></div>
+    <div class="particle" style="top: 30px; left: 50px;"></div>
+    <div class="particle" style="top: 30px; left: 60px;"></div>
+    <div class="particle" style="top: 30px; left: 70px;"></div>
+    <div class="particle" style="top: 40px; left: 30px;"></div>
+  </div>
+        </div>
+        </body>
+        </html>

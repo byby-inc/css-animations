@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Vortex Singularity</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.2); }
+  }
+
+  @keyframes neural-flicker {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: linear-gradient(225deg, #6495ED, #33CC33);
+  }
+
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: radial-gradient(rgba(255, 255, 255, 0), #F7DC6F);
+    box-shadow: 0 0 20px #F7DC6F, 0 0 60px #F7DC6F, 0 0 80px #F7DC6F, 0 0 100px #F7DC6F, 0 0 120px #F7DC6F, 0 0 140px #F7DC6F;
+    animation: core-pulse 1s infinite;
+  }
+
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, #6495ED, #33CC33);
+    animation: particle-dance 4s infinite;
+  }
+
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.2); }
+  }
+
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #fff;
+  }
+
+  .neural-web path {
+    stroke-width: 2;
+  }
+
+  .neural-web path:nth-child(1) {
+    stroke-dasharray: 150 150;
+    stroke-dashoffset: 75;
+    animation: neural-flicker 3s infinite;
+  }
+
+  .neural-web path:nth-child(2) {
+    stroke-dasharray: 150 150;
+    stroke-dashoffset: 75;
+    animation: neural-flicker 3.5s infinite;
+    animation-delay: 0.5s;
+  }
+
+  .neural-web path:nth-child(3) {
+    stroke-dasharray: 150 150;
+    stroke-dashoffset: 75;
+    animation: neural-flicker 4s infinite;
+    animation-delay: 1s;
+  }
+
+  @keyframes neural-flicker {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .vortex-container .particle:nth-child(1) {
+    left: 50%;
+    top: 20%;
+    animation-delay: 0s;
+  }
+
+  .vortex-container .particle:nth-child(2) {
+    left: 20%;
+    top: 50%;
+    animation-delay: 0.5s;
+  }
+
+  .vortex-container .particle:nth-child(3) {
+    left: 70%;
+    top: 50%;
+    animation-delay: 1s;
+  }
+
+  .vortex-container .particle:nth-child(4) {
+    left: 40%;
+    top: 80%;
+    animation-delay: 1.5s;
+  }
+
+  .vortex-container .particle:nth-child(5) {
+    left: 60%;
+    top: 80%;
+    animation-delay: 2s;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 50 20 a 20 20 0 0 1 30 0" />
+      <path d="M 50 80 a 20 20 0 0 1 30 0" />
+      <path d="M 80 50 a 20 20 0 0 1 10 0" />
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

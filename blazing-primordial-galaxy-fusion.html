@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Primordial Galaxy Fusion</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    100% {
+      transform: translate(-2rem, -3rem) rotate(360deg);
+    }
+  }
+
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes neural-flicker {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(180deg);
+    }
+  }
+
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: linear-gradient(90deg, #fff9e4, #ffdde2);
+  }
+
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(180deg, #ff69b4, #ff1493);
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    box-shadow: 0 0 0 0 #ff69b4, 0 0 0 0 #ff69b4, 0 0 0 0 #ff69b4, 0 0 0 0 #ff69b4, 0 0 0 0 #ff69b4, 0 0 0 0 #ff69b4;
+  }
+
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    background: linear-gradient(180deg, #fff9e4, #ffdde2);
+  }
+
+  .neural-web {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    fill: #fff;
+  }
+
+  .neural-web path {
+    stroke: #fff;
+    stroke-width: 0.1rem;
+    fill: none;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core">
+      <i class="particle" style="animation: particle-dance 5s infinite;"></i>
+      <i class="particle" style="animation: particle-dance 5s infinite;"></i>
+      <i class="particle" style="animation: particle-dance 5s infinite;"></i>
+      <i class="particle" style="animation: particle-dance 5s infinite;"></i>
+      <i class="particle" style="animation: particle-dance 5s infinite;"></i>
+      <i class="particle" style="animation: particle-dance 5s infinite;"></i>
+    </div>
+    <div class="neural-web">
+      <svg>
+        <path d="M 0 0 L 50 50 L 100 0 Z" style="animation: neural-flicker 10s infinite;"/>
+        <path d="M 0 0 L 75 75 L 100 0 Z" style="animation: neural-flicker 12s infinite;"/>
+        <path d="M 0 0 L 50 50 L 100 100 Z" style="animation: neural-flicker 8s infinite;"/>
+      </svg>
+    </div>
+  </div>
+        </div>
+        </body>
+        </html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Boundless Maelstrom Genesis</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% { transform: translate(0, 50%) rotate(0deg); }
+    50% { transform: translate(-30%, 50%) rotate(180deg); }
+    100% { transform: translate(0, 50%) rotate(0deg); }
+  }
+
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+
+  @keyframes neural-flicker {
+    0% { transform: rotate(0deg); }
+    30% { transform: rotate(5deg); }
+    50% { transform: rotate(0deg); }
+    80% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+  .vortex-container {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%,75% 0%,100% 25%,50% 100%,0% 25%);
+    background: linear-gradient(to bottom, #000, #000) padding-box, linear-gradient(to bottom, #fff, #fff) border-box;
+  }
+
+  .core {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px; height: 100px;
+    background: linear-gradient(to top, #fff, #000);
+    border-radius: 50%;
+    box-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff;
+    animation: core-pulse infinite 5s ease-in-out;
+    animation-play-state: running;
+  }
+
+  .particle {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 20px; height: 20px;
+    background: linear-gradient(to bottom, #fff, #000);
+    animation: particle-dance infinite 8s linear;
+    animation-play-state: running;
+  }
+
+  .neural-web {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    fill: #fff;
+    stroke: #fff;
+    stroke-width: 1;
+  }
+
+  .neural-web path {
+    stroke-dasharray: 200;
+    stroke-dashoffset: -100;
+    animation: neural-flicker infinite 15s linear;
+    animation-play-state: running;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 0 0 L 50 0 C 70 20 50 50 30 20 L 0 0 Z" />
+      <path d="M 0 50 L 50 50 C 70 70 50 90 30 70 L 0 50 Z" />
+      <path d="M 50 100 L 0 100 C -30 80 -50 100 -30 80 L 50 100 Z" />
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Horizon Cataclysm</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            /* Clip-path for the .vortex-container */
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+  }
+
+  /* Style for the .core element */
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border: 10px solid #111;
+    background: linear-gradient(to bottom, #f3f3f3, #e2e2e2);
+    border-radius: 50%;
+    box-shadow: 0 0 10px #333, 0 0 20px #222, 0 0 30px #111, 0 0 40px #000, 0 0 50px #000;
+    animation: core-pulse infinite 5s;
+  }
+
+  /* Style for the .particle element */
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #111, #222);
+  }
+
+  /* Keyframes for .particle animation */
+  @keyframes particle-dance {
+    0% {
+      transform: translate(50%, 50%) rotate(0);
+    }
+    50% {
+      transform: translate(100% 100%) rotate(180deg);
+    }
+    100% {
+      transform: translate(0% 0%) rotate(360deg);
+    }
+  }
+
+  /* Style for the .particle element */
+  .particle.dance {
+    animation: particle-dance infinite 10s;
+  }
+
+  /* Style for the .neural-web element */
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Keyframes for .neural-web animation */
+  @keyframes neural-flicker {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  /* Style for .neural-web paths */
+  .neural-web path {
+    stroke: #fff;
+    stroke-opacity: 0.5;
+    animation: neural-flicker infinite 7s;
+  }
+
+  /* Style for the .vortex-container .particle element */
+  .vortex-container .particle {
+    width: 20px;
+    height: 20px;
+    top: 10px;
+    left: 10px;
+  }
+  .vortex-container .particle.dance1 {
+    animation: particle-dance infinite 5s;
+    top: 40px;
+    left: 20px;
+  }
+  .vortex-container .particle.dance2 {
+    animation: particle-dance infinite 8s;
+    top: 30px;
+    left: 80px;
+  }
+  .vortex-container .particle.dance3 {
+    animation: particle-dance infinite 12s;
+    top: 60px;
+    left: 30px;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core core-pulse"></div>
+    <div class="particle dance1"></div>
+    <div class="particle dance2"></div>
+    <div class="particle dance3"></div>
+    <svg class="neural-web" width="100%" height="100%">
+      <path d="M50 0 L 100 100" />
+      <path d="M50 100 L 100 0" />
+      <path d="M0 50 L 100 50" />
+    </svg>
+    <div class="particle dance1"></div>
+    <div class="particle dance2"></div>
+    <div class="particle dance3"></div>
+  </div>
+        </div>
+        </body>
+        </html>

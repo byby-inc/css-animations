@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Ethereal Plasma Convergence</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% { transform: rotate(0deg) translate(0px, 0px); }
+    100% { transform: rotate(360deg) translate(-50%, 0px); }
+  }
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.2); }
+  }
+  @keyframes neural-flicker {
+    0% { transform: translate(0px, 0px); }
+    100% { transform: translate(50px, 20px); }
+  }
+  .particle-p1 {
+    position: absolute;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+  }
+  .particle-p2 {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  .particle-p3 {
+    position: absolute;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+  }
+  .particle-p4 {
+    position: absolute;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+  }
+  .particle-p5 {
+    position: absolute;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+  }
+  .particle-p6 {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  .particle-p7 {
+    position: absolute;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+  }
+  .particle-p7 {
+    background-image: linear-gradient(#fff, #fff);
+  }
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: circle(50% at 50% 50%);
+    background-image: linear-gradient(#03055B, #3F00F1);
+    background-size: 400% 100%;
+    animation: core-pulse 10s infinite;
+    -webkit-animation: core-pulse 10s infinite;
+    animation: core-pulse 10s infinite;
+  }
+  .core {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
+    background-size: 100% 150%;
+    background-position: 0 100%, 0 0;
+    -webkit-background-clip: text, border-box;
+    -webkit-text-fill-color: transparent;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #1A1A1A, 0 0 0 15px #03055B, 
+                 0 0 0 20px #3F00F1, 0 0 0 25px #9B0A21, 
+                 0 0 0 30px #FF00C7, 0 0 0 35px #FF69B4;
+    animation: core-pulse 10s infinite;
+    -webkit-animation: core-pulse 10s infinite;
+  }
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#fff, #fff);
+    stroke: #fff;
+  }
+  .neural-web path {
+    stroke-width: 2px;
+    stroke: #fff;
+  }
+  .neural-web path:nth-child(1) {
+    stroke-dasharray: 300 300;
+  }
+  .neural-web path:nth-child(2) {
+    stroke-dasharray: 400 400;
+  }
+  .neural-web path:nth-child(3) {
+    stroke-dasharray: 500 500;
+  }
+  .neural-web path:nth-child(1) {
+    stroke-dashoffset: 800;
+  }
+  .neural-web path:nth-child(2) {
+    stroke-dashoffset: 600;
+  }
+  .neural-web path:nth-child(3) {
+    stroke-dashoffset: 400;
+  }
+  .vortex-container, .core, .neural-web {
+    animation: neural-flicker 1s infinite;
+    -webkit-animation: neural-flicker 1s infinite;
+  }
+  @keyframes neural-flicker {
+    0% { transform: translate(0px, 0px); }
+    100% { transform: translate(50px, 20px); }
+  }
+  @keyframes particle-dance {
+    0% { transform: rotate(0deg) translate(0px, 0px); }
+    100% { transform: rotate(360deg) translate(-50%, 0px); }
+  }
+  .particle-p1 {
+    animation: particle-dance 15s infinite;
+    -webkit-animation: particle-dance 15s infinite;
+    background-image: linear-gradient(#fff, #fff);
+    animation-duration: 15s;
+    -webkit-animation-duration: 15s;
+  }
+  .particle-p2 {
+    animation: particle-dance 18s infinite;
+    -webkit-animation: particle-dance 18s infinite;
+    background-image: linear-gradient(#fff, #fff);
+    animation-duration: 18s;
+    -webkit-animation-duration: 18s;
+  }
+  .particle-p7 {
+    animation: particle-dance 12s infinite;
+    -webkit-animation: particle-dance 12s infinite;
+    background-image: linear-gradient(#fff, #fff);
+    animation-duration: 12s;
+    -webkit-animation-duration: 12s;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <div class="particle particle-p1" style="top: 20%; left: 10%"></div>
+    <div class="particle particle-p2" style="top: 50%; left: 50%"></div>
+    <div class="particle particle-p3" style="top: 80%; left: 20%"></div>
+    <div class="particle particle-p4" style="top: 30%; left: 40%"></div>
+    <div class="particle particle-p5" style="top: 15%; left: 60%"></div>
+    <div class="particle particle-p6" style="top: 25%; left: 10%"></div>
+    <div class="particle particle-p7" style="top: 35%; left: 80%"></div>
+    <svg class="neural-web">
+      <path d="M 30 0 a 30 30 0 3, 5 30 30"  />
+      <path d="M 20 0 a 20 20 0 3,5 20 20"  />
+      <path d="M 10 0 a 10 10 0 3,5 10 10"  />
+      <path d="M 60 0 a 30 30 0 3,-5 30 30" />
+      <path d="M 50 0 a 20 20 0 3,-5 20 20" />
+      <path d="M 40 0 a 10 10 0 3,-5 10 10" />
+    </svg>
+  </div>
+        </div>
+        </body>
+        </html>

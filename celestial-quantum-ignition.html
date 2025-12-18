@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Celestial Quantum Ignition</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% { transform: translate(-50%, -50%) rotate(0deg) }
+    50% { transform: translate(-50%, -50%) rotate(360deg) }
+    100% { transform: translate(-50%, -50%) rotate(0deg) }
+  }
+  
+  @keyframes core-pulse {
+    0% { transform: scale(1) }
+    50% { transform: scale(1.2) }
+    100% { transform: scale(1) }
+  }
+  
+  @keyframes neural-flicker {
+    0% { transform: translate(0, 0) }
+    20% { transform: translate(-10%, 0) }
+    40% { transform: translate(0, -10%) }
+    60% { transform: translate(10%, 0) }
+    80% { transform: translate(0, 10%) }
+    100% { transform: translate(0, 0) }
+  }
+  
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #1f1f1f, #101010);
+    background-size: 200% 200%;
+    background-position: 0 0;
+    transition: background-position 0.65s;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+  }
+  
+  .vortex-container:hover {
+    background-position: 0 100%;
+  }
+  
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, #f7d2c4, #f75b2c);
+    background-size: 200% 200%;
+    background-position: 0 0;
+    transition: background-position 0.5s;
+    box-shadow:
+      0px 0px 0px 10px #fff,
+      0 0 0 25px #f7d2c4,
+      0 0 0 50px #f75b2c,
+      0 0 0 75px #fff,
+      0 0 0 100px #f7d2c4,
+      0 0 0 125px #f75b2c;
+    animation: core-pulse 2s infinite;
+  }
+  
+  .particle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, #1f1f1f, #101010);
+    background-size: 200% 200%;
+    background-position: 0 0;
+    transition: background-position 1.4s;
+    animation: particle-dance 8s infinite;
+    transform: rotate(50deg);
+  }
+  
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    stroke: #fff;
+  }
+  
+  .neural-web path {
+    stroke-width: 2px;
+  }
+  
+  @keyframes particle-dance {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    50% { transform: translate(-50%, -50%) rotate(360deg); }
+    100% { transform: translate(-50%, -50%) rotate(0deg); }
+  }
+  
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes neural-flicker {
+    0% { transform: translate(0, 0); }
+    20% { transform: translate(-10%, 0); }
+    40% { transform: translate(0, -10%); }
+    60% { transform: translate(10%, 0); }
+    80% { transform: translate(0, 10%); }
+    100% { transform: translate(0, 0); }
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 50 50 L 100 100 L 0 100 L 50 50 Z" />
+      <path d="M 50 50 L 100 0 L 0 0 L 50 50 Z" />
+      <path d="M 100 50 L 200 100 L 50 100 L 100 50 Z" />
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

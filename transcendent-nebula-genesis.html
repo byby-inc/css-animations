@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Transcendent Nebula Genesis</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% { transform: translate(0%, 0%) rotate(0deg); }
+    50% { transform: translate(-5%, -5%) rotate(10deg); }
+    100% { transform: translate(0%, 0%) rotate(0deg); }
+  }
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+  @keyframes neural-flicker {
+    0% { transform: translate(0%, 0%) scale(1); }
+    25% { transform: translate(0%, 10%) scale(1.1); }
+    75% { transform: translate(0%, -10%) scale(0.9); }
+    100% { transform: translate(0%, 0%) scale(1); }
+  }
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom left, #33CCFF, #66CCCC);
+    box-shadow: 0 0 10px #66CCCC, 0 0 20px #33CCFF, 0 0 30px #66CCCC, 0 0 40px #33CCFF, 0 0 50px #66CCCC, 0 0 60px #33CCFF;
+    animation: core-pulse 2s infinite;
+  }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-image: linear-gradient(to bottom right, #66CCCC, #33CCFF);
+    animation: particle-dance 4s infinite;
+  }
+  .neural-web {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+  }
+  .neural-web path {
+    opacity: 0.5;
+  }
+  @keyframes neural-flicker {
+    0% { transform: translate(0%, 0%) scale(1); }
+    25% { transform: translate(0%, 10%) scale(1.1); }
+    75% { transform: translate(0%, -10%) scale(0.9); }
+    100% { transform: translate(0%, 0%) scale(1); }
+  }
+  .neural-web path:nth-child(1) {
+    stroke-dasharray: 100, 150;
+    animation: neural-flicker 8s infinite;
+  }
+  .neural-web path:nth-child(2) {
+    stroke-dasharray: 120, 180;
+    animation: neural-flicker 10s infinite;
+  }
+  .neural-web path:nth-child(3) {
+    stroke-dasharray: 100, 150;
+    animation: neural-flicker 12s infinite;
+  }
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: circle(50% at 50% 50%);
+  }
+  .particle:nth-child(1) {
+    top: 50%;
+    left: 10%;
+    animation-play-state: paused;
+  }
+  .particle:nth-child(2) {
+    top: 10%;
+    left: 50%;
+    animation-play-state: running;
+    background-image: linear-gradient(to bottom right, #66CCCC, #33CCFF);
+  }
+  .particle:nth-child(3) {
+    top: 60%;
+    left: 30%;
+    animation-play-state: running;
+  }
+  .particle:nth-child(4) {
+    top: 40%;
+    left: 70%;
+    animation-play-state: running;
+  }
+  .particle:nth-child(5) {
+    top: 80%;
+    left: 20%;
+    animation-play-state: running;
+  }
+  .neural-web {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path stroke-dasharray="100, 150" d="M200 200 A 100 100 0 0 1 300 200 L 300 300 Z"></path>
+      <path stroke-dasharray="120, 180" d="M200 200 A 100 100 0 0 1 300 200 L 300 300 Z"></path>
+      <path stroke-dasharray="100, 150" d="M200 200 A 100 100 0 0 1 300 200 L 300 300 Z"></path>
+    </svg>
+    <div class="particle" style="top: 10%; left: 50%; animation-play-state: paused;"></div>
+    <div class="particle" style="top: 60%; left: 30%; animation-play-state: running;"></div>
+    <div class="particle" style="top: 40%; left: 70%; animation-play-state: running;"></div>
+    <div class="particle" style="top: 80%; left: 20%; animation-play-state: running;"></div>
+  </div>
+        </div>
+        </body>
+        </html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Eternal Vortex Symphony</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+      transform: translate(-10px, -10px) rotate(10deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+  }
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes neural-flicker {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(5deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  .vortex-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: linear-gradient(90deg, #3b3b3b 0%, #444444 100%);
+    animation: particle-dance 2s infinite;
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(90deg, #ff69b4 0%, #33cc33 100%);
+    border-radius: 50%;
+    box-shadow:
+      0 0 0 1px rgba(255, 102, 180, 0.5),
+      0 0 10px rgba(255, 102, 180, 0.5),
+      0 0 20px rgba(255, 102, 180, 0.5),
+      0 0 30px rgba(255, 102, 180, 0.5),
+      0 0 40px rgba(255, 102, 180, 0.5),
+      0 0 50px rgba(255, 102, 180, 0.5);
+    animation: core-pulse 4s infinite;
+  }
+  .particle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(90deg, #ff69b4 0%, #33cc33 100%);
+    border-radius: 50%;
+    animation: neural-flicker 1.5s infinite;
+  }
+  .particle:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .particle:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .particle:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  .particle:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+  .particle:nth-child(5) {
+    animation-delay: 0.8s;
+  }
+  .particle:nth-child(6) {
+    animation-delay: 1s;
+  }
+  .particle:nth-child(7) {
+    animation-delay: 1.2s;
+  }
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .neural-web path {
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+  .neural-web path:nth-child(1) {
+    stroke-dasharray: 100 200;
+    stroke-dashoffset: 100;
+  }
+  .neural-web path:nth-child(2) {
+    stroke-dasharray: 150 300;
+    stroke-dashoffset: 150;
+  }
+  .neural-web path:nth-child(3) {
+    stroke-dasharray: 200 400;
+    stroke-dashoffset: 200;
+  }
+  @keyframes neural-flicker {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(5deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  .neural-web path {
+    animation: neural-flicker 3s infinite;
+    animation-delay: calc(100ms * var(--i));
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web" viewBox="0 0 100 100">
+      <path d="M 0,50 H 50 V 0 H 0" stroke-dasharray="100 200" stroke="white" fill="none"></path>
+      <path d="M 0,50 H 75 V 0 H 0" stroke-dasharray="150 300" stroke="white" fill="none"></path>
+      <path d="M 0,50 H 95 V 0 H 0" stroke-dasharray="200 400" stroke="white" fill="none"></path>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </svg>
+  </div>
+        </div>
+        </body>
+        </html>

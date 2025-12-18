@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Celestial Maelstrom</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            /* Main container styles */
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+  }
+
+  /* Core styles */
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, #ffff00, #ffff66);
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.5), 0 0 20px rgba(255, 255, 0, 0.5), 0 0 30px rgba(255, 255, 0, 0.5), 0 0 40px rgba(255, 255, 0, 0.5), 0 0 50px rgba(255, 255, 0, 0.5);
+    animation: core-pulse infinite;
+  }
+
+  /* Particle styles */
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, #ffff00, #ffff66);
+  }
+
+  /* Particle animation styles */
+  @keyframes particle-dance {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+      transform: translate(-50px, -50px) rotate(360deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+  }
+
+  /* Core animation styles */
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  /* Neural web styles */
+  .neural-web {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Neural web path styles */
+  .neural-web path {
+    stroke: #fff;
+    fill: none;
+    stroke-width: 2;
+  }
+
+  /* Neural web animation styles */
+  @keyframes neural-flicker {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 50 50 L 100 100 L 150 150 Z" fill="none" />
+      <path d="M 50 50 L 150 50 L 100 100 Z" fill="none" />
+      <path d="M 50 150 L 100 50 L 150 100 Z" fill="none" />
+    </svg>
+    <div class="particle" style="top: 20px; left: 20px;"></div>
+    <div class="particle" style="top: 40px; left: 40px;"></div>
+    <div class="particle" style="top: 60px; left: 60px;"></div>
+    <div class="particle" style="top: 80px; left: 80px;"></div>
+    <div class="particle" style="top: 20px; left: 120px;"></div>
+    <div class="particle" style="top: 40px; left: 140px;"></div>
+    <div class="particle" style="top: 60px; left: 160px;"></div>
+    <div class="particle" style="top: 80px; left: 180px;"></div>
+    <div class="particle" style="top: 20px; left: 200px;"></div>
+    <div class="particle" style="top: 40px; left: 220px;"></div>
+  </div>
+        </div>
+        </body>
+        </html>

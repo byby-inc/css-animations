@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Boundless Stellar Symphony</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+      0% {
+        transform: translate(50%, 0px) rotate(0deg);
+      }
+      100% {
+        transform: translate(-50%, 0px) rotate(360deg);
+      }
+    }
+    @keyframes core-pulse {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.1);
+      }
+    }
+    @keyframes neural-flicker {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    
+    .vortex-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+      background: linear-gradient(to bottom, #3f008b, #5c1bff);
+    }
+    .core {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: linear-gradient(to bottom, #3f008b, #5c1bff);
+      box-shadow:
+        0 0 10px #3f008b,
+        0 0 20px #5c1bff,
+        0 0 30px #3f008b,
+        0 0 40px #5c1bff,
+        0 0 50px #3f008b,
+        0 0 60px #5c1bff;
+      animation: core-pulse infinite 1s;
+    }
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      background: linear-gradient(to bottom, #3f008b, #5c1bff);
+      animation: particle-dance infinite 5s;
+    }
+    .particle:nth-child(1) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .particle:nth-child(2) {
+      top: 20%;
+      left: 70%;
+      transform: rotate(45deg) translate(-50%, -50%);
+    }
+    .particle:nth-child(3) {
+      top: 30%;
+      left: 30%;
+      transform: rotate(90deg) translate(-50%, -50%);
+    }
+    .particle:nth-child(4) {
+      top: 70%;
+      left: 20%;
+      transform: rotate(90deg) translate(-50%, -50%);
+    }
+    .particle:nth-child(5) {
+      top: 10%;
+      left: 80%;
+      transform: rotate(90deg) translate(-50%, -50%);
+    }
+    .neural-web {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      fill: none;
+    }
+    .neural-web path {
+      stroke: #fff;
+      stroke-width: 5;
+      stroke-linecap: round;
+    }
+    .neural-web path:nth-child(1) {
+      d: M 10 10 h 80 v 80 h -80 v -80 z;
+    }
+    .neural-web path:nth-child(2) {
+      d: M 30 30 v 60 h 60 v -60 h -60 z;
+    }
+    .neural-web path:nth-child(3) {
+      d: M 50 50 h 40 v 80 h -40 v -80 z;
+    }
+    .neural-web {
+      animation: neural-flicker infinite 3s;
+    }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <style>
+    @keyframes particle-dance {
+      0% {
+        transform: translate(50%, 0px) rotate(0deg);
+      }
+      100% {
+        transform: translate(-50%, 0px) rotate(360deg);
+      }
+    }
+    @keyframes core-pulse {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.1);
+      }
+    }
+    @keyframes neural-flicker {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    
+    .vortex-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+      background: linear-gradient(to bottom, #3f008b, #5c1bff);
+    }
+    .core {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: linear-gradient(to bottom, #3f008b, #5c1bff);
+      box-shadow:
+        0 0 10px #3f008b,
+        0 0 20px #5c1bff,
+        0 0 30px #3f008b,
+        0 0 40px #5c1bff,
+        0 0 50px #3f008b,
+        0 0 60px #5c1bff;
+      animation: core-pulse infinite 1s;
+    }
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      background: linear-gradient(to bottom, #3f008b, #5c1bff);
+      animation: particle-dance infinite 5s;
+    }
+    .particle:nth-child(1) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .particle:nth-child(2) {
+      top: 20%;
+      left: 70%;
+      transform: rotate(45deg) translate(-50%, -50%);
+    }
+    .particle:nth-child(3) {
+      top: 30%;
+      left: 30%;
+      transform: rotate(90deg) translate(-50%, -50%);
+    }
+    .particle:nth-child(4) {
+      top: 70%;
+      left: 20%;
+      transform: rotate(90deg) translate(-50%, -50%);
+    }
+    .particle:nth-child(5) {
+      top: 10%;
+      left: 80%;
+      transform: rotate(90deg) translate(-50%, -50%);
+    }
+    .neural-web {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      fill: none;
+    }
+    .neural-web path {
+      stroke: #fff;
+      stroke-width: 5;
+      stroke-linecap: round;
+    }
+    .neural-web path:nth-child(1) {
+      d: M 10 10 h 80 v 80 h -80 v -80 z;
+    }
+    .neural-web path:nth-child(2) {
+      d: M 30 30 v 60 h 60 v -60 h -60 z;
+    }
+    .neural-web path:nth-child(3) {
+      d: M 50 50 h 40 v 80 h -40 v -80 z;
+    }
+    .neural-web {
+      animation: neural-flicker infinite 3s;
+    }
+  </style>
+  <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web"></svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

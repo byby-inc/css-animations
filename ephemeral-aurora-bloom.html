@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Ephemeral Aurora Bloom</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% {
+      transform: rotate(0deg) translate(0, 0);
+    }
+    50% {
+      transform: rotate(30deg) translate(10px, -10px);
+    }
+    100% {
+      transform: rotate(60deg) translate(0, 0);
+    }
+  }
+
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes neural-flicker {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(10deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(-10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+  }
+
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to bottom, #33ccff, #66ffff);
+    box-shadow: 0 0 10px #33ccff, 0 0 20px #66ffff, 0 0 30px #66ffff, 0 0 40px #33ccff, 0 0 50px #66ffff, 0 0 60px #33ccff;
+  }
+
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #ccff66, #ffffcc);
+  }
+
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: #fff;
+  }
+
+  .neural-web path {
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+
+  .particle {
+    animation: particle-dance 2s infinite;
+  }
+
+  .core {
+    animation: core-pulse 4s infinite;
+  }
+
+  .neural-web {
+    animation: neural-flicker 1s infinite;
+  }
+
+  .particle:nth-child(1) {
+    top: 20%;
+    left: 20%;
+    width: 50px;
+    height: 50px;
+  }
+
+  .particle:nth-child(2) {
+    top: 30%;
+    left: 40%;
+    width: 40px;
+    height: 40px;
+  }
+
+  .particle:nth-child(3) {
+    top: 10%;
+    left: 60%;
+    width: 30px;
+    height: 30px;
+  }
+
+  .particle:nth-child(4) {
+    top: 60%;
+    left: 10%;
+    width: 20px;
+    height: 20px;
+  }
+
+  .particle:nth-child(5) {
+    top: 50%;
+    left: 30%;
+    width: 25px;
+    height: 25px;
+  }
+
+  .particle:nth-child(6) {
+    top: 40%;
+    left: 70%;
+    width: 35px;
+    height: 35px;
+  }
+
+  .particle:nth-child(7) {
+    top: 70%;
+    left: 90%;
+    width: 45px;
+    height: 45px;
+  }
+
+  .particle:nth-child(8) {
+    top: 80%;
+    left: 80%;
+    width: 35px;
+    height: 35px;
+  }
+
+  .particle:nth-child(9) {
+    top: 90%;
+    left: 20%;
+    width: 25px;
+    height: 25px;
+  }
+
+  .particle:nth-child(10) {
+    top: 10%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core">
+      <div class="neural-web">
+        <path d="M 50 50 H 100 V 100 H 50 Z" />
+        <path d="M 50 50 H 25 V 75 H 50 Z" />
+        <path d="M 50 50 H 75 V 25 H 50 Z" />
+      </div>
+    </div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>
