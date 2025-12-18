@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Horizon Convergence</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            /* Define colors for animation */
+  :root {
+    --primary: #F7D2C4;
+    --secondary: #FFC107;
+    --accent: #FF69B4;
+  }
+
+  /* Main wrapper */
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: circle(50% at 50% 50%);
+    background-image: linear-gradient(to bottom, var(--primary), var(--secondary));
+  }
+
+  /* Core element */
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: linear-gradient(var(--primary), var(--secondary));
+    box-shadow: 0 0 0 5px var(--accent), 0 0 0 10px var(--accent), 0 0 0 15px var(--accent), 0 0 0 20px var(--accent), 0 0 0 25px var(--accent), 0 0 0 30px var(--accent);
+  }
+
+  /* Particle elements */
+  .particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, var(--primary), var(--secondary));
+    box-shadow: 0 0 0 5px var(--accent);
+  }
+
+  /* Neural web SVG */
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #fff;
+  }
+
+  /* Define keyframes for animations */
+  @keyframes particle-dance {
+    0% {
+      transform: translate(-20px, -20px) rotate(0deg);
+    }
+    50% {
+      transform: translate(20px, 20px) rotate(360deg);
+    }
+    100% {
+      transform: translate(-20px, -20px) rotate(0deg);
+    }
+  }
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes neural-flicker {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(360deg);
+    }
+    50% {
+      transform: rotate(720deg);
+    }
+    75% {
+      transform: rotate(1080deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  /* Animate particles and core */
+  .particle {
+    animation: particle-dance infinite 2s;
+  }
+  .core {
+    animation: core-pulse infinite 4s;
+  }
+
+  /* Animate neural web */
+  .neural-web path {
+    animation: neural-flicker infinite 6s;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 50 50 L 20 80"></path>
+      <path d="M 50 50 L 80 80"></path>
+      <path d="M 50 50 L 20 20"></path>
+    </svg>
+    <div class="particle" style="top: 20px; left: 20px;"></div>
+    <div class="particle" style="top: 30px; left: 30px;"></div>
+    <div class="particle" style="top: 40px; left: 40px;"></div>
+    <div class="particle" style="top: 50px; left: 50px;"></div>
+    <div class="particle" style="top: 60px; left: 60px;"></div>
+    <div class="particle" style="top: 70px; left: 70px;"></div>
+    <div class="particle" style="top: 80px; left: 80px;"></div>
+    <div class="particle" style="top: 30px; left: 90px;"></div>
+    <div class="particle" style="top: 60px; left: 20px;"></div>
+  </div>
+        </div>
+        </body>
+        </html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Ancient Primordial Singularity Dawn</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            .vortex-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  background: linear-gradient(90deg, #3a4562 0%, #2f343f 100%);
+  clip-path: polygon(25% 0%,75% 0%,100% 25%,50% 100%,0% 25%);
+  animation: core-pulse 5s infinite;
+}
+
+.core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(90deg, #a9adad 0%, #454f55 100%);
+  border-radius: 50%;
+  box-shadow: 
+    0 0 10px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(0, 0, 0, 0.3),
+    0 0 5px rgba(0, 0, 0, 0.2),
+    0 0 30px rgba(0, 0, 0, 0.1),
+    0 0 15px rgba(0, 0, 0, 0.6),
+    0 0 25px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  animation: particle-dance 3s infinite;
+}
+
+#particle1 {
+  top: 10%;
+  left: 15%;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(90deg, #b2b2b2 0%, #5f5f5f 100%);
+  box-shadow: 
+    0 0 5px rgba(0, 0, 0, 0.2),
+    0 0 10px rgba(0, 0, 0, 0.1);
+  animation-delay: 0.1s;
+}
+
+#particle2 {
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(90deg, #5f5f5f 0%, #b2b2b2 100%);
+  box-shadow: 
+    0 0 10px rgba(0, 0, 0, 0.2),
+    0 0 15px rgba(0, 0, 0, 0.1);
+  animation-delay: 0.2s;
+}
+
+#particle3 {
+  top: 80%;
+  left: 75%;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(90deg, #b2b2b2 0%, #5f5f5f 100%);
+  box-shadow: 
+    0 0 5px rgba(0, 0, 0, 0.2),
+    0 0 10px rgba(0, 0, 0, 0.1);
+  animation-delay: 0.3s;
+}
+
+#particle4 {
+  top: 25%;
+  left: 90%;
+  width: 25px;
+  height: 25px;
+  background: linear-gradient(90deg, #5f5f5f 0%, #b2b2b2 100%);
+  box-shadow: 
+    0 0 10px rgba(0, 0, 0, 0.2),
+    0 0 15px rgba(0, 0, 0, 0.1);
+  animation-delay: 0.4s;
+}
+
+#particle5 {
+  top: 60%;
+  left: 60%;
+  width: 18px;
+  height: 18px;
+  background: linear-gradient(90deg, #b2b2b2 0%, #5f5f5f 100%);
+  box-shadow: 
+    0 0 5px rgba(0, 0, 0, 0.2),
+    0 0 10px rgba(0, 0, 0, 0.1);
+  animation-delay: 0.5s;
+}
+
+.neural-web {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: #fff;
+  animation: neural-flicker 2s infinite;
+}
+
+.neural-web path {
+  stroke-width: 2px;
+  stroke: #fff;
+}
+
+@keyframes core-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes particle-dance {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(10px, -10px) rotate(360deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes neural-flicker {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core">
+      <!-- core pulses and emits particles -->
+    </div>
+    <div id="particle1" class="particle"></div>
+    <div id="particle2" class="particle"></div>
+    <div id="particle3" class="particle"></div>
+    <div id="particle4" class="particle"></div>
+    <div id="particle5" class="particle"></div>
+    <svg class="neural-web">
+      <path d="M 0 0 L 100 100 L 100 0 Z" />
+      <path d="M 50 100 L 150 0 L 50 0 Z" />
+      <path d="M 0 50 L 0 150 L 100 150 Z" />
+    </svg>
+  </div>
+        </div>
+        </body>
+        </html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Vortex Maelstrom</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    transform: translateY(-25px);
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(120deg, #ff99cc, #ffffcc);
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    box-shadow:
+      0 0 20px rgba(255, 153, 204, 0.5),
+      0 0 30px rgba(255, 255, 204, 0.6),
+      0 0 40px rgba(255, 153, 204, 0.7),
+      0 0 50px rgba(255, 255, 204, 0.8),
+      0 0 60px rgba(255, 153, 204, 0.9),
+      0 0 70px rgba(255, 255, 204, 1);
+  }
+  @keyframes core-pulse {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  .core {
+    animation: core-pulse 5s infinite;
+  }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(120deg, #ff99cc, #ffffcc);
+  }
+  @keyframes particle-dance {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    20% {
+      transform: translate(100px, -100px) rotate(45deg);
+    }
+    40% {
+      transform: translate(-50px, 50px) rotate(90deg);
+    }
+    60% {
+      transform: translate(0, 0) rotate(135deg);
+    }
+    80% {
+      transform: translate(-50px, -50px) rotate(180deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+  }
+  .particle {
+    animation: particle-dance 3s infinite;
+  }
+  .particle:nth-of-type(1) {
+    top: 20px;
+    left: 20px;
+    animation-delay: 0.5s;
+  }
+  .particle:nth-of-type(2) {
+    top: 40px;
+    left: 40px;
+    animation-delay: 1s;
+  }
+  .particle:nth-of-type(3) {
+    top: 60px;
+    left: 60px;
+    animation-delay: 1.5s;
+  }
+  .particle:nth-of-type(4) {
+    top: 20px;
+    left: 80px;
+    animation-delay: 2s;
+  }
+  .particle:nth-of-type(5) {
+    top: 40px;
+    left: 100px;
+    animation-delay: 2.5s;
+  }
+  .particle:nth-of-type(6) {
+    top: 60px;
+    left: 120px;
+    animation-delay: 3s;
+  }
+  .particle:nth-of-type(7) {
+    top: 20px;
+    left: 140px;
+    animation-delay: 3.5s;
+  }
+  .particle:nth-of-type(8) {
+    top: 40px;
+    left: 160px;
+    animation-delay: 4s;
+  }
+  .particle:nth-of-type(9) {
+    top: 60px;
+    left: 180px;
+    animation-delay: 4.5s;
+  }
+  .particle:nth-of-type(10) {
+    top: 20px;
+    left: 200px;
+    animation-delay: 5s;
+  }
+  .neural-web {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+  }
+  .neural-web path {
+    stroke: #fff;
+    stroke-width: 2;
+  }
+  @keyframes neural-flicker {
+    0% {
+      transform: scale(1);
+    }
+    20% {
+      transform: scale(1.2);
+    }
+    40% {
+      transform: scale(1);
+    }
+    60% {
+      transform: scale(0.8);
+    }
+    80% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  .neural-web.path:nth-of-type(1) {
+    animation: neural-flicker 4s infinite;
+  }
+  .neural-web.path:nth-of-type(2) {
+    animation: neural-flicker 3.5s infinite;
+  }
+  .neural-web.path:nth-of-type(3) {
+    animation: neural-flicker 3s infinite;
+  }
+  .neural-web.path:nth-of-type(4) {
+    animation: neural-flicker 2.5s infinite;
+  }
+  .neural-web.path:nth-of-type(5) {
+    animation: neural-flicker 2s infinite;
+  }
+  .neural-web.path:nth-of-type(6) {
+    animation: neural-flicker 1.5s infinite;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core">
+    </div>
+    <svg class="neural-web">
+      <path d="M 50,100 A 50,50 0 1,1 50,0 A 50,50 0 1,1 50,100" />
+      <path d="M 100,50 L 150,100 L 200,50" />
+      <path d="M 150,150 L 200,100 L 100,150" />
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

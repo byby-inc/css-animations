@@ -42,7 +42,7 @@ be suject to copyright policies.
 
 Send me an e-mail if interested.
 
-811/1000
+817/1000
 
 
 
@@ -857,3 +857,9 @@ Send me an e-mail if interested.
 <a href="./celestial-vortex-symphony.html">Celestial Vortex Symphony</a> <br/><br/>
 <a href="./blazing-supernova-resonance.html">Blazing Supernova Resonance</a> <br/><br/>
 <a href="./blazing-horizon-cataclysm.html">Blazing Horizon Cataclysm</a> <br/><br/>
+<a href="./eternal-cascade-of-stellar-fusion.html">Eternal Cascade of Stellar Fusion</a> <br/><br/>
+<a href="./ephemeral-celestial-cascade.html">Ephemeral Celestial Cascade</a> <br/><br/>
+<a href="./eternal-vortex-cataclysm.html">Eternal Vortex Cataclysm</a> <br/><br/>
+<a href="./blazing-vortex-maelstrom.html">Blazing Vortex Maelstrom</a> <br/><br/>
+<a href="./ancient-primordial-singularity-dawn.html">Ancient Primordial Singularity Dawn</a> <br/><br/>
+<a href="./blazing-horizon-convergence.html">Blazing Horizon Convergence</a> <br/><br/>

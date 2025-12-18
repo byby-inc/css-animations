@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Eternal Cascade of Stellar Fusion</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: linear-gradient(to bottom right, #333, #444);
+  }
+
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #fff, 0 0 0 2px #fff;
+    background: linear-gradient(to bottom left, #777, #777),
+      linear-gradient(to bottom right, #777, #777);
+  }
+
+  .core::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom left, #999, #999);
+  }
+
+  .core::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, #999, #999);
+  }
+
+  .particle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    animation: particle-dance 5s infinite;
+  }
+
+  .particle:nth-child(1) {
+    background: linear-gradient(to bottom right, #555, #666);
+    animation-play-state: running;
+  }
+
+  .particle:nth-child(2) {
+    top: 75%;
+    left: 25%;
+    background: linear-gradient(to bottom left, #666, #555);
+    animation-play-state: running;
+  }
+
+  .particle:nth-child(3) {
+    bottom: 25%;
+    left: 25%;
+    background: linear-gradient(to bottom right, #666, #555);
+    animation-play-state: running;
+  }
+
+  .particle:nth-child(4) {
+    top: 25%;
+    left: 75%;
+    background: linear-gradient(to bottom left, #555, #666);
+    animation-play-state: running;
+  }
+
+  .particle:nth-child(5) {
+    bottom: 25%;
+    left: 75%;
+    background: linear-gradient(to bottom right, #555, #666);
+    animation-play-state: running;
+  }
+
+  .particle:nth-child(6) {
+    top: 75%;
+    left: 25%;
+    background: linear-gradient(to bottom left, #666, #555);
+    animation-play-state: running;
+  }
+
+  .particle:nth-child(7) {
+    bottom: 25%;
+    left: 75%;
+    background: linear-gradient(to bottom right, #666, #555);
+    animation-play-state: running;
+  }
+
+  @keyframes particle-dance {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+      opacity: 1;
+    }
+    25% {
+      transform: translate(-50%, -50%) rotate(10deg) scale(1.1);
+      opacity: 0.9;
+    }
+    50% {
+      transform: translate(-50%, -50%) rotate(-5deg) scale(1.05);
+      opacity: 0.8;
+    }
+    75% {
+      transform: translate(-50%, -50%) rotate(3deg) scale(1);
+      opacity: 0.7;
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(0deg);
+      opacity: 0.6;
+    }
+  }
+
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes neural-flicker {
+    0% {
+      transform: scaleY(1);
+    }
+    25% {
+      transform: scaleY(1.1);
+    }
+    50% {
+      transform: scaleY(0.9);
+    }
+    75% {
+      transform: scaleY(1.1);
+    }
+    100% {
+      transform: scaleY(1);
+    }
+  }
+
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1;
+    animation: neural-flicker 3s infinite;
+  }
+
+  .neural-web path {
+    stroke-dasharray: 100, 200;
+    stroke-dashoffset: 0;
+    animation: dash 3s infinite;
+  }
+
+  @keyframes dash {
+    0% {
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dashoffset: -200;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .neural-web path:nth-child(1) {
+    d: M 50 10 l 0 70 l 50 0 l 0 -70;
+    animation-delay: 0s;
+  }
+
+  .neural-web path:nth-child(2) {
+    d: M 50 10 l 0 90 l -50 0 l 0 -90;
+    animation-delay: 0.5s;
+  }
+
+  .neural-web path:nth-child(3) {
+    d: M 50 10 l 50 0 l 30 70 l -30 -70;
+    animation-delay: 1s;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 50 10 l 0 70 l 50 0 l 0 -70" animation="dash 3s infinite 0s forwards" />
+      <path d="M 50 10 l 0 90 l -50 0 l 0 -90" animation="dash 3s infinite 0.5s forwards" />
+      <path d="M 50 10 l 50 0 l 30 70 l -30 -70" animation="dash 3s infinite 1s forwards" />
+      <div class="particle" style="top: 40%; left: 80%; background: linear-gradient(to top right, #777, #888);"> </div>
+      <div class="particle" style="top: 60%; left: 40%; background: linear-gradient(to bottom right, #888, #777);"></div>
+      <div class="particle" style="top: 20%; left: 40%; background: linear-gradient(to top left, #777, #888);"></div>
+      <div class="particle" style="bottom: 60%; left: 60%; background: linear-gradient(to top right, #777, #888);"></div>
+      <div class="particle" style="top: 40%; left: 60%; background: linear-gradient(to bottom right, #888, #777);"></div>
+    </svg>
+  </div>
+        </div>
+        </body>
+        </html>
