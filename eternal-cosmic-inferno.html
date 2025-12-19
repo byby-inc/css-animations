@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>ETERNAL Cosmic Inferno</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% {
+      transform: translate(-50%, 50%) rotate(0deg);
+    }
+    50% {
+      transform: translate(-50%, 50%) rotate(45deg);
+    }
+    100% {
+      transform: translate(-50%, 50%) rotate(0deg);
+    }
+  }
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes neural-flicker {
+    0% {
+      transform: scaleY(1);
+    }
+    20% {
+      transform: scaleY(0.9);
+    }
+    50% {
+      transform: scaleY(1);
+    }
+    80% {
+      transform: scaleY(0.95);
+    }
+    100% {
+      transform: scaleY(1);
+    }
+  }
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background-image: linear-gradient(90deg, #fff, #444);
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-image: linear-gradient(90deg, #fff, #f00);
+    border-radius: 50%;
+    box-shadow: 0 0 20px #f00;
+    box-shadow: 0 0 10px #00f;
+    box-shadow: 0 0 10px #0ff;
+    box-shadow: 0 0 10px #ff0;
+    box-shadow: 0 0 10px #f0f;
+    box-shadow: 0 0 10px #0f0;
+  }
+  .core:hover {
+    animation: core-pulse 2s infinite;
+  }
+  .particle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: linear-gradient(90deg, #fff, #0ff);
+    animation: particle-dance 5s infinite;
+  }
+  .particle:nth-child(1) {
+    top: 10%;
+    left: 10%;
+  }
+  .particle:nth-child(2) {
+    top: 30%;
+    left: 70%;
+  }
+  .particle:nth-child(3) {
+    top: 50%;
+    left: 20%;
+  }
+  .particle:nth-child(4) {
+    top: 80%;
+    left: 40%;
+  }
+  .particle:nth-child(5) {
+    top: 60%;
+    left: 80%;
+  }
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    stroke: #fff;
+  }
+  .neural-web path {
+    stroke-width: 5;
+  }
+  .neural-web path:nth-child(1) {
+    strokeDasharray: 100, 1000;
+  }
+  .neural-web path:nth-child(2) {
+    strokeDasharray: 100, 5000;
+  }
+  .neural-web path:nth-child(3) {
+    strokeDasharray: 100, 3000;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M40 20L60 20 70 0 20 0" />
+      <path d="M50 10L80 10 60 50 10 50" />
+      <path d="M30 30L90 30 70 80 30 80" />
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

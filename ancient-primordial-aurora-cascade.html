@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Ancient Primordial Aurora Cascade</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes core-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+
+  @keyframes particle-dance {
+    0% { transform: rotate(0deg) translateX(0) translateY(0); }
+    50% { transform: rotate(360deg) translateX(20px) translateY(-10px); }
+    100% { transform: rotate(0deg) translateX(0) translateY(0); }
+  }
+
+  @keyframes neural-flicker {
+    0% { transform: rotate(0deg) skewY(0deg); }
+    50% { transform: rotate(10deg) skewY(5deg); }
+    100% { transform: rotate(0deg) skewY(0deg); }
+  }
+
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: linear-gradient(to top, #6495ED, #6495ED);
+  }
+
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(to top, #C9E4CA, #C9E4CA);
+    box-shadow: 0 0 0 10px #6495ED, 0 0 0 15px #6495ED, 0 0 0 20px #6495ED, 0 0 0 25px #6495ED, 0 0 0 30px #6495ED, 0 0 0 35px #6495ED;
+  }
+
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(to top, #6495ED, #6495ED);
+  }
+
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #fff;
+  }
+
+  .particle:nth-child(1) {
+    top: 10px;
+    left: 10px;
+    animation: particle-dance 2s infinite;
+  }
+
+  .particle:nth-child(2) {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: particle-dance 2.5s infinite;
+  }
+
+  .particle:nth-child(3) {
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    animation: particle-dance 3s infinite;
+  }
+
+  .particle:nth-child(4) {
+    top: 50%;
+    left: 80%;
+    transform: translateX(-50%) translateY(-50%);
+    animation: particle-dance 2.8s infinite;
+  }
+
+  .particle:nth-child(5) {
+    top: 80%;
+    left: 10px;
+    animation: particle-dance 2.2s infinite;
+  }
+
+  .particle:nth-child(6) {
+    top: 80%;
+    left: 80%;
+    animation: particle-dance 3.5s infinite;
+  }
+
+  .particle:nth-child(7) {
+    top: 50%;
+    left: 50%;
+    animation: particle-dance 2.3s infinite;
+  }
+
+  .particle:nth-child(8) {
+    top: 20px;
+    left: 80%;
+    animation: particle-dance 2.1s infinite;
+  }
+
+  .particle:nth-child(9) {
+    top: 50%;
+    left: 10px;
+    animation: particle-dance 3.2s infinite;
+  }
+
+  .particle:nth-child(10) {
+    top: 80%;
+    left: 50%;
+    animation: particle-dance 2.6s infinite;
+  }
+
+  .core {
+    animation: core-pulse 1s infinite;
+  }
+
+  .neural-web path {
+    stroke-dasharray: 200, 200;
+    animation: neural-flicker 5s infinite;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 50 50 L 90 50" />
+      <path d="M 50 50 L 70 70" />
+      <path d="M 50 50 L 30 70" />
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Transcendent Maelstrom of Eternal Genesis</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            /* Define colors palette */
+:root {
+  --primary: #3498db;
+  --secondary: #2ecc71;
+  --accent: #9b59b6;
+  --background: radial-gradient( #2c3e50, 1px 1px 10px rgba(0,0,0,.7));
+}
+
+/* Keyframes */
+@keyframes particle-dance {
+  0% { transform: rotate(0deg) translate(5%, 10%); }
+  50% { transform: rotate(45deg) translate(-2%, -5%); }
+  100% { transform: rotate(90deg) translate(-5%, 10%); }
+}
+
+@keyframes core-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes neural-flicker {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(0, 5px) scale(1.1); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+/* Style elements */
+.vortex-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: circle(50% at 50% 50%);
+  background: var(--background);
+}
+
+.core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #3498db 0%, #2ecc71 100%);
+  box-shadow: 
+    0px 0px 50px rgba(0, 0, 0, 0.5),
+    0px 0px 100px rgba(0, 0, 0, 0.5),
+    0px 0px 150px rgba(0, 0, 0, 0.5),
+    0px 0px 200px rgba(0, 0, 0, 0.5),
+    0px 0px 25px rgba(255, 255, 255, 0.1),
+    0px 0px 35px rgba(255, 255, 255, 0.1),
+    0px 0px 45px rgba(255, 255, 255, 0.1),
+    0px 0px 55px rgba(255, 255, 255, 0.1);
+  animation: core-pulse 2s infinite;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #9b59b6 0%, #2ecc71 100%);
+  box-shadow: 
+    0px 0px 5px rgba(0, 0, 0, 0.5),
+    0px 0px 10px rgba(0, 0, 0, 0.5),
+    0px 0px 15px rgba(0, 0, 0, 0.5),
+    0px 0px 20px rgba(0, 0, 0, 0.5);
+  animation: particle-dance 1.5s infinite;
+}
+
+.particle:nth-child(1) {
+  top: 20%;
+  left: 20%;
+  transform: translate(0, -20px) rotate(0deg);
+  animation-duration: 1.5s;
+}
+
+.particle:nth-child(2) {
+  top: 40%;
+  left: 60%;
+  transform: translate(-10px, -15px) rotate(45deg);
+  animation-duration: 1.2s;
+}
+
+.particle:nth-child(3) {
+  top: 70%;
+  left: 30%;
+  transform: translate(5px, -35px) rotate(90deg);
+  animation-duration: 1.5s;
+}
+
+.particle:nth-child(4) {
+  top: 10%;
+  left: 80%;
+  transform: translate(-20px, 0px) rotate(0deg);
+  animation-duration: 1.8s;
+}
+
+.particle:nth-child(5) {
+  top: 50%;
+  left: 75%;
+  transform: translate(-15px, 5px) rotate(45deg);
+  animation-duration: 1.9s;
+}
+
+.neural-web {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+}
+
+.neural-web path {
+  stroke: #fff;
+  stroke-width: 3px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.neural-web path:nth-child(1) {
+  stroke: #3498db;
+  d: "M50 50 L90 50 L90 100 L50 100 Z";
+  animation: neural-flicker 1.5s infinite;
+}
+
+.neural-web path:nth-child(2) {
+  stroke: #2ecc71;
+  d: "M25 75 L75 75 L75 150 L25 150 Z";
+  animation: neural-flicker 1.8s infinite;
+}
+
+.neural-web path:nth-child(3) {
+  stroke: #9b59b6;
+  d: "M45 25 L100 25 L100 60 L45 60 Z";
+  animation: neural-flicker 2s infinite;
+}
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path></path>
+      <path></path>
+      <path></path>
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

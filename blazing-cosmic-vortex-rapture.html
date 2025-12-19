@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Cosmic Vortex Rapture</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% { transform: translate(0, 0); }
+    20% { transform: translate(-5%, 5%); }
+    40% { transform: translate(2%, 10%); }
+    60% { transform: translate(-3%, -5%); }
+    80% { transform: translate(4%, 2%); }
+    100% { transform: translate(0, 0); }
+  }
+
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    20% { transform: scale(1.1); }
+    40% { transform: scale(1); }
+    60% { transform: scale(0.9); }
+    80% { transform: scale(1); }
+    100% { transform: scale(1); }
+  }
+
+  @keyframes neural-flicker {
+    0% { transform: scale(1) rotate(0); }
+    20% { transform: scale(1.05) rotate(5deg); }
+    40% { transform: scale(1) rotate(0); }
+    60% { transform: scale(0.9) rotate(-5deg); }
+    80% { transform: scale(1) rotate(0); }
+    100% { transform: scale(1) rotate(0); }
+  }
+
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    overflow: hidden;
+  }
+
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background-image: linear-gradient(to bottom, #ff0, #f0ff);
+    border-radius: 50%;
+    box-shadow:
+        0 0 10px #ff0,
+        0 0 10px #ff0,
+        5px 5px 10px #ff0,
+        -5px 5px 10px #ff0,
+        10px -10px 20px #ff0,
+        -10px -10px 20px #ff0;
+    animation: core-pulse 2s infinite;
+  }
+
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-image: linear-gradient(to bottom, #0ff, #f0ff);
+  }
+
+  .particle:nth-child(1) {
+    animation: particle-dance 8s infinite;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  .particle:nth-child(2) {
+    animation: particle-dance 10s infinite;
+    transform: translate(10%, 10%) rotate(30deg);
+  }
+  .particle:nth-child(3) {
+    animation: particle-dance 8s infinite;
+    transform: translate(-5%, -5%) rotate(60deg);
+  }
+  .particle:nth-child(4) {
+    animation: particle-dance 12s infinite;
+    transform: translate(-15%, 15%) rotate(90deg);
+  }
+  .particle:nth-child(5) {
+    animation: particle-dance 9s infinite;
+    transform: translate(5%, -15%) rotate(120deg);
+  }
+  .particle:nth-child(6) {
+    animation: particle-dance 11s infinite;
+    transform: translate(20%, 20%) rotate(150deg);
+  }
+  .particle:nth-child(7) {
+    animation: particle-dance 10s infinite;
+    transform: translate(-10%, -10%) rotate(180deg);
+  }
+  .particle:nth-child(8) {
+    animation: particle-dance 8s infinite;
+    transform: translate(15%, 5%) rotate(210deg);
+  }
+  .particle:nth-child(9) {
+    animation: particle-dance 12s infinite;
+    transform: translate(-25%, 25%) rotate(240deg);
+  }
+  .particle:nth-child(10) {
+    animation: particle-dance 11s infinite;
+    transform: translate(25%, -25%) rotate(270deg);
+  }
+
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .neural-web path {
+    stroke: #fff;
+    stroke-width: 5;
+    fill: none;
+  }
+
+  .neural-web path:nth-child(1) {
+    d: M 50 50 H 150 V 150 H 50 Z;
+    animation: neural-flicker 4s infinite;
+    transform: scale(1) rotate(0);
+  }
+
+  .neural-web path:nth-child(2) {
+    d: M 50 50 L 150 150 L 50 250 Z;
+    animation: neural-flicker 5s infinite;
+    transform: scale(0.85) rotate(15deg);
+  }
+
+  .neural-web path:nth-child(3) {
+    d: M 50 50 L 100 200 L 150 150 Z;
+    animation: neural-flicker 6s infinite;
+    transform: scale(0.9) rotate(30deg);
+  }
+
+  .neural-web path:nth-child(4) {
+    d: M 50 50 L 120 200 L 220 220 Z;
+    animation: neural-flicker 4s infinite;
+    transform: scale(1.1) rotate(45deg);
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 50 50 H 150 V 150 H 50 Z"></path>
+      <path d="M 50 50 L 150 150 L 50 250 Z"></path>
+      <path d="M 50 50 L 100 200 L 150 150 Z"></path>
+      <path d="M 50 50 L 120 200 L 220 220 Z"></path>
+      <path d="M 50 50 L 200 250 L 120 220 Z"></path>
+      <path d="M 50 50 L 250 150 L 220 220 Z"></path>
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Transcendent Maelstrom of Light</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: linear-gradient(to top, #0c0c0c 0%, #1f1f1f 100%), linear-gradient(to right, #121212 0%, #292929 100%);
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #ff9900 0%, #ffcc00 50%, #ffcc00 51%, #ffff00 100%);
+  }
+  .core {
+    box-shadow: 0 0 0 2px #fff;
+    box-shadow: 0 0 5px 4px #ffd700;
+    box-shadow: 0 0 10px 8px #ffff00;
+    box-shadow: 0 0 15px 12px #ffcc00;
+    box-shadow: 0 0 20px 16px #ff9900;
+    box-shadow: 0 0 25px 20px #fff;
+    transition: transform 2s infinite;
+  }
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  .particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #ff3300 0%, #ff9900 100%);
+    animation: particle-dance 10s infinite;
+  }
+  @keyframes particle-dance {
+    0% {
+      transform: translate(-50%, -10px) rotate(0deg);
+    }
+    50% {
+      transform: translate(-50%, 10px) rotate(30deg);
+    }
+    100% {
+      transform: translate(-50%, -10px) rotate(0deg);
+    }
+  }
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transform-origin: center;
+  }
+  .neural-web path:nth-child(1) {
+    transform: rotate(45deg);
+    animation: neural-flicker 8s infinite;
+  }
+  .neural-web path:nth-child(2) {
+    transform: rotate(90deg);
+    animation: neural-flicker 10s infinite;
+  }
+  .neural-web path:nth-child(3) {
+    transform: rotate(135deg);
+    animation: neural-flicker 12s infinite;
+  }
+  @keyframes neural-flicker {
+    0% {
+      stroke-width: 1;
+      transform: scale(1);
+    }
+    50% {
+      stroke-width: 3;
+      transform: scale(0.9);
+    }
+    100% {
+      stroke-width: 1;
+      transform: scale(1);
+    }
+  }
+  .neural-web path {
+    d: M 30 20 l 20 20 l 20 -20;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+    <svg class="neural-web">
+      <path d="M 30 20 l 20 20 l 20 -20" />
+      <path d="M 70 20 l 20 20 l 20 -20" />
+      <path d="M 110 20 l 20 20 l 20 -20" />
+    </svg>
+  </div>
+        </div>
+        </body>
+        </html>

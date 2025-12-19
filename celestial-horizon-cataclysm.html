@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Celestial Horizon Cataclysm</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            /* Main container */
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+  }
+  /* Core */
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to bottom, #FF00FF, #00FFFF);
+    border-radius: 50%;
+    box-shadow: 
+      0 0 10px #FF00FF, 
+      0 0 20px #00FFFF, 
+      0 0 30px #FF00FF, 
+      0 0 40px #00FFFF;
+    animation: core-pulse infinite 4s;
+  }
+  /* Particle */
+  .particle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(to bottom, #0000FF, #FFFF00);
+    border-radius: 50%;
+    animation: particle-dance infinite 3s;
+  }
+  /* Particle animation */
+  @keyframes particle-dance {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+  }
+  /* Core pulsing animation */
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  /* Neural web */
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+  }
+  /* Neural web paths */
+  .neural-web path:nth-child(1) {
+    d: 'M 0 0 L 100 0';
+    animation: neural-flicker infinite 2s;
+  }
+  .neural-web path:nth-child(2) {
+    d: 'M 0 100 L 100 100';
+    animation: neural-flicker infinite 2s;
+  }
+  .neural-web path:nth-child(3) {
+    d: 'M 0 0 L 0 100';
+    animation: neural-flicker infinite 2s;
+  }
+  /* Neural web animation */
+  @keyframes neural-flicker {
+    0% {
+      transform: scale(1) translate(0, 0);
+    }
+    50% {
+      transform: scale(1.2) translate(0, 20px);
+    }
+    100% {
+      transform: scale(1) translate(0, 0);
+    }
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 0 0 L 100 0"></path>
+      <path d="M 0 100 L 100 100"></path>
+      <path d="M 0 0 L 0 100"></path>
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

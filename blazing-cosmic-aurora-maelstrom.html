@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Cosmic Aurora Maelstrom</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            /* Define keyframes */
+  @keyframes particle-dance {
+    0% {
+      transform: rotate(0deg) translateX(0px) translateY(0px);
+    }
+    100% {
+      transform: rotate(360deg) translateX(-20px) translateY(-20px);
+    }
+  }
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+  @keyframes neural-flicker {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(5deg);
+    }
+  }
+  
+  /* Define styles */
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    overflow: hidden;
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(90deg, #ff69b4, #33ccff, #ff69b4);
+    box-shadow: 0 0 10px #ff69b4, 0 0 10px #33ccff, 0 0 10px #ff69b4, 0 0 10px #33ccff, 0 0 10px #ff69b4, 0 0 10px #33ccff;
+    animation: core-pulse 2s infinite;
+  }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background-image: linear-gradient(90deg, #ff69b4, #33ccff, #ff69b4);
+    animation: particle-dance 1s infinite;
+  }
+  .neural-web {
+    position: absolute;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+  }
+  .neural-web path {
+    stroke-dasharray: 100, 200;
+    stroke-dashoffset: 0;
+    animation: neural-flicker 3s infinite;
+  }
+  .particle:nth-child(1) {
+    top: 20px;
+    left: 20px;
+    transform: rotate(0deg) translateX(0px) translateY(0px);
+  }
+  .particle:nth-child(2) {
+    top: 50px;
+    left: 50px;
+    transform: rotate(120deg) translateX(-5px) translateY(-5px);
+  }
+  .particle:nth-child(3) {
+    top: 80px;
+    left: 80px;
+    transform: rotate(240deg) translateX(10px) translateY(-10px);
+  }
+  .particle:nth-child(4) {
+    top: 10px;
+    left: 10px;
+    transform: rotate(180deg) translateX(-10px) translateY(10px);
+  }
+  .particle:nth-child(5) {
+    top: 30px;
+    left: 30px;
+    transform: rotate(60deg) translateX(-5px) translateY(-5px);
+  }
+  .particle:nth-child(6) {
+    top: 70px;
+    left: 70px;
+    transform: rotate(300deg) translateX(10px) translateY(-10px);
+  }
+  .particle:nth-child(7) {
+    top: 90px;
+    left: 90px;
+    transform: rotate(360deg) translateX(-20px) translateY(-20px);
+  }
+  .particle:nth-child(8) {
+    top: 40px;
+    left: 40px;
+    transform: rotate(120deg) translateX(-5px) translateY(-5px);
+  }
+  .particle:nth-child(9) {
+    top: 60px;
+    left: 60px;
+    transform: rotate(240deg) translateX(10px) translateY(-10px);
+  }
+  .particle:nth-child(10) {
+    top: 20px;
+    left: 20px;
+    transform: rotate(60deg) translateX(-5px) translateY(-5px);
+  }
+  .neural-web path:nth-child(1) {
+    transform: rotate(0deg);
+  }
+  .neural-web path:nth-child(2) {
+    transform: rotate(30deg);
+  }
+  .neural-web path:nth-child(3) {
+    transform: rotate(60deg);
+  }
+  .neural-web path:nth-child(4) {
+    transform: rotate(90deg);
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <svg class="neural-web" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+      <path d="M 0 0 L 0 100 L 100 0 Z"/>
+      <path d="M 0 0 L 0 50 L 50 0 Z"/>
+      <path d="M 0 0 L 50 0 L 100 50 Z"/>
+    </svg>
+  </div>
+        </div>
+        </body>
+        </html>

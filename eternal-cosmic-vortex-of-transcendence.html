@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Eternal Cosmic Vortex of Transcendence</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.2); }
+    50% { transform: scale(1); }
+  }
+  @keyframes neural-flicker {
+    0% { transform: scale(1); }
+    100% { transform: scale(0.9); }
+    50% { transform: scale(1); }
+  }
+  .vortex-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+  }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-image: linear-gradient(to bottom, #66CCCC, #66CCCC);
+  }
+  .particle::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    margin-left: -25px;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid #66CCCC;
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, #ff9999, #ff9999);
+    box-shadow: 0 0 1px #ff9999,
+               1px 0 1px #ff9999,
+               2px 2px 1px #ff9999,
+               3px 3px 2px #f88,
+               4px 4px 3px #f88,
+               5px 5px 4px #f88,
+               6px 6px 5px #f88;
+  }
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .neural-web path {
+    stroke: #fff;
+    stroke-width: 2;
+  }
+  .neural-web path:nth-child(1) {
+    transform: rotate(0deg);
+  }
+  .neural-web path:nth-child(2) {
+    transform: rotate(90deg);
+  }
+  .neural-web path:nth-child(3) {
+    transform: rotate(180deg);
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 0 0 L 100 0" keyframes="neural-flicker"></path>
+      <path d="M 100 0 L 0 0" keyframes="neural-flicker"></path>
+      <path d="M 0 0 L 50 100" keyframes="neural-flicker"></path>
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

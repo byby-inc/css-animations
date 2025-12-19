@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Primordial Aurora Horizon</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% { transform: translate(0px, 0px) rotate(0deg); }
+    20% { transform: translate(-50px, -20px) rotate(10deg); }
+    40% { transform: translate(20px, 40px) rotate(20deg); }
+    60% { transform: translate(-50px, 20px) rotate(-10deg); }
+    80% { transform: translate(20px, -40px) rotate(-20deg); }
+    100% { transform: translate(0px, 0px) rotate(0deg); }
+  }
+  
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    20% { transform: scale(1.1); }
+    40% { transform: scale(0.9); }
+    60% { transform: scale(1.2); }
+    80% { transform: scale(0.8); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes neural-flicker {
+    0% { transform: translate(0px, 0px) rotate(0deg); }
+    20% { transform: translate(-10px, -5px) rotate(5deg); }
+    40% { transform: translate(10px, 10px) rotate(15deg); }
+    60% { transform: translate(-5px, -15px) rotate(-5deg); }
+    80% { transform: translate(5px, 15px) rotate(-15deg); }
+    100% { transform: translate(0px, 0px) rotate(0deg); }
+  }
+  
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: linear-gradient(to bottom, #330066, #66FF00);
+  }
+  
+  /* particles */
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #66FF00, #FF9900);
+  }
+  
+  /* core */
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #FF0000, #0000FF);
+    box-shadow:
+    0 0 5px #FF0000,
+    0 0 10px #0000FF,
+    0 0 5px #33CC33,
+    0 0 10px #9966CC,
+    0 0 5px #3333CC,
+    0 0 10px #33CC33,;
+    animation: core-pulse infinite 2s;
+  }
+  
+  /* neural-web */
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #fff;
+  }
+  
+  /* SVG paths */
+  .neural-web path {
+    animation: neural-flicker infinite 5s;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 0 0 L 100 50 L 200 0 Z" />
+      <path d="M 50 0 L 100 50 L 0 75 Z" />
+      <path d="M 150 50 L 200 50 L 150 100 L 100 50 Z" />
+    </svg>
+    <div class="particle" style="top: 10px; left: 10px; animation-duration: 4s;"></div>
+    <div class="particle" style="top: 20px; left: 20px; animation-duration: 3s;"></div>
+    <div class="particle" style="top: 30px; left: 30px; animation-duration: 2s;"></div>
+  </div>
+        </div>
+        </body>
+        </html>

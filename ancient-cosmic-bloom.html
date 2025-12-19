@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Ancient Cosmic Bloom</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: circle(50% at 50% 50%);
+    overflow: hidden;
+  }
+
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #fff, #fff 50%, #333 50%, #333);
+    box-shadow:
+      0 0 10px rgba(0, 0, 0, 0.1),
+      0 0 20px rgba(0, 0, 0, 0.2),
+      0 0 30px rgba(0, 0, 0, 0.3),
+      0 0 50px rgba(0, 0, 0, 0.4),
+      0 0 70px rgba(0, 0, 0, 0.5),
+      0 0 100px rgba(0, 0, 0, 0.6);
+    animation: core-pulse 2s infinite;
+  }
+
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+  }
+
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    15% {
+      transform: scale(1.1);
+    }
+    30% {
+      transform: scale(1);
+    }
+    45% {
+      transform: scale(0.9);
+    }
+    60% {
+      transform: scale(1);
+    }
+    80% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .particle-1 {
+    top: 50%;
+    left: 10%;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(90deg, #333, #333 50%, #fff 50%, #fff);
+    animation: particle-dance 4s infinite;
+  }
+
+  .particle-2 {
+    top: 20%;
+    left: 30%;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(180deg, #fff, #fff 50%, #333 50%, #333);
+    animation: particle-dance 4.5s infinite;
+  }
+
+  .particle-3 {
+    top: 20%;
+    left: 80%;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(90deg, #333, #333 50%, #fff 50%, #fff);
+    animation: particle-dance 5s infinite;
+  }
+
+  .particle-4 {
+    top: 50%;
+    left: 80%;
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(180deg, #fff, #fff 50%, #333 50%, #333);
+    animation: particle-dance 5.5s infinite;
+  }
+
+  .particle-5 {
+    top: 60%;
+    left: 30%;
+    width: 15px;
+    height: 15px;
+    background: linear-gradient(270deg, #333, #333 50%, #fff 50%, #fff);
+    animation: particle-dance 6s infinite;
+  }
+
+  .particle-6 {
+    top: 10%;
+    left: 40%;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(90deg, #333, #333 50%, #fff 50%, #fff);
+    animation: particle-dance 6.5s infinite;
+  }
+
+  .particle-7 {
+    top: 10%;
+    left: 60%;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(180deg, #fff, #fff 50%, #333 50%, #333);
+    animation: particle-dance 7s infinite;
+  }
+
+  .particle-8 {
+    top: 80%;
+    left: 80%;
+    width: 5px;
+    height: 5px;
+    background: linear-gradient(90deg, #333, #333 50%, #fff 50%, #fff);
+    animation: particle-dance 7.5s infinite;
+  }
+
+  @keyframes particle-dance {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    10% {
+      transform: translate(-10px, 0) rotate(10deg);
+    }
+    20% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    40% {
+      transform: translate(10px, 0) rotate(-10deg);
+    }
+    50% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    60% {
+      transform: translate(-10px, 0) rotate(10deg);
+    }
+    80% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+  }
+
+  .neural-web {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .neural-web path {
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+
+  .neural-web path:nth-child(1) {
+    transform: rotate(0deg);
+    animation: neural-flicker 10s infinite;
+  }
+
+  .neural-web path:nth-child(2) {
+    transform: rotate(45deg);
+    animation: neural-flicker 9s infinite;
+  }
+
+  .neural-web path:nth-child(3) {
+    transform: rotate(90deg);
+    animation: neural-flicker 8s infinite;
+  }
+
+  @keyframes neural-flicker {
+    0% {
+      opacity: 1;
+    }
+    5% {
+      opacity: 0;
+    }
+    15% {
+      opacity: 1;
+    }
+    20% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 0 0 L 100 0 L 100 100 Z" />
+      <path d="M 0 100 L 100 100 L 100 0 Z" />
+      <path d="M 0 0 L 50 100 L 100 0 Z" />
+    </svg>
+    <div class="particle particle-1"></div>
+    <div class="particle particle-2"></div>
+    <div class="particle particle-3"></div>
+    <div class="particle particle-4"></div>
+    <div class="particle particle-5"></div>
+    <div class="particle particle-6"></div>
+    <div class="particle particle-7"></div>
+    <div class="particle particle-8"></div>
+  </div>
+        </div>
+        </body>
+        </html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Timeless Primordial Genesis</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(5px, -5px);
+    }
+  }
+  
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes neural-flicker {
+    0%, 50% {
+      transform: scale(1);
+    }
+    51%, 99% {
+      transform: scale(1.02);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+  }
+  
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to bottom right, #ff9900, #0099ff);
+    border-radius: 50%;
+    box-shadow:
+      0 0 10px #fff,
+      0 0 20px #fff,
+      0 0 30px #fff,
+      0 0 40px #fff,
+      0 0 50px #fff,
+      0 0 100px #fff;
+    animation: core-pulse 2s infinite;
+  }
+  
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, #ff9900, #0099ff);
+    animation: particle-dance 5s infinite;
+  }
+  
+  .particle:nth-child(1) {
+    top: 0;
+    left: 0;
+    transform: rotate(45deg);
+  }
+  
+  .particle:nth-child(2) {
+    top: 50%;
+    left: 50%;
+    transform: rotate(90deg) translate(-50%, -50%);
+  }
+  
+  .particle:nth-child(3) {
+    top: 100%;
+    left: 0;
+    transform: rotate(135deg);
+  }
+  
+  .particle:nth-child(4) {
+    top: 50%;
+    left: 100%;
+    transform: rotate(180deg) translate(-50%, 50%);
+  }
+  
+  .particle:nth-child(5) {
+    top: 0;
+    left: 100%;
+    transform: rotate(225deg);
+  }
+  
+  .particle:nth-child(6) {
+    top: 0;
+    left: 0;
+    transform: rotate(270deg);
+  }
+  
+  .neural-web {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    fill: #fff;
+  }
+  
+  .neural-web path {
+    stroke: #fff;
+    animation: neural-flicker 3s infinite;
+  }
+  
+  .neural-web path:nth-child(1) {
+    transform: scale(1);
+    animation-delay: 0s;
+  }
+  
+  .neural-web path:nth-child(2) {
+    transform: scale(0.9);
+    animation-delay: 0.5s;
+  }
+  
+  .neural-web path:nth-child(3) {
+    transform: scale(1.1);
+    animation-delay: 1s;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 50 50 L 100 50 Z" transform="scale(1)" />
+      <path d="M 50 50 L 75 25 Z" transform="scale(0.9)" animation-delay="0.5s" />
+      <path d="M 50 50 L 25 75 Z" transform="scale(1.1)" animation-delay="1s" />
+    </svg>
+    <div class="particle" style="top: 0; left: 0;"></div>
+    <div class="particle" style="top: 50%; left: 50%; transform: rotate(90deg) translate(-50%, -50%);"></div>
+    <div class="particle" style="top: 100%; left: 0;"></div>
+    <div class="particle" style="top: 50%; left: 100%; transform: rotate(180deg) translate(-50%, 50%);"></div>
+    <div class="particle" style="top: 0; left: 100%; transform: rotate(225deg);"></div>
+    <div class="particle" style="top: 0; left: 0; transform: rotate(270deg);"></div>
+    <div class="particle" style="top: 50%; left: 0;"></div>
+    <div class="particle" style="top: 0; left: 50%; transform: rotate(45deg);"></div>
+  </div>
+        </div>
+        </body>
+        </html>
