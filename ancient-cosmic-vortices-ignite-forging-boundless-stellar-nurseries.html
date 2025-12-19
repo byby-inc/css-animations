@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Ancient Cosmic Vortices ignite, forging boundless stellar nurseries</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% {
+      transform: rotate(0deg) translate(0,0) scale(1);
+    }
+    25% {
+      transform: rotate(360deg) translate(50px,20px) scale(1.2);
+    }
+    50% {
+      transform: rotate(720deg) translate(-50px,-20px) scale(1);
+    }
+    75% {
+      transform: rotate(1080deg) translate(0,0) scale(1.2);
+    }
+    100% {
+      transform: rotate(1440deg) translate(50px,20px) scale(1);
+    }
+  }
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+      animation: pulse 2s infinite;
+    }
+    25% {
+      transform: scale(1.2);
+    }
+    50% {
+      transform: scale(1);
+    }
+    75% {
+      transform: scale(1.4);
+    }
+    100% {
+      transform: scale(1);
+    }
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0px #e91e63;
+      }
+      25% {
+        transform: scale(1.2);
+        box-shadow: 0 0 0 0px #f44336;
+      }
+      50% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0px #e91e63;
+      }
+      75% {
+        transform: scale(1.4);
+        box-shadow: 0 0 0 0px #f44336;
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0px #e91e63;
+      }
+    }
+  }
+  @keyframes neural-flicker {
+    0% {
+      transform: translate(0,10%) scale(1);
+    }
+    25% {
+      transform: translate(-10px,20%) scale(1.1);
+    }
+    50% {
+      transform: translate(0,10%) scale(1);
+    }
+    75% {
+      transform: translate(10px,0%) scale(1.2);
+    }
+    100% {
+      transform: translate(0,10%) scale(1);
+    }
+  }
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #e91e63, #f44336), 
+    linear-gradient(45deg, #e91e63, #f44336);
+    background-size: 100px 100px;
+    background-position: 0 0, 50px 50px;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .vortex-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    clip-path: circle(50% at 50% 50%);
+    background: conic-gradient(#e91e63,#f44336);
+    animation: core-pulse 2s infinite;
+    transform: translate(-50%, -50%);
+  }
+  .core {
+    position: absolute;
+    background: linear-gradient(-225deg, #e91e63, #f44336), 
+    linear-gradient(45deg, #e91e63, #f44336);
+    background-size: 100px 100px;
+    background-position: 0 0, 50px 50px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow:
+    -10px 0 20px fade(#e91e63,25%),
+    10px 0 20px fade(#e91e63,25%),
+    0 -10px 20px fade(#f44336,25%),
+    0 10px 20px fade(#f44336,25%);
+    animation: core-pulse 2s infinite;
+  }
+  .core::before {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    clip-path: circle(30px at 30px 30px);
+    background: linear-gradient(0deg, #e91e63, #f44336);
+    animation: pulse 2s infinite;
+    transform: translate(-30px, -30px) rotate(45deg);
+    box-shadow:  -10px -10px 20px fade(#f44336,25%), 
+                10px 10px 20px fade(#f44336,50%);
+  }
+  .particle {
+    position: absolute;
+    animation: particle-dance 4s infinite;
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(315deg, #e91e63, #f44336);
+    border-radius: 50%;
+    box-shadow: -10px 10px 20px fade(#e91e63,25%), 
+    10px -10px 20px fade(#f44336,25%);
+  }
+  .neural-web {
+    position: absolute;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 5px;
+  }
+  .neural-web path {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web" viewBox="0 0 100 100">
+      <path d="M 20 0 L 0 20 L 20 50 L 0 70 L 30 80" />
+      <path d="M 70 0 L 50 70 L 70 30 L 20 0 L 50 0" />
+      <path d="M 0 100 L 100 40 L 0 0 L 0 60 L 40 100" />
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>
