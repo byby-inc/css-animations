@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Celestial Vortex Genesis</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: circle(50% at 50% 50%);
+    background: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+  }
+  
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #ff99cc, #ff33cc);
+    box-shadow:
+      0 0 0 2px #fff,
+      0 0 10px 2px #fff,
+      0 0 20px 2px #fff,
+      0 0 30px 2px #fff,
+      0 0 40px 2px #fff,
+      0 0 50px 2px #fff;
+    animation: core-pulse infinite 2s;
+  }
+  
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(180deg, #66ccff, #44ccff);
+  }
+  
+  .particle:nth-child(1) {
+    top: 10%;
+    left: 10%;
+    animation: particle-dance infinite 3s;
+  }
+  
+  .particle:nth-child(2) {
+    top: 20%;
+    left: 20%;
+    animation: particle-dance infinite 2.5s;
+  }
+  
+  .particle:nth-child(3) {
+    top: 30%;
+    left: 30%;
+    animation: particle-dance infinite 2s;
+  }
+  
+  .particle:nth-child(4) {
+    top: 40%;
+    left: 40%;
+    animation: particle-dance infinite 1.5s;
+  }
+  
+  .particle:nth-child(5) {
+    top: 50%;
+    left: 50%;
+    animation: particle-dance infinite 1s;
+  }
+  
+  .particle:nth-child(6) {
+    top: 60%;
+    left: 60%;
+    animation: particle-dance infinite 0.5s;
+  }
+  
+  .particle:nth-child(7) {
+    top: 70%;
+    left: 70%;
+    animation: particle-dance infinite 3.5s;
+  }
+  
+  .particle:nth-child(8) {
+    top: 80%;
+    left: 80%;
+    animation: particle-dance infinite 4s;
+  }
+  
+  .particle:nth-child(9) {
+    top: 90%;
+    left: 90%;
+    animation: particle-dance infinite 3.2s;
+  }
+  
+  .particle:nth-child(10) {
+    top: 45%;
+    left: 45%;
+  }
+  
+  @keyframes particle-dance {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+      transform: translate(-50px, -50px) rotate(360deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+  }
+  
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes neural-flicker {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+      stroke-dashoffset: 200;
+    }
+    50% {
+      transform: translate(-50%, -50%) rotate(10deg);
+      stroke-dashoffset: 100;
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(0deg);
+      stroke-dashoffset: 200;
+    }
+  }
+  
+  .neural-web {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+  
+    
+  .neural-web path:nth-child(1) {
+    d: M100,100 a100,100 0 0,1 100-100 a100,100 0 0,1 0,200 a100,100 0 0,1 -100,100 a100,100 0 0,1 -100-100 a100,100 0 0,1 0-200Z;
+    animation: neural-flicker infinite 1s;
+  }
+  
+  .neural-web path:nth-child(2) {
+    d: M200,150 a100,100 0 0,1 100,50 a100,100 0 0,1 0-100 a100,100 0 0,1 -100,50 a100,100 0 0,1 -100-100 a100,100 0 0,1 0-200z;
+    animation: neural-flicker infinite 1s;
+  }
+  
+  .neural-web path:nth-child(3) {
+    d: M150,300 a100,100 0 0,1 100,250 a100,100 0 0,1 0,50 a100,100 0 0,1 -100,250 a100,100 0 0,1 -100,50 a100,100 0 0,1 0-200z;
+    animation: neural-flicker infinite 1s;
+  }
+  
+  .neural-web path:nth-child(4) {
+    d: M250,250 a100,100 0 0,1 100,200 a100,100 0 0,1 0-50 a100,100 0 0,1 -100,200 a100,100 0 0,1 -100,50 a100,100 0 0,1 0-200z;
+    animation: neural-flicker infinite 1s;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path class="neural-web path" d="M100,100 a100,100 0 0,1 100-100 a100,100 0 0,1 0,200 a100,100 0 0,1 -100,100 a100,100 0 0,1 -100-100 a100,100 0 0,1 0-200Z"></path>
+      <path class="neural-web path" d="M200,150 a100,100 0 0,1 100,50 a100,100 0 0,1 0-100 a100,100 0 0,1 -100,50 a100,100 0 0,1 -100-100 a100,100 0 0,1 0-200z"></path>
+      <path class="neural-web path" d="M150,300 a100,100 0 0,1 100,250 a100,100 0 0,1 0,50 a100,100 0 0,1 -100,250 a100,100 0 0,1 -100,50 a100,100 0 0,1 0-200z"></path>
+      <path class="neural-web path" d="M250,250 a100,100 0 0,1 100,200 a100,100 0 0,1 0-50 a100,100 0 0,1 -100,200 a100,100 0 0,1 -100,50 a100,100 0 0,1 0-200z"></path>
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

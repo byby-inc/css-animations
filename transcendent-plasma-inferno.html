@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Transcendent Plasma Inferno</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-50vh) rotate(30deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+  }
+  @keyframes core-pulse {
+    0% { transform: scale(0.8); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(0.8); }
+  }
+  @keyframes neural-flicker {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+  }
+  :root {
+    --color-01: #FF7F7F;
+    --color-02: #FF99FF;
+    --color-03: #99FF66;
+    --color-04: #66CCCC;
+    --color-05: #FFFF66;
+  }
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(var(--color-03), var(--color-05));
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10vh;
+    height: 10vh;
+    background: linear-gradient(to bottom left, var(--color-01), var(--color-04));
+    border-radius: 50%;
+    box-shadow:
+      0 0 0 1vh var(--color-02),
+      0 0 0 2vh var(--color-03),
+      0 0 0 3vh var(--color-04),
+      0 0 0 4vh var(--color-05),
+      0 0 0 5vh var(--color-02),
+      0 0 0 6vh var(--color-03);
+    animation: core-pulse infinite;
+  }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to top right, var(--color-01), var(--color-04));
+    animation: particle-dance infinite;
+  }
+  .particle:nth-of-type(1) {
+    top: 30vh;
+    left: 20vw;
+    width: 5vh;
+    height: 5vh;
+    animation-duration: 6s;
+  }
+  .particle:nth-of-type(2) {
+    top: 60vh;
+    left: 40vw;
+    width: 3vh;
+    height: 3vh;
+    animation-duration: 8s;
+  }
+  .particle:nth-of-type(3) {
+    top: 10vh;
+    left: 70vw;
+    width: 2vh;
+    height: 2vh;
+    animation-duration: 4s;
+  }
+  .particle:nth-of-type(4) {
+    top: 80vh;
+    left: 10vw;
+    width: 1vh;
+    height: 1vh;
+    animation-duration: 2s;
+  }
+  .particle:nth-of-type(5) {
+    top: 40vh;
+    left: 80vw;
+    width: 4vh;
+    height: 4vh;
+    animation-duration: 10s;
+  }
+  .particle:nth-of-type(6) {
+    top: 20vh;
+    left: 30vw;
+    width: 3vh;
+    height: 3vh;
+    animation-duration: 5s;
+  }
+  .particle:nth-of-type(7) {
+    top: 60vh;
+    left: 20vw;
+    width: 2vh;
+    height: 2vh;
+    animation-duration: 9s;
+  }
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2vh;
+  }
+  .neural-web path:nth-of-type(1) {
+    d: M70 0 L70 20 50 10 L30 20 30 0 Z;
+    animation: neural-flicker infinite;
+  }
+  .neural-web path:nth-of-type(2) {
+    d: M10 0 L10 20 50 10 L90 20 90 0 Z;
+    animation: neural-flicker infinite;
+  }
+  .neural-web path:nth-of-type(3) {
+    d: M30 20 L30 40 70 30 L70 60 90 20 Z;
+    animation: neural-flicker infinite;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <svg class="neural-web">
+      <path class="neural-web path-1" />
+      <path class="neural-web path-2" />
+      <path class="neural-web path-3" />
+    </svg>
+  </div>
+        </div>
+        </body>
+        </html>

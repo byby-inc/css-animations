@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Horizon Aurora</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% {
+      transform: translate(50%, 50%) rotate(0deg);
+    }
+    20% {
+      transform: translate(20%, 60%) rotate(10deg);
+    }
+    40% {
+      transform: translate(40%, 40%) rotate(-20deg);
+    }
+    60% {
+      transform: translate(60%, 20%) rotate(30deg);
+    }
+    80% {
+      transform: translate(80%, 0%) rotate(-40deg);
+    }
+    100% {
+      transform: translate(50%, 50%) rotate(0deg);
+    }
+  }
+  
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1) rotate(0deg);
+    }
+    50% {
+      transform: scale(1.2) rotate(0deg);
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+    }
+  }
+  
+  @keyframes neural-flicker {
+    0% {
+      transform: rotate(0deg) translateY(0);
+    }
+    10% {
+      transform: rotate(-5deg) translateY(-5px);
+    }
+    20% {
+      transform: rotate(0deg) translateY(0);
+    }
+    30% {
+      transform: rotate(-10deg) translateY(10px);
+    }
+    100% {
+      transform: rotate(0deg) translateY(0);
+    }
+  }
+  
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    clip-path: circle(50% at 50% 50%);
+    background: linear-gradient(to bottom right, #FF69B4, #33CCFF);
+  }
+  
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom left, #33CCFF, #FF69B4);
+    box-shadow:
+      0 0 10px #33CCFF,
+      0 0 10px #33CCFF,
+      0 0 20px #33CCFF,
+      0 0 20px #33CCFF,
+      0 0 30px #33CCFF,
+      0 0 40px #33CCFF;
+    animation: core-pulse infinite 3s;
+  }
+  
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(to bottom left, #33CCFF, #FF69B4);
+    animation: particle-dance infinite 1.5s;
+  }
+  
+  .particle:nth-child(1) {
+    top: 30%;
+    left: 20%;
+  }
+  
+  .particle:nth-child(2) {
+    top: 70%;
+    left: 40%;
+  }
+  
+  .particle:nth-child(3) {
+    top: 100%;
+    left: 50%;
+  }
+  
+  .particle:nth-child(4) {
+    top: 90%;
+    left: 60%;
+  }
+  
+  .particle:nth-child(5) {
+    top: 80%;
+    left: 10%;
+  }
+  
+  .particle:nth-child(6) {
+    top: 40%;
+    left: 30%;
+  }
+  
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: #fff;
+  }
+  
+  .neural-web path {
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+  
+  .neural-web path:nth-child(1) {
+    d: 'M50 0 L50 100 0 50 Z';
+  }
+  
+  .neural-web path:nth-child(2) {
+    d: 'M25 0 L75 0 50 50 Z';
+  }
+  
+  .neural-web path:nth-child(3) {
+    d: 'M0 25 L0 75 75 50 Z';
+  }
+  
+  .neural-web path {
+    animation: neural-flicker infinite 5s;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path></path>
+      <path></path>
+      <path></path>
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

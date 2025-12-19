@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Eternal Vortex Ignition</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            /* Styles for the container */
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+  }
+
+  /* Styles for the core */
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #ffd200, #ffaa00, #ff9900);
+    box-shadow:
+      0 0 10px #ffd200,
+      0 0 10px #ffaa00,
+      0 0 10px #ff9900,
+      0 0 15px #ffaa00,
+      0 0 15px #ff9900,
+      0 0 20px #ffd200;
+  }
+
+  /* Styles for the particles */
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: particle-dance 2s infinite;
+  }
+
+  /* Styles for the neural web */
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Keyframes for the particle dance */
+  @keyframes particle-dance {
+    0% {
+      transform: translate(0, 0) rotate(0);
+    }
+    25% {
+      transform: translate(-10px, -10px) rotate(30deg);
+    }
+    50% {
+      transform: translate(0, 0) rotate(0);
+    }
+    75% {
+      transform: translate(10px, 10px) rotate(-30deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0);
+    }
+  }
+
+  /* Keyframes for the core pulse */
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  /* Keyframes for the neural flicker */
+  @keyframes neural-flicker {
+    0% {
+      transform: scale(1) rotate(0);
+    }
+    25% {
+      transform: scale(1.1) rotate(5deg);
+    }
+    50% {
+      transform: scale(1) rotate(0);
+    }
+    75% {
+      transform: scale(1.1) rotate(-5deg);
+    }
+    100% {
+      transform: scale(1) rotate(0);
+    }
+  }
+
+  /* Styles for the paths */
+  .neural-web path {
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+  .neural-web path:nth-child(1) {
+    opacity: 0.5;
+    animation: neural-flicker 4s infinite;
+  }
+  .neural-web path:nth-child(2) {
+    animation: neural-flicker 2s infinite;
+  }
+  .neural-web path:nth-child(3) {
+    animation: neural-flicker 3s infinite;
+  }
+
+  /* Adding more particles */
+  .particle:nth-child(1) {
+    top: 20%;
+    left: 20%;
+    background: linear-gradient(to bottom, #ff9900, #ffd200);
+  }
+  .particle:nth-child(2) {
+    top: 40%;
+    left: 40%;
+    background: linear-gradient(to bottom, #fff, #fff);
+  }
+  .particle:nth-child(3) {
+    top: 60%;
+    left: 20%;
+    background: linear-gradient(to bottom, #ff9900, #ffd200);
+  }
+  .particle:nth-child(4) {
+    top: 80%;
+    left: 40%;
+    background: linear-gradient(to bottom, #fff, #fff);
+  }
+  .particle:nth-child(5) {
+    top: 10%;
+    left: 60%;
+    background: linear-gradient(to bottom, #ff9900, #ffd200);
+  }
+  .particle:nth-child(6) {
+    top: 30%;
+    left: 80%;
+    background: linear-gradient(to bottom, #fff, #fff);
+  }
+  .particle:nth-child(7) {
+    top: 50%;
+    left: 60%;
+    background: linear-gradient(to bottom, #ff9900, #ffd200);
+  }
+  .particle:nth-child(8) {
+    top: 70%;
+    left: 80%;
+    background: linear-gradient(to bottom, #fff, #fff);
+  }
+  .particle:nth-child(9) {
+    top: 20%;
+    left: 90%;
+    background: linear-gradient(to bottom, #ff9900, #ffd200);
+  }
+  .particle:nth-child(10) {
+    top: 40%;
+    left: 10%;
+    background: linear-gradient(to bottom, #fff, #fff);
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 100 100 L 0 0 L 200 100 Z" />
+      <path d="M 100 100 L 50 50 L 150 100 Z" />
+      <path d="M 100 100 L 200 150 L 0 100 Z" />
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

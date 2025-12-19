@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Plasma Ascension</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            body {margin:0;}
+.vortex-container {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  clip-path: circle(50% at 50% 50%);
+  background: radial-gradient(rgba(255, 0, 0, 0.5), rgba(0, 255, 0, 0.5));
+}
+.particle {
+  position:absolute;
+  border-radius:50%;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(0, 0, 255, 0.5));
+  animation: particle-dance 4s infinite;
+  transform-origin: center;
+}
+.core {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  width:100px;
+  height:100px;
+  background: linear-gradient(rgba(255, 0, 0, 0.5), rgba(0, 255, 0, 0.5));
+  border-radius:50%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+              0 0 20px rgba(255, 255, 0, 0.5),
+              0 0 30px rgba(0, 255, 255, 0.5),
+              0 0 40px rgba(0, 0, 0, 0.5);
+  animation: core-pulse 2s infinite;
+  transform-origin: center;
+}
+
+@keyframes particle-dance {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.5) translate(50px, 50px); }
+  100% { transform: scale(1); }
+}
+@keyframes core-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+@keyframes neural-flicker {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+.neural-web {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  width:100%;
+  height:100%;
+  fill: none;
+  stroke:#fff;
+}
+.neural-web path {
+  stroke-width:2px;
+  animation: neural-flicker 8s infinite;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <div class="particle" style="top:50px; left:50px;"></div>
+    <div class="particle" style="top:60px; left:60px;"></div>
+    <div class="particle" style="top:70px; left:70px;"></div>
+    <div class="particle" style="top:80px; left:80px;"></div>
+    <div class="particle" style="top:90px; left:90px;"></div>
+    <div class="particle" style="top:100px; left:100px;"></div>
+  </div>
+  <svg class="neural-web">
+    <path d="M 50 50  l 100 0  l 0 -100  z" />
+    <path d="M 150 50  l 0 100  l -100 0  z" />
+    <path d="M 50 150  l 0 -100  l 100 0  z" />
+    <path d="M 150 150  l 100 0  l 0 100  z" />
+    <path d="M 250 50  l 0 100  l 100 0  z" />
+  </svg>
+        </div>
+        </body>
+        </html>

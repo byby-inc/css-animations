@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Eternal Vortex Convergence</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% {
+      transform: rotate(0deg) translateX(50vw + 500px) translateY(30vh - 200px);
+    }
+    30% {
+      transform: rotate(180deg) translateX(-50vw - 500px) translateY(30vh - 200px);
+    }
+    50% {
+      transform: rotate(270deg) translateX(50vw + 500px) translateY(30vh - 200px);
+    }
+    70% {
+      transform: rotate(360deg) translateX(-50vw - 500px) translateY(30vh - 200px);
+    }
+    100% {
+      transform: rotate(0deg) translateX(50vw + 500px) translateY(30vh - 200px);
+    }
+  }
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes neural-flicker {
+    0% {
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(180deg);
+    }
+    20% {
+      transform: rotate(360deg);
+    }
+    30% {
+      transform: rotate(540deg);
+    }
+    40% {
+      transform: rotate(720deg);
+    }
+    50% {
+      transform: rotate(900deg);
+    }
+    60% {
+      transform: rotate(1080deg);
+    }
+    70% {
+      transform: rotate(1260deg);
+    }
+    80% {
+      transform: rotate(1440deg);
+    }
+    90% {
+      transform: rotate(1620deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: linear-gradient(to right, #4a4a4a, #333);
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(to right, #4a4a4a, #333);
+    box-shadow: 0 0 20px #4a4a4a, 0 0 30px #333, 0 0 40px #4a4a4a, 0 0 50px #333, 0 0 60px #4a4a4a, 0 0 70px #333;
+  }
+  .particle {
+    position: absolute;
+    background: linear-gradient(to right, #4a4a4a, #333);
+    border-radius: 50%;
+    animation: particle-dance 10s infinite;
+  }
+  .neural-web {
+    position: absolute;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+  }
+  .particle:nth-child(1) {
+    animation: particle-dance 10s infinite;
+    top: 20vh;
+    left: 20vw;
+    width: 20px;
+    height: 20px;
+  }
+  .particle:nth-child(2) {
+    animation: particle-dance 10s infinite;
+    top: 30vh;
+    left: 30vw;
+    width: 20px;
+    height: 20px;
+  }
+  .particle:nth-child(3) {
+    animation: particle-dance 10s infinite;
+    top: 40vh;
+    left: 40vw;
+    width: 20px;
+    height: 20px;
+  }
+  .particle:nth-child(4) {
+    animation: particle-dance 8s infinite;
+    top: 50vh;
+    left: 50vw;
+    width: 15px;
+    height: 15px;
+  }
+  .particle:nth-child(5) {
+    animation: particle-dance 7s infinite;
+    top: 60vh;
+    left: 60vw;
+    width: 25px;
+    height: 25px;
+  }
+  .particle:nth-child(6) {
+    animation: particle-dance 12s infinite;
+    top: 20vh;
+    left: 70vw;
+    width: 15px;
+    height: 15px;
+  }
+  .particle:nth-child(7) {
+    animation: particle-dance 10s infinite;
+    top: 30vh;
+    left: 80vw;
+    width: 20px;
+    height: 20px;
+  }
+  .particle:nth-child(8) {
+    animation: particle-dance 14s infinite;
+    top: 40vh;
+    left: 90vw;
+    width: 10px;
+    height: 10px;
+  }
+  .particle:nth-child(9) {
+    animation: particle-dance 11s infinite;
+    top: 50vh;
+    left: 20vw;
+    width: 10px;
+    height: 10px;
+  }
+  .particle:nth-child(10) {
+    animation: particle-dance 9s infinite;
+    top: 60vh;
+    left: 30vw;
+    width: 20px;
+    height: 20px;
+  }
+  .particle:nth-child(1) {
+    animation-duration: 18s;
+  }
+  .particle:nth-child(2) {
+    animation-duration: 19s;
+  }
+  .particle:nth-child(3) {
+    animation-duration: 20s;
+  }
+  .particle:nth-child(4) {
+    animation-duration: 21s;
+  }
+  .particle:nth-child(5) {
+    animation-duration: 22s;
+  }
+  .particle:nth-child(6) {
+    animation-duration: 16s;
+  }
+  .particle:nth-child(7) {
+    animation-duration: 17s;
+  }
+  .particle:nth-child(8) {
+    animation-duration: 15s;
+  }
+  .particle:nth-child(9) {
+    animation-duration: 13s;
+  }
+  .particle:nth-child(10) {
+    animation-duration: 14s;
+  }
+  .neural-web path {
+    stroke-opacity: 0.2;
+  }
+  .neural-web {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .neural-web #neural-1 {
+    stroke-width: 5;
+  }
+  .neural-web #neural-2 {
+    stroke-width: 2;
+  }
+  .neural-web #neural-3 {
+    stroke-width: 10;
+  }
+  .neural-web #neural-4 {
+    stroke-width: 15;
+  }
+  .core {
+    animation: core-pulse 3s infinite;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+  <div class="core"></div>
+  <svg class="neural-web">
+    <path id="neural-1" d="M 500 500 L 600 500 L 610 610 L 500 610 Z" />
+    <path id="neural-2" d="M 500 500 L 600 500 L 610 390 L 500 390 Z" />
+    <path id="neural-3" d="M 500 500 L 510 410 L 600 500 L 510 590 Z" />
+    <path id="neural-4" d="M 500 500 L 580 410 L 610 390 L 500 390 Z" />
+  </svg>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+</div>
+        </div>
+        </body>
+        </html>

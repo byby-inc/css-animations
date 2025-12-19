@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Celestial Genesis</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            /* Clip-path */
+  .vortex-container {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: conic-gradient(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 1));
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    z-index: -1;
+  }
+
+  /* Core Styles */
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10vw; height: 10vw;
+    border-radius: 50%;
+    box-shadow:
+      0 0 10px rgba(255, 0, 0, 0.7),
+      0 0 20px rgba(0, 0, 255, 0.8),
+      0 0 30px rgba(0, 255, 0, 0.9),
+      0 0 40px rgba(255, 255, 0, 0.8),
+      0 0 50px rgba(255, 0, 255, 0.9),
+      0 0 60px rgba(0, 255, 255, 0.8);
+    background:
+      radial-gradient(rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 1)),
+      linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 1));
+  }
+
+  /* Particle Styles */
+  .particle {
+    position: absolute;
+    width: 1vw; height: 1vw;
+    border-radius: 50%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 1));
+  }
+
+  /* Neural Web Styles */
+  .neural-web {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1px;
+  }
+
+  /* Animations */
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  @keyframes particle-dance {
+    0% { transform: translate(2vw, 5vh) rotate(0deg); }
+    50% { transform: translate(5vw, 5vh) rotate(180deg); }
+    100% { transform: translate(2vw, 5vh) rotate(0deg); }
+  }
+  @keyframes neural-flicker {
+    0% { transform: translate(0vw, 0vh) rotate(0deg); }
+    50% { transform: translate(5vw, 5vh) rotate(360deg); }
+    100% { transform: translate(0vw, 0vh) rotate(0deg); }
+  }
+  .core {
+    animation: core-pulse 6s infinite;
+  }
+  .particle {
+    animation: particle-dance 8s infinite;
+  }
+  .neural-web {
+    animation: neural-flicker 4s infinite;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M50 10 C 70 30, 30 70, 50 90" />
+      <path d="M80 20 C 10 40, 60 80, 80 100" />
+      <path d="M30 50 C 50 70, 90 30, 30 80" />
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

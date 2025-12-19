@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Timeless Quantum Cascade</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            .vortex-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  clip-path: polygon(25% 0%,75% 0%,100% 25%,50% 100%,0% 25%);
+  background: linear-gradient(90deg, #3b3b3b, #1a1a1a);
+}
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+}
+.particle:nth-child(1) {
+  background: linear-gradient(90deg, #ff99cc, #ff66cc);
+  animation: particle-dance 4s infinite;
+}
+.particle:nth-child(2) {
+  background: linear-gradient(90deg, #ffccff, #ccffff);
+  animation: particle-dance 4s infinite;
+}
+.particle:nth-child(3) {
+  background: linear-gradient(90deg, #ccffff, #ffffcc);
+  animation: particle-dance 4s infinite;
+}
+.particle:nth-child(4) {
+  background: linear-gradient(90deg, #ffffcc, #ccccff);
+  animation: particle-dance 4s infinite;
+}
+.core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #ff99cc, #ff66cc);
+  animation: core-pulse 2s infinite;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.5),
+    0 0 50px rgba(255, 0, 0, 0.5), 0 0 10px rgba(0, 0, 255, 0.5),
+    0 0 20px rgba(0, 0, 255, 0.5), 0 0 50px rgba(0, 0, 255, 0.5),
+    0 0 10px rgba(0, 100, 0, 0.5), 0 0 20px rgba(0, 100, 0, 0.5),
+    0 0 50px rgba(0, 100, 0, 0.5);
+}
+.neural-web {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: #fff;
+}
+.neural-web path {
+  stroke-width: 2;
+  stroke: #fff;
+}
+.neural-web path:nth-child(1) {
+  animation: neural-flicker 1s infinite;
+  transform: rotate(45deg);
+}
+.neural-web path:nth-child(2) {
+  animation: neural-flicker 1s infinite;
+  transform: rotate(-45deg);
+}
+.neural-web path:nth-child(3) {
+  animation: neural-flicker 1s infinite;
+  transform: rotate(90deg);
+}
+@keyframes particle-dance {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+@keyframes core-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes neural-flicker {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 50 50 L 100 100" />
+      <path d="M 50 50 L 200 200" />
+      <path d="M 50 50 L 300 300" />
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

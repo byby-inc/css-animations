@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Eternal Radiance Vortex</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    50% { transform: translate(-50%, -50%) rotate(360deg); }
+    100% { transform: translate(-50%, -50%) rotate(0deg); }
+  }
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+  }
+  @keyframes neural-flicker {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(10px, 10px); }
+    100% { transform: translate(0, 0); }
+  }
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: radial-gradient( circle closest-side at center, #000 0%, #444 100% );
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: repeating-linear-gradient(135deg, #fff, #fff 10px, #ccc 10px, #ccc 20px);
+    box-shadow:
+      0 0 10px #fff,
+      0 0 20px #fff,
+      0 0 30px #fff,
+      0 0 40px #fff,
+      0 0 50px #fff,
+      0 0 60px #fff;
+    animation: core-pulse infinite 2s;
+  }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient( circle closest-side at center, #000 0%, #888 100% );
+    animation: particle-dance infinite 4s;
+  }
+  .particle:nth-child(1) { top: 10%; left: 10%; }
+  .particle:nth-child(2) { top: 20%; left: 20%; }
+  .particle:nth-child(3) { top: 30%; left: 30%; }
+  .particle:nth-child(4) { top: 40%; left: 40%; }
+  .particle:nth-child(5) { top: 50%; left: 50%; }
+  .particle:nth-child(6) { top: 60%; left: 60%; }
+  .particle:nth-child(7) { top: 70%; left: 70%; }
+  .particle:nth-child(8) { top: 80%; left: 80%; }
+  .particle:nth-child(9) { top: 90%; left: 90%; }
+  .particle:nth-child(10) { top: 95%; left: 95%; }
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: #fff;
+  }
+  .neural-web path {
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+  @keyframes neural-flicker {
+    0% { transform: translate(0, 10px); }
+    50% { transform: translate(25px, 5px); }
+    100% { transform: translate(0, 10px); }
+  }
+  .neural-web path:nth-child(1) {
+    d: M 0 50,50 50;
+    animation: neural-flicker infinite 8s;
+  }
+  .neural-web path:nth-child(2) {
+    d: M 0 50,100 50;
+    animation: neural-flicker infinite 8s;
+  }
+  .neural-web path:nth-child(3) {
+    d: M 50 0,75 100;
+    animation: neural-flicker infinite 8s;
+  }
+  .neural-web path:nth-child(4) {
+    d: M 100 50,150 50;
+    animation: neural-flicker infinite 8s;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path/>
+      <path/>
+      <path/>
+      <path/>
+      <path/>
+      <path/>
+      <path/>
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

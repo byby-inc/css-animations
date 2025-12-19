@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Ethereal Aurora Convergence</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% { transform: rotate(0deg) translate(0, 0); }
+    50% { transform: rotate(20deg) translate(-10%, 10%); }
+    100% { transform: rotate(0deg) translate(0, 0); }
+  }
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+  @keyframes neural-flicker {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+  }
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: circle(50% at 50% 50%);
+    background: linear-gradient(to bottom, #ff9900, #ff3300);
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #ffffff, #ff0000);
+    box-shadow: 
+      0 0 10px #ffffff,
+      0 0 20px #ff9900,
+      0 0 30px #ff3300,
+      0 0 40px #ffffff,
+      0 0 50px #ff3300,
+      0 0 60px #ff9900;
+    animation: core-pulse infinite 1s;
+  }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(to bottom, #ffffff, #ff3300);
+    animation: particle-dance infinite 5s;
+  }
+  .particle:nth-child(1) {
+    top: 20%;
+    left: 20%;
+    animation: particle-dance infinite 2s;
+  }
+  .particle:nth-child(2) {
+    top: 40%;
+    left: 40%;
+    animation: particle-dance infinite 3s;
+  }
+  .particle:nth-child(3) {
+    top: 60%;
+    left: 20%;
+    animation: particle-dance infinite 4s;
+  }
+  .particle:nth-child(4) {
+    top: 20%;
+    left: 60%;
+    animation: particle-dance infinite 5s;
+  }
+  .particle:nth-child(5) {
+    top: 40%;
+    left: 40%;
+    animation: particle-dance infinite 6s;
+  }
+  .particle:nth-child(6) {
+    top: 60%;
+    left: 60%;
+    animation: particle-dance infinite 7s;
+  }
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+  }
+  .neural-web path {
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+  .neural-web path:nth-child(1) {
+    d: M 50 50 L 100 100 L 50 150 L 0 100;
+    animation: neural-flicker infinite 10s;
+  }
+  .neural-web path:nth-child(2) {
+    d: M 50 50 L 0 100 L 50 150 L 100 100;
+    animation: neural-flicker infinite 10s;
+  }
+  .neural-web path:nth-child(3) {
+    d: M 50 50 L 100 0 L 50 50 L 0 0;
+    animation: neural-flicker infinite 10s;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path class="neural-web-path" d="M 50 50 L 100 100 L 50 150 L 0 100"></path>
+      <path class="neural-web-path" d="M 50 50 L 0 100 L 50 150 L 100 100"></path>
+      <path class="neural-web-path" d="M 50 50 L 100 0 L 50 50 L 0 0"></path>
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

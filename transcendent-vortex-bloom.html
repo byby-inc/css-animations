@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Transcendent Vortex Bloom</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% {
+      transform: translate(-100px, 0) rotate(0deg);
+    }
+    25% {
+      transform: translate(0, 50px) rotate(10deg);
+    }
+    50% {
+      transform: translate(100px, 0) rotate(20deg);
+    }
+    75% {
+      transform: translate(0, -50px) rotate(-10deg);
+    }
+    100% {
+      transform: translate(-100px, 0) rotate(0deg);
+    }
+  }
+  @keyframes core-pulse {
+    0% {
+      animation-timing-function: ease-in;
+      transform: scale(0.9);
+      box-shadow: 0px 0px 25px #3d25f9, 0px 0px 25px #3d25f9, 0px 0px 25px #e6f4c5, 0px 0px 25px #4cd8f3, 0px 0px 25px #f1c7f4, 0px 0px 25px #4cd8f3;
+    }
+    50% {
+      animation-timing-function: ease-out;
+      transform: scale(1.1);
+      box-shadow: 0px 0px 30px #e6f4c5, 0px 0px 30px #4cd8f3, 0px 0px 30px #f1c7f4, 0px 0px 30px #3d25f9, 0px 0px 30px #4cd8f3, 0px 0px 30px #e6f4c5;
+    }
+    100% {
+      animation-timing-function: ease-in;
+      transform: scale(0.9);
+      box-shadow: 0px 0px 25px #3d25f9, 0px 0px 25px #3d25f9, 0px 0px 25px #e6f4c5, 0px 0px 25px #4cd8f3, 0px 0px 25px #f1c7f4, 0px 0px 25px #4cd8f3;
+    }
+  }
+  @keyframes neural-flicker {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%,75% 0%,100% 25%,50% 100%,0% 25%);
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(to top, #3d25f9, #e6f4c5);
+    box-shadow: 0px 0px 25px #3d25f9, 0px 0px 25px #3d25f9, 0px 0px 25px #e6f4c5, 0px 0px 25px #4cd8f3, 0px 0px 25px #f1c7f4, 0px 0px 25px #4cd8f3;
+    animation: core-pulse infinite 2s;
+  }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to top, #e6f4c5, #4cd8f3);
+    width: 20px;
+    height: 20px;
+    animation: particle-dance infinite 5s;
+  }
+  .particle:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    animation-timing-function: ease-in-out;
+    transform: translateY(0) rotate(0deg);
+  }
+  .particle:nth-child(2) {
+    top: 50%;
+    left: 80%;
+    animation-timing-function: ease-out;
+    transform: translateY(0) rotate(5deg);
+  }
+  .particle:nth-child(3) {
+    top: 80%;
+    left: 60%;
+    animation-timing-function: ease-in;
+    transform: translateY(0) rotate(10deg);
+  }
+  .particle:nth-child(4) {
+    top: 15%;
+    left: 30%;
+    animation-timing-function: ease-out;
+    transform: translateY(0) rotate(5deg);
+  }
+  .particle:nth-child(5) {
+    top: 25%;
+    left: 50%;
+    animation-timing-function: ease-in;
+    transform: translateY(0) rotate(10deg);
+  }
+  .particle:nth-child(6) {
+    top: 35%;
+    left: 70%;
+    animation-timing-function: ease-out;
+    transform: translateY(0) rotate(5deg);
+  }
+  .particle:nth-child(7) {
+    top: 45%;
+    left: 20%;
+    animation-timing-function: ease-in;
+    transform: translateY(0) rotate(10deg);
+  }
+  .particle:nth-child(8) {
+    top: 55%;
+    left: 90%;
+    animation-timing-function: ease-out;
+    transform: translateY(0) rotate(5deg);
+  }
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+  }
+  .neural-web path {
+    stroke: #fff;
+  }
+  .neural-web path:nth-child(1) {
+    stroke-width: 10px;
+    transform: rotate(30deg);
+  }
+  .neural-web path:nth-child(2) {
+    stroke-width: 5px;
+    transform: rotate(45deg);
+  }
+  .neural-web path:nth-child(3) {
+    stroke-width: 20px;
+    transform: rotate(60deg);
+  }
+  @keyframes neural-flicker {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  .neural-web path {
+    animation: neural-flicker infinite 10s;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 50 50 L 100 50 L 150 100 L 100 150 L 50 100 L 0 50 Z" />
+      <path d="M 150 50 L 150 100 L 200 100 L 200 50 L 150 0 L 100 50 L 50 50 Z" />
+      <path d="M 50 150 L 0 150 L 50 200 L 100 200 L 150 200 L 200 150 L 200 50 Z" />
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

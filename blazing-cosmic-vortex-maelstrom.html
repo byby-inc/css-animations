@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Cosmic Vortex Maelstrom</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            .vortex-container {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -1;
+  clip-path: circle(50% at 50% 50%);
+  background: linear-gradient(to right, rgb(255, 255, 165), rgb(175, 255, 175));
+  overflow: hidden;
+ }
+ .core {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(to right, rgb(128, 255, 255), rgb(255, 255, 128));
+  box-shadow:
+   0 0 0 10px rgb(255, 255, 165),
+   0 0 0 20px rgb(175, 255, 175),
+   0 0 0 30px rgb(128, 255, 255),
+   0 0 0 40px rgb(255, 255, 128),
+   0 0 0 50px rgb(128, 128, 255),
+   0 0 0 60px rgb(255, 192, 203);
+  animation: core-pulse infinite 2s reverse;
+ }
+ @keyframes core-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+ }
+ .particle {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(to right, rgb(128, 255, 255), rgb(255, 255, 128));
+ }
+ .particle1 {
+  top: 20px; left: 20px;
+  width: 40px; height: 40px;
+  animation: particle-dance infinite 3s;
+ }
+ .particle2 {
+  top: 50px; left: 100px;
+  width: 20px; height: 20px;
+  animation: particle-dance infinite 4s;
+ }
+ .particle3 {
+  top: 80px; left: 160px;
+  width: 10px; height: 10px;
+  animation: particle-dance infinite 5s;
+ }
+ @keyframes particle-dance {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(-10px, 10px) rotate(10deg); }
+  50% { transform: translate(5px, -5px) rotate(5deg); }
+  75% { transform: translate(10px, 10px) rotate(10deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+ }
+ @keyframes neural-flicker {
+  0% { stroke-dasharray: 10 0 50; }
+  50% { stroke-dasharray: 0 30 80; }
+  100% { stroke-dasharray: 10 0 50; }
+ }
+ .neural-web {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; height: 100%;
+  fill: none; stroke: #fff;
+  stroke-width: 1px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+ }
+ .neural-web path {
+  stroke-dasharray: 20 10 30;
+ }
+ .neural-web path:nth-child(2) {
+  stroke-dasharray: 20 20 40;
+ }
+ .neural-web path:nth-child(3) {
+  stroke-dasharray: 10 10 20;
+ }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+   <div class="core"></div>
+   <svg class="neural-web">
+    <path d="M 10,10 A 10 10 0 1 1 30 30 M 30 30 A 10 10 0 1 1 10 10" />
+    <path d="M 10,10 A 20 20 0 1 1 40 40 M 40 40 A 20 20 0 1 1 10 10" />
+    <path d="M 30,30 A 30 30 0 1 1 60 60 M 60 60 A 30 30 0 1 1 30 30" />
+   </svg>
+   <div class="particle" style="background: linear-gradient(to right, rgb(255, 128, 0), rgb(128, 0, 255));"></div>
+   <div class="particle" style="background: linear-gradient(to right, rgb(255, 128, 0), rgb(128, 0, 255)); top: 30px; left: 30px;"></div>
+   <div class="particle" style="background: linear-gradient(to right, rgb(255, 128, 0), rgb(128, 0, 255)); top: 80px; left: 130px;"></div>
+   <div class="particle" style="background: linear-gradient(to right, rgb(255, 128, 0), rgb(128, 0, 255)); top: 40px; left: 50px;"></div>
+ </div>
+        </div>
+        </body>
+        </html>

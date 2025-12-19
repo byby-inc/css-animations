@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Cosmic Genesis</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            /* Keyframes for animations */
+  @keyframes particle-dance {
+    0% { transform: translate(0, 0) rotate(0); }
+    50% { transform: translate(-20%, -10%) rotate(360deg); }
+    100% { transform: translate(0, 0) rotate(0); }
+  }
+  
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes neural-flicker {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(10%, 5%) scale(1.2); }
+    100% { transform: translate(0, 0) scale(1); }
+  }
+  
+  /* Style for .vortex-container */
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: linear-gradient(to bottom, #f8f4fd, #d4d1f5);
+  }
+  
+  /* Style for .core */
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #3a1c71, #9c59b6);
+    box-shadow: 0 0 0 10px #d4d1f5, 0 0 0 20px #9c59b6, 0 0 0 30px #3a1c71, 0 0 0 40px #d4d1f5, 0 0 0 50px #9c59b6;
+  }
+  
+  /* Style for .particle */
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(to bottom, #f8f4fd, #d4d1f5);
+  }
+  
+  /* Style for .particle animation */
+  .particle.particle-1 {
+    top: 10%;
+    left: 10%;
+    animation: particle-dance 2s infinite;
+  }
+  
+  .particle.particle-2 {
+    top: 20%;
+    left: 20%;
+    animation: particle-dance 1.5s infinite;
+  }
+  
+  .particle.particle-3 {
+    top: 30%;
+    left: 30%;
+    animation: particle-dance 2.5s infinite;
+  }
+  
+  /* Style for .neural-web */
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1px;
+  }
+  
+  /* Paths for .neural-web */
+  .neural-web path {
+    stroke: #fff;
+    stroke-width: 1px;
+  }
+  
+  .neural-web.path-1 {
+    d: M 10 10 L 30 30 L 50 10;
+  }
+  
+  .neural-web.path-2 {
+    d: M 40 40 L 60 20 L 80 40;
+  }
+  
+  .neural-web.path-3 {
+    d: M 20 60 L 30 70 L 40 60;
+  }
+  
+  /* Animation for .neural-web */
+  .neural-web.animation {
+    animation: neural-flicker 3s infinite;
+  }
+  
+  /* Animation for core pulsing */
+  .core.pulse {
+    animation: core-pulse 1s infinite;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+  <div class="core pulse"></div>
+  <div class="particle particle-1"></div>
+  <div class="particle particle-2"></div>
+  <div class="particle particle-3"></div>
+  <svg class="neural-web" viewBox="0 0 100 100">
+    <path class="path-1 animation" d="M 10 10 L 30 30 L 50 10"></path>
+    <path class="path-2 animation" d="M 40 40 L 60 20 L 80 40"></path>
+    <path class="path-3 animation" d="M 20 60 L 30 70 L 40 60"></path>
+  </svg>
+  <div class="particle particle-4"></div>
+  <div class="particle particle-5"></div>
+  <div class="particle particle-6"></div>
+  <div class="particle particle-7"></div>
+  <div class="particle particle-8"></div>
+  <div class="particle particle-9"></div>
+  <div class="particle particle-10"></div>
+  <div class="particle particle-11"></div>
+  <div class="particle particle-12"></div>
+  <div class="neural-web.path-4 animation" d="M 50 50 L 70 70 L 90 50"></div>
+</div>
+        </div>
+        </body>
+        </html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Eternal Molten Inferno</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance { 
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-10%, 10%); }
+  }
+  
+  @keyframes core-pulse { 
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+  }
+  
+  @keyframes neural-flicker { 
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-5%, 5%); }
+  }
+  
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .vortex-container::after {
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #ff3737, #ff6b6b);
+  }
+  
+  .core {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    animation: core-pulse infinite 2s ease;
+    cursor: pointer;
+  }
+  
+  .core::before, .core::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  
+  .core::before {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(to bottom, #fff, #fff);
+    animation: pulse 2s infinite ease;
+    animation-delay: 0.5s;
+  }
+  
+  .core::after {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(to bottom, #fff, #fff);
+    animation: pulse 2s infinite ease;
+    animation-delay: 0s;
+  }
+  
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #fff, #fff);
+    animation: particle-dance infinite 3s ease;
+  }
+  
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1px;
+  }
+  
+  .neural-web path:nth-child(1) {
+    stroke-dasharray: 100, 150;
+  }
+  
+  .neural-web path:nth-child(2) {
+    stroke-dasharray: 120, 180;
+  }
+  
+  .neural-web path:nth-child(3) {
+    stroke-dasharray: 150, 200;
+  }
+  
+  .neural-web path:nth-child(4) {
+    stroke-dasharray: 180, 220;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core">
+      <div class="core::before"></div>
+      <div class="core::after"></div>
+    </div>
+    <svg class="neural-web">
+      <path d="M100 50 L150 100 L200 50" />
+      <path d="M150 50 L250 50 L200 100" />
+      <path d="M200 50 L300 50 L250 100" />
+      <path d="M250 50 L400 50 L350 100" />
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

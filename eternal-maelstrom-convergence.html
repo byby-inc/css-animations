@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Eternal Maelstrom Convergence</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            .vortex-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+  background: linear-gradient(to bottom, #2F4F7F, #4B6584);
+}
+
+.core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #66CCCC, #99CCFF);
+  box-shadow:
+  0 0 10px #66CCCC,
+  0 0 10px #66CCCC,
+  0 0 15px #66CCCC,
+  0 0 15px #66CCCC,
+  0 0 20px #66CCCC,
+  0 0 20px #66CCCC;
+}
+
+.core::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #33CCCC, #66CCCC);
+}
+
+.core::before {
+  content: '';
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(to top, #33CCCC, #66CCCC);
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #66CCCC, #99CCFF);
+  animation: particle-dance infinite 3s;
+}
+
+.particle:nth-of-type(1) {
+  top: 20%;
+  left: 20%;
+  width: 50px;
+  height: 50px;
+}
+.particle:nth-of-type(2) {
+  top: 75%;
+  left: 20%;
+  width: 30px;
+  height: 30px;
+}
+.particle:nth-of-type(3) {
+  top: 20%;
+  left: 75%;
+  width: 40px;
+  height: 40px;
+}
+.particle:nth-of-type(4) {
+  top: 40%;
+  left: 20%;
+  width: 60px;
+  height: 60px;
+}
+.particle:nth-of-type(5) {
+  top: 10%;
+  left: 20%;
+  width: 20px;
+  height: 20px;
+}
+
+.neural-web {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+}
+
+.neural-web path {
+  stroke: #fff;
+  stroke-width: 0.5;
+}
+
+@keyframes particle-dance { 
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+  20% { transform: translate(-10px, -10px) rotate(20deg) scale(1.2); }
+  40% { transform: translate(0, 0) rotate(0deg) scale(1); }
+  60% { transform: translate(10px, 10px) rotate(-20deg) scale(1); }
+  80% { transform: translate(0, 0) rotate(0deg) scale(1); }
+  100% { transform: translate(-5px, -5px) rotate(10deg) scale(1); }
+}
+
+@keyframes core-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes neural-flicker {
+  0% { transform: matrix( 0.95, 0, 0, 0.05, 0, 0 ); }
+  25% { transform: matrix( 1.05, 0, 0, 0.05, 0, 0 ); }
+  50% { transform: matrix( 0.95, 0, 0, 0.05, 0, 0 ); }
+  75% { transform: matrix( 1.05, 0, 0, 0.05, 0, 0 ); }
+  100% { transform: matrix( 0.95, 0, 0, 0.05, 0, 0 ); }
+}
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+  <div class="core">
+  </div>
+  <svg class="neural-web">
+    <path d="M 50 20 C 20 50 50 90 80 50" />
+    <path d="M 70 100 C 90 140 130 120 100 70" />
+    <path d="M 40 50 C 50 70 80 90 80 30" />
+  </svg>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+</div>
+        </div>
+        </body>
+        </html>

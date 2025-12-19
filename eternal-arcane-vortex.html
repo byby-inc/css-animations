@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Eternal Arcane Vortex</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+  0% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+  50% {
+    transform: rotate(10deg) translate(10px, -10px);
+  }
+  100% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+}
+@keyframes core-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes neural-flicker {
+  0% {
+    transform: translate(-20px, -20px);
+  }
+  50% {
+    transform: translate(20px, -20px);
+  }
+  100% {
+    transform: translate(-20px, -20px);
+  }
+}
+.vortex-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+  background-image: linear-gradient(90deg, #03A9F4, #03A9F4), linear-gradient(45deg, #03A9F4, #03A9F4);
+}
+.core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-image: linear-gradient(135deg, #FF69CE, #FF69CE);
+  box-shadow: 0 0 10px #FF69CE, 0 0 10px #FF69CE, 0 0 10px #FF69CE, 0 0 10px #FF69CE, 0 0 10px #FF69CE, 0 0 10px #FF69CE;
+}
+.core::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  background-image: linear-gradient(135deg, #FF69CE, #FF69CE);
+  box-shadow: 0 0 10px #FF69CE, 0 0 10px #FF69CE, 0 0 10px #FF69CE, 0 0 10px #FF69CE, 0 0 10px #FF69CE, 0 0 10px #FF69CE;
+}
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-image: linear-gradient(135deg, #34A8FF, #34A8FF);
+  animation: particle-dance 3s infinite;
+}
+.neural-web {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  animation: neural-flicker 1s infinite;
+}
+.neural-web path {
+  stroke-dasharray: 100, 100;
+  stroke-dashoffset: 100;
+}
+@-webkit-keyframes particle-dance {
+  0% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+  50% {
+    transform: rotate(10deg) translate(10px, -10px);
+  }
+  100% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+}
+@-webkit-keyframes core-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes neural-flicker {
+  0% {
+    transform: translate(-20px, -20px);
+  }
+  50% {
+    transform: translate(20px, -20px);
+  }
+  100% {
+    transform: translate(-20px, -20px);
+  }
+}
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+  <div class="core">
+    <!-- Core Pulse Animation -->
+    <div class="core-pulse" style="animation: core-pulse 1s infinite;"></div>
+    <!-- End Core Pulse Animation -->
+  </div>
+  <!-- Core Shadow Animation -->
+  <div class="core-shadow" style="animation: core-pulse 1s infinite;"></div>
+  <!-- End Core Shadow Animation -->
+  <div class="core-shadow" style="animation: core-pulse 1s infinite;"></div>
+  <div class="core-shadow" style="animation: core-pulse 1s infinite;"></div>
+  <div class="core-shadow" style="animation: core-pulse 1s infinite;"></div>
+  <div class="core-shadow" style="animation: core-pulse 1s infinite;"></div>
+  <div class="core-shadow" style="animation: core-pulse 1s infinite;"></div>
+  <!-- End Core Shadow Animation -->
+  <svg class="neural-web">
+    <path d="M 15 50 A 50 50 0 1 0 95 0 A 50 50 0 1 0 15 50" />
+    <path d="M 50 15 A 50 50 0 1 0 100 95 A 50 50 0 1 0 50 15" />
+    <path d="M 10 50 A 50 50 0 1 0 90 0 A 50 50 0 1 0 10 50" />
+    <!-- End Path 1 -->
+    <!-- Path 2 -->
+    <path d="M 80 50 A 50 50 0 1 0 0 95 A 50 50 0 1 0 80 50" />
+    <!-- End Path 2 -->
+    <!-- Path 3 -->
+    <path d="M 30 50 A 50 50 0 1 0 90 0 A 50 50 0 1 0 30 50" />
+    <!-- End Path 3 -->
+  </svg>
+  <!-- End Neural Web -->
+  <div class="particle" style="animation: particle-dance 3s infinite;"></div>
+  <div class="particle" style="animation: particle-dance 3s infinite;"></div>
+  <div class="particle" style="animation: particle-dance 3s infinite;"></div>
+  <div class="particle" style="animation: particle-dance 3s infinite;"></div>
+  <div class="particle" style="animation: particle-dance 3s infinite;"></div>
+  <div class="particle" style="animation: particle-dance 3s infinite;"></div>
+  <div class="particle" style="animation: particle-dance 3s infinite;"></div>
+  <div class="particle" style="animation: particle-dance 3s infinite;"></div>
+  <div class="particle" style="animation: particle-dance 3s infinite;"></div>
+  <div class="particle" style="animation: particle-dance 3s infinite;"></div>
+  <!-- End Particles -->
+</div>
+<!-- End Vortex Container -->
+        </div>
+        </body>
+        </html>

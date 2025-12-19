@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Cosmic Eruption</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+      transform: translate(50px, -25px) rotate(10deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+  }
+
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes neural-flicker {
+    0% {
+      transform:translate(-25px, 25px) rotate(10deg);
+    }
+    50% {
+      transform: translate(25px, -25px) rotate(0deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+  }
+
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    z-index: -1;
+  }
+
+  .vortex-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  }
+
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(white, #FFD700);
+    box-shadow:
+      0 0 10px white,
+      0 0 20px #FFD700,
+      0 0 30px #FFA500,
+      0 0 40px #FFA07A,
+      0 0 50px #FF8C00;
+    transition: transform 5s infinite ease-in-out;
+    animation: core-pulse 10s infinite;
+  }
+
+  .particle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(to bottom, #FFD700, #FFA500);
+    border-radius: 50%;
+    transform: translate(0, 0);
+    transition: transform 2s infinite ease-in-out;
+    animation: particle-dance 3s infinite;
+  }
+
+  .particle:nth-child(1) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-duration: 0.5s;
+  }
+
+  .particle:nth-child(2) {
+    top: 20%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    animation-duration: 1.2s;
+  }
+
+  .particle:nth-child(3) {
+    top: 20%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    animation-duration: 0.8s;
+  }
+
+  .particle:nth-child(4) {
+    top: 80%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    animation-duration: 0.1s;
+  }
+
+  .particle:nth-child(5) {
+    top: 80%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    animation-duration: 1.5s;
+  }
+
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+  }
+
+  .neural-web .line {
+    stroke: #fff;
+    stroke-dasharray: 200, 200;
+  }
+
+  .neural-web .line:nth-child(1) {
+    stroke-width: 20;
+    transform: rotate(10deg);
+  }
+
+  .neural-web .line:nth-child(2) {
+    stroke-width: 15;
+    transform: rotate(15deg);
+  }
+
+  .neural-web .line:nth-child(3) {
+    stroke-width: 10;
+    transform: rotate(20deg);
+  }
+
+  @keyframes particle-dance {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+      transform: translate(50px, -25px) rotate(10deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+  }
+
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes neural-flicker {
+    0% {
+      transform: translate(-25px, 25px) rotate(10deg);
+    }
+    50% {
+      transform: translate(25px, -25px) rotate(0deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web" viewBox="0 0 100 100">
+      <path class="line" d="M 10 10 H 90"></path>
+      <path class="line" d="M 30 60 H 70"></path>
+      <path class="line" d="M 20 50 H 80"></path>
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

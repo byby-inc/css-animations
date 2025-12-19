@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Ethereal Vortex Singularity</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            /* Clip-path */
+ 
+.vortex-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+  overflow: hidden;
+}
+ 
+/* Linear-gradient */
+.linear-gradient {
+  background: linear-gradient(-45deg, #ff0063, #ff6c8b, #ffd6d6, #ffffff);
+}
+ 
+ CORE
+ 
+.core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle at center, #ffffff, #ffffff, #000000);
+  border-radius: 100%;
+  width: 10%;
+  height: 10%;  
+  z-index: 2;
+  animation: core-pulse 20s infinite;
+}
+ 
+.core-boxshadow {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4), 0 0 0 0 rgba(255, 255, 255, 0.2);
+  animation: box-shadow 20s infinite;
+}
+ CORE
+ 
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  height: 2%;
+  width: 2%;
+  top: 50%;
+  left: 50%;
+  background: linear-gradient(-45deg, #ff0063, #ff6c8b, #ffd6d6, #ffffff);
+  animation: particle-dance 10s infinite;
+  transform: rotate(45deg) translateX(-50%);
+}
+ 
+.particles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+ 
+/* Neural Web SVG */
+.neural-web {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  stroke: #fff;
+  fill: none;
+}
+ 
+path {
+  stroke: #fff;
+  stroke-width: 1px;
+  animation: neural-flicker 5s infinite;
+}
+ 
+@keyframes particle-dance {
+  0% {
+    transform: rotate(45deg) translateX(-50%);
+  }
+  50% {
+    transform: rotate(45deg) translateX(-60%);
+  }
+  100% {
+    transform: rotate(45deg) translateX(-50%);
+  }
+}
+ 
+ 
+@keyframes core-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+  @keyframes box-shadow {
+    50% {
+      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.6), 0 0 0 0 rgba(255, 255, 255, 0.2);
+    }
+ }
+ 
+@keyframes neural-flicker {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(20px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  70% {
+    transform: translateX(-10px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+ 
+  <div class="core">
+   <div class="core-boxshadow"></div>
+   <div class="core-boxshadow"></div>
+  </div>
+ 
+  <div class="particles">
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+  </div>
+  
+  <svg class="neural-web" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet"> 
+    <path d="M50 10 A40 40 0 1 0 10 50 A40 40 0 1 0 50 90 A40 40 0 1 0 100 50 Z"/> 
+    <path d="M50 90 A40 40 0 1 0 20 70 A40 40 0 1 0 50 90 A40 40 0 1 0 60 130 Z"/> 
+    <path d="M50 90 A40 40 0 1 0 40 100 A40 40 0 1 0 50 90 A40 40 0 1 0 90 140 Z"/> 
+  </svg>
+ 
+  <div class="particles">  <div class="particle"></div>  <div class="particle"></div>  <div class="particle"></div>  </div>
+ 
+ </div>
+        </div>
+        </body>
+        </html>

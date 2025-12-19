@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Eternal Primordial Genesis</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(10px, -10px) rotate(45deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+  }
+  @keyframes core-pulse {
+    0% { transform: scale(0); }
+    50% { transform: scale(2); }
+    100% { transform: scale(0); }
+  }
+  @keyframes neural-flicker {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(5px, -5px) scale(1.1); }
+    100% { transform: translate(0, 0) scale(1); }
+  }
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(50% at 50% 50%);
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #ff99ff, #33ccff);
+    box-shadow: 0 0 10px #000;
+    box-shadow: 0 0 20px #000;
+    box-shadow: 0 0 30px #000;
+    box-shadow: 0 0 40px #000;
+    box-shadow: 0 0 50px #000;
+    box-shadow: 0 0 60px #000;
+    animation: core-pulse infinite;
+  }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #ff99ff, #33ccff, #ff99ff);
+  }
+  .particle:nth-child(1) {
+    top: 20%;
+    left: 10%;
+    animation: particle-dance infinite 5s;
+  }
+  .particle:nth-child(2) {
+    top: 20%;
+    left: 70%;
+    animation: particle-dance infinite 3s;
+  }
+  .particle:nth-child(3) {
+    top: 60%;
+    left: 50%;
+    animation: particle-dance infinite 4s;
+  }
+  .particle:nth-child(4) {
+    top: 80%;
+    left: 20%;
+    animation: particle-dance infinite 2s;
+  }
+  .particle:nth-child(5) {
+    top: 30%;
+    left: 80%;
+  }
+  .particle:nth-child(6) {
+    top: 15%;
+    left: 40%;
+  }
+  .particle:nth-child(7) {
+    top: 90%;
+    left: 90%;
+  }
+  .particle:nth-child(8) {
+    top: 5%;
+    left: 60%;
+  }
+  .particle:nth-child(9) {
+    top: 85%;
+    left: 30%;
+  }
+  .particle:nth-child(10) {
+    top: 40%;
+    left: 20%;
+  }
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+  }
+  .neural-web path {
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+  @keyframes neural-flicker {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(5px, -5px) scale(1.1); }
+    100% { transform: translate(0, 0) scale(1); }
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 20 20 L 80 20 A 60 60 0 0 1 20 20 z" />
+      <path d="M 50 60 L 50 40" stroke-dasharray="5 5" />
+      <path d="M 60 30 L 100 30" stroke-dasharray="3 3" />
+    </svg>
+    <div class="particle:nth-child(1)"></div>
+    <div class="particle:nth-child(2)"></div>
+    <div class="particle:nth-child(3)"></div>
+    <div class="particle:nth-child(4)"></div>
+    <div class="particle:nth-child(5)"></div>
+    <div class="particle:nth-child(6)"></div>
+    <div class="particle:nth-child(7)"></div>
+    <div class="particle:nth-child(8)"></div>
+    <div class="particle:nth-child(9)"></div>
+    <div class="particle:nth-child(10)"></div>
+  </div>
+        </div>
+        </body>
+        </html>

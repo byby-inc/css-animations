@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Supernova Genesis</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.5);
+    }
+  }
+  
+  @keyframes particle-dance {
+    0% {
+      transform: rotate(0deg) translate(0%, 0%);
+    }
+    100% {
+      transform: rotate(360deg) translate(5%, 5%);
+    }
+  }
+  
+  @keyframes neural-flicker {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.9);
+    }
+  }
+  
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background-image: linear-gradient(to bottom, #FF69B4, #33CCFF);
+  }
+  
+  .vortex-container::before, .vortex-container::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, #FF69B4, #33CCFF);
+    animation: particle-dance infinite 12s linear;
+  }
+  
+  .vortex-container::before {
+    top: 2%;
+    left: 25%;
+    animation-delay: 4s;
+  }
+  
+  .vortex-container::after {
+    top: 50%;
+    left: 50%;
+    animation-delay: 8s;
+  }
+  
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, #FFFFFF, #CCCCFF);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.9);
+    animation: core-pulse infinite 8s ease;
+  }
+  
+  .particle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, #FFFFFF, #CCCCFF);
+    animation: particle-dance infinite 12s linear;
+  }
+  
+  .particle:hover {
+    animation-play-state: paused;
+  }
+  
+  .neural-web {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+  }
+  .neural-web path {
+    stroke: #FFFFFF;
+    stroke-width: 5px;
+  }
+  .neural-web path:nth-child(1) {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 0;
+  }
+  .neural-web path:nth-child(2) {
+    stroke-dasharray: 250;
+    stroke-dashoffset: 0;
+  }
+  .neural-web path:nth-child(3) {
+    stroke-dasharray: 300;
+    stroke-dashoffset: 0;
+  }
+  @keyframes neural-flicker {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.9);
+    }
+  }
+  @keyframes neon-flicker {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 0 0 L 100 50 0 100 Z" />
+      <path d="M 0 50 L 100 0 0 -100 Z" />
+      <path d="M 50 0 L 0 100 100 100 Z" />
+      <path d="M 0 70 L 100 0 0 -50 Z" />
+      <path d="M 80 0 L 0 20 0 -30 Z" />
+      <path d="M 0 0 L 50 -50 0 30 Z" />
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

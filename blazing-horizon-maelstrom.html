@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Horizon Maelstrom</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(50vh); }
+}
+@keyframes core-pulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.2); }
+}
+@keyframes neural-flicker {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+.vortex-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+  background: radial-gradient(ellipse at center, #2d3436 0%, #20242c 100%);
+}
+.core {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, #33ccff, #00b3ff);
+  box-shadow: 0 0 0 5px #33ccff, 0 0 0 10px #00b3ff, 0 0 0 15px #33ccff, 0 0 0 20px #00b3ff, 0 0 0 25px #33ccff, 0 0 0 30px #00b3ff;
+  animation: core-pulse 5s infinite;
+}
+.particle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #f4a460, #fa709a);
+  animation: particle-dance 3s infinite;
+}
+.neural-web {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2px;
+}
+.neural-web path {
+  stroke-dasharray: 200, 500;
+  animation: neural-flicker 4s infinite;
+}
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M0,0 L50,100 L100,0" stroke-dasharray="200,500" />
+      <path d="M0,0 L75,75 L150,0" stroke-dasharray="200,500" />
+      <path d="M50,150 L100,50 L150,150" stroke-dasharray="200,500" />
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

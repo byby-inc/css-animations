@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Galactic Singularity Eruption</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% { transform: translate(0, 0) rotate(0); }
+    50% { transform: translate(50vw, 50vh) rotate(360deg); }
+    100% { transform: translate(0, 0) rotate(0); }
+  }
+ 
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+  }
+ 
+  @keyframes neural-flicker {
+    0% { transform: scale(1) translate(0, 0); }
+    50% { transform: scale(0.8) translate(10vw, 10vh); }
+    100% { transform: scale(1) translate(0, 0); }
+  }
+ 
+  ::-webkit-scrollbar { display: none; }
+ 
+  .vortex-container {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100vh;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: linear-gradient(45deg, #ff9900 50%, #ff00ff 100%);
+  }
+ 
+  .core {
+    width: 150px; height: 150px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, #f7d2c4 50%, #ff66cc 100%);
+    border-radius: 50%;
+  }
+ 
+  .core, .core::before {
+    box-shadow: 0 0 10px #ff00ff;
+  }
+ 
+  .core::before, .core::after {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    width: 20px; height: 20px;
+    background: linear-gradient(135deg, #f7d2c4 50%, #ff66cc 100%);
+    border-radius: 50%;
+  }
+ 
+  .core::after {
+    top: 120px;
+    left: 40px;
+  }
+ 
+  .core::before::before, .core::after::before {
+    content: "";
+    position: absolute;
+    width: 10px; height: 10px;
+    background: linear-gradient(45deg, #f7d2c4 50%, #ff66cc 100%);
+    border-radius: 50%;
+  }
+ 
+  .core::before::before {
+    top: 110px;
+    left: 30px;
+  }
+ 
+  .core::after::before {
+    top: 130px;
+    left: 50px;
+  }
+ 
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    animation: particle-dance 2s infinite;
+  }
+ 
+  .particle::before {
+    position: absolute;
+    content: "";
+    width: 20px; height: 20px;
+    background: linear-gradient(135deg, #f7d2c4 50%, #ff66cc 100%);
+    border-radius: 50%;
+    animation: particle-dance 1.5s infinite;
+  }
+ 
+  .particle:nth-of-type(1) {
+    top: 10px; left: 10px;
+    background: linear-gradient(315deg, #ff3300 50%, #00ccff 100%);
+  }
+ 
+  .particle:nth-of-type(2) {
+    top: 50vh; left: 50vw;
+    background: linear-gradient(135deg, #ff6600 50%, #00ffcc 100%);
+  }
+ 
+  .particle:nth-of-type(3) {
+    top: 20px; left: 70px;
+    background: linear-gradient(45deg, #ff0099 50%, #ffcc00 100%);
+  }
+ 
+ /* .particle:nth-of-type(4) {...} */
+ /* .particle:nth-of-type(5) {...} */
+ 
+  .neural-web {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100vh;
+    z-index: -1;
+    stroke: #fff;
+    stroke-width: 2;
+  }
+ 
+  .neural-web path:nth-of-type(1) {
+    d: M 0 0 Q 20vw 30vh 40vw 0 Q 50vw 30vh 50vw 0 T 60vw 0 C 60vw 0 40vw 30vh 20vw 0;
+    animation: neural-flicker 1s infinite;
+  }
+ 
+  .neural-web path:nth-of-type(2) {
+    d: M 0 0 Q 30vw 40vh 60vw 0 Q 80vw 40vh 80vw 0 T 100vw 0 C 80vw 0 60vw 40vh 30vw 0;
+    animation: neural-flicker 0.5s infinite;
+  }
+ 
+  .neural-web path:nth-of-type(3) {
+    d: M 100vw 0 Q 90vw 30vh 80vw 0 Q 70vw 30vh 70vw 0 T 60vw 0 C 70vw 0 80vw 30vh 90vw 0;
+    animation: neural-flicker 0.8s infinite;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core">
+      <div class="core::before">-</div>
+      <div class="core::after">*</div>
+      <div class="core::before::before">*</div>
+      <div class="core::after::before">×</div>
+    </div>
+    <div class="particle" style="top: 10px; left: 10px;"></div>
+    <div class="particle" style="top: 50vh; left: 50vw;"></div>
+    <div class="particle" style="top: 20px; left: 70px;"></div>
+    <div class="particle" style="top: 10px; left: 60px;"></div>
+    <div class="particle" style="top: 60px; left: 60px;"></div>
+    <div class="particle" style="top: 30px; left: 30px;"></div>
+    <div class="particle" style="top: 90px; left: 10px;"></div>
+    <div class="particle" style="top: 20px; left: 80px;"></div>
+    <div class="particle" style="top: 40px; left: 60px;"></div>
+    <div class="particle" style="top: 10px; left: 50px;"></div>
+ 
+    <svg class="neural-web">
+      <path d="M 0 0 Q 20vw 30vh 40vw 0 Q 50vw 30vh 50vw 0 T 60vw 0 C 60vw 0 40vw 30vh 20vw 0;"></path>
+      <path d="M 0 0 Q 30vw 40vh 60vw 0 Q 80vw 40vh 80vw 0 T 100vw 0 C 80vw 0 60vw 40vh 30vw 0;"></path>
+      <path d="M 100vw 0 Q 90vw 30vh 80vw 0 Q 70vw 30vh 70vw 0 T 60vw 0 C 70vw 0 80vw 30vh 90vw 0;"></path>
+    </svg>
+  </div>
+        </div>
+        </body>
+        </html>

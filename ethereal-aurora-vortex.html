@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Ethereal Aurora Vortex</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% {
+      transform: rotate(0deg) translate(-50%, -50%);
+    }
+    50% {
+      transform: rotate(30deg) translate(-60%, -60%);
+    }
+    100% {
+      transform: rotate(0deg) translate(-50%, -50%);
+    }
+  }
+
+  @keyframes core-pulse {
+    0% {
+      transform: scale(0.9);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.9);
+    }
+  }
+
+  @keyframes neural-flicker {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(-10px, -10px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: radial-gradient(ellipse at center, #87CEEB, #6495ED);
+  }
+
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #FF69B4, #FF99CC);
+    box-shadow:
+      0 0 20px rgba(255,169,211, 0.5),
+      0 0 40px rgba(255,169,211, 0.3),
+      0 0 60px rgba(255,169,211, 0.2),
+      0 0 80px rgba(255,169,211, 0.1),
+      0 0 100px rgba(255,169,211, 0.05);
+    animation: core-pulse 1.5s infinite;
+  }
+
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #C9E4CA, #87CEEB);
+    animation: particle-dance 3s infinite;
+  }
+
+  .particle.particle-1 {
+    top: 20%;
+    left: 20%;
+    width: 20px;
+    height: 20px;
+    animation-duration: 2.5s;
+  }
+
+  .particle.particle-2 {
+    top: 40%;
+    left: 40%;
+    width: 30px;
+    height: 30px;
+    animation-duration: 2s;
+  }
+
+  .particle.particle-3 {
+    top: 10%;
+    left: 10%;
+    width: 10px;
+    height: 10px;
+    animation-duration: 3.5s;
+  }
+
+  .particle.particle-4 {
+    top: 60%;
+    left: 60%;
+    width: 40px;
+    height: 40px;
+    animation-duration: 2.2s;
+  }
+
+  .particle.particle-5 {
+    top: 30%;
+    left: 30%;
+    width: 25px;
+    height: 25px;
+    animation-duration: 3.2s;
+  }
+
+  .particle.particle-6 {
+    top: 70%;
+    left: 70%;
+    width: 45px;
+    height: 45px;
+    animation-duration: 2.8s;
+  }
+
+  .particle.particle-7 {
+    top: 85%;
+    left: 85%;
+    width: 55px;
+    height: 55px;
+    animation-duration: 2.9s;
+  }
+
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #fff;
+  }
+
+  .neural-web path {
+    stroke-width: 1px;
+  }
+
+  .neural-web path:nth-child(1) {
+    stroke-dasharray: 50, 50;
+    animation: neural-flicker 4s infinite;
+  }
+
+  .neural-web path:nth-child(2) {
+    stroke-dasharray: 75, 75;
+    animation: neural-flicker 5s infinite;
+  }
+
+  .neural-web path:nth-child(3) {
+    stroke-dasharray: 100, 100;
+    animation: neural-flicker 6s infinite;
+  }
+
+  .neural-web path:nth-child(4) {
+    stroke-dasharray: 125, 125;
+    animation: neural-flicker 7s infinite;
+  }
+
+  .neural-web path:nth-child(5) {
+    stroke-dasharray: 150, 150;
+    animation: neural-flicker 8s infinite;
+  }
+
+  .neural-web path:nth-child(6) {
+    stroke-dasharray: 175, 175;
+    animation: neural-flicker 9s infinite;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web" viewBox="0 0 100 100">
+      <path d="M 50 80 A 30 30 0 0 0 70 50 A 30 30 0 0 0 50 80" />
+      <path d="M 50 80 A 30 30 0 0 0 70 50 A 30 30 0 0 0 50 80" />
+      <path d="M 50 80 A 30 30 0 0 0 70 50 A 30 30 0 0 0 50 80" />
+      <path d="M 50 40 A 25 25 0 0 0 90 30 A 25 25 0 0 0 50 40" />
+      <path d="M 50 40 A 25 25 0 0 0 90 30 A 25 25 0 0 0 50 40" />
+      <path d="M 50 20 A 20 20 0 0 0 80 10 A 20 20 0 0 0 50 20" />
+    </svg>
+    <div class="particle particle-1"></div>
+    <div class="particle particle-2"></div>
+    <div class="particle particle-3"></div>
+    <div class="particle particle-4"></div>
+    <div class="particle particle-5"></div>
+    <div class="particle particle-6"></div>
+    <div class="particle particle-7"></div>
+  </div>
+        </div>
+        </body>
+        </html>

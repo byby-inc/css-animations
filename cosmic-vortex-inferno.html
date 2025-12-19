@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Cosmic Vortex Inferno</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% {
+      transform: translate(0px, 0px) rotate(0deg);
+    }
+    50% {
+      transform: translate(10px, -5px) rotate(5deg);
+    }
+    100% {
+      transform: translate(0px, 0px) rotate(0deg);
+    }
+  }
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes neural-flicker {
+    0% {
+      transform: scaleY(1) offsetX(0px) offsetY(0px);
+    }
+    50% {
+      transform: scaleY(1.5) offsetX(-5px) offsetY(3px);
+    }
+    100% {
+      transform: scaleY(1) offsetX(0px) offsetY(0px);
+    }
+  }
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: circle(50% at 50% 50%);
+    background-image: linear-gradient(to bottom, #ff9900, #ff0066);
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, #ffffff, #ffffff),
+      linear-gradient(to bottom, #ffffff, #ffffff);
+    box-shadow: 0 0 5px #ffffff inset,
+      0 0 10px #ffffff,
+      0 0 20px #ffffff inset,
+      0 0 15px #ffffff,
+      0 0 30px #ffffff inset,
+      0 0 25px #ffffff,
+      0 0 40px #ffffff inset;
+    width: 200px;
+    height: 200px;
+  }
+  .core {
+    animation: core-pulse infinite 2s;
+  }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, #ffffff, #000000),
+      linear-gradient(to bottom, #ffffff, #000000);
+    animation: particle-dance infinite 0.1s;
+    width: 50px;
+    height: 50px;
+  }
+  .neural-web {
+    position: absolute;
+    fill: none;
+    stroke: #ffffff;
+  }
+  .neural-web path {
+    stroke-width: 2px;
+  }
+  .neural-web .wave {
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 2px;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web" width="100%" height="100%">
+      <path class="wave" d="M 0 0 L 100 100 Q 80 30 100 0 Z" />
+      <path class="wave" d="M 100 0 L 0 100 Q 20 30 0 0 Z" />
+      <path class="wave" d="M 0 100 L 100 0 Q 80 30 100 100 Z" />
+    </svg>
+    <div class="particle" style="left: 10px; top: 10px;"></div>
+    <div class="particle" style="left: 50px; top: 70px;"></div>
+    <div class="particle" style="left: 30px; top: 40px;"></div>
+    <div class="particle" style="left: 80px; top: 20px;"></div>
+    <div class="particle" style="left: 60px; top: 80px;"></div>
+  </div>
+        </div>
+        </body>
+        </html>

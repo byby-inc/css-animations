@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Aurora Galactic Symphony</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% { transform: translateX(-100px) translateY(-100px); transform-origin: 50% 50%; }
+    50% { transform: translateX(50px) translateY(100px); transform-origin: 50% 50%; }
+    100% { transform: translateX(200px) translateY(-200px); transform-origin: 50% 50%; }
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
+
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.5); }
+  }
+
+  @keyframes neural-flicker {
+    0% { transform: rotate(0deg) translateX(0px) translateY(0px); }
+    50% { transform: rotate(360deg) translateX(-20px) translateY(-20px); }
+    100% { transform: rotate(0deg) translateX(40px) translateY(40px); transform-origin: 50% 50%; }
+    0%, 50% { transform: scale(1); }
+    100% { transform: scale(0.9); }
+  }
+
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: circle(50% at 50% 50%);
+    background-image: linear-gradient(to top, #3b5998, #2f4f7f);
+  }
+
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(to top, #ff99cc, #ff6666);
+    border-radius: 50%;
+    box-shadow: 
+      0 0 20px #fff, 
+      0 0 30px rgb(255, 170, 153), 
+      0 0 50px rgb(240, 150, 200), 
+      0 0 100px rgb(220, 120, 180), 
+      0 0 150px rgb(200, 90, 160), 
+      0 0 200px rgb(180, 60, 140);
+  }
+
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-image: linear-gradient(to top, #c3c6f1, #a9adff);
+    animation: particle-dance 10s infinite;
+    animation-timing-function: ease-in-out;
+    transform-origin: 50% 50%;
+  }
+
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 4;
+  }
+
+  .neural-web path {
+    stroke-opacity: 1;
+    animation: neural-flicker 2s infinite;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 400 200  l 200 0  c 0-50-100-100-200-100 -100 0-200 50-200 100 z" />
+      <path d="M 600 300  l 200 0  c 0-20-100-30-200-20 -100 10-200 30-200 20 z" />
+      <path d="M 700 400  l 200 0  c 0-30-150-40-300-40 -150 0-300 30-300 40 z" />
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

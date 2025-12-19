@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Cosmic Eruption Symphony</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% { transform: translate(-100%, -100%) rotate(0deg); }
+    10% { transform: translate(-100%, -50%) rotate(30deg); }
+    20% { transform: translate(-50%, -50%) rotate(60deg); }
+    30% { transform: translate(-50%, 50%) rotate(90deg); }
+    40% { transform: translate(50%, 50%) rotate(120deg); }
+    50% { transform: translate(50%, 0%) rotate(150deg); }
+    60% { transform: translate(100%, 50%) rotate(180deg); }
+    70% { transform: translate(100%, 50%) rotate(210deg); }
+    80% { transform: translate(50%, 100%) rotate(240deg); }
+    90% { transform: translate(50%, 100%) rotate(270deg); }
+    100% { transform: translate(-100%, 50%) rotate(300deg); }
+  }
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    5% { transform: scale(1.1); }
+    10% { transform: scale(1); }
+    15% { transform: scale(1.1); }
+    20% { transform: scale(1); }
+    100% { transform: scale(1); }
+  }
+  @keyframes neural-flicker {
+    0% { transform: translateY(-100%); }
+    20% { transform: translateY(-50%); }
+    40% { transform: translateY(0%); }
+    60% { transform: translateY(20%); }
+    80% { transform: translateY(50%); }
+    100% { transform: translateY(100%); }
+  }
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: linear-gradient(to bottom, #fff, #000);
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to bottom, #ff0000, #ffff00);
+    border-radius: 50%;
+    box-shadow:
+    0 0 10px #ff0000,
+    0 0 20px #ffff00,
+    0 0 30px #00ff00;
+    width: 20%;
+    height: 20%;
+  }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+  }
+  .particle:nth-child(1) { background: linear-gradient(to bottom, #ff0000, #0000ff); top: 50%; left: 50%; transform: translate(-50%, -50%); }
+  .particle:nth-child(2) { background: linear-gradient(to bottom, #ffff00, #00ff00); top: 40%; left: 40%; transform: rotate(-30deg); }
+  .particle:nth-child(3) { background: linear-gradient(to bottom, #ff00ff, #0000ff); top: 30%; left: 30%; transform: rotate(30deg); }
+  .particle:nth-child(4) { background: linear-gradient(to bottom, #ff0000, #00ff00); top: 20%; left: 20%; transform: rotate(-60deg); }
+  .particle:nth-child(5) { background: linear-gradient(to bottom, #ffff00, #00ffff); top: 10%; left: 10%; transform: rotate(90deg); }
+  .particle:nth-child(6) { background: linear-gradient(to bottom, #00ff00, #ff00ff); top: 0%; left: 0%; transform: rotate(-120deg); }
+  .particle:nth-child(7) { background: linear-gradient(to bottom, #ff0000, #ffff00); top: 70%; left: 70%; transform: rotate(-150deg); }
+  .particle:nth-child(8) { background: linear-gradient(to bottom, #ffff00, #00ff00); top: 60%; left: 60%; transform: rotate(150deg); }
+  .particle:nth-child(9) { background: linear-gradient(to bottom, #ff00ff, #0000ff); top: 50%; left: 50%; transform: rotate(180deg); }
+  .particle:nth-child(10) { background: linear-gradient(to bottom, #ff0000, #00ff00); top: 40%; left: 40%; transform: rotate(-210deg); }
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .neural-web path {
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+  .neural-web path:nth-child(1) { transform: rotate(50deg); }
+  .neural-web path:nth-child(2) { transform: rotate(90deg); }
+  .neural-web path:nth-child(3) { transform: rotate(270deg); }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 100 100 L 200 100 L 200 200 L 100 200 Z" />
+      <path d="M 200 100 L 300 100 L 300 200 L 200 200 Z" />
+      <path d="M 300 100 L 400 100 L 400 200 L 300 200 Z" />
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

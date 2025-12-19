@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Primordial Quantum Ascension</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            /* Keyframes */
+  @keyframes particle-dance {
+    0% {
+      transform: translateX(50%) rotate(0deg);
+    }
+    100% {
+      transform: translateX(-50%) rotate(360deg);
+    }
+  }
+  
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes neural-flicker {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  /* Styles */
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: linear-gradient(180deg, #1e90ff, #4d90ff);
+  }
+  
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #ffff00, #ffbf00);
+    box-shadow: 0 0 10px #ffff00, 0 0 20px #ffff00, 0 0 30px #ffff00, 0 0 40px #ffff00, 0 0 50px #ffff00, 0 0 60px #ffff00;
+  }
+  
+  .core:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #ffff00, #ffbf00);
+  }
+  
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(90deg, #ffff00, #ffbf00);
+  }
+  
+  .particle:nth-child(1) {
+    top: 20%;
+    left: 20%;
+    animation: particle-dance 1.5s infinite alternate;
+  }
+  
+  .particle:nth-child(2) {
+    top: 50%;
+    left: 50%;
+    animation: particle-dance 2s infinite;
+  }
+  
+  .particle:nth-child(3) {
+    top: 80%;
+    left: 80%;
+    animation: particle-dance 2.5s infinite reverse;
+  }
+  
+  .particle:nth-child(4) {
+    top: 30%;
+    left: 30%;
+    animation: particle-dance 1.2s infinite;
+  }
+  
+  .particle:nth-child(5) {
+    top: 60%;
+    left: 60%;
+    animation: particle-dance 3s infinite;
+  }
+  
+  .particle:nth-child(6) {
+    top: 10%;
+    left: 10%;
+    animation: particle-dance 2.2s infinite reverse;
+  }
+  
+  .neural-web {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: #fff;
+  }
+  
+  .neural-web path {
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 1px;
+  }
+  
+  .neural-web {
+    animation: neural-flicker 4s infinite;
+  }
+  
+  .neural-web path {
+    animation: neural-flicker 1.5s infinite;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core">
+      <div class="core:after"></div>
+    </div>
+    <svg class="neural-web" viewBox="0 0 100 100">
+      <path d="M 50 10 C 10 10, 10 90, 50 90 S 90 90, 90 10 S 50 10 50 10" />
+      <path d="M 50 50 C 10 10, 90 90, 50 90 S 90 90, 90 10 S 50 10 50 10" />
+      <path d="M 50 80 C 10 10, 90 90, 50 90 S 90 90, 90 10 S 50 10 50 10" />
+      <path d="M 20 20 C 10 10, 90 90, 50 90 S 90 90, 90 10 S 50 10 50 10" />
+      <path d="M 80 20 C 10 10, 90 90, 50 90 S 90 90, 90 10 S 50 10 50 10" />
+      <path d="M 10 20 C 10 10, 90 90, 50 90 S 90 90, 90 10 S 50 10 50 10" />
+      <path d="M 20 80 C 10 10, 90 90, 50 90 S 90 90, 90 10 S 50 10 50 10" />
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

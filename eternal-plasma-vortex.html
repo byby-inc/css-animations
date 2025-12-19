@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Eternal Plasma Vortex</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% { transform: rotate(0deg) translate(0px, 0px); }
+    100% { transform: rotate(360deg) translate(-100px, -100px); }
+  }
+
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.2); }
+  }
+
+  @keyframes neural-flicker {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.1); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+  }
+
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5));
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    z-index: -1;
+    animation: cosmic-flicker infinite 10s;
+  }
+
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20%;
+    height: 20%;
+    background: linear-gradient(to bottom, rgba(255, 105, 180, 1), rgba(148, 0, 211, 1));
+    border-radius: 50%;
+    box-shadow: 
+      0 0 0 0 rgba(255, 105, 180, 0.5),
+      0 0 0 0 rgba(148, 0, 211, 0.5),
+      0 0 0 0 rgba(255, 105, 180, 0.5),
+      0 0 0 0 rgba(148, 0, 211, 0.5),
+      0 0 0 0 rgba(255, 105, 180, 0.5),
+      0 0 0 0 rgba(148, 0, 211, 0.5),
+      0 0 0 0 rgba(255, 105, 180, 0.5),
+      0 0 0 0 rgba(148, 0, 211, 0.5),
+      0 0 0 0 rgba(255, 105, 180, 0.5),
+      0 0 0 0 rgba(148, 0, 211, 0.5);
+    animation: core-pulse infinite 2s;
+  }
+
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, rgba(255, 105, 180, 1), rgba(148, 0, 211, 1));
+    animation: particle-dance infinite 10s;
+  }
+
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #fff;
+  }
+
+  @keyframes cosmic-flicker {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+  }
+
+  .core-path {
+    transform: rotate(-45deg);
+  }
+
+  #path1 {
+    stroke-dasharray: 100, 100;
+    animation: neural-flicker infinite 2s;
+  }
+
+  #path2 {
+    stroke-dasharray: 50, 50;
+    animation: neural-flicker infinite 5s;
+  }
+
+  #path3 {
+    stroke-dasharray: 20, 20;
+    animation: neural-flicker infinite 10s;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core">
+    </div>
+    <svg class="neural-web">
+      <path id="path1" d="M 0 0 Q 50 50 1000 0" stroke-width="2pt"/>
+      <path id="path2" d="M 0 1000 Q 50 950 1000 1000" stroke-width="1pt"/>
+      <path id="path3" d="M 0 1000 Q 50 900 1000 1000" stroke-width="0.5pt"/>
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

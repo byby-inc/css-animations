@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>ETERNAL ASCENSION BLOOM</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: linear-gradient(135deg, #FF69B4 0%, #33CC33 100%);
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #333333 0%, #FFFFFF 100%);
+    box-shadow:
+      0 0 10px #333333,
+      0 0 20px #333333,
+      0 0 30px #333333,
+      0 0 40px #333333,
+      0 0 50px #333333,
+      0 0 60px #333333,
+      0 0 70px #000000,
+      0 0 80px #000000;
+    animation: core-pulse 3s infinite;
+  }
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(90deg, #FFFFFF 0%, #33CC33 100%);
+    animation: particle-dance 2s infinite;
+  }
+  @keyframes particle-dance {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+      transform: translate(50px, -50px) rotate(360deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+  }
+  .neural-web {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 1px;
+  }
+  .neural-web path {
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 1px;
+  }
+  .neural-web path:nth-child(1) {
+    stroke-dasharray: 100, 100;
+    animation: neural-flicker 4s infinite ease-in-out;
+  }
+  @keyframes neural-flicker {
+    0% {
+      stroke-dashoffset: -50px;
+    }
+    50% {
+      stroke-dashoffset: 0px;
+    }
+    100% {
+      stroke-dashoffset: -50px;
+    }
+  }
+  svg .neural-web path:nth-child(2) {
+    stroke-dasharray: 150, 150;
+    animation: neural-flicker 4s 0.5s infinite ease-in-out;
+  }
+  svg .neural-web path:nth-child(3) {
+    stroke-dasharray: 200, 200;
+    animation: neural-flicker 4s 1s infinite ease-in-out;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M25,50 L50,75 L75,50 L50,25 L25,50 Z" />
+      <path d="M25,50 L50,90 L75,50 L50,10 L25,50 Z" />
+      <path d="M25,50 L50,130 L75,50 L50,-30 L25,50 Z" />
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

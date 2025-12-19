@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Ancient Supernova Resonance</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% { transform: translate(0%, 0%) rotate(0deg); }
+    50% { transform: translate(50%, 50%) rotate(360deg); }
+    100% { transform: translate(0%, 0%) rotate(0deg); }
+  }
+
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+  }
+
+  @keyframes neural-flicker {
+    0% { transform: translate(0%, 0%) scale(1); }
+    50% { transform: translate(10%, 10%) scale(1.2); }
+    100% { transform: translate(0%, 0%) scale(1); }
+  }
+
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #000;
+    clip-path: polygon(25% 0%,75% 0%,100% 25%,50% 100%,0% 25%);
+    overflow: hidden;
+  }
+
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(#fff, #fff), 
+                linear-gradient(45deg, #33ccff, #66b3ff) 100% -100%;
+    box-shadow: 
+              5px 5px 0 #fff,
+              10px 10px 0 #fff,
+              5px -5px 0 #fff,
+              -5px 5px 0 #fff,
+              -10px 10px 0 #fff,
+              -5px -5px 0 #fff;
+  }
+
+  .core-core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(#fff, #fff), 
+                linear-gradient(45deg, #ff6600, #ff9900) 100% -100%;
+  }
+
+  .neural-web {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+  }
+
+  .neural-web path {
+    stroke: #fff;
+    stroke-width: 2;
+    fill: none;
+  }
+
+  @media (min-resolution: 1.5dppx) {
+    .particle { animation: particle-dance 2.5s infinite; }
+    .core { animation: core-pulse 4s infinite; }
+    .neural-web { animation: neural-flicker 3s infinite; }
+  }
+
+  @media (max-resolution: 1dppx) {
+    .particle { animation: particle-dance 3s infinite; }
+    .core { animation: core-pulse 5s infinite; }
+    .neural-web { animation: neural-flicker 2s infinite; }
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core">
+      <div class="core-core">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+          <path d="M 150 150 Q 220 100, 190 50 Z" />
+          <path d="M 150 150 C 100 70, 170 170, 150 150 Z" />
+          <path d="M 150 150 C 150 10, 220 50, 190 90 Z" />
+          <path d="M 150 150 L 180 220 L 120 220 Z" />
+        </svg>
+      </div>
+    </div>
+    <div class="neural-web">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+        <path d="M 150 150 L 200 150 Z" />
+        <path d="M 150 150 L 150 200 Z" />
+        <path d="M 150 150 L 100 200 Z" />
+        <path d="M 150 150 L 120 250 L 180 250 Z" />
+      </svg>
+    </div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

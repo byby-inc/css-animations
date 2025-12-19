@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Primordial Plasma Maelstrom</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% {
+      transform: translate(0, -50px) rotate(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translate(-50px, 50px) rotate(360deg);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translate(0, -50px) rotate(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes neural-flicker {
+    0% {
+      transform: translateY(0) rotate(0);
+    }
+    50% {
+      transform: translateY(-20px) rotate(180deg);
+    }
+    100% {
+      transform: translateY(0) rotate(0);
+    }
+  }
+  
+  /* Main wrapper */
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Core */
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background-image: linear-gradient(to bottom, #FFC080 0%, #FFA07A 100%);
+    border-radius: 50%;
+    box-shadow:
+      inset 0 0 30px rgba(255, 255, 255, 0.5),
+      inset 0 0 60px rgba(255, 255, 255, 0.2),
+      0 0 10px rgba(255, 255, 255, 0.5),
+      0 0 15px rgba(255, 255, 255, 0.2),
+      0 0 20px rgba(255, 255, 255, 0.1),
+      0 0 5px rgba(255, 255, 255, 0.5),
+      0 0 10px rgba(255, 255, 255, 0.2),
+      0 0 15px rgba(255, 255, 255, 0.1);
+    animation: core-pulse infinite 2s;
+  }
+  
+  /* Particles */
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-image: linear-gradient(to bottom, #C7F464 0%, #FFFF00 100%);
+    animation: particle-dance infinite 3s;
+  }
+  
+  /* SVG Neural Web */
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: #000;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .neural-web path {
+    stroke: #fff;
+    stroke-width: 2;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 20 50 L 80 50 A 50 50 0 1 0 20 50 z" />
+      <path d="M 50 20 L 50 80 A 50 50 0 1 0 50 20 z" />
+      <path d="M 80 50 L 20 50 A 50 50 0 1 0 80 50 z" />
+      <path d="M 20 20 L 80 20 A 50 50 0 1 0 20 20 z" />
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

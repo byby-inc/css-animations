@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Primordial Galactic Convergence</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% {
+      transform: translate(-50%, 0) rotate(0deg);
+      opacity: 1;
+    }
+    50% {
+      transform: translate(-50%, 100%) rotate(360deg);
+      opacity: .5;
+    }
+    100% {
+      transform: translate(-50%, 0) rotate(0deg);
+      opacity: 1;
+    }
+  }
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes neural-flicker {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(-100%, 0);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    z-index: -1;
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #ffffff50, #ff00ff);
+    box-shadow: 0 0 10px 0 #ffffff80, 0 0 15px 0 #ffffff50, 0 0 20px 0 #ff00ff, 0 5px 10px 0 #ffffff80, 0 5px 15px 0 #ffffff50, 0 5px 20px 0 #ff00ff;
+    animation: core-pulse 1s infinite;
+  }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(to bottom, #ffffff50, #ff00ff);
+  }
+  .particle:nth-child(1) {
+    top: 40%;
+    left: 30%;
+    animation: particle-dance 4s infinite;
+  }
+  .particle:nth-child(2) {
+    top: 60%;
+    left: 20%;
+    animation: particle-dance 3s infinite;
+  }
+  .particle:nth-child(3) {
+    top: 80%;
+    left: 10%;
+    animation: particle-dance 2s infinite;
+  }
+  .particle:nth-child(4) {
+    top: 30%;
+    left: 40%;
+    animation: particle-dance 1s infinite;
+  }
+  .particle:nth-child(5) {
+    top: 20%;
+    left: 60%;
+    animation: particle-dance 5s infinite;
+  }
+  .particle:nth-child(6) {
+    top: 10%;
+    left: 70%;
+    animation: particle-dance 6s infinite;
+  }
+  .particle:nth-child(7) {
+    top: 50%;
+    left: 50%;
+    animation: particle-dance 7s infinite;
+  }
+  .particle:nth-child(8) {
+    top: 70%;
+    left: 50%;
+    animation: particle-dance 8s infinite;
+  }
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .neural-web path {
+    stroke: #ffffff;
+    stroke-width: .1;
+  }
+  .neural-web path:nth-child(1) {
+    transform: translate(0, 20%);
+    animation: neural-flicker 2s infinite;
+  }
+  .neural-web path:nth-child(2) {
+    transform: translate(20%, 0);
+    animation: neural-flicker 3s infinite;
+  }
+  .neural-web path:nth-child(3) {
+    transform: translate(0, 0);
+    animation: neural-flicker 1s infinite;
+  }
+  .neural-web path:nth-child(4) {
+    transform: translate(-20%, 0);
+    animation: neural-flicker 4s infinite;
+  }
+  .neural-web path:nth-child(5) {
+    transform: translate(0, -20%);
+    animation: neural-flicker 5s infinite;
+  }
+  svg {
+    overflow: visible;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"> </div>
+    <svg class="neural-web">
+      <path d="M 0 0 L 100 0 L 100 100 L 0 100 L 0 0" />
+      <path d="M 50 50 L 150 50 L 150 150 L 50 150 L 50 50" />
+      <path d="M 0 100 L 100 100 L 100 200 L 0 200 L 0 100" />
+      <path d="M 75 0 L 75 50 L 125 50 L 125 0 L 75 0" />
+      <path d="M 25 0 L 25 50 L 75 50 L 75 0 L 25 0" />
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

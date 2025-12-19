@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Transcendent Galaxy Inferno</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            .vortex-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+  overflow: hidden;
+}
+.core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-image: linear-gradient(to bottom, #fff, #c7b8ea);
+  box-shadow:
+    0 0 20px 5px rgba(238, 210, 255, 0.7),
+    0 0 25px 5px rgba(231, 180, 255, 0.6),
+    0 0 30px 5px rgba(220, 150, 255, 0.5),
+    0 0 35px 5px rgba(206, 120, 255, 0.4),
+    0 0 40px 5px rgba(192, 90, 255, 0.3),
+    0 0 45px 5px rgba(178, 60, 255, 0.2),
+    0 0 50px 5px rgba(165, 30, 255, 0.1);
+}
+.particle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-image: linear-gradient(to bottom, #fff, #c7b8ea);
+  animation: particle-dance 2s infinite;
+}
+@keyframes particle-dance {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  10% { transform: translate(-50%, -50%) rotate(20deg); }
+  20% { transform: translate(-50%, -50%) rotate(0deg); }
+  30% { transform: translate(-50%, -50%) rotate(-20deg); }
+  40% { transform: translate(-50%, -50%) rotate(0deg); }
+  50% { transform: translate(-50%, -50%) rotate(20deg); }
+  60% { transform: translate(-50%, -50%) rotate(0deg); }
+  70% { transform: translate(-50%, -50%) rotate(-20deg); }
+  80% { transform: translate(-50%, -50%) rotate(0deg); }
+  90% { transform: translate(-50%, -50%) rotate(20deg); }
+  100% { transform: translate(-50%, -50%) rotate(0deg); }
+}
+.neural-web {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1px;
+}
+.neural-web path:nth-child(1) {
+  stroke-dasharray: 300, 30;
+  animation: neural-flicker 3s infinite;
+}
+@keyframes neural-flicker {
+  0% { stroke-dashoffset: 0; }
+  50% { stroke-dashoffset: 150; }
+  100% { stroke-dashoffset: 0; }
+}
+.neural-web path:nth-child(2) {
+  stroke-dasharray: 250, 25;
+  animation: neural-flicker 4s infinite;
+}
+@keyframes neural-flicker {
+  0% { stroke-dashoffset: 0; }
+  50% { stroke-dashoffset: 125; }
+  100% { stroke-dashoffset: 0; }
+}
+.neural-web path:nth-child(3) {
+  stroke-dasharray: 200, 20;
+  animation: neural-flicker 5s infinite;
+}
+@keyframes neural-flicker {
+  0% { stroke-dashoffset: 0; }
+  50% { stroke-dashoffset: 100; }
+  100% { stroke-dashoffset: 0; }
+}
+@keyframes core-pulse {
+  0% { transform: scale(1); }
+  5% { transform: scale(1.05); }
+  10% { transform: scale(1); }
+  15% { transform: scale(1.1); }
+  20% { transform: scale(1); }
+  25% { transform: scale(1.15); }
+  30% { transform: scale(1); }
+}
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+    <svg class="neural-web">
+      <path d="M 10 10 H 80 V 80 H 10 Z" />
+      <path d="M 20 20 H 60 V 60 H 20 Z" />
+      <path d="M 30 30 H 50 V 50 H 30 Z" />
+    </svg>
+  </div>
+        </div>
+        </body>
+        </html>

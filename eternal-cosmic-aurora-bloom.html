@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Eternal Cosmic Aurora Bloom</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% {
+      transform: scale(3) rotate(0deg);
+      opacity: 1;
+    }
+    20% {
+      transform: scale(1) rotate(360deg);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(3) rotate(-360deg);
+      opacity: 1;
+    }
+  }
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+      box-shadow: 0 0 0 20px #fff, 0 0 0 25px #fff, 0 0 0 30px #f9f9f9, 0 0 0 35px #f9f9f9, 0 0 0 40px #f9f9f9, 0 0 0 45px #fff;
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px #fff, 0 0 0 15px #fff, 0 0 0 20px #f9f9f9, 0 0 0 25px #f9f9f9, 0 0 0 30px #f9f9f9, 0 0 0 35px #fff;
+    }
+  }
+  @keyframes neural-flicker {
+    0% {
+      transform: skewX(0deg) rotateX(0deg);
+    }
+    20% {
+      transform: skewX(45deg) rotateX(360deg);
+    }
+    100% {
+      transform: skewX(-45deg) rotateX(-360deg);
+    }
+  }
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: linear-gradient(to top, #ff99cc, #ff66cc, #ff33cc);
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 0 10px #fff, 0 0 0 15px #fff, 0 0 0 20px #f9f9f9, 0 0 0 25px #f9f9f9, 0 0 0 30px #f9f9f9, 0 0 0 35px #fff;
+  }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to top, #66b3fa, #33b5e5, #0099ff);
+    width: 50px;
+    height: 50px;
+    animation: particle-dance 5s infinite;
+  }
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .neural-web path {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+  }
+  #neural-path1 {
+    animation: neural-flicker 2.5s infinite;
+  }
+  #neural-path2 {
+    animation: neural-flicker 1.5s infinite;
+  }
+  #neural-path3 {
+    animation: neural-flicker 1s infinite;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core">
+      <div class="particle" style="background-position: 0% 50%;"></div>
+      <div class="particle" style="background-position: 100% 50%; top: 300px; left: 300px;"></div>
+      <div class="particle" style="background-position: 0% 50%; top: 50%; left: 500px;"></div>
+      <div class="particle" style="background-position: 100% 50%; top: 200px; left: 700px;"></div>
+      <div class="particle" style="background-position: 0% 50%; top: 100px; left: 900px;"></div>
+      <div class="particle" style="background-position: 100% 50%; top: 400px; left: 1100px;"></div>
+      <div class="particle" style="background-position: 50% 50%; top: 150px; left: 800px;"></div>
+    </div>
+    <svg class="neural-web" width="100%" height="100%">
+      <path id="neural-path1" d="M 10 50 L 90 50" />
+      <path id="neural-path2" d="M 10 50 L 90 200" />
+      <path id="neural-path3" d="M 10 50 L 110 50" />
+    </svg>
+  </div>
+        </div>
+        </body>
+        </html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Eternal Cosmic Vortex Bloom</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            /* clip-path */
+.vortex-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+}
+
+/* keyframes */
+@keyframes particle-dance {
+  0% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+  30% {
+    transform: rotate(45deg) translate(-20px, 20px);
+  }
+  60% {
+    transform: rotate(90deg) translate(20px, -20px);
+  }
+  100% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+}
+
+@keyframes core-pulse {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.1);
+  }
+  80% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes neural-flicker {
+  0% {
+    transform: translate(-20px, 0);
+  }
+  30% {
+    transform: translate(20px, -20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* core styles */
+.core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #ff99cc, #33ccff);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+/* particle styles */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff99cc, #33ccff);
+  animation: particle-dance infinite 4s linear;
+}
+
+/* neural-web styles */
+.neural-web {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: #fff;
+}
+
+.neural-web path {
+  stroke: #fff;
+  stroke-width: 1px;
+}
+
+/* animation */
+@keyframes particle-dance {
+  0% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+  30% {
+    transform: rotate(45deg) translate(-20px, 20px);
+  }
+  60% {
+    transform: rotate(90deg) translate(20px, -20px);
+  }
+  100% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+}
+
+@keyframes core-pulse {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.1);
+  }
+  80% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes neural-flicker {
+  0% {
+    transform: translate(-20px, 0);
+  }
+  30% {
+    transform: translate(20px, -20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 20 50 L 60 50 L 80 20 L 40 80 L 0 20 Z"></path>
+      <path d="M 80 50 L 120 50 L 160 20 L 120 80 L 80 20 Z"></path>
+      <path d="M 0 20 L 40 80 L 60 20 L 100 20 L 140 80 Z"></path>
+    </svg>
+    <div class="particle" style="top: 20%; left: 30%;"></div>
+    <div class="particle" style="top: 50%; left: 50%;"></div>
+    <div class="particle" style="top: 20%; left: 70%;"></div>
+    <div class="particle" style="top: 80%; left: 50%;"></div>
+    <div class="particle" style="top: 20%; left: 80%;"></div>
+  </div>
+        </div>
+        </body>
+        </html>

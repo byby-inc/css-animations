@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Ancient Vortex Maelstrom</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% { transform: translate3d(0, 0, 0) rotate(0deg); }
+    25% { transform: translate3d(10px, -10px, 0) rotate(20deg); }
+    50% { transform: translate3d(0, 0, 0) rotate(0deg); }
+    75% { transform: translate3d(-10px, 10px, 0) rotate(-20deg); }
+    100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  }
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+  @keyframes neural-flicker {
+    0% { transform: matrix(0.9, 0, 0, 0.9, 0, 0); }
+    25% { transform: matrix(0.9, 0, 0, 0.9, 0px, 10px); }
+    50% { transform: matrix(1, 0, 0, 1, 0, 0); }
+    75% { transform: matrix(0.9, 0, 0, 0.9, 0px, -10px); }
+    100% { transform: matrix(0.9, 0, 0, 0.9, 0, 0); }
+  }
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: linear-gradient(135deg, #2a2a2a 0%, #f7f7f7 10%, #2a2a2a 20%, #2a2a2a 30%, #f7f7f7 40%, #2a2a2a 50%, #2a2a2a 60%, #f7f7f7 70%, #2a2a2a 80%, #2a2a2a 90%);
+  }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(45deg, #33ccff 0%, #ccff33 100%);
+    animation: particle-dance 5s infinite;
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #33ccff 0%, #ccff33 100%);
+    box-shadow: 0 0 50px rgba(0, 0, 0, .4), 0 0 20px rgba(0, 0, 0, .6), 0 0 20px rgba(0, 0, 0, .6), 0 0 10px rgba(255, 255, 255, 1), 0 0 10px rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    animation: core-pulse 3s infinite;
+  }
+  .neural-web {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background: none;
+    fill: none;
+  }
+  .neural-web path {
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+  @media only screen and (max-width: 700px) {
+    .particle { animation-duration: 3s; }
+    .core { animation-duration: 2s; }
+    .neural-web { transform: scale(.5) translate(-50%, -50%); }
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M200 0 A100 100 0 0 1 300 100" />
+      <path d="M200 0 A100 100 0 0 1 100 300" />
+      <path d="M200 0 A100 100 0 0 1 300 300" />
+      <path d="M200 0 A100 100 0 0 1 200 100" />
+      <path d="M200 0 A100 100 0 0 1 100 0" />
+      <path d="M200 0 A100 100 0 0 1 300 0" />
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

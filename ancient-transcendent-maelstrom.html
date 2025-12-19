@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Ancient Transcendent Maelstrom</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            /* Clip-path */
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: linear-gradient(90deg, #2c3e50 0%, #3498db 100%);
+  }
+  
+  /* Core */
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: linear-gradient(0deg, #8b0a1a 0%, #ff4c4c 100%);
+    box-shadow: 0px 0px 10px #a10000, 0px 0px 10px #ff0000, 0px 0px 10px #ff3737, 0px 0px 10px #ff3737, 0px 0px 10px #ff3737, 0px 0px 10px #ff3737;
+  }
+  
+  /* Particles */
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  /* Neural Web */
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+  }
+  
+  /* Keyframes */
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.5);
+    }
+  }
+  
+  @keyframes particle-dance {
+    0% {
+      transform: translate(0px, 0px) rotate(0deg);
+    }
+    100% {
+      transform: translate(50px, 50px) rotate(360deg);
+    }
+  }
+  
+  @keyframes neural-flicker {
+    0% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(20px);
+    }
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core">
+      <style>
+        .core {
+          animation: core-pulse 2s infinite;
+        }
+        @keyframes core-pulse {
+          0% {
+            transform: scale(1);
+          }
+          100% {
+            transform: scale(1.5);
+          }
+        }
+      </style>
+    </div>
+    <svg class="neural-web">
+      <path d="M 20 20 L 80 80" />
+      <path d="M 80 20 L 20 80" />
+      <path d="M 30 30 L 70 70" />
+    </svg>
+    <div class="particle">
+      <style>
+        .particle {
+          animation: particle-dance 5s infinite;
+        }
+        @keyframes particle-dance {
+          0% {
+            transform: translate(0px, 0px) rotate(0deg);
+          }
+          100% {
+            transform: translate(50px, 50px) rotate(360deg);
+          }
+        }
+      </style>
+      <style>
+        .particle {
+          background-image: linear-gradient(90deg, #2c3e50 0%, #3498db 100%);
+          box-shadow: 0px 0px 10px #a10000;
+        }
+      </style>
+    </div>
+    <div class="particle">
+      <style>
+        .particle {
+          animation: particle-dance 5s infinite;
+        }
+        @keyframes particle-dance {
+          0% {
+            transform: translate(0px, 0px) rotate(0deg);
+          }
+          100% {
+            transform: translate(50px, 50px) rotate(360deg);
+          }
+        }
+      </style>
+      <style>
+        .particle {
+          background-image: linear-gradient(180deg, #ff4c4c 0%, #8b0a1a 100%);
+          box-shadow: 0px 0px 10px #ff3737;
+        }
+      </style>
+    </div>
+    <div class="particle">
+      <style>
+        .particle {
+          animation: particle-dance 5s infinite;
+        }
+        @keyframes particle-dance {
+          0% {
+            transform: translate(0px, 0px) rotate(0deg);
+          }
+          100% {
+            transform: translate(50px, 50px) rotate(360deg);
+          }
+        }
+      </style>
+      <style>
+        .particle {
+          background-image: linear-gradient(0deg, #3498db 0%, #2c3e50 100%);
+          box-shadow: 0px 0px 10px #a10000;
+        }
+      </style>
+    </div>
+    <div class="particle">
+      <style>
+        .particle {
+          animation: particle-dance 5s infinite;
+        }
+        @keyframes particle-dance {
+          0% {
+            transform: translate(0px, 0px) rotate(0deg);
+          }
+          100% {
+            transform: translate(50px, 50px) rotate(360deg);
+          }
+        }
+      </style>
+      <style>
+        .particle {
+          background-image: linear-gradient(90deg, #8b0a1a 0%, #ff4c4c 100%);
+          box-shadow: 0px 0px 10px #ff3737;
+        }
+      </style>
+    </div>
+    <div class="particle">
+      <style>
+        .particle {
+          animation: particle-dance 5s infinite;
+        }
+        @keyframes particle-dance {
+          0% {
+            transform: translate(0px, 0px) rotate(0deg);
+          }
+          100% {
+            transform: translate(50px, 50px) rotate(360deg);
+          }
+        }
+      </style>
+      <style>
+        .particle {
+          background-image: linear-gradient(180deg, #ff4c4c 0%, #8b0a1a 100%);
+          box-shadow: 0px 0px 10px #ff3737;
+        }
+      </style>
+    </div>
+    <div class="particle">
+      <style>
+        .particle {
+          animation: particle-dance 5s infinite;
+        }
+        @keyframes particle-dance {
+          0% {
+            transform: translate(0px, 0px) rotate(0deg);
+          }
+          100% {
+            transform: translate(50px, 50px) rotate(360deg);
+          }
+        }
+      </style>
+      <style>
+        .particle {
+          background-image: linear-gradient(0deg, #2c3e50 0%, #3498db 100%);
+          box-shadow: 0px 0px 10px #a10000;
+        }
+      </style>
+    </div>
+    <div class="particle">
+      <style>
+        .particle {
+          animation: particle-dance 5s infinite;
+        }
+        @keyframes particle-dance {
+          0% {
+            transform: translate(0px, 0px) rotate(0deg);
+          }
+          100% {
+            transform: translate(50px, 50px) rotate(360deg);
+          }
+        }
+      </style>
+      <style>
+        .particle {
+          background-image: linear-gradient(90deg, #8b0a1a 0%, #ff4c4c 100%);
+          box-shadow: 0px 0px 10px #ff3737;
+        }
+      </style>
+    </div>
+    <div class="particle">
+      <style>
+        .particle {
+          animation: particle-dance 5s infinite;
+        }
+        @keyframes particle-dance {
+          0% {
+            transform: translate(0px, 0px) rotate(0deg);
+          }
+          100% {
+            transform: translate(50px, 50px) rotate(360deg);
+          }
+        }
+      </style>
+      <style>
+        .particle {
+          background-image: linear-gradient(180deg, #ff4c4c 0%, #8b0a1a 100%);
+          box-shadow: 0px 0px 10px #ff3737;
+        }
+      </style>
+    </div>
+    <div class="particle">
+      <style>
+        .particle {
+          animation: particle-dance 5s infinite;
+        }
+        @keyframes particle-dance {
+          0% {
+            transform: translate(0px, 0px) rotate(0deg);
+          }
+          100% {
+            transform: translate(50px, 50px) rotate(360deg);
+          }
+        }
+      </style>
+      <style>
+        .particle {
+          background-image: linear-gradient(0deg, #3498db 0%, #2c3e50 100%);
+          box-shadow: 0px 0px 10px #a10000;
+        }
+      </style>
+    </div>
+    <svg class="neural-web">
+      <style>
+        .neural-web {
+          animation: neural-flicker 10s infinite;
+        }
+        @keyframes neural-flicker {
+          0% {
+            transform: translateY(0px);
+          }
+          100% {
+            transform: translateY(20px);
+          }
+        }
+      </style>
+      <path d="M 20 20 L 80 80" />
+      <path d="M 80 20 L 20 80" />
+      <path d="M 30 30 L 70 70" />
+    </svg>
+  </div>
+        </div>
+        </body>
+        </html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Cosmic Primordial Maelstrom</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0%, 100% { transform: translate(-50%, -50%); }
+    50% { transform: translate(-50%, -50%) rotate(45deg); }
+  }
+
+  @keyframes core-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+  }
+
+  @keyframes neural-flicker {
+    0%, 100% { transform: rotateZ(0deg); }
+    20%, 80% { transform: rotateZ(10deg); }
+  }
+
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: linear-gradient(to bottom, #ffff00, #ffff00);
+  }
+
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 0 #fff;
+    box-shadow: 0 0 10px 0 #fff;
+    box-shadow: 0 0 10px 0 #fff;
+    box-shadow: 0 0 10px 0 #fff;
+    box-shadow: 0 0 10px 0 #fff;
+    background: linear-gradient(to right, #ff0000, #00ff00);
+    animation: core-pulse 2s infinite;
+  }
+
+  .particle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(to right, #0000ff, #ffff00);
+    animation: particle-dance 1s infinite;
+  }
+
+  .particle:nth-child(1) {
+    top: 50px;
+    left: 100px;
+    transform: rotate(45deg) translate(0, 0);
+    animation-duration: 2s;
+  }
+
+  .particle:nth-child(2) {
+    top: 100px;
+    left: 50px;
+    transform: rotate(-45deg) translate(0, 0);
+    animation-duration: 2s;
+  }
+
+  .particle:nth-child(3) {
+    top: 200px;
+    left: 100px;
+    transform: translate(0, 0);
+    animation-duration: 3s;
+  }
+
+  .particle:nth-child(4) {
+    top: 50px;
+    left: 80px;
+    transform: rotate(45deg) translate(0, 0);
+    animation-duration: 2s;
+  }
+
+  .particle:nth-child(5) {
+    top: 100px;
+    left: 150px;
+    transform: rotate(-45deg) translate(0, 0);
+    animation-duration: 2s;
+  }
+
+  .particle:nth-child(6) {
+    top: 200px;
+    left: 50px;
+    transform: translate(0, 0);
+    animation-duration: 3s;
+  }
+
+  .neural-web {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+
+  .neural-web path {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+
+  .neural-web path:nth-child(1) {
+    d: path("M200,100A50,50 0 0,1 250,150A50,50 0 0,1 200,100");
+    animation: neural-flicker 4s infinite;
+  }
+
+  .neural-web path:nth-child(2) {
+    d: path("M250,150A50,50 0 0,1 300,200A50,50 0 0,1 250,150");
+    animation: neural-flicker 4s infinite;
+  }
+
+  .neural-web path:nth-child(3) {
+    d: path("M300,200A50,50 0 0,1 350,250A50,50 0 0,1 300,200");
+    animation: neural-flicker 4s infinite;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M200,100A50,50 0 0,1 250,150A50,50 0 0,1 200,100"></path>
+      <path d="M250,150A50,50 0 0,1 300,200A50,50 0 0,1 250,150"></path>
+      <path d="M300,200A50,50 0 0,1 350,250A50,50 0 0,1 300,200"></path>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </svg>
+  </div>
+        </div>
+        </body>
+        </html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Celestial Horizon of Eternal Ascension</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg) scale(1);
+    }
+    50% {
+      transform: translate(-50%, -50%) rotate(360deg) scale(0.9);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(0deg) scale(1);
+    }
+  }
+
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes neural-flicker {
+    0% {
+      transform: translate(0, 2px);
+    }
+    50% {
+      transform: translate(2px, -2px);
+    }
+    100% {
+      transform: translate(0, 2px);
+    }
+  }
+
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background: radial-gradient(circle at 50% 50%, #fff, #fff, #c9e4ca);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    transform: scale(1.1);
+  }
+
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: linear-gradient(to left, #f7d2c4, #fff, #fff);
+    box-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff;
+    animation: core-pulse 2s infinite;
+  }
+
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to right, #f7d2c4, #fff, #fff);
+    animation: particle-dance 3s infinite;
+  }
+
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    stroke: #fff;
+  }
+
+  .neural-web path:nth-child(1) {
+    stroke-width: 5px;
+  }
+
+  .neural-web path:nth-child(2) {
+    stroke-width: 2px;
+  }
+
+  .neural-web path:nth-child(3) {
+    stroke-width: 1px;
+  }
+
+  .neural-web path:nth-child(1),
+  .neural-web path:nth-child(2),
+  .neural-web path:nth-child(3) {
+    animation: neural-flicker 1s infinite;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 0 0 L 100 100 L 100 300 L 200 200 L 100 300 L 100 100 Z" />
+      <path d="M 200 200 L 100 100 L 400 300 L 300 100 L 100 100 Z" />
+      <path d="M 400 300 L 300 100 L 500 200 L 400 300 Z" />
+    </svg>
+    <div class="particle" style="top: 100px; left: 100px;"></div>
+    <div class="particle" style="top: 50px; left: 50px;"></div>
+    <div class="particle" style="top: 200px; left: 200px;"></div>
+    <div class="particle" style="top: 300px; left: 300px;"></div>
+    <div class="particle" style="top: 150px; left: 150px;"></div>
+  </div>
+        </div>
+        </body>
+        </html>

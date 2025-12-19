@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Aurora Ignition</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% {
+      transform: rotate(0deg) translateX(10px) translateY(-2px);
+    }
+    50% {
+      transform: rotate(30deg) translateX(-8px) translateY(5px);
+    }
+    100% {
+      transform: rotate(0deg) translateX(10px) translateY(-2px);
+    }
+  }
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes neural-flicker {
+    0% {
+      transform: translateX(-10px);
+    }
+    25% {
+      transform: translateX(5px);
+    }
+    50% {
+      transform: translateX(-5px);
+    }
+    100% {
+      transform: translateX(-10px);
+    }
+  }
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: linear-gradient(to bottom left, #ff69b4, #ff0066, #6600ff);
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to bottom left, #ff69b4, #ff0066, #6600ff);
+    box-shadow:
+      0 0 10px rgba(255, 105, 180, 0.3),
+      0 0 20px rgba(255, 3, 102, 0.3),
+      0 0 30px rgba(102, 0, 255, 0.3),
+      0 0 40px rgba(255, 105, 180, 0.4),
+      0 0 50px rgba(255, 3, 102, 0.4),
+      0 0 60px rgba(102, 0, 255, 0.4);
+    animation: core-pulse 2s infinite;
+  }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(to bottom left, #ff69b4, #ff0066, #6600ff);
+    animation: particle-dance 2s infinite;
+  }
+  #particle1 {
+    top: 20%;
+    left: 20%;
+    animation: particle-dance 2s infinite;
+  }
+  #particle2 {
+    top: 40%;
+    left: 60%;
+    animation: particle-dance 3s infinite;
+  }
+  #particle3 {
+    top: 80%;
+    left: 10%;
+    animation: particle-dance 2s infinite;
+  }
+  #particle4 {
+    top: 15%;
+    left: 45%;
+    animation: particle-dance 1.5s infinite;
+  }
+  #particle5 {
+    top: 50%;
+    left: 70%;
+    animation: particle-dance 3s infinite;
+  }
+  #particle6 {
+    top: 90%;
+    left: 25%;
+    animation: particle-dance 1.8s infinite;
+  }
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1px;
+  }
+  .neural-web path {
+    stroke-dasharray: 50, 150;
+    stroke-dashoffset: 0;
+    animation: neural-flicker 6s infinite;
+  }
+  .neural-web path:nth-of-type(1) {
+    stroke-dashoffset: 0;
+    animation-delay: 0s;
+  }
+  .neural-web path:nth-of-type(2) {
+    stroke-dashoffset: -100;
+    animation-delay: 2s;
+  }
+  .neural-web path:nth-of-type(3) {
+    stroke-dashoffset: -200;
+    animation-delay: 4s;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core" id="core"></div>
+    <svg class="neural-web" viewBox="0 0 100 100">
+      <path d="M 50 0 L 10 50 90 50 50 100 Z" id="path1" />
+      <path d="M 50 0 L 30 50 70 50 50 100 Z" id="path2" />
+      <path d="M 50 0 L 0 50 100 50 50 100 Z" id="path3" />
+    </svg>
+    <div class="particle" id="particle1"></div>
+    <div class="particle" id="particle2"></div>
+    <div class="particle" id="particle3"></div>
+    <div class="particle" id="particle4"></div>
+    <div class="particle" id="particle5"></div>
+    <div class="particle" id="particle6"></div>
+  </div>
+        </div>
+        </body>
+        </html>

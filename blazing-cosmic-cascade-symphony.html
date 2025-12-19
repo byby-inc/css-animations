@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Cosmic Cascade Symphony</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes particle-dance {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+      transform: translate(50%, -50%) rotate(1800deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(3600deg);
+    }
+  }
+
+  @keyframes neural-flicker {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(9000deg);
+    }
+  }
+
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background-image: linear-gradient(150deg, #f7d2c4, #f7d2c4 50%, #8b0a1a 100%);
+  }
+
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: linear-gradient(135deg, #4d7df8, #6cd7d0 50%, #f7d2c4 100%);
+    box-shadow: 0 0 20px #3e3a93, 0 0 20px #f7d2c4, 0 0 20px #f7d2c4, 0 0 20px #f7d2c4, 0 0 20px #f7d2c4, 0 0 20px #3e3a93;
+  }
+
+  .particle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-image: linear-gradient(135deg, #4d7df8, #6cd7d0 50%, #f7d2c4 100%);
+    animation: particle-dance 4s infinite;
+  }
+
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: #000;
+    stroke: #fff;
+    stroke-width: 2;
+  }
+
+  .neural-web path {
+    stroke: #fff;
+  }
+
+  @foreach (i from 1 to 5) {
+    .particle:nth-child(#i) {
+      animation-delay: #i * 0.8s;
+    }
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+    <svg class="neural-web">
+      <path d="M0,20 C30,60,60,100,50,150 A30,30 0 0,1 10,100 A20,20 0 0,0 0,20 Z" />
+      <path d="M20,0 C20,-10,70,-50,90,0 A40,20 0 0,1 50,80 A60,60 0 0,0 20,0 Z" />
+      <path d="M50,50 C20,90,70,130,80,180 A40,20 0 0,1 20,120 A30,30 0 0,0 50,50 Z" />
+      <path d="M70,60 C70,100,150,150,180,110 A60,20 0 0,1 110,220 A50,50 0 0,0 70,60 Z" />
+    </svg>
+  </div>
+        </div>
+        </body>
+        </html>

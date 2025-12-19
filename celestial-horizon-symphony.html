@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Celestial Horizon Symphony</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            /* Style */
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: linear-gradient(90deg, #333399, #444466);
+
+    /* Core */
+    .core {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: linear-gradient(90deg, #999999, #777777);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.2), 0 0 30px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.2), 0 0 30px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.2), 0 0 30px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.2), 0 0 30px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.2), 0 0 30px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Core Pulse */
+    @keyframes core-pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    /* Particles */
+    .particle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: linear-gradient(90deg, #999999, #777777);
+      animation: particle-dance 2s infinite;
+    }
+
+    /* Particle Dance */
+    @keyframes particle-dance {
+      0% { transform: rotate(0deg) scale(1); }
+      50% { transform: rotate(10deg) scale(1.2); }
+      100% { transform: rotate(0deg) scale(1); }
+    }
+
+    /* Neural Web */
+    .neural-web {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      fill: #fff;
+      stroke: #fff;
+      stroke-width: 1;
+
+      /* Paths */
+      path {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 0;
+        animation: neural-flicker 5s infinite;
+      }
+    }
+
+    /* Neural Flicker */
+    @keyframes neural-flicker {
+      0% { stroke-dashoffset: 0; }
+      25% { stroke-dashoffset: 50; }
+      50% { stroke-dashoffset: 0; }
+      75% { stroke-dashoffset: 50; }
+      100% { stroke-dashoffset: 0; }
+    }
+  }
+
+  /* Add Particles */
+  .particle {
+    animation-delay: calc(-1s * var(--count));
+  }
+  .particle:nth-child(2) { animation-delay: -1s; }
+  .particle:nth-child(3) { animation-delay: -2s; }
+  .particle:nth-child(4) { animation-delay: -3s; }
+  .particle:nth-child(5) { animation-delay: -4s; }
+  .particle:nth-child(6) { animation-delay: -5s; }
+  .particle:nth-child(7) { animation-delay: -6s; }
+  .particle:nth-child(8) { animation-delay: -7s; }
+  .particle:nth-child(9) { animation-delay: -8s; }
+  .particle:nth-child(10) { animation-delay: -9s; }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+    <svg class="neural-web">
+      <path d="M 100 100 L 150 150 L 200 100 Z" />
+      <path d="M 100 100 L 150 100 L 150 150 L 100 150 Z" />
+      <path d="M 200 100 L 250 150 L 250 100 Z" />
+    </svg>
+  </div>
+        </div>
+        </body>
+        </html>

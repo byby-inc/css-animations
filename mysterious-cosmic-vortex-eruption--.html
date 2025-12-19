@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Mysterious Cosmic Vortex Eruption -</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% { transform: rotate(0deg) translate(0px, 0px); }
+    20% { transform: rotate(5deg) translate(10px, 5px); }
+    40% { transform: rotate(-5deg) translate(5px, 15px); }
+    60% { transform: rotate(10deg) translate(-5px, -10px); }
+    80% { transform: rotate(0deg) translate(0px, 0px); }
+  }
+
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(2.2); }
+    100% { transform: scale(1); }
+  }
+
+  @keyframes neural-flicker {
+    0% { transform: rotate(0deg) translate(0px, 0px); }
+    10% { transform: rotate(3deg) translate(5px, -5px); }
+    20% { transform: rotate(-3deg) translate(-5px, 10px); }
+    100% { transform: rotate(0deg) translate(0px, 0px); }
+  }
+
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #121216;
+    background-image: linear-gradient(90deg, #121216, #13131f);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+  }
+
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-image: linear-gradient(120deg, #8d6e97, #4d6db3);
+  }
+
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: linear-gradient(120deg, #ff99f3, #ff6eff);
+    background-size: 400% 400%;
+    animation: core-pulse infinite 2s;
+  }
+
+  .core::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    background-image: linear-gradient(120deg, #ff99f3, #ff6eff);
+    box-shadow: 0 0 30px rgba(255, 153, 243, 0.5), 0 0 20px rgba(255, 102, 255, 0.7),
+      0 0 10px rgba(255, 51, 255, 0.9), 10px 10px 30px rgba(255, 0, 255, 0.6),
+      -10px -10px 30px rgba(255, 0, 255, 0.5), 20px -20px 50px rgba(255, 0, 255, 0.7),
+      20px 20px 50px rgba(255, 0, 255, 0.5), 0 0 20px rgba(255, 0, 255, 0.5);
+    animation: core-pulse infinite 2s;
+  }
+
+  .particle:nth-child(1) {
+    top: 30%;
+    left: 30%;
+    animation: particle-dance infinite 3s ease-in-out;
+  }
+
+  .particle:nth-child(2) {
+    top: 70%;
+    left: 70%;
+    animation: particle-dance infinite 3s ease-in-out;
+  }
+
+  .particle:nth-child(3) {
+    top: 10%;
+    left: 90%;
+    animation: particle-dance infinite 3s ease-in-out;
+  }
+
+  .particle:nth-child(4) {
+    top: 90%;
+    left: 10%;
+    animation: particle-dance infinite 3s ease-in-out;
+  }
+
+  .particle:nth-child(5) {
+    top: 50%;
+    left: 50%;
+    animation: particle-dance infinite 3s ease-in-out;
+  }
+
+  .particle:nth-child(6) {
+    top: 40%;
+    left: 20%;
+    animation: particle-dance infinite 3s ease-in-out;
+  }
+
+  .particle:nth-child(7) {
+    top: 60%;
+    left: 80%;
+    animation: particle-dance infinite 3s ease-in-out;
+  }
+
+  .particle:nth-child(8) {
+    top: 80%;
+    left: 40%;
+    animation: particle-dance infinite 3s ease-in-out;
+  }
+
+  .particle:nth-child(9) {
+    top: 20%;
+    left: 60%;
+    animation: particle-dance infinite 3s ease-in-out;
+  }
+
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: #fff;
+  }
+
+  .neural-web path {
+    stroke: #fff;
+    stroke-dasharray: 5, 5;
+    stroke-dashoffset: 0;
+    stroke-width: 1px;
+  }
+
+  @keyframes core-rotating {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes core-flicker {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core">
+      <div class="core::before"></div>
+    </div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <svg class="neural-web" viewBox="0 0 100 100">
+      <path d="M50 0 L100 50 L100 50" transform="rotate(20deg) translate(20px, 0px)" />
+      <path d="M50 0 L70 50 L30 50" transform="rotate(-20deg) translate(15px, 0px)" />
+      <path d="M50 0 L60 50 L40 50" transform="rotate(40deg) translate(10px, 0px)" />
+    </svg>
+  </div>
+        </div>
+        </body>
+        </html>

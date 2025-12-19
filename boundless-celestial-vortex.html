@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Boundless Celestial Vortex</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes particle-dance {
+    0% {
+      transform: translate(0px, 0px) rotate(0deg);
+    }
+    50% {
+      transform: translate(10px, -10px) rotate(30deg);
+    }
+    100% {
+      transform: translate(0px, 0px) rotate(0deg);
+    }
+  }
+  @keyframes neural-flicker {
+    0% {
+      transform: rotate(0deg) skewX(0deg);
+    }
+    50% {
+      transform: rotate(10deg) skewX(5deg);
+    }
+    100% {
+      transform: rotate(0deg) skewX(0deg);
+    }
+  }
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background-image: linear-gradient(45deg, #03055B, #FFC6DB);
+    background-size: 400% 400%;
+    animation: vortex-spin infinite 10s linear;
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: linear-gradient(90deg, #C51077, #FF69B4, #33CCFF, #66CCCC);
+    box-shadow: 
+      0 0 0 10px #fff, 
+      0 0 0 20px #fff, 
+      0 0 0 30px #fff, 
+      0 0 0 40px #fff, 
+      0 0 0 50px #fff, 
+      0 0 0 60px #fff;
+    animation: core-pulse 10s infinite;
+  }
+  .particle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-image: linear-gradient(45deg, #C51077, #FF69B4, #33CCFF, #66CCCC);
+    border-radius: 50%;
+    animation: particle-dance 5s infinite;
+  }
+  .vortex {
+    background-image: linear-gradient(135deg, #C51077, #FF69B4, #33CCFF, #66CCCC);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .neural-web path {
+    stroke: #fff;
+    stroke-width: 10px;
+    fill: none;
+    animation: neural-flicker 3s infinite;
+  }
+  @keyframes vortex-spin {
+    0% {
+      clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    }
+    50% {
+      clip-path: polygon(25% 50%, 75% 50%, 100% 75%, 50% 125%, 0% 75%);
+    }
+    100% {
+      clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    }
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+  </div>
+  <div class="core"></div>
+  <svg class="neural-web">
+    <path d="M 50 0 A 100 100 0 0,1 150 100 M 50 100 A 100 100 0 0,1 0 150 M 50 0 L 150 100 M 100 50 L 150 75 M 150 25 L 100 50"></path>
+    <path d="M 50 -50 A 100 100 0 0,1 150 -100 M 50 50 A 100 100 0 0,1 0 150 M 50 -50 L 150 -100 M 100 -25 L 150 0 M 150 -50 L 100 -75"></path>
+  </svg>
+  <div class="particle"></div>
+  <div class="vortex"></div>
+  <div class="particle"></div>
+  <div class="vortex"></div>
+  <div class="particle"></div>
+  <div class="vortex"></div>
+  <div class="particle"></div>
+  <div class="vortex"></div>
+  <div class="particle"></div>
+        </div>
+        </body>
+        </html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Quasar Symphony</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance { 
+    0% { transform: scale(1); rotate(0deg); } 
+    50% { transform: scale(1.2) rotate(45deg); } 
+    100% { transform: scale(1) rotate(90deg); }
+  }
+  @keyframes core-pulse { 
+    0% { transform: scale(1); } 
+    50% { transform: scale(1.2); } 
+    100% { transform: scale(1); }
+  }
+  @keyframes neural-flicker { 
+    0% { transform: translate(0, 0); } 
+    50% { transform: translate(5px, -5px); } 
+    100% { transform: translate(0, 0); }
+  }
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: circle(50% at 50% 50%);
+    background-image: linear-gradient(to bottom, #03a9f4, #00bcd4);
+  }
+  .core {
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, #ff9800, #ff3d00);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 50px rgba(255, 255, 255, 0.5);
+    border: 2px solid #fff;
+  }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-image: linear-gradient(to bottom, #03a9f4, #00bcd4);
+  }
+  .neural-web {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: #fff;
+  }
+  .neural-web path {
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+  .particle {
+    animation: particle-dance 5s infinite;
+  }
+  .core {
+    animation: core-pulse 3s infinite;
+  }
+  .neural-web {
+    animation: neural-flicker 2s infinite;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 300 70 C 300 140, 120 210, 100 100" />
+      <path d="M 700 100 C 780 140, 1200 210, 1200 100" />
+      <path d="M 500 70 C 500 140, 100 210, 200 100" />
+    </svg>
+    <div class="particle" style="top: 20px; left: 20px;"></div>
+    <div class="particle" style="top: 180px; left: 200px;"></div>
+    <div class="particle" style="top: 100px; left: 400px;"></div>
+    <div class="particle" style="top: 250px; left: 600px;"></div>
+    <div class="particle" style="top: 100px; left: 300px;"></div>
+  </div>
+        </div>
+        </body>
+        </html>

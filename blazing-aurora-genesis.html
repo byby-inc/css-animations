@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Aurora Genesis</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% { transform: translate(0, 0); }
+    20% { transform: translate(50px, 0); }
+    40% { transform: translate(50px, -50px); }
+    60% { transform: translate(0, -50px); }
+    80% { transform: translate(-50px, -50px); }
+    100% { transform: translate(-50px, 0); }
+  }
+  
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes neural-flicker {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(10deg); }
+    30% { transform: rotate(30deg); }
+    50% { transform: rotate(0deg); }
+    70% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+  }
+  
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #FFC107, #FF9800);
+    box-shadow:
+      0 0 0 10px #FFC107,
+      0 0 0 20px #FF9800,
+      0 0 0 30px #FFC107,
+      0 0 0 40px #FF9800,
+      0 0 0 50px #FFC107,
+      0 0 0 60px #FF9800;
+    animation: core-pulse 1s infinite;
+  }
+  
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(to bottom, #FF69B4, #FF69B4);
+    animation: particle-dance 0.5s infinite;
+  }
+  
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+  
+  .neural-web path {
+    stroke-dasharray: 100, 500;
+    animation: neural-flicker 3s infinite;
+  }
+  
+  @media (max-width: 768px) {
+    .vortex-container {
+      clip-path: circle(50% at 50% 50%);
+    }
+  }
+  
+  #particle1 {
+    top: 20%;
+    left: 20%;
+    animation-delay: 0.2s;
+    animation-name: particle-dance;
+  }
+  
+  #particle2 {
+    top: 40%;
+    left: 40%;
+    animation-delay: 0.4s;
+    animation-name: particle-dance;
+  }
+  
+  #particle3 {
+    top: 60%;
+    left: 60%;
+    animation-delay: 0.6s;
+    animation-name: particle-dance;
+  }
+  
+  #particle4 {
+    top: 80%;
+    left: 20%;
+    animation-delay: 0.8s;
+    animation-name: particle-dance;
+  }
+  
+  #particle5 {
+    top: 20%;
+    left: 40%;
+    animation-delay: 1s;
+    animation-name: particle-dance;
+  }
+  
+  #particle6 {
+    top: 40%;
+    left: 60%;
+    animation-delay: 1.2s;
+    animation-name: particle-dance;
+  }
+  
+  #particle7 {
+    top: 60%;
+    left: 20%;
+    animation-delay: 1.4s;
+    animation-name: particle-dance;
+  }
+  
+  #particle8 {
+    top: 20%;
+    left: 80%;
+    animation-delay: 1.6s;
+    animation-name: particle-dance;
+  }
+  
+  #particle9 {
+    top: 40%;
+    left: 40%;
+    animation-delay: 1.8s;
+    animation-name: particle-dance;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core">
+    </div>
+    <div class="particle" id="particle1"></div>
+    <div class="particle" id="particle2"></div>
+    <div class="particle" id="particle3"></div>
+    <div class="particle" id="particle4"></div>
+    <div class="particle" id="particle5"></div>
+    <div class="particle" id="particle6"></div>
+    <div class="particle" id="particle7"></div>
+    <div class="particle" id="particle8"></div>
+    <div class="particle" id="particle9"></div>
+    <svg class="neural-web">
+      <path d="M50,0 L100,50 L50,100 L0,50 Z" id="neural-line-1" />
+      <path d="M50,0 L75,25 L50,50 L25,25 L0,0 Z" id="neural-line-2" />
+      <path d="M50,100 L75,75 L50,50 L25,75 L0,100 Z" id="neural-line-3" />
+    </svg>
+  </div>
+        </div>
+        </body>
+        </html>

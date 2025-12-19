@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>ETERNAL VORTEX OF CREATION</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+  0% {
+    transform: rotate(0deg) translateX(25px);
+  }
+  50% {
+    transform: rotate(100deg) translateX(-50px);
+  }
+  100% {
+    transform: rotate(0deg) translateX(25px);
+  }
+}
+@keyframes core-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes neural-flicker {
+  0% {
+    stroke-opacity: 1;
+  }
+  50% {
+    stroke-opacity: 0.5;
+  }
+  100% {
+    stroke-opacity: 1;
+  }
+}
+.vortex-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  clip-path: circle(50% at 50% 50%);
+  background: linear-gradient(150deg, #f7d2c4, #f7d2c4), radial-gradient(#fff, #fff);
+}
+.core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #ff69b4, #1ce06d);
+  box-shadow:
+    0 0 10px #ff69b4,
+    0 0 20px #ff69b4,
+    0 0 30px #ff69b4,
+    0 0 40px #ff69b4,
+    0 0 50px #ff69b4,
+    0 0 60px #1ce06d;
+  animation: core-pulse infinite 2s;
+}
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(to right, #e3d8d8, #e3d8d8);
+  box-shadow: 0 0 5px #e3d8d8;
+}
+.neural-web {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: #fff;
+  stroke: #fff;
+  stroke-width: 2;
+}
+.neural-web path:nth-child(1) {
+  d: M 0 0 L 100 0;
+  animation: neural-flicker infinite 1s;
+}
+.neural-web path:nth-child(2) {
+  d: M 100 0 L 0 100;
+  animation: neural-flicker infinite 1s;
+}
+.neural-web path:nth-child(3) {
+  d: M 100 100 L 0 0;
+  animation: neural-flicker infinite 1s;
+}
+.vortex-container .particle:nth-child(1) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: particle-dance infinite 3s;
+}
+.vortex-container .particle:nth-child(2) {
+  top: 25%;
+  left: 25%;
+  transform: translate(50%, 50%);
+  animation: particle-dance infinite 3s;
+}
+.vortex-container .particle:nth-child(3) {
+  top: 75%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  animation: particle-dance infinite 3s;
+}
+.vortex-container .particle:nth-child(4) {
+  top: 90%;
+  left: 90%;
+  transform: translate(50%, 50%);
+  animation: particle-dance infinite 3s;
+}
+.vortex-container .particle:nth-child(5) {
+  top: 10%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  animation: particle-dance infinite 3s;
+}
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 0 0 L 100 0"/>
+      <path d="M 100 0 L 0 100"/>
+      <path d="M 100 100 L 0 0"/>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </svg>
+  </div>
+        </div>
+        </body>
+        </html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Celestial Vortex Cataclysm</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%,75% 0%,100% 25%,50% 100%,0% 25%);
+    background: radial-gradient(rgba(0,0,0,.1), rgba(0,0,0,0));
+  }
+
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, rgba(255,0,255,.5), rgba(0,255,0,.5));
+    box-shadow:
+      0 0 10px rgba(255,0,255, .2),
+      0 0 10px rgba(0,255,0, .2),
+      0 0 10px rgba(0,0,255, .2),
+      0 0 10px rgba(255,255,0, .2),
+      0 0 10px rgba(255,0,0, .2),
+      0 0 10px rgba(0,0,0, .2);
+    animation: core-pulse 1.5s infinite;
+  }
+
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(to bottom, rgba(255,0,255,.5), rgba(255,0,0,.5));
+    animation: particle-dance 1s infinite;
+  }
+
+  @keyframes particle-dance {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(20px, 20px); }
+    50% { transform: translate(-20px, 20px); }
+    75% { transform: translate(0, -20px); }
+    100% { transform: translate(0, 0); }
+  }
+
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1;
+  }
+
+  .neural-web path {
+    animation: neural-flicker 0.5s infinite;
+  }
+
+  @keyframes neural-flicker {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .neural-web path:nth-child(1) {
+    transform-origin: center;
+    stroke-dasharray: 100;
+  }
+
+  .neural-web path:nth-child(2) {
+    stroke-dasharray: 50;
+    animation: dash-offset 2s infinite;
+  }
+
+  @keyframes dash-offset {
+    0% { stroke-dashoffset: 50; }
+    100% { stroke-dashoffset: 0; }
+  }
+
+  .neural-web path:nth-child(3) {
+    stroke-width: 5;
+    animation: scale-animation 2s infinite;
+  }
+
+  @keyframes scale-animation {
+    0% { transform: scale(1); }
+    50% { transform: scale(2); }
+    100% { transform: scale(1); }
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M100 0L50 100L200 100Z" />
+      <path d="M0 100L200 0L200 100Z" stroke-dasharray="200" />
+      <path d="M100 100L200 250L0 250Z" stroke-width="5" />
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </svg>
+  </div>
+        </div>
+        </body>
+        </html>

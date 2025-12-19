@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Primordial Eruption Symphony</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes core-pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5); }
+    50% { transform: scale(1.2); box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+  }
+
+  @keyframes particle-dance {
+    0% { transform: translateX(0) translateY(0); animation-timing-function: cubic-bezier(0.45, 1, 0.55, 1); }
+    20% { transform: translateX(-20%) translateY(-20%); animation-timing-function: cubic-bezier(0.55, 1, 0.45, 1); }
+    40% { transform: translateX(30%) translateY(30%); animation-timing-function: cubic-bezier(0.55, 1, 0.45, 1); }
+    60% { transform: translateX(-15%) translateY(-15%); animation-timing-function: cubic-bezier(0.45, 1, 0.55, 1); }
+    100% { transform: translateX(0) translateY(0); animation-timing-function: cubic-bezier(0.45, 1, 0.55, 1); }
+  }
+
+  @keyframes neural-flicker {
+    0% { transform: scale(1, 1); }
+    10% { transform: scale(1.05, 1) rotate(5deg); }
+    20% { transform: scale(1, 1) rotate(0deg); }
+    30% { transform: scale(0.95, 1) rotate(5deg); }
+    40% { transform: scale(1, 1) rotate(0deg); }
+    50% { transform: scale(1, 1.05) rotate(5deg); }
+    60% { transform: scale(1, 1) rotate(0deg); }
+    70% { transform: scale(1, 0.95) rotate(5deg); }
+    80% { transform: scale(1, 1) rotate(0deg); }
+    90% { transform: scale(1, 1) rotate(5deg); }
+    100% { transform: scale(1, 1); }
+  }
+
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: circle(50% at 50% 50%);
+  }
+
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #FF33CC, #FF00CC);
+    box-shadow: 0 0 20px 10px rgba(255, 0, 204, 0.8);
+    box-shadow: 0 0 10px 5px rgba(255, 0, 204, 0.6);
+    box-shadow: 0 0 5px 2px rgba(255, 0, 204, 0.3);
+    box-shadow: 0 0 2px 1px rgba(255, 0, 204, 0.1);
+    box-shadow: 0 0 1px 0.5px rgba(255, 0, 204, 0.05);
+  }
+
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(145deg, #33CCCC, #00CCCC);
+  }
+
+  .neural-web {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+  }
+
+  .neural-web path {
+    stroke: #fff;
+    stroke-width: 2;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M50 0 A50 50 0 0 0 100 50" stroke="#fff" />
+      <path d="M50 0 A50 50 0 0 0 0 50" stroke="#fff" />
+      <path d="M100 50 A50 50 0 0 0 150 0" stroke="#fff" />
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

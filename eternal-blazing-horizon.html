@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Eternal Blazing Horizon</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% { transform: translate(-50%, -50%), rotate(0deg); }
+    50% { transform: translate(-50%, -50%), rotate(90deg); }
+    100% { transform: translate(-50%, -50%), rotate(0deg); }
+  }
+  
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes neural-flicker {
+    0% { transform: translate(0, -100%) scale(1); }
+    50% { transform: translate(0, 100%) scale(1.1); }
+    100% { transform: translate(0, -100%) scale(1); }
+  }
+
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: linear-gradient(to bottom, #FFC107 0%, #FFA07A 100%);
+  }
+  
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #FFD700 0%, #FFC107 100%);
+    box-shadow:
+      0 0 10px #FFA07A,
+      0 0 20px #FFC107,
+      0 0 30px #FFD700,
+      0 0 40px #FFA07A,
+      0 0 50px #FFC107,
+      0 0 60px #FFD700;
+    animation: core-pulse 5s infinite;
+  }
+  
+  .particle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #FFC107 0%, #FFA07A 100%);
+    animation: particle-dance 2s infinite;
+  }
+  
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1;
+    animation: neural-flicker 10s infinite;
+  }
+  
+  .neural-web path {
+    stroke-dasharray: 100, 300;
+    animation: neural-flicker 10s infinite;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 50 50 L 150 150" />
+      <path d="M 50 150 L 150 50" />
+      <path d="M 150 50 L 250 150" />
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

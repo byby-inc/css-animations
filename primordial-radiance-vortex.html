@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Primordial Radiance Vortex</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% { transform: translate(0, 0) rotate(0) scale(1); }
+    50% { transform: translate(-50px, 50px) rotate(360deg) scale(1.5); }
+    100% { transform: translate(0, 0) rotate(0) scale(1); }
+  }
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+  }
+  @keyframes neural-flicker {
+    0% { transform: translateX(0) translateY(-50%) rotate(0deg); }
+    50% { transform: translateX(-20px) translateY(-50%) rotate(360deg); }
+    100% { transform: translateX(0) translateY(-50%) rotate(0deg); }
+  }
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background: linear-gradient(to bottom right, #ffffff, #ccf3f4, #87f3ff, #87f3ff, #ccf3f4, #ffffff);
+    background-size: 200% 100%;
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to bottom left, #ff6600, #cc99cc);
+    box-shadow: 0 0 10px #ff6600;
+    box-shadow: 0 0 20px #ff9999;
+    box-shadow: 0 0 30px #ffccff;
+    box-shadow: 0 0 40px #ffff66;
+    box-shadow: 0 0 50px #ccffcc;
+    box-shadow: 0 0 60px #66ff99;
+  }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    animation: particle-dance 5s infinite;
+    transform-origin: center;
+  }
+  .particle:nth-of-type(1) {
+    top: 20%;
+    left: 20%;
+    background: linear-gradient(to right, #ffccff, #ffcccc);
+  }
+  .particle:nth-of-type(2) {
+    top: 50%;
+    left: 30%;
+    background: linear-gradient(to right, #ccffcc, #ccffcc);
+  }
+  .particle:nth-of-type(3) {
+    top: 20%;
+    left: 50%;
+    background: linear-gradient(to right, #ff0099, #ff33cc);
+  }
+  .particle:nth-of-type(4) {
+    top: 30%;
+    left: 10%;
+    background: linear-gradient(to right, #ff66ff, #ff66cc);
+  }
+  .particle:nth-of-type(5) {
+    top: 40%;
+    left: 70%;
+    background: linear-gradient(to right, #ffcc00, #ffa500);
+  }
+  .particle:nth-of-type(6) {
+    top: 60%;
+    left: 40%;
+    background: linear-gradient(to right, #66ff99, #ccccff);
+  }
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: #ffffff;
+  }
+  .neural-web path {
+    stroke: #ffffff;
+    stroke-width: 1px;
+    opacity: .5;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web" viewBox="0 0 200 200">
+      <path d="M50 10 L100 150 L150 10" />
+      <path d="M40 20 L120 180 L200 20" />
+      <path d="M30 30 L110 170 L190 30" />
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

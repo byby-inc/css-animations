@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Transcendent Celestial Cascade</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% { transform: translate(0, 0) rotate(0); }
+    50% { transform: translate(10px, -10px) rotate(30deg); }
+    100% { transform: translate(-10px, 10px) rotate(0); }
+  }
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  @keyframes neural-flicker {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+  }
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%,75% 0%,100% 25%,50% 100%,0% 25%);
+    background: linear-gradient(to top, #2d3142 0%, #24283b 50%, #2d3142 100%);
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #ffffff, 0 0 0 20px #ffffff, 0 0 0 30px #ffffff, 0 0 0 40px #ffffff, 0 0 0 50px #ffffff, 0 0 0 60px #2d3142;
+    background: linear-gradient(to bottom, #ffffff 0%, #c7e1f3 100%);
+  }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #ffffff 0%, #c7e1f3 100%);
+    animation: particle-dance 2s infinite;
+  }
+  .particle:nth-child(1) { top: 30%; left: 20%; }
+  .particle:nth-child(2) { top: 30%; left: 70%; }
+  .particle:nth-child(3) { top: 70%; left: 20%; }
+  .particle:nth-child(4) { top: 70%; left: 70%; }
+  .particle:nth-child(5) { top: 10%; left: 50%; }
+  .particle:nth-child(6) { top: 90%; left: 50%; }
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1px;
+  }
+  .neural-web path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+    animation: neural-flicker 4s infinite;
+  }
+  .neural-web path:nth-child(1) { stroke-width: 3px; }
+  .neural-web path:nth-child(2) { transform: rotate(10deg); }
+  .neural-web path:nth-child(3) { transform: rotate(20deg); }
+  .core {
+    animation: core-pulse 1.5s infinite;
+  }
+  @keyframes particle-dance {
+    0% { transform: translate(0, 0) rotate(0); }
+    50% { transform: translate(10px, -10px) rotate(30deg); }
+    100% { transform: translate(-10px, 10px) rotate(0); }
+  }
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  @keyframes neural-flicker {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 50 50 L 100 100 L 150 50 L 100 0 Z" />
+      <path d="M 50 50 L 0 100 L 50 50 L 100 0 Z" />
+      <path d="M 50 50 L 150 50 L 100 100 L 150 150 Z" />
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

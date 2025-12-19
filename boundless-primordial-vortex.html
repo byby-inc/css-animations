@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Boundless Primordial Vortex</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+      0% { transform: rotate(0) translate(70px, 70px) scale(0.5) rotate(360deg); }
+      50% { transform: rotate(10deg) translate(60px, 70px) scale(1.1) rotate(-360deg); }
+      100% { transform: rotate(20deg) translate(50px, 70px) scale(1.5) rotate(0deg); }
+    }
+    @keyframes core-pulse {
+      0% { transform: scale(0.2) rotate(0deg) translate(-50%, -50%); }
+      50% { transform: scale(1) rotate(10deg) translate(-50%, -50%); }
+      100% { transform: scale(0.2) rotate(20deg) translate(-50%, -50%); }
+    }
+    @keyframes neural-flicker {
+      0% { transform: rotate(0deg); }
+      50% { transform: rotate(20deg); }
+      100% { transform: rotate(0deg); }
+    }
+    .vortex-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+      background: linear-gradient(to bottom right, #2B65EC, #C6C6E4);
+    }
+    .core {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: 
+        linear-gradient(to top left, #C6C6E4, #F7F9A8),
+        linear-gradient(to bottom right, #F7F9A8, #C6C6E4);
+      box-shadow: 
+        0 0 15px 20px transparent,
+        0 0 5px 10px #C6C6E4,
+        0 0 10px 5px #C6C6E4,
+        0 0 15px 20px #C6C6E4,
+        0 0 5px 10px #F7F9A8,
+        0 0 10px 5px #F7F9A8,
+        0 0 15px 20px #F7F9A8;
+      animation: core-pulse infinite 20s;
+    }
+    .particle {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: linear-gradient(to top right, #2B65EC, #C6C6E4);
+      animation: particle-dance infinite 2s;
+    }
+    .particle:nth-child(1) {
+      top: 10px;
+      left: 20px;
+      border-radius: 5px;
+      background: linear-gradient(to top right, #C6C6E4, #F7F9A8);
+      animation-duration: 5s;
+    }
+    .particle:nth-child(2) {
+      top: 50%;
+      left: 30%;
+      transform: translateY(-50%);
+      background: linear-gradient(to top right, #F7F9A8, #C6C6E4);
+    }
+    .particle:nth-child(3) {
+      top: 90px;
+      left: 80px;
+      background: linear-gradient(to bottom right, #F7F9A8, #C6C6E4);
+    }
+    .particle:nth-child(4) {
+      top: 200px;
+      left: 120px;
+      transform: translateY(-50%);
+      background: linear-gradient(to bottom right, #C6C6E4, #F7F9A8);
+    }
+    .particle:nth-child(5) {
+      top: 250px;
+      left: 100px;
+      transform: translate(5px, -5px);
+      background: linear-gradient(to bottom right, #F7F9A8, #C6C6E4);
+    }
+    .particle:nth-child(6) {
+      top: 180px;
+      left: 180px;
+      background: linear-gradient(to bottom right, #C6C6E4, #F7F9A8);
+    }
+    .particle:nth-child(7) {
+      top: 300px;
+      left: 200px;
+      transform: translate(5px, -5px);
+      background: linear-gradient(to bottom right, #F7F9A8, #C6C6E4);
+    }
+    .neural-web {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      fill: none;
+    }
+    .neural-web path {
+      stroke: #fff;
+      stroke-width: 0.5px;
+      stroke-dasharray: 500px;
+      stroke-dashoffset: 250px;
+      animation: neural-flicker infinite 3s;
+    }
+    .neural-web path:nth-child(1) {
+      d="M 45 60 c 20 -10 60 10 60 20 l 10 0" transform translateY(20px)
+    }
+    .neural-web path:nth-child(2) {
+      d="M 20 60 c 10 -20 20 -20 30 0" transform translateY(10px)
+    }
+    .neural-web path:nth-child(3) {
+      d="M 60 100 c 20 -10 60 10 60 20 l 20 0" transform translateY(15px)
+    }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+      <div class="core"></div>
+      <svg class="neural-web">
+        <path d="M 45 60 c 20 -10 60 10 60 20 l 10 0" transform="translateY(20px)" />
+        <path d="M 20 60 c 10 -20 20 -20 30 0" transform="translateY(10px)" />
+        <path d="M 60 100 c 20 -10 60 10 60 20 l 20 0" transform="translateY(15px)" />
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+      </svg>
+    </div>
+        </div>
+        </body>
+        </html>

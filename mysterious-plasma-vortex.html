@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Mysterious Plasma Vortex</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to bottom, #03a9f4, #03a9f4);
+    background-size: 200% 200%;
+    border-radius: 50%;
+    transition: transform 3s infinite;
+    box-shadow: 0 0 0 0 rgba(3, 169, 244, 0.5),
+               0 0 20px 10px rgba(3, 169, 244, 0.5),
+               0 0 30px 10px rgba(3, 169, 244, 0.5);
+  }
+  .core:hover {
+    transform: scale(1.2);
+  }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #ff69b4, #fff5f5);
+    background-size: 200% 200%;
+    animation: particle-dance 4s infinite;
+  }
+  .particle:nth-child(1) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  .particle:nth-child(2) {
+    top: 20%;
+    left: 20%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .particle:nth-child(3) {
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+  .particle:nth-child(4) {
+    top: 40%;
+    left: 80%;
+    transform: translate(-50%, -50%) rotate(135deg);
+  }
+  .particle:nth-child(5) {
+    top: 20%;
+    left: 70%;
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+  .particle:nth-child(6) {
+    top: 10%;
+    left: 30%;
+    transform: translate(-50%, -50%) rotate(225deg);
+  }
+  .particle:nth-child(7) {
+    top: 60%;
+    left: 40%;
+    transform: translate(-50%, -50%) rotate(270deg);
+  }
+  @keyframes particle-dance {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+  }
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes neural-flicker {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(20deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+  }
+  .neural-web path:nth-child(1) {
+    d: M 0 0 L 100% 0;
+  }
+  .neural-web path:nth-child(2) {
+    d: M 0 0 L 50% 100%;
+  }
+  .neural-web path:nth-child(3) {
+    d: M 0 0 L 0 100%;
+  }
+  .neural-web path:nth-child(4) {
+    d: M 0 0 L 100% 100%;
+  }
+  .neural-web path:nth-child(5) {
+    d: M 0 0 L 50% 0%;
+  }
+  .neural-web path:nth-child(6) {
+    d: M 0 0 L 0 0%;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path></path>
+      <path></path>
+      <path></path>
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

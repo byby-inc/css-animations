@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Boundless Radiant Singularity</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            /* Styles for the .vortex-container */
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    background-image: linear-gradient(to bottom, #33ccff, #66ffff);
+  }
+
+  /* Styles for the .core */
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, #ffff66, #ffffcc);
+    box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffcc, 0 0 30px #ffff66, 0 0 40px #ffffff, 0 0 50px #ffffcc, 0 0 60px #ffff66;
+    animation: core-pulse infinite;
+  }
+
+  /* Styles for the .particle */
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+  }
+
+  /* Styles for the .neural-web */
+  .neural-web {
+    position: absolute;
+    fill: none;
+    stroke: #ffffff;
+  }
+
+  /* Keyframes for particle-dance */
+  @keyframes particle-dance {
+    0% {
+      transform: translate(0, 0) rotate(0);
+    }
+    50% {
+      transform: translate(50px, 50px) rotate(360deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0);
+    }
+  }
+
+  /* Keyframes for core-pulse */
+  @keyframes core-pulse {
+    0% {
+      transform: scale(0.7);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(0.7);
+    }
+  }
+
+  /* Keyframes for neural-flicker */
+  @keyframes neural-flicker {
+    0% {
+      transform: scale(1) translate(0, 0);
+    }
+    50% {
+      transform: scale(1.2) translate(10px, 10px);
+    }
+    100% {
+      transform: scale(1) translate(0, 0);
+    }
+  }
+
+  /* Animated particle styles */
+  .particle.animate {
+    animation: particle-dance 2s infinite;
+  }
+
+  /* Animated neural-web styles */
+  .neural-web.animate {
+    animation: neural-flicker 1s infinite;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web animate" viewBox="0 0 100 100">
+      <path d="M50,0 Q80,30 100,60 Q120,90 150,100" />
+      <path d="M0,50 Q30,80 50,100 Q70,120 100,150" />
+      <path d="M50,100 Q30,120 20,150 Q10,180 0,200" />
+    </svg>
+    <div class="particle animate" style="top: 20px; left: 20px; background-image: linear-gradient(to bottom, #ffffcc, #ffff66);"></div>
+    <div class="particle animate" style="top: 30px; left: 30px; background-image: linear-gradient(to bottom, #ffff66, #ffffcc);"></div>
+    <div class="particle animate" style="top: 40px; left: 40px; background-image: linear-gradient(to bottom, #ffffcc, #ffff66);"></div>
+    <div class="particle animate" style="top: 50px; left: 50px; background-image: linear-gradient(to bottom, #ffff66, #ffffcc);"></div>
+    <div class="particle animate" style="top: 60px; left: 60px; background-image: linear-gradient(to bottom, #ffffcc, #ffff66);"></div>
+  </div>
+        </div>
+        </body>
+        </html>

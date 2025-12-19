@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Cosmic Vortex Convergence</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            /* Clip-path: circle(50% at 50% 50%) */
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    clip-path: circle(50% at 50% 50%);
+    background-image: linear-gradient(to bottom, #0b0a17, #1c1a2d, #2f313a, #40455c, #5a637e);
+  }
+
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, #5a637e, #6f75a3, #7f81bf, #8f8bc4, #9f99d7);
+  }
+  .core:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, #f2c464, #ffd07a, #ffc107, #ff8c00, #ff5733);
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff;
+  }
+
+  .core:after {
+    animation: core-pulse 5s infinite;
+  }
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, #0b0a17, #1c1a2d, #2f313a, #40455c, #5a637e);
+    animation: particle-dance 2s infinite;
+  }
+
+  .particle:nth-child(1) {
+    top: 20%;
+    left: 20%;
+    background-image: linear-gradient(to bottom, #8f8bc4, #9f99d7, #b3b9d6, #c6cfd6, #d3d6e5);
+  }
+  @keyframes particle-dance {
+    0% {
+      transform: translate(0px, 0px) rotate(0deg);
+    }
+    50% {
+      transform: translate(50px, -50px) rotate(90deg);
+    }
+    100% {
+      transform: translate(0px, 0px) rotate(0deg);
+    }
+  }
+
+  .particle:nth-child(2) {
+    top: 40%;
+    left: 40%;
+    background-image: linear-gradient(to bottom, #9f99d7, #b3b9d6, #c6cfd6, #d3d6e5, #e8eaed);
+  }
+  @keyframes particle-dance {
+    0% {
+      transform: translate(0px, 0px) rotate(0deg);
+    }
+    50% {
+      transform: translate(-50px, 50px) rotate(-90deg);
+    }
+    100% {
+      transform: translate(0px, 0px) rotate(0deg);
+    }
+  }
+
+  .particle:nth-child(3) {
+    top: 60%;
+    left: 20%;
+    background-image: linear-gradient(to bottom, #b3b9d6, #c6cfd6, #d3d6e5, #e8eaed, #f1f3f6);
+  }
+  @keyframes particle-dance {
+    0% {
+      transform: translate(0px, 0px) rotate(0deg);
+    }
+    50% {
+      transform: translate(50px, 50px) rotate(90deg);
+    }
+    100% {
+      transform: translate(0px, 0px) rotate(0deg);
+    }
+  }
+
+  /* 
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke-width: 1px;
+  }
+  */
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .neural-web circle {
+    stroke: #fff;
+  }
+  .neural-web path {
+    stroke: #fff;
+  }
+
+  .neural-web {
+    animation: neural-flicker 3s infinite;
+  }
+  @keyframes neural-flicker {
+    0% {
+      transform: translate(0px, 0px) rotate(0deg);
+    }
+    50% {
+      transform: translate(50px, -50px) rotate(90deg);
+    }
+    100% {
+      transform: translate(0px, 0px) rotate(0deg);
+    }
+  }
+
+  .neural-web path:nth-child(1) {
+    d: M 50 50 L 75 75;
+  }
+  @keyframes neural-flicker {
+    0% {
+      transform: inherit;
+    }
+    50% {
+      transform: translate(75px, 75px) rotate(45deg);
+    }
+    100% {
+      transform: inherit;
+    }
+  }
+  .neural-web path:nth-child(1) {
+    d: M 50 50 L 75 75;
+  }
+  .neural-web path:nth-child(2) {
+    d: M 75 75 L 50 50;
+  }
+  @keyframes neural-flicker {
+    0% {
+      transform: inherit;
+    }
+    50% {
+      transform: translate(-50px, -50px) rotate(-45deg);
+    }
+    100% {
+      transform: inherit;
+    }
+  }
+  .neural-web path:nth-child(2) {
+    d: M 75 75 L 50 50;
+  }
+  .neural-web path:nth-child(3) {
+    d: M 50 75 L 75 50;
+  }
+  @keyframes neural-flicker {
+    0% {
+      transform: inherit;
+    }
+    50% {
+      transform: translate(0px, 0px) rotate(0deg);
+    }
+    100% {
+      transform: inherit;
+    }
+  }
+  .neural-web path:nth-child(3) {
+    d: M 50 75 L 75 50;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web" width="100%" height="100%">
+      <circle cx="50" cy="50" r="50" stroke-width="1" stroke="#fff"></circle>
+      <path d="M 50 50 L 75 75" stroke-width="1" stroke="#fff"></path>
+      <path d="M 75 75 L 50 50" stroke-width="1" stroke="#fff"></path>
+      <path d="M 50 75 L 75 50" stroke-width="1" stroke="#fff"></path>
+    </svg>
+    <div class="particle" style="top: 20%; left: 20%; background-image: linear-gradient(to bottom, #9f99d7, #b3b9d6, #c6cfd6, #d3d6e5, #e8eaed);"></div>
+    <div class="particle" style="top: 40%; left: 40%; background-image: linear-gradient(to bottom, #b3b9d6, #c6cfd6, #d3d6e5, #e8eaed, #f1f3f6);"></div>
+    <div class="particle" style="top: 60%; left: 20%; background-image: linear-gradient(to bottom, #d3d6e5, #e8eaed, #f1f3f6, #f3f7f8, #f5f7f9);"></div>
+  </div>
+        </div>
+        </body>
+        </html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Ethereal Vortex</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%,75% 0%,100% 25%,50% 100%,0% 25%);
+    background: linear-gradient(to bottom, #f5f5f5, #e2a6e4);
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #e2a6e4, #f5f5f5);
+    box-shadow: 0px 0px 10px 0px #e2a6e4;
+    box-shadow: 0px 0px 20px 0px #c1c1c1;
+    box-shadow: 0px 0px 30px 0px #f5f5f5;
+    box-shadow: 0px 0px 40px 0px #e2a6e4;
+    box-shadow: 0px 0px 50px 0px #c1c1c1;
+    box-shadow: 0px 0px 60px 0px #f5f5f5;
+    box-shadow: 0px 0px 70px 0px #e2a6e4;
+  }
+  .core::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #e2a6e4, #f5f5f5);
+    box-shadow: 0px 0px 10px 0px #e2a6e4;
+    box-shadow: 0px 0px 20px 0px #c1c1c1;
+    box-shadow: 0px 0px 30px 0px #f5f5f5;
+    box-shadow: 0px 0px 40px 0px #e2a6e4;
+    box-shadow: 0px 0px 50px 0px #c1c1c1;
+    box-shadow: 0px 0px 60px 0px #f5f5f5;
+    box-shadow: 0px 0px 70px 0px #e2a6e4;
+  }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    animation: particle-dance infinite;
+  }
+  .particle:nth-child(1) {
+    top: 30%;
+    left: 40%;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to bottom, #e2a6e4, #f5f5f5);
+    animation-duration: 4s;
+    animation-delay: 0s;
+  }
+  .particle:nth-child(2) {
+    top: 20%;
+    left: 80%;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(to bottom, #f5f5f5, #e2a6e4);
+    animation-duration: 3s;
+    animation-delay: 2s;
+  }
+  .particle:nth-child(3) {
+    top: 10%;
+    left: 65%;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(to bottom, #f5f5f5, #e2a6e4);
+    animation-duration: 5s;
+    animation-delay: 1s;
+  }
+  @keyframes particle-dance {
+    0% { transform: rotate(0deg) translate3d(0, 0, 0) };
+    50% { transform: rotate(359.9deg) translate3d(50px, 20px, 0) };
+    100% { transform: rotate(720deg) translate3d(0, 0, 0) };
+  }
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 5px;
+  }
+  .neural-web path:nth-child(1) {
+    d: M 50 0 L 100 100 L 0 100 Z;
+    animation: neural-flicker infinite;
+    animation-duration: 6s;
+    animation-delay: 3s;
+  }
+  .neural-web path:nth-child(2) {
+    d: M 25 25 L 75 75 L 25 75 L 75 25 Z;
+    animation: neural-flicker infinite;
+    animation-duration: 7s;
+    animation-delay: 4s;
+  }
+  .neural-web path:nth-child(3) {
+    d: M 50 0 L 0 100 L 100 100 Z;
+    animation: neural-flicker infinite;
+    animation-duration: 5s;
+    animation-delay: 5s;
+  }
+  @keyframes neural-flicker {
+    0% { transform: rotate(0deg) scale(1) };
+    50% { transform: rotate(179.9deg) scale(1.1) };
+    100% { transform: rotate(360deg) scale(1) };
+  }
+  @keyframes core-pulse {
+    0% { transform: scale(0.9) };
+    50% { transform: scale(1) };
+    100% { transform: scale(0.9) };
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core">
+      <div class="core::before"></div>
+    </div>
+    <svg class="neural-web">
+      <path class="neural-web path:nth-child(1)"></path>
+      <path class="neural-web path:nth-child(2)"></path>
+      <path class="neural-web path:nth-child(3)"></path>
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

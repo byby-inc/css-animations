@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Ancient Primordial Vortex Ignition</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% {
+      transform: translate(0, 100%) rotate(0deg);
+    }
+    50% {
+      transform: translate(-50%, -50%) rotate(180deg);
+    }
+    100% {
+      transform: translate(100%, 0) rotate(360deg);
+    }
+  }
+  
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 1),
+      0 0 20px rgba(255, 255, 255, 1),
+      0 0 30px rgba(255, 255, 255, 1),
+      0 0 40px rgba(255, 255, 255, 1),
+      0 0 50px rgba(255, 255, 255, 1),
+      0 0 60px rgba(255, 255, 255, 0);
+    }
+    50% {
+      transform: scale(1.2);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.7),
+      0 0 30px rgba(255, 255, 255, 0.7),
+      0 0 40px rgba(255, 255, 255, 0.7),
+      0 0 50px rgba(255, 255, 255, 0.7),
+      0 0 60px rgba(255, 255, 255, 0.7),
+      0 0 70px rgba(255, 255, 255, 0);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.6),
+      0 0 20px rgba(255, 255, 255, 0.6),
+      0 0 30px rgba(255, 255, 255, 0.6),
+      0 0 40px rgba(255, 255, 255, 0.6),
+      0 0 50px rgba(255, 255, 255, 0.6),
+      0 0 60px rgba(255, 255, 255, 0);
+    }
+  }
+  
+  @keyframes neural-flicker {
+    0% {
+      stroke-dashoffset: 300;
+      opacity: 1;
+    }
+    100% {
+      stroke-dashoffset: -300;
+      opacity: 0.3;
+    }
+  }
+  
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(to bottom,
+      #ff9b69 0%,
+      #ff9b69 25%,
+      #f7c23d 25%,
+      #f7c23d 75%,
+      #ff99bf 75%);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+  }
+  
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom,
+      #f7c23d 0%,
+      #ff9b69 25%,
+      #f7c23d 25%,
+      #f7c23d 75%,
+      #ff99bf 75%);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6),
+      0 0 20px rgba(255, 255, 255, 0.6),
+      0 0 30px rgba(255, 255, 255, 0.6),
+      0 0 40px rgba(255, 255, 255, 0.6),
+      0 0 50px rgba(255, 255, 255, 0.6),
+      0 0 60px rgba(255, 255, 255, 0);
+  }
+  
+  .core:hover {
+    animation: core-pulse 5s infinite;
+  }
+  
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to bottom,
+      #ff99bf 0%,
+      #ff9b69 25%,
+      #f7c23d 25%,
+      #f7c23d 75%,
+      #ff99bf 75%);
+  }
+  
+  .particle:hover {
+    animation: particle-dance 1s infinite;
+  }
+  
+  .particle:nth-child(1) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .particle:nth-child(2) {
+    top: 10%;
+    left: 10%;
+    opacity: 0.5;
+  }
+  
+  .particle:nth-child(3) {
+    top: 80%;
+    left: 80%;
+    transform: scale(2);
+  }
+  
+  .particle:nth-child(4) {
+    top: 20%;
+    left: 50%;
+  }
+  
+  .particle:nth-child(5) {
+    top: 70%;
+    left: 30%;
+  }
+  
+  .particle:nth-child(6) {
+    top: 40%;
+    left: 80%;
+    transform: translate(100px, 50px);
+  }
+  
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    stroke: #fff;
+  }
+  
+  .neural-web path {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 400;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 0 0 L 100 0 L 200 50 L 150 100 L 0 50 Z M 0 50 L 0 100 L 100 50 L 0 50 Z M 0 50 L 150 100 L 0 100 Z" />
+      <path d="M 0 0 L 150 50 L 150 100 L 0 100 L 0 50 Z M 0 0 L 0 100 L 100 50 L 0 50 Z M 50 0 L 100 50 L 150 0 L 50 0 Z" />
+      <path d="M 100 50 L 150 100 L 100 150 L 50 100 L 100 50 Z M 100 50 L 0 50 L 0 100 L 100 50 Z M 0 50 L 50 100 L 150 50 L 0 50 Z" />
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

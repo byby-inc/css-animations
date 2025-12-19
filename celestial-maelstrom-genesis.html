@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Celestial Maelstrom Genesis</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes particle-dance {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    50% { transform: translate(-50%, -50%) rotate(360deg); }
+    100% { transform: translate(-50%, -50%) rotate(0deg); }
+  }
+
+  @keyframes core-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+
+  @keyframes neural-flicker {
+    0% { transform: matrix(1, 0, 0, 1, 100px, 100px); }
+    50% { transform: matrix(1, 0, 0, 1, -100px, -100px); }
+    100% { transform: matrix(1, 0, 0, 1, 100px, 100px); }
+  }
+
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%,75% 0%,100% 25%,50% 100%,0% 25%);
+    background-image: linear-gradient(to bottom, #f7d2c4, #ff99cc);
+  }
+
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-image: linear-gradient(to bottom, #66ccff, #ccff66);
+    animation: particle-dance infinite 2s linear;
+  }
+
+  .particle:nth-child(1) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .particle:nth-child(2) {
+    top: 70%;
+    left: 20%;
+    animation-delay: .5s;
+  }
+
+  .particle:nth-child(3) {
+    top: 40%;
+    left: 70%;
+    animation-delay: .2s;
+  }
+
+  .particle:nth-child(4) {
+    top: 20%;
+    left: 40%;
+    animation-delay: .8s;
+  }
+
+  .particle:nth-child(5) {
+    top: 30%;
+    left: 60%;
+    animation-delay: .6s;
+  }
+
+  .particle:nth-child(6) {
+    top: 10%;
+    left: 30%;
+    animation-delay: .4s;
+  }
+
+  .particle:nth-child(7) {
+    top: 60%;
+    left: 10%;
+    animation-delay: .3s;
+  }
+
+  .particle:nth-child(8) {
+    top: 80%;
+    left: 50%;
+    animation-delay: .1s;
+  }
+
+  .core {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, #ff66cc, #ccff00);
+  }
+
+  .core::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-image: linear-gradient(to bottom, #99ccff, #ccff66);
+  }
+
+  .core::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, .5);
+    background-image: linear-gradient(to bottom, #66ccff, #ccff66);
+  }
+
+  .core::before::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, .5);
+    background-image: linear-gradient(to bottom, #ff99cc, #ccff00);
+  }
+
+  .core::before::before::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(255, 255, 255, .5);
+    background-image: linear-gradient(to bottom, #66ccff, #ccff66);
+  }
+
+  .core::before::before::before::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+    border-radius: 50%;
+    box-shadow: 0 0 40px rgba(255, 255, 255, .5);
+    background-image: linear-gradient(to bottom, #ff99cc, #ccff00);
+  }
+
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+  }
+
+  .neural-web path {
+    stroke: #fff;
+    stroke-width: 1px;
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 50 50 L 200 200 Q 250 100 250 200 T 200 200 L 200 350 Q 150 450 100 100 T 100 300" />
+      <path d="M 100 50 L 250 200 Q 200 400 300 300 T 250 200 L 100 350 Q 150 450 250 400 T 250 200" />
+      <path d="M 200 50 L 200 300 150 400 250 300 T 250 200" />
+    </svg>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+        </div>
+        </body>
+        </html>

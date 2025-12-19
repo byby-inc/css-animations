@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Ephemeral Quasar Horizon</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @keyframes core-pulse {
+    to { transform: scale(2); }
+  }
+  @keyframes particle-dance {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    50% { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+  @keyframes neural-flicker {
+    0% { transform: translate(-50%, -50%); }
+    100% { transform: translate(0, 0); }
+  }
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    clip-path: circle(50% at 50% 50%);
+  }
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: linear-gradient(
+      120deg,
+      #87CEEB, #ADD8E6, #6495ED, #4682B4
+    );
+    box-shadow: 0px 0px 10px 0px #000, 10px -10px 20px 0px #000,
+      20px -20px 40px 0px #000, -10px 0px 20px 0px #000,
+      -20px 10px 40px 0px #000;
+  }
+  .particle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    background-image: linear-gradient(
+      120deg,
+      #87CEEB, #ADD8E6, #6495ED, #4682B4
+    );
+    animation: particle-dance infinite 2s;
+  }
+  .neural-web {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    stroke-width: 0.5;
+    stroke: #fff;
+    fill: none;
+  }
+  .neural-web path {
+    animation: neural-flicker infinite 1s;
+  }
+  @media only screen and (max-width: 768px) {
+    .neural-web {
+      width: 90%;
+      height: 90%;
+    }
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core">
+      <div class="core-pulse"></div>
+    </div>
+    <svg class="neural-web">
+      <path d="M200 100 C 150 50 50 150 100 300" />
+      <path d="M100 150 C 100 50 50 100 150 50" />
+      <path d="M300 100 C 300 150 50 50 150 100" />
+    </svg>
+    <div class="particle" style="top: 10%; left: 10%;"></div>
+    <div class="particle" style="top: 50%; left: 90%;"></div>
+    <div class="particle" style="top: 90%; left: 50%;"></div>
+    <div class="particle" style="top: 80%; left: 10%;"></div>
+    <div class="particle" style="top: 20%; left: 20%;"></div>
+  </div>
+        </div>
+        </body>
+        </html>

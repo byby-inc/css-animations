@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Celestial Vortex Maelstrom</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            .vortex-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  clip-path: circle(50% at 50% 50%);
+  background-image: linear-gradient(#2f4f7f, #1a1d23, #161719);
+}
+
+.core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-image: linear-gradient(#8b9467, #575e6e);
+  box-shadow:
+    0 0 10px #2f4f7f,
+    0 0 20px #343b4d,
+    0 0 30px #323a46,
+    0 0 40px #262a36,
+    0 0 50px #1a1d23,
+    0 0 60px #161719;
+  animation: core-pulse infinite 2s;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-image: linear-gradient(#9b98b1, #787892);
+  animation: particle-dance infinite 5s;
+}
+
+@keyframes particle-dance {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-25%, 25%) scale(2);
+  }
+  100% {
+    transform: translate(25%, -25%) scale(1);
+  }
+}
+
+@keyframes core-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.neural-web {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1;
+  animation: neural-flicker infinite 3s;
+}
+
+.neural-web path {
+  stroke-dasharray: 1000, 2000;
+}
+
+@keyframes neural-flicker {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+  50% {
+    transform: scale(1) rotate(360deg);
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+.particle:nth-child(1) {
+  top: 50%;
+  left: 25%;
+  background-image: linear-gradient(#c4b59c, #b1a78a);
+  animation: particle-dance infinite 5s;
+}
+
+.particle:nth-child(2) {
+  top: 25%;
+  left: 50%;
+  background-image: linear-gradient(#a6a7a5, #858585);
+  animation: particle-dance infinite 8s;
+}
+
+.particle:nth-child(3) {
+  top: 50%;
+  left: 75%;
+  background-image: linear-gradient(#5e5e5f, #454c4d);
+  animation: particle-dance infinite 6s;
+}
+
+.particle:nth-child(4) {
+  top: 75%;
+  left: 50%;
+  background-image: linear-gradient(#333333, #24292c);
+  animation: particle-dance infinite 4s;
+}
+
+.particle:nth-child(5) {
+  top: 25%;
+  left: 25%;
+  background-image: linear-gradient(#787b86, #63657d);
+  animation: particle-dance infinite 3s;
+}
+
+.particle:nth-child(6) {
+  top: 75%;
+  left: 25%;
+  background-image: linear-gradient(#565b5f, #3e454b);
+  animation: particle-dance infinite 2s;
+}
+
+.neural-web path:nth-child(1) {
+  d: M 50 75 C 30 0 70 0 50 75;
+}
+
+.neural-web path:nth-child(2) {
+  d: M 75 25 C 95 0 35 0 75 25;
+}
+
+.neural-web path:nth-child(3) {
+  d: M 25 50 C 45 0 55 0 25 50;
+}
+
+.neural-web path:nth-child(4) {
+  d: M 75 75 C 95 0 35 0 75 75;
+}
+
+.neural-web path:nth-child(5) {
+  d: M 25 25 C 45 0 55 0 25 25;
+}
+
+.neural-web path:nth-child(6) {
+  d: M 75 25 C 95 0 35 0 75 25;
+}
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+  <div class="core"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <svg class="neural-web">
+    <path />
+    <path />
+    <path />
+    <path />
+    <path />
+    <path />
+  </svg>
+</div>
+        </div>
+        </body>
+        </html>

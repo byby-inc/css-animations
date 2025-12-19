@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Eternal Celestial Vortex</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: circle(50% at 50% 50%);
+    background: radial-gradient(ellipse at center, #1A1D23 0%, #1A1D23 100%);
+  }
+
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(150deg, #F7D2C4 0%, #FEC5F7 100%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 80px rgba(255, 255, 255, 0.8), 0 0 120px rgba(255, 255, 255, 0.5), 0 0 160px rgba(255, 255, 255, 0.2), 0 0 200px rgba(255, 255, 255, 0.1);
+    animation: core-pulse 2s infinite;
+  }
+
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(150deg, #F7D2C4 0%, #FEC5F7 100%);
+    animation: particle-dance 4s infinite;
+  }
+  @keyframes particle-dance {
+    0% {
+      transform: translate(0%, 0%) rotate(0deg);
+      opacity: 0.5;
+    }
+    50% {
+      transform: translate(-10%, 10%) rotate(360deg);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translate(-20%, -20%) rotate(720deg);
+      opacity: 0.5;
+    }
+  }
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 80px rgba(255, 255, 255, 0.8), 0 0 120px rgba(255, 255, 255, 0.5), 0 0 160px rgba(255, 255, 255, 0.2), 0 0 200px rgba(255, 255, 255, 0.1);
+    }
+    50% {
+      transform: scale(1.2);
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 0.2), 0 0 40px rgba(255, 255, 255, 0.4), 0 0 60px rgba(255, 255, 255, 0.6), 0 0 80px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 80px rgba(255, 255, 255, 0.8), 0 0 120px rgba(255, 255, 255, 0.5), 0 0 160px rgba(255, 255, 255, 0.2), 0 0 200px rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: #fff;
+  }
+
+  .neural-web path {
+    stroke: #fff;
+  }
+  .neural-web path:nth-child(1) {
+    stroke-width: 4;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 100;
+  }
+  .neural-web path:nth-child(2) {
+    stroke-width: 2;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 50;
+  }
+  .neural-web path:nth-child(3) {
+    stroke-width: 6;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 150;
+  }
+
+  @keyframes neural-flicker {
+    0% {
+      transform: translate(0, -10px);
+    }
+    50% {
+      transform: translate(5px, 0);
+    }
+    100% {
+      transform: translate(0, 10px);
+    }
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M100,100 Q150,0 200,100"></path>
+      <path d="M100,100 Q0,50 100,100"></path>
+      <path d="M200,100 Q200,200 300,100"></path>
+    </svg>
+    <div class="particle" style="top: 20%; left: 20%;"></div>
+    <div class="particle" style="top: 20%; left: 40%;"></div>
+    <div class="particle" style="top: 20%; left: 60%;"></div>
+    <div class="particle" style="top: 20%; left: 80%;"></div>
+    <div class="particle" style="top: 50%; left: 60%;"></div>
+    <div class="particle" style="top: 30%; left: 40%;"></div>
+    <div class="particle" style="top: 10%; left: 20%;"></div>
+    <div class="particle" style="top: 80%; left: 80%;"></div>
+  </div>
+        </div>
+        </body>
+        </html>

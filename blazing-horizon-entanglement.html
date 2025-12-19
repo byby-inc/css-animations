@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Horizon Entanglement</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            /* Global Styles */
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+    z-index: -1;
+  }
+
+  /* Core Styles */
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to bottom, #ff69b4, #ff99cc);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.2), 0 0 30px rgba(255, 0, 0, 0.1), 0 10px 20px rgba(255, 0, 0, 0.5), 0 20px 30px rgba(255, 0, 0, 0.2), 0 30px 40px rgba(255, 0, 0, 0.1);
+  }
+
+  /* Core Pulsing Animation */
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  /* Particle Styles */
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #6666ff, #3333ff);
+    animation: particle-dance infinite;
+  }
+
+  /* Particle Dance Animation */
+  @keyframes particle-dance {
+    0% {
+      transform: translate(0, -100px) rotate(0);
+    }
+    100% {
+      transform: translate(100px, 100px) rotate(360deg);
+    }
+  }
+
+  /* Neural Web Styles */
+  .neural-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: #000;
+  }
+
+  /* Neural Web Paths */
+  .neural-web path {
+    stroke: #fff;
+    stroke-width: 2px;
+    stroke-dasharray: 100, 100;
+    stroke-dashoffset: -100;
+    animation: neural-flicker infinite;
+  }
+
+  /* Neural Flicker Animation */
+  @keyframes neural-flicker {
+    0% {
+      stroke-dashoffset: -100;
+    }
+    100% {
+      stroke-dashoffset: -200;
+    }
+    50% {
+      stroke-dasharray: 200, 200;
+    }
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core">
+      <div class="particle" style="top: 50px; left: 50px;"></div>
+      <div class="particle" style="top: 100px; left: 100px;"></div>
+      <div class="particle" style="top: 150px; left: 150px;"></div>
+      <div class="particle" style="top: 200px; left: 200px;"></div>
+      <div class="particle" style="top: 250px; left: 250px;"></div>
+      <div class="particle" style="top: 300px; left: 300px;"></div>
+      <div class="particle" style="top: 350px; left: 350px;"></div>
+      <div class="particle" style="top: 400px; left: 400px;"></div>
+      <div class="particle" style="top: 450px; left: 450px;"></div>
+      <div class="particle" style="top: 500px; left: 500px;"></div>
+    </div>
+    <svg class="neural-web">
+      <path d="M 10 10 L 100 100 L 10 200 Z" />
+      <path d="M 150 10 L 20 200 L 150 300 Z" />
+      <path d="M 200 10 L 300 100 L 20 250 Z" />
+      <path d="M 250 10 L 100 300 L 250 300 Z" />
+      <path d="M 10 150 L 300 300 L 10 200 Z" />
+      <path d="M 10 200 L 100 100 L 10 300 Z" />
+    </svg>
+    <div class="core" style="background: linear-gradient(to bottom, #33cc33, #00cc00);"></div>
+    <div class="particle" style="background: linear-gradient(to bottom, #ffff00, #ccff00); top: 250px; left: 250px;"></div>
+  </div>
+        </div>
+        </body>
+        </html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Blazing Celestial Horizon of Primordial Genesis</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+  .vortex-container {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%,75% 0%,100% 25%,50% 100%,0% 25%);
+    font-family: 'Monoton', cursive;
+  }
+
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #ffffff, #cccccc);
+    box-shadow: 0 0 10px #cc00ff, 0 0 20px #cc00ff, 0 0 30px #cc00ff, 0 0 40px #cc00ff, 0 0 50px #cc00ff, 0 0 60px #cc00ff;
+    animation: core-pulse infinite 5s;
+  }
+
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    animation: particle-dance infinite 3s;
+  }
+
+  @keyframes particle-dance {
+    0% {
+      transform: translate(50px, 50px) rotate(0deg);
+    }
+    100% {
+      transform: translate(100px, 100px) rotate(360deg);
+    }
+  }
+
+  .particle:nth-child(1) {
+    top: 20px; left: 20px;
+    background: linear-gradient(to bottom, #cccccc, #ffffff);
+  }
+
+  .particle:nth-child(2) {
+    top: 50px; left: 50px;
+    background: linear-gradient(to bottom, #ffff80, #ff00cc);
+  }
+
+  .particle:nth-child(3) {
+    top: 80px; left: 80px;
+    background: linear-gradient(to bottom, #cc00ff, #00ccff);
+  }
+
+  .particle:nth-child(4) {
+    top: 10px; left: 10px;
+    background: linear-gradient(to bottom, #ff3300, #ff0099);
+  }
+
+  .particle:nth-child(5) {
+    top: 30px; left: 30px;
+    background: linear-gradient(to bottom, #ff00ff, #ff00cc);
+  }
+
+  .particle:nth-child(6) {
+    top: 40px; left: 40px;
+    background: linear-gradient(to bottom, #990000, #cc00cc);
+  }
+
+  .particle:nth-child(7) {
+    top: 60px; left: 60px;
+    background: linear-gradient(to bottom, #ff6600, #ff0066);
+  }
+
+  .particle:nth-child(8) {
+    top: 70px; left: 70px;
+    background: linear-gradient(to bottom, #00ff66, #00ff00);
+  }
+
+  .particle:nth-child(9) {
+    top: 90px; left: 90px;
+    background: linear-gradient(to bottom, #cc9900, #cc0033);
+  }
+
+  .neural-web {
+    position: absolute;
+    fill: none;
+    stroke: #ffffff;
+  }
+
+  .neural-web path {
+    stroke-width: 2px;
+  }
+
+  @keyframes neural-flicker {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+      transform: translate(2px, 2px) rotate(180deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <svg class="neural-web">
+      <path d="M 50 50 L 100 100" />
+      <path d="M 150 100 L 200 200" />
+      <path d="M 200 150 L 250 100" />
+    </svg>
+    <div class="particle:nth-child(1)" style="animation-delay: 0s"></div>
+    <div class="particle:nth-child(2)" style="animation-delay: 0.5s"></div>
+    <div class="particle:nth-child(3)" style="animation-delay: 1s"></div>
+    <div class="particle:nth-child(4)" style="animation-delay: 1.5s"></div>
+    <div class="particle:nth-child(5)" style="animation-delay: 2s"></div>
+    <div class="particle:nth-child(6)" style="animation-delay: 2.5s"></div>
+    <div class="particle:nth-child(7)" style="animation-delay: 3s"></div>
+    <div class="particle:nth-child(8)" style="animation-delay: 3.5s"></div>
+    <div class="particle:nth-child(9)" style="animation-delay: 4s"></div>
+  </div>
+        </div>
+        </body>
+        </html>

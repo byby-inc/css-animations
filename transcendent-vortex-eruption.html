@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <title>Transcendent Vortex Eruption</title>
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+
+            /* Background color and style */
+            body {
+                background-image: url("/thumb"); 
+                background-repeat: no-repeat;   
+                background-position: center center;              
+                background-size: cover;    
+                background-attachment: fixed;          
+                background-color: black; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw; 
+                overflow: hidden;
+            }
+
+           
+
+            /* Animation container */
+            .animation-container {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            background: transparent;
+            }
+
+            /* Define keyframes */
+  @keyframes particle-dance {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+      transform: translate(20px, -20px) rotate(45deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+  }
+  @keyframes core-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes neural-flicker {
+    0% {
+      transform: translate(-10px, -10px);
+    }
+    50% {
+      transform: translate(10px, 10px);
+    }
+    100% {
+      transform: translate(-10px, -10px);
+    }
+  }
+  
+  /* Style .vortex-container */
+  .vortex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 100%, 0% 25%);
+  }
+  
+  /* Style .core */
+  .core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(180deg, #fff, #000);
+    box-shadow:
+      0 0 50px #f0f0f0,
+      10px 10px 20px #333,
+      15px 15px 30px #666,
+      -10px -10px 20px #999,
+      -15px -15px 30px #aaa,
+      20px 20px 40px #ccc;
+  }
+  
+  /* Style .core:linear-gradient */
+  .core:linear-gradient(0deg, #fff, #000);
+  .core:grad-1 {
+    background: linear-gradient(0deg, #fff, #333);
+    animation: core-pulse 2s infinite;
+  }
+  
+  /* Style .particle */
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: particle-dance 1s infinite;
+  }
+  
+  /* Style .particle:linear-gradient */
+  .particle:grad-1 {
+    background: linear-gradient(0deg, #aaa, #999);
+  }
+  
+  /* Style .neural-web */
+  .neural-web {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #fff;
+    animation: neural-flicker 3s infinite;
+  }
+  
+  /* Neural web: Paths */
+  .neural-web path:nth-child(1) {
+    d: "M 0 0 L 100 0 L 100 100 L 0 100 Z";
+  }
+  .neural-web path:nth-child(2) {
+    d: "M 0 0 L 150 0 L 150 150 L 0 150 Z";
+  }
+  .neural-web path:nth-child(3) {
+    d: "M 0 0 L 200 0 L 200 200 L 0 200 Z";
+  }
+  .neural-web path:nth-child(4) {
+    d: "M 0 0 L 250 0 L 250 250 L 0 250 Z";
+  }
+        </style>
+        </head>
+        <body>
+
+        <div class="animation-container">
+            <div class="vortex-container">
+    <div class="core"></div>
+    <svg class="neural-web">
+      <path d="M 0 0 L 100 0 L 100 100 L 0 100 Z"></path>
+      <path d="M 0 0 L 150 0 L 150 150 L 0 150 Z"></path>
+      <path d="M 0 0 L 200 0 L 200 200 L 0 200 Z"></path>
+      <path d="M 0 0 L 250 0 L 250 250 L 0 250 Z"></path>
+    </svg>
+    <div class="particle grad-1" style="top: 20px; left: 20px;"></div>
+    <div class="particle grad-1" style="top: 40px; left: 40px;"></div>
+    <div class="particle grad-1" style="top: 60px; left: 60px;"></div>
+    <div class="particle grad-1" style="top: 80px; left: 80px;"></div>
+    <div class="particle grad-1" style="top: 100px; left: 100px;"></div>
+  </div>
+        </div>
+        </body>
+        </html>
