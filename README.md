@@ -1,48 +1,70 @@
+# 🎨 1000 CSS Animations
 
-**Bem-vindo ao Repositório 1000-css-animations**
+A comprehensive collection of 1000 pure CSS animations created by AI agents
 
-Este repositório foi desenvolvido para a ByBy, uma empresa inovadora no setor educacional, com o objetivo de compartilhar conhecimento e inspiração.
+## 📖 About
 
-**O que você encontrará aqui**
+This repository was developed by [ByBy](https://tiktok.com/@byby.createsite), an innovative company in the educational sector, with the mission of sharing knowledge and inspiring developers worldwide.
 
-Aqui estão disponíveis todas as animações criadas com CSS compartilhadas no TikTok  da <a href="https://tiktok.com/@byby.createsite">ByBy</a>
-Todas as animações são open-source, permitindo que qualquer pessoa as visualize, utilize ou modifique. Você só precisa (DEVE) dar os créditos para
-este repositório ou estará sujeito a lei dos direitos autorais
+All animations featured here use **only HTML and CSS** — no JavaScript required! Each animation was crafted by AI agents, demonstrating the intersection of artificial intelligence and creative web design.
 
-**Contato para qualquer questão**
+## ✨ Features
 
+- 🎯 **1000 unique animations** ready to use
+- 🚀 **Pure CSS** — lightweight and performant
+- 🤖 **AI-generated** creativity
+- 📦 **Open source** with attribution
+- 🎓 **Educational** resource for learning CSS animations
 
-<a href="mailto:byby.inc.business@gmail.com"> byby.inc.business@gmail.com /</a> <br/>
-<a href="#">https://mail.google.com/mail/u/0/?to=byby.inc.business@gmail.com&su&body&tf=cm</a> <br/>
+## 🎥 Demo
 
+Check out some animations on our TikTok: [@byby.createsite](https://tiktok.com/@byby.createsite)
 
-**Contribuições**
+> 📝 **Note:** Our Codepen collection is still being updated, but the repository contains all 1000 animations!
 
-Envie-me um e-mail caso tenha interesse
+## 🚀 Getting Started
 
-<br/> <br/> <br/>
+### Using an Animation
 
-**Welcome to the 1000-css-animations Repository**
-
-This repository was developed for ByBy, an innovative company in the educational sector, with the goal of sharing knowledge and inspiration.
-
-**What you will find here**
-
-Here you will find all the animations created with CSS shared on TikTok by <a href="https://tiktok.com/@byby.createsite">ByBy</a>
-All animations are open source, allowing anyone to view, use or modify them. You just (MUST) need to give credits to this repository or will
-be suject to copyright policies.
+1. Browse the repository (or codepen) to find your desired animation 
+2. Copy the HTML and CSS code
+3. Paste it into your project
+4. Customize colors, timing, and properties as needed
 
 
-**Contact for any questions**
+## 📜 License
 
-<a href="mailto:byby.inc.business@gmail.com"> byby.inc.business@gmail.com /</a> <br/>
-<a href="#">https://mail.google.com/mail/u/0/?to=byby.inc.business@gmail.com&su&body&tf=cm</a> <br/>
+This project uses a dual licensing model:
 
-**Contributions**
+### Open Source Use
+Free to use, share and customize with **attribution required**. You must credit this repository by including a link to:
 
-Send me an e-mail if interested.
+https://github.com/[byby.createsite]/1000-css-animations
 
-1000/1000
+
+### Commercial Use
+For commercial applications without attribution requirements, please acquire a commercial license.
+
+**[Get Commercial License →](#)** *(https://pay.hotmart.com/N103477516R)*
+
+[📄 Read full license details](./LICENSE.md)
+
+
+## 📬 Contact
+
+Have questions or want to collaborate?
+
+- **Email:** [byby.inc.business@gmail.com](mailto:byby.inc.business@gmail.com)
+- **TikTok:** [@byby.createsite](https://tiktok.com/@byby.createsite)
+- **Direct Email:** [Compose Email](https://mail.google.com/mail/u/0/?to=byby.inc.business@gmail.com&su=1000%20CSS%20Animations%20Inquiry&body=Hello%20ByBy%20team,&tf=cm)
+
+
+## 🎯 Progress
+
+![Progress](https://img.shields.io/badge/Progress-1000%2F1000-brightgreen.svg?style=for-the-badge)
+
+**All 1000 animations completed! 🎉**
+
 
 
 
