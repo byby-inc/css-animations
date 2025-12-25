@@ -20,7 +20,6 @@ All animations featured here use **only HTML and CSS** — no JavaScript require
 
 Check out some animations on our TikTok: [@byby.createsite](https://tiktok.com/@byby.createsite)
 
-> 📝 **Note:** Our Codepen collection is still being updated, but the repository contains all 1000 animations!
 
 ## 🚀 Getting Started
 
@@ -39,7 +38,7 @@ This project uses a dual licensing model:
 ### Open Source Use
 Free to use, share and customize with **attribution required**. You must credit this repository by including a link to:
 
-https://github.com/[byby.createsite]/1000-css-animations
+https://github.com/byby.createsite/1000-css-animations
 
 
 ### Commercial Use
@@ -1068,3 +1067,6 @@ Have questions or want to collaborate?
 <a href="./ethereal-superposition-bloom.html">Ethereal Superposition Bloom</a> <br/><br/>
 <a href="./eternal-magma-horizon.html">ETERNAL Magma Horizon</a> <br/><br/>
 <a href="./blazing-horizon-singularity-eruption.html">Blazing Horizon Singularity Eruption</a> <br/><br/>
+
+
+
